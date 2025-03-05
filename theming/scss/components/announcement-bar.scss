@@ -26,7 +26,8 @@
   background: var(--color-announcement-bar-bg, var(--color-accent));
   color: var(--color-announcement-bar-text, #fff);
   line-height: 1;
-  padding: 8px 0;
+  padding: 0.7rem 0;
+  min-height: 2.8125rem;
 }
 
 .announcement-bar--inner {
@@ -35,8 +36,8 @@
   align-items: center;
   max-width: none;
   white-space: nowrap;
-  font-size: calc(var(--font-announcement-scale, 1) * 13px);
-  font-weight: 400;
+  font-size: calc(var(--font-announcement-scale, 1) * 1rem);
+  font-weight: 700;
   overflow: hidden;
 }
 
@@ -79,6 +80,10 @@
   display: block;
   white-space: normal;
   text-align: center;
+  font-size: var(--font-size-16);
+  line-height: 130%;
+  font-family: var(--font-poppins), serif;
+  letter-spacing: -0.32px;
 }
 
 .announcement-bar--carousel .carousel__slide ~ .carousel__slide {
@@ -142,5 +147,11 @@
 
   100% {
     transform: translateX(0%);
+  }
+}
+
+@media only screen and (width <= 1023px) {
+  .announcement-bar-section {
+    display: none;
   }
 }

@@ -8,13 +8,13 @@ Author URI: https://brandbrand.nl
 */
 
 :root {
-  --font-poppins: Poppins, sans-serif;
+  --font-primary: Poppins, sans-serif;
 
   --color-primary: #FF8500;
   --color-black: #000000;
-  --color-3D3F43: #3D3F43;
-  --color-1A3C32: #1A3C32;
-  --color-E8D67A: #E8D67A;
+  --color-secondary: #3D3F43;
+  --color-accent: #1A3C32;
+  --color-accent-2: #E8D67A;
 
   --font-size-16: 1rem;
 }
@@ -3649,13 +3649,13 @@ h6,
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: var(--font-poppins);
+  font-family: var(--font-primary);
   font-size: var(--font-size-16);
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-  --color-header-links: var(--color-3D3F43);
-  --color-header-links-hover: var(--color-1A3C32);
+  --color-header-links: var(--color-secondary);
+  --color-header-links-hover: var(--color-accent);
 }
 
 .header .menu-logo-container .header-right .thb-full-menu > li.menu-item-has-children > a {
@@ -3677,13 +3677,13 @@ h6,
 
 .header .menu-logo-container .header-right .thb-full-menu > li > .sub-menu li a,
 .header .menu-logo-container .header-right .header-localization form .custom-select--list ul li button {
-  font-family: var(--font-poppins);
+  font-family: var(--font-primary);
   font-size: var(--font-size-16);
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-  --color-header-links: var(--color-3D3F43);
-  --color-header-links-hover: var(--color-1A3C32);
+  --color-header-links: var(--color-secondary);
+  --color-header-links-hover: var(--color-accent);
 }
 
 .header .menu-logo-container .header-right .thb-secondary-area {
@@ -3696,7 +3696,7 @@ h6,
   padding: 0;
   width: 43px;
   height: 43px;
-  background-color: var(--color-1A3C32);
+  background-color: var(--color-accent);
   border-radius: 100%;
   display: flex;
   place-content: center;
@@ -3714,8 +3714,8 @@ h6,
 
 .header .menu-logo-container .header-right .header-localization form .custom-select--button {
   padding: 0;
-  font-family: var(--font-poppins);
-  color: var(--color-3D3F43);
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
   font-size: var(--font-size-16);
   font-style: normal;
   font-weight: 700;
@@ -3749,7 +3749,7 @@ h6,
 
   .header .menu-logo-container .header-right .thb-secondary-area a.thb-secondary-cart svg,
   .header .menu-logo-container .header-right .thb-secondary-area a.thb-secondary-cart svg * {
-    fill: var(--color-1A3C32);
+    fill: var(--color-accent);
   }
 
   .header .header--inner {
@@ -3812,7 +3812,7 @@ h6,
   }
 
   .header .menu-logo-container .header-right .thb-secondary-area a.thb-secondary-cart .thb-item-count {
-    --color-accent: var(--color-E8D67A);
+    --color-accent: var(--color-accent-2);
     --color-header-bg: var(--color-black);
     font-size: 0.5rem;
     top: -0.625rem;
@@ -3858,8 +3858,8 @@ h6,
 
   .header .mobile-menu-drawer .mobile-menu-drawer--inner .mobile-menu li a,
   .header .mobile-menu-drawer .mobile-menu-drawer--inner .mobile-menu li .parent-link {
-    color: var(--color-1A3C32);
-    font-family: var(--font-poppins);
+    color: var(--color-accent);
+    font-family: var(--font-primary);
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 700;
@@ -3899,8 +3899,8 @@ h6,
   .header .mobile-menu-drawer .mobile-menu-drawer--inner .thb-mobile-menu-footer .thb-mobile-account-link {
     display: flex;
     padding: 0;
-    color: var(--color-3D3F43);
-    font-family: var(--font-poppins);
+    color: var(--color-secondary);
+    font-family: var(--font-primary);
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
@@ -3925,8 +3925,8 @@ h6,
   }
 
   .header .mobile-menu-drawer .thb-mobile-menu-footer .thb-localization-forms .custom-select--button .custom-select--text {
-    color: var(--color-3D3F43);
-    font-family: var(--font-poppins);
+    color: var(--color-secondary);
+    font-family: var(--font-primary);
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;

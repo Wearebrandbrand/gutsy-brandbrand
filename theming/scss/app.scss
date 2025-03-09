@@ -9,14 +9,20 @@ Author URI: https://brandbrand.nl
 
 :root {
   --font-primary: Poppins, sans-serif;
-
   --color-primary: #FF8500;
   --color-black: #000000;
   --color-secondary: #3D3F43;
-  --color-accent: #1A3C32;
+  --color-secondary-dark: #094E39;
+  --color-accent-1: #1A3C32;
   --color-accent-2: #E8D67A;
-
+  --color-accent-3: #0C644A;
+  --color-light-1: #F4F5F5;
+  --color-light-2: #FAFAFA;
+  --font-size-10: 0.625rem;
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
   --font-size-16: 1rem;
+  --font-size-20: 1.25rem;
 }
 
 #wrapper .click-capture,
@@ -3726,7 +3732,7 @@ h6,
   .header {
     position: fixed;
     border-radius: 0.75rem;
-    background: #FAFAFA;
+    background: var(--color-light-2);
     box-shadow: 0 0 0.625rem 0.125rem rgba(0, 0, 0, 0.16);
     max-width: calc(100% - 2rem);
     left: 1rem;

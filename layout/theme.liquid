@@ -122,17 +122,12 @@
 		{{ 'components--free-shipping.js' | asset_url | script_tag }}
 		{{ 'components--free-shipping.css' | asset_url | stylesheet_tag }}
 	{%- endif -%}
-	{%- if request.design_mode -%}
-		{{ 'extra--theme-editor.js' | asset_url | script_tag }}
-	{%- endif -%}
 	{%- if settings.cart_terms_conditions_enable -%}
 		<script src="{{ 'extra--terms-checkbox.js' | asset_url }}" defer="defer"></script>
 	{%- endif -%}
 	{% render 'back-to-top' %}
 	{%- if settings.preload_links -%}
-		{%- unless request.design_mode -%}
 		<script type="module" src="{{ 'instant-page.js' | asset_url }}" defer="defer"></script>
-		{%- endunless -%}
 	{%- endif -%}
 </body>
 </html>

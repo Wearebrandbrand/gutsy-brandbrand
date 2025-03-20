@@ -36,20 +36,23 @@ if (!customElements.get('variant-selects')) {
       this.updateVariantText();
       this.setDisabled();
 
-      if (!this.currentVariant) {
-        this.toggleAddButton(true, '', true);
-        this.setUnavailable();
-      } else {
-        this.updateMedia();
-        if (this.updateUrl) {
-          this.updateURL();
+      checkProductIsPurchasable(this.dataset.url).then((purchasable) => {
+        if (!this.currentVariant || !purchasable) {
+          this.toggleAddButton(true, '', true);
+          this.setUnavailable();
+        } else {
+          this.updateMedia();
+          if (this.updateUrl) {
+            this.updateURL();
+          }
+          this.updateVariantInput();
+          this.renderProductInfo();
+          //this.updateShareUrl();
         }
-        this.updateVariantInput();
-        this.renderProductInfo();
-        //this.updateShareUrl();
-      }
+      });
 
       this.updateOther();
+
       dispatchCustomEvent('product:variant-change', {
         variant: this.currentVariant,
         sectionId: this.dataset.section
@@ -284,7 +287,6 @@ if (!customElements.get('variant-selects')) {
       }
       const variant_data = this.getVariantData();
 
-
       if (variant_data) {
 
         let selected_options = false;
@@ -434,7 +436,7 @@ if (!customElements.get('variant-selects')) {
     }
 
     getVariantData() {
-      this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+      this.variantData = this.variantData || JSON.parse(this.querySelector('[data-json-type="variant-data"]').textContent);
       return this.variantData;
     }
   }
@@ -1016,6 +1018,26 @@ if (!customElements.get('side-panel-links')) {
   }
 
   customElements.define('side-panel-links', ProductSidePanelLinks);
+}
+
+/**
+ * Async function to check if product is purchasable.
+ *
+ * @param url
+ * @returns {Promise<{line: number, path: string, preview: string}>}
+ */
+async function checkProductIsPurchasable(url) {
+  return purchasable = (await fetch(url + '?view=purchase-limit')
+  .then(res => res.text())
+  .then(html => {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    const json = JSON.parse(div.querySelector('script').textContent);
+    if (json?.in_cart === "true" && parseInt(json?.limit) === 1) {
+      return false
+    }
+    return true;
+  }));
 }
 
 if (typeof addIdToRecentlyViewed !== "undefined") {

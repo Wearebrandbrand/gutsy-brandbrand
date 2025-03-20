@@ -93,6 +93,7 @@
 								{%- endfor -%}
 							</ul>
 							{%- endif -%}
+							{%- if item.product.metafields.custom.purchase_limit != 1 -%}
 							<quantity-selector class="quantity cart-update small-qty" data-id="{{ item.key | escape }}">
 							 <button class="minus" type="button" aria-label="{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}">{% render 'svg-icons' with 'minus' %}</button>
 							 <input
@@ -113,6 +114,7 @@
 							 >
 							 <button class="plus" type="button" aria-label="{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}">{% render 'svg-icons' with 'plus' %}</button>
 							</quantity-selector>
+							{%- endif -%}
 							<a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" class="remove" data-index="{{ item.index | plus: 1 }}">{% render 'svg-icons' with 'trash' %}</a>
 						</div>
 						<div class="product-cart-item-price">

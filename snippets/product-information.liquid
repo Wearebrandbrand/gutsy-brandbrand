@@ -142,7 +142,7 @@
           {% render 'product-option', option_type: option_type, color_picker_size: color_picker_size, color_picker_use_variants: color_picker_use_variants, product: product, option: option, forloop: forloop, product_form_id: product_form_id, sizing_link: sizing_link %}
         {%- endfor -%}
       </div>
-      <script type="application/json">
+      <script type="application/json" data-json-type="variant-data">
         {{ product.variants | json }}
       </script>
     </variant-selects>
@@ -185,7 +185,7 @@
       {%- endif -%}
     </side-panel-links>
   {%- when 'quantity' -%}
-    {%- if product.available -%}
+    {%- if product.available and product.metafields.custom.purchase_limit != 1 -%}
     <div
       id="quantity-{{ section.id }}"
       {{ block.shopify_attributes }}

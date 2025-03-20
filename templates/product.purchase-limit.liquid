@@ -1,0 +1,14 @@
+{% layout none %}
+{%- assign in_cart = false -%}
+{%- for item in cart.items -%}
+    {% if item.product.id == product.id %}
+        {% assign in_cart = true %}
+    {% endif %}
+{%- endfor -%}
+
+<script type="application/json" data-json-type="purchase-limit">
+{
+  "limit": "{{ product.metafields.custom.purchase_limit | escape }}",
+  "in_cart": "{{ in_cart | json }}"
+}
+</script>

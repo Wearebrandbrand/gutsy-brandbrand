@@ -20,7 +20,7 @@
             "column_size": "large",
             "text_alignment": "left",
             "title": "",
-            "text": "<p><strong>Text block<\/strong><\/p>",
+            "text": "<p><strong>Text block</strong></p>",
             "text_size": "medium",
             "button_text": "",
             "button_link": "",
@@ -48,7 +48,7 @@
           "settings": {
             "column_size": "large",
             "title": "Subscribe to our newsletter",
-            "text": "<p>Subscription description<\/p>"
+            "text": "<p>Subscription description</p>"
           }
         }
       },
@@ -59,11 +59,12 @@
         "2ab8345e-9f63-4c80-b028-f4edae3633b5"
       ],
       "settings": {
-        "footer_reveal_animation": true,
+        "footer_reveal_animation": false,
         "copyright_text": "All rights reserved.",
         "show_language_switcher": true,
         "show_currency_switcher": true,
-        "show_payment_icons": true
+        "show_payment_icons": true,
+        "enable_follow_on_shop": true
       }
     }
   },

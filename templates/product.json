@@ -147,7 +147,7 @@
         "color_text": "#303c43",
         "marker_color": "#fd6262",
         "disable_top_spacing": false,
-        "disable_bottom_spacing": false
+        "disable_bottom_spacing": true
       }
     },
     "product-recommendations": {
@@ -158,7 +158,7 @@
         "mobile_swipe": true,
         "product_limit": 6,
         "columns_desktop": 4,
-        "disable_top_spacing": true,
+        "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }
     }

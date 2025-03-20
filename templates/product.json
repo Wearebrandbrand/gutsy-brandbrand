@@ -147,34 +147,43 @@
     "245ee280-dfa9-4791-91ed-b65a153cc976": {
       "type": "tabbed-content",
       "blocks": {
-        "aab3af59-da6e-4438-a635-b38db53647da": {
+        "tab_XLUwrV": {
           "type": "tab",
           "settings": {
-            "tab_label": "Tab label",
+            "tab_label": "Gutsy",
             "icon": "none",
-            "text": "<p>Add a short description for this tabbed section</p>",
+            "text": "<p>Duurzame hondenvoeding door zelfs de moeilijkste eters. Niet goed, geld terug</p>",
             "text_columns": "1",
             "page": "",
             "custom_liquid": ""
           }
         },
-        "15ab2a15-1840-4978-bc16-bbd27f68ea2b": {
+        "tab_MbeGK6": {
           "type": "tab",
           "settings": {
-            "tab_label": "Tab label",
+            "tab_label": "ingrediënten",
             "icon": "none",
-            "text": "<p>Add a short description for this tabbed section</p>",
+            "text": "",
             "text_columns": "1",
             "page": "",
             "custom_liquid": ""
           }
         },
-        "897d66ee-eae4-44c6-9c00-1c378b662056": {
+        "specification_jifejJ": {
+          "type": "specification",
+          "settings": {
+            "tab_label": "Inhoud",
+            "icon": "none",
+            "content": "",
+            "empty_field_label": "N/A"
+          }
+        },
+        "tab_q9hJfd": {
           "type": "tab",
           "settings": {
-            "tab_label": "Tab label",
+            "tab_label": "Voedingsgids",
             "icon": "none",
-            "text": "<p>Add a short description for this tabbed section</p>",
+            "text": "",
             "text_columns": "1",
             "page": "",
             "custom_liquid": ""
@@ -182,9 +191,10 @@
         }
       },
       "block_order": [
-        "aab3af59-da6e-4438-a635-b38db53647da",
-        "15ab2a15-1840-4978-bc16-bbd27f68ea2b",
-        "897d66ee-eae4-44c6-9c00-1c378b662056"
+        "tab_XLUwrV",
+        "tab_MbeGK6",
+        "specification_jifejJ",
+        "tab_q9hJfd"
       ],
       "settings": {
         "heading": "Product details",

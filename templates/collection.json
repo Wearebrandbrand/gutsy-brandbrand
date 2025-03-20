@@ -29,6 +29,37 @@
         "display_description": true
       }
     },
+    "collection_list_zXcK46": {
+      "type": "collection-list",
+      "settings": {
+        "heading": "",
+        "marker_style": "style1",
+        "description": "",
+        "heading_size": "medium",
+        "collection_list": [
+          "all",
+          "kibble",
+          "supplement",
+          "snacks",
+          "toys"
+        ],
+        "image_ratio": "square",
+        "collection_layout": "carousel",
+        "style": "style1",
+        "text_alignment": "center",
+        "columns_desktop": 5,
+        "columns_mobile": "2",
+        "show_progress_bar": false,
+        "mobile_swipe": true,
+        "heading_position": "bottom-center",
+        "marker_color": "#FD6262",
+        "text_color": "#2C2D2E",
+        "overlay_color": "transparent",
+        "overlay_opacity": 30,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -150,6 +181,7 @@
   "order": [
     "breadcrumbs",
     "template-header",
+    "collection_list_zXcK46",
     "product-grid",
     "9e57bc14-72e8-48b3-81d3-9b209e520fd0",
     "a923b0af-87bd-4fac-ac50-7c5ad000c0d0"

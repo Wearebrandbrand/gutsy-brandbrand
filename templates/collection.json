@@ -29,6 +29,14 @@
         "display_description": true
       }
     },
+    "single_image_ykmzDH": {
+      "type": "single-image",
+      "settings": {
+        "full_width": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
     "collection_list_zXcK46": {
       "type": "collection-list",
       "settings": {
@@ -181,6 +189,7 @@
   "order": [
     "breadcrumbs",
     "template-header",
+    "single_image_ykmzDH",
     "collection_list_zXcK46",
     "product-grid",
     "9e57bc14-72e8-48b3-81d3-9b209e520fd0",

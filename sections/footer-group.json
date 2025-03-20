@@ -20,12 +20,12 @@
             "column_size": "large",
             "text_alignment": "left",
             "title": "",
-            "image": "shopify://shop_images/gutsy-logo-beige_aabcb816-3687-4048-9c9e-1bd79f126f07.png",
+            "image": "shopify://shop_images/Vector.svg",
             "text": "",
             "text_size": "medium",
             "button_text": "",
             "button_link": "",
-            "show_social_links": false
+            "show_social_links": true
           }
         },
         "d402e6d5-9d79-43ad-900a-cfaddc6cd9f8": {

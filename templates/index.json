@@ -9,6 +9,59 @@
  */
 {
   "sections": {
+    "8ba47ba3-de7f-4f0a-b30d-6f2a540748c3": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_9tfJ4P": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Overlay.png",
+            "slide_link": "",
+            "video_background": false,
+            "badge_text": "",
+            "subheading": "",
+            "heading": "Gezonde hondenvoeding voor de moeilijke eters",
+            "heading_size": "h1",
+            "content": "Lorum ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. A vel vulpurate bibendum magna cursus nunc.",
+            "description_size": "medium",
+            "content_position": "middle-center",
+            "text_alignment": "left",
+            "content_size": "large",
+            "color_slidebg": "transparent",
+            "color_slidebg_opacity": 0,
+            "color_slidebg_blur": 0,
+            "color_text": "#ffffff",
+            "color_badge_bg": "#FF8500",
+            "color_badge_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 70,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4) 100%)",
+            "button_1_text": "Hondenvoeding",
+            "button_1_color": "accent",
+            "button_1_link": "",
+            "use_text_button_1": false,
+            "button_2_text": "Supplementen",
+            "button_2_color": "regular",
+            "button_2_link": "",
+            "use_text_button_2": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_9tfJ4P"
+      ],
+      "settings": {
+        "desktop_height": "desktop-height-550",
+        "mobile_height": "mobile-height-400",
+        "full_width": false,
+        "autoplay": true,
+        "autoplay_length": 5,
+        "transition": "zoom",
+        "controls": "arrows-with-numbers",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
+    },
     "top-spacer": {
       "type": "spacer",
       "settings": {
@@ -31,61 +84,9 @@
         "show_view_all": true,
         "mobile_swipe": true,
         "show_progress_bar": true,
-        "marker_color": "#FD6262",
+        "marker_color": "#fd6262",
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
-      }
-    },
-    "8ba47ba3-de7f-4f0a-b30d-6f2a540748c3": {
-      "type": "slideshow",
-      "blocks": {
-        "template--17993467625754__8ba47ba3-de7f-4f0a-b30d-6f2a540748c3-16787035832bb7b6a4-0": {
-          "type": "slide",
-          "settings": {
-            "slide_link": "",
-            "video_background": false,
-            "badge_text": "",
-            "subheading": "Add a tagline",
-            "heading": "Slide Heading",
-            "heading_size": "h1",
-            "content": "Add descriptive text for your slide here.",
-            "description_size": "medium",
-            "content_position": "middle-center",
-            "text_alignment": "center",
-            "content_size": "medium",
-            "color_slidebg": "rgba(0,0,0,0)",
-            "color_slidebg_opacity": 0,
-            "color_slidebg_blur": 0,
-            "color_text": "#2c2d2e",
-            "color_badge_bg": "#3f72e5",
-            "color_badge_text": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "",
-            "button_1_text": "Shop Now",
-            "button_1_color": "accent",
-            "button_1_link": "",
-            "use_text_button_1": false,
-            "button_2_text": "Shop Now",
-            "button_2_color": "white",
-            "button_2_link": "",
-            "use_text_button_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--17993467625754__8ba47ba3-de7f-4f0a-b30d-6f2a540748c3-16787035832bb7b6a4-0"
-      ],
-      "settings": {
-        "desktop_height": "desktop-height-550",
-        "mobile_height": "mobile-height-400",
-        "full_width": false,
-        "autoplay": true,
-        "autoplay_length": 5,
-        "transition": "zoom",
-        "controls": "arrows-with-numbers",
-        "disable_top_spacing": true,
-        "disable_bottom_spacing": true
       }
     },
     "a7802e0a-30f4-4485-bf29-8868a637ca3e": {
@@ -1077,9 +1078,9 @@
     }
   },
   "order": [
+    "8ba47ba3-de7f-4f0a-b30d-6f2a540748c3",
     "top-spacer",
     "featured_collection_xqyUKK",
-    "8ba47ba3-de7f-4f0a-b30d-6f2a540748c3",
     "a7802e0a-30f4-4485-bf29-8868a637ca3e",
     "8670c6b1-68f6-405f-bfff-2c6ff1e89099",
     "16614195534fb74bc3",

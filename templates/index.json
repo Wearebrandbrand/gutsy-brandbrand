@@ -173,12 +173,64 @@
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }
+    },
+    "logo_list_fxpijU": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_cRT8Aj": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.svg",
+            "link": ""
+          }
+        },
+        "logo_fqbhtk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.svg",
+            "link": ""
+          }
+        },
+        "logo_dpNNVC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.svg",
+            "link": ""
+          }
+        },
+        "logo_ABLQNz": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo.svg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_cRT8Aj",
+        "logo_fqbhtk",
+        "logo_dpNNVC",
+        "logo_ABLQNz"
+      ],
+      "settings": {
+        "heading": "Logo list",
+        "marker_style": "style1",
+        "description": "<p>Add a short description for this section</p>",
+        "columns": 4,
+        "mobile_swipe": true,
+        "center_align": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "color_logo_bg": "#ffffff",
+        "marker_color": "#FD6262"
+      }
     }
   },
   "order": [
     "8ba47ba3-de7f-4f0a-b30d-6f2a540748c3",
     "rich_text_j6nVd9",
     "multicolumn_LQzPTY",
-    "featured_collection_jfCLBH"
+    "featured_collection_jfCLBH",
+    "logo_list_fxpijU"
   ]
 }

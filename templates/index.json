@@ -213,9 +213,9 @@
         "logo_ABLQNz"
       ],
       "settings": {
-        "heading": "Logo list",
+        "heading": "",
         "marker_style": "style1",
-        "description": "<p>Add a short description for this section</p>",
+        "description": "",
         "columns": 4,
         "mobile_swipe": true,
         "center_align": true,

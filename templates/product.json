@@ -83,24 +83,6 @@
         "media_show_prevnext_mobile": true
       }
     },
-    "c4204c3f-0267-4094-942b-cbef4c9c0a87": {
-      "type": "spacer",
-      "settings": {
-        "spacer_mobile": 0,
-        "spacer_desktop": 50,
-        "border_separator": false,
-        "border_separator_full": false
-      }
-    },
-    "d5ba2a2b-8bd0-4354-b15b-a335dd1b21ad": {
-      "type": "spacer",
-      "settings": {
-        "spacer_mobile": 40,
-        "spacer_desktop": 70,
-        "border_separator": false,
-        "border_separator_full": false
-      }
-    },
     "245ee280-dfa9-4791-91ed-b65a153cc976": {
       "type": "tabbed-content",
       "blocks": {
@@ -164,17 +146,8 @@
         "color_tabs": "#303c43",
         "color_text": "#303c43",
         "marker_color": "#fd6262",
-        "disable_top_spacing": true,
-        "disable_bottom_spacing": true
-      }
-    },
-    "1662552569cce2536d": {
-      "type": "spacer",
-      "settings": {
-        "spacer_mobile": 40,
-        "spacer_desktop": 80,
-        "border_separator": false,
-        "border_separator_full": false
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
       }
     },
     "product-recommendations": {
@@ -193,10 +166,7 @@
   "order": [
     "breadcrumbs",
     "main-product",
-    "c4204c3f-0267-4094-942b-cbef4c9c0a87",
-    "d5ba2a2b-8bd0-4354-b15b-a335dd1b21ad",
     "245ee280-dfa9-4791-91ed-b65a153cc976",
-    "1662552569cce2536d",
     "product-recommendations"
   ]
 }

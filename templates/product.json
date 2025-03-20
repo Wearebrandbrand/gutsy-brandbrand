@@ -73,8 +73,8 @@
       "settings": {
         "enable_sticky_add_to_cart": true,
         "show_taxes_included": true,
-        "thumbnail_position": "left",
-        "media_aspect_ratio": "adapt",
+        "thumbnail_position": "bottom",
+        "media_aspect_ratio": "square",
         "display_captions": true,
         "hide_variants": false,
         "lightbox": true,

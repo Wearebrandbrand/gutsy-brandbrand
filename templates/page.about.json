@@ -19,26 +19,25 @@
             "heading_size": "h1-xlarge"
           }
         },
-        "text_hTF9J9": {
-          "type": "text",
+        "subheading_rYrHwV": {
+          "type": "subheading",
           "settings": {
-            "text": "<p>Dit is het verhaal achter gutsy</p>",
-            "description_size": "large"
+            "text": "Dit is het verhaal achter gutsy"
           }
         }
       },
       "block_order": [
         "heading_bFGaWT",
-        "text_hTF9J9"
+        "subheading_rYrHwV"
       ],
       "settings": {
         "image_parallax": false,
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",
         "full_width": true,
-        "content_width": "medium",
+        "content_width": "large",
         "content_position": "bottom-center",
-        "text_alignment": "center",
+        "text_alignment": "left",
         "text_color": "#FFFFFF",
         "overlay_color": "#000000",
         "overlay_opacity": 30,

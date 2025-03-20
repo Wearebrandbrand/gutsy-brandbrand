@@ -676,7 +676,7 @@
   "scripts": {
     "dev": "run-p -sr \"shopify:dev -- {@}\" \"vite:dev\" --",
     "deploy": "run-s \"build\" \"shopify:push -- {@}\" --",
-    "shopify:dev": "shopify theme dev",
+    "shopify:dev": "shopify theme dev --store=gutsy-bonfire-dev.myshopify.com",
     "vite:dev": "vite build --watch",
     "lint": "npx stylelint \"theming/scss/**/*.scss\" --fix\n",
     "shopify:push": "shopify theme push",

@@ -31,7 +31,8 @@
         "subheading_rYrHwV"
       ],
       "settings": {
-        "image_parallax": false,
+        "image": "shopify://shop_images/DSCF2782.jpg",
+        "image_parallax": true,
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",
         "full_width": true,

@@ -72,7 +72,7 @@
       ],
       "settings": {
         "enable_sticky_add_to_cart": true,
-        "show_taxes_included": true,
+        "show_taxes_included": false,
         "thumbnail_position": "bottom",
         "media_aspect_ratio": "square",
         "display_captions": true,

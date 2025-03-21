@@ -62,7 +62,7 @@
 					assign product_template = 'pre-order'
 				endif
 			-%}
-		  <product-form class="product-form" data-sticky="1" data-section="{{ section.id }}" template="{{ product_template | escape }}">
+		  <product-form class="product-form" data-sticky="1" data-url="{{ product.url }}" data-section="{{ section.id }}" template="{{ product_template | escape }}">
 				<div class="product-form__error-message-wrapper form-notification error" role="alert" hidden>
 		      {% render 'svg-icons' with 'thb-error' %}
 		      <span class="product-form__error-message"></span>

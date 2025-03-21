@@ -575,6 +575,7 @@ if (!customElements.get('cart-drawer')) {
       removes.forEach((remove) => {
         remove.addEventListener('click', (event) => {
           this.updateQuantity(event.target.dataset.index, '0');
+          this.updatePurchasable(event.target.parentNode.parentNode.dataset)
 
           event.preventDefault();
         });
@@ -642,6 +643,26 @@ if (!customElements.get('cart-drawer')) {
           cart: parsedState
         });
         this.querySelector(`#CartDrawerItem-${line}`)?.classList.remove('thb-loading');
+      });
+    }
+
+    updatePurchasable(dataset) {
+      if (!dataset?.handle) return;
+      var product_handle = dataset.handle;
+      var matching_product_handle = document.querySelector('.thb-product-detail').dataset.handle;
+      if (matching_product_handle !== product_handle) return;
+
+      const submitButtons = document.querySelectorAll('.single-add-to-cart-button');
+      submitButtons.forEach((submitButton) => {
+        if (submitButton.classList.contains('loading')) return;
+        submitButton.removeAttribute('aria-disabled');
+        submitButton.removeAttribute('disabled');
+        submitButton.classList.remove('loading');
+
+        const submitButtonText = submitButton.querySelector('.single-add-to-cart-button--text');
+        if (!submitButton) return;
+        submitButtonText.textContent = window.theme.variantStrings.addToCart
+        submitButton.classList.remove('sold-out');
       });
     }
 

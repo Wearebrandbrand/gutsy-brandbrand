@@ -12,6 +12,7 @@ class Cart {
   onChange(event) {
     if (event.target.type == 'number') {
       this.updateQuantity(event.target.dataset.index, event.target.value);
+      console.log('changed the data')
     } else if (event.target.getAttribute('id') == 'CartSpecialInstructions') {
       this.saveNotes();
     }
@@ -48,15 +49,10 @@ class Cart {
 
   getSectionsToRender() {
     return [{
-      id: 'Cart',
-      section: 'main-cart',
-      selector: '.thb-cart-form'
-    },
-      {
-        id: 'cart-drawer-toggle',
-        section: 'cart-bubble',
-        selector: '.thb-item-count'
-      }];
+      id: 'Cart', section: 'main-cart', selector: '.thb-cart-form'
+    }, {
+      id: 'cart-drawer-toggle', section: 'cart-bubble', selector: '.thb-item-count'
+    }];
   }
 
   displayErrors(line, message) {

@@ -22,7 +22,7 @@
 						endif
 					-%}
 					{% for item in cart.items %}
-					<div class="product-cart-item" id="CartDrawerItem-{{ item.index | plus: 1 }}">
+					<div class="product-cart-item" id="CartDrawerItem-{{ item.index | plus: 1 }}" data-url="{{ item.product.url }}" data-handle="{{ item.product.handle }}">
 						<div class="product-cart-item-image">
 							{% if item.image %}
 								{%- render 'responsive-image', image: item.image, sizes: '168x0', priority: 'low' -%}

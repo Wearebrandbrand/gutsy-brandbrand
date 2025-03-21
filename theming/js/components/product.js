@@ -36,7 +36,7 @@ if (!customElements.get('variant-selects')) {
       this.updateVariantText();
       this.setDisabled();
 
-      checkProductIsPurchasable(this.dataset.url).then((purchasable) => {
+      checkProductPurchaseLimit(this.dataset.url).then((purchasable) => {
         if (!this.currentVariant || !purchasable) {
           this.toggleAddButton(true, '', true);
           this.setUnavailable(!purchasable);
@@ -780,40 +780,66 @@ if (!customElements.get('product-form')) {
       formData.append('sections_url', window.location.pathname);
       config.body = formData;
 
-      fetch(`${theme.routes.cart_add_url}`, config)
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.status) {
-          dispatchCustomEvent('product:variant-error', {
-            source: 'product-form',
-            productVariantId: formData.get('id'),
-            errors: response.description,
-            message: response.message
+      checkProductPurchaseLimit(this.form.dataset.url).then((purchasable) => {
+        if (!purchasable) {
+          submitButtons.forEach((submitButton) => {
+            submitButton.classList.remove('loading');
+            submitButton.setAttribute('aria-disabled', true);
+            submitButton.setAttribute('disabled', 'disabled');
+            const submitButtonText = submitButton.querySelector('.single-add-to-cart-button--text');
+            if (!submitButtonText) return;
+            submitButtonText.textContent = window.theme.variantStrings.maxLimit;
           });
-          if (response.status === 422) {
-            document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-              bubbles: true
-            }));
-          }
-          this.handleErrorMessage(response.description);
           return;
         }
 
-        this.renderContents(response);
+        fetch(`${theme.routes.cart_add_url}`, config)
+        .then((response) => response.json())
+        .then((response) => {
+          if (response.status) {
+            dispatchCustomEvent('product:variant-error', {
+              source: 'product-form',
+              productVariantId: formData.get('id'),
+              errors: response.description,
+              message: response.message
+            });
+            if (response.status === 422) {
+              document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+                bubbles: true
+              }));
+            }
+            this.handleErrorMessage(response.description);
+            return;
+          }
 
-        dispatchCustomEvent('cart:item-added', {
-          product: response.hasOwnProperty('items') ? response.items[0] : response
+          this.renderContents(response);
+
+          dispatchCustomEvent('cart:item-added', {
+            product: response.hasOwnProperty('items') ? response.items[0] : response
+          });
+        })
+        .catch((e) => {
+          console.error(e);
+        })
+        .finally(() => {
+          submitButtons.forEach((submitButton) => {
+            submitButton.classList.remove('loading');
+            submitButton.removeAttribute('aria-disabled');
+          });
+
+          checkProductPurchaseLimit(this.form.dataset.url).then((purchasable) => {
+            if (!purchasable) {
+              submitButtons.forEach((submitButton) => {
+                submitButton.setAttribute('disabled', 'disabled');
+                const submitButtonText = submitButton.querySelector('.single-add-to-cart-button--text');
+                if (!submitButtonText) return;
+                submitButtonText.textContent = window.theme.variantStrings.maxLimit;
+              });
+              return;
+            }
+          });
         });
       })
-      .catch((e) => {
-        console.error(e);
-      })
-      .finally(() => {
-        submitButtons.forEach((submitButton) => {
-          submitButton.classList.remove('loading');
-          submitButton.removeAttribute('aria-disabled');
-        });
-      });
     }
 
     getSectionsToRender() {
@@ -1026,7 +1052,7 @@ if (!customElements.get('side-panel-links')) {
  * @param url
  * @returns {Promise<{line: number, path: string, preview: string}>}
  */
-async function checkProductIsPurchasable(url) {
+async function checkProductPurchaseLimit(url) {
   return purchasable = (await fetch(url + '?view=purchase-limit')
   .then(res => res.text())
   .then(html => {

@@ -117,6 +117,7 @@
       "add_to_cart": "Voeg toe",
       "choose_options": "Opties kiezen",
       "sold_out": "Uitverkocht",
+      "max_limit": "Maximale aankooplimiet bereikt",
       "save_html": "Bespaar {{ saved_amount }}",
       "unavailable": "Niet beschikbaar",
       "pre_order": "Vooruitbestellen",

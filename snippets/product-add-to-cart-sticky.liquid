@@ -1,4 +1,15 @@
-{%- assign product_form_id = 'product-form-' | append: section.id -%}
+{%- liquid
+	assign product_form_id = 'product-form-' | append: section.id
+
+	assign in_cart = false
+	for item in cart.items
+		if item.product.id == product.id
+			assign in_cart = true
+		endif
+	endfor
+
+	assign purchase_limit = product.metafields.custom.purchase_limit
+-%}
 <product-add-to-cart-sticky class="product-add-to-cart-sticky no-js-hidden" data-section="{{ section.id }}">
 	<button class="product-add-to-cart-sticky--inner">
 		<div class="product-add-to-cart-sticky--image" id="product-image-{{ section.id }}--sticky">
@@ -59,11 +70,13 @@
 				<div class="product-add-to-cart-container">
 					<div class="form-notification error" style="display:none;"></div>
 				  <div class="add_to_cart_holder">
-				    <button type="submit" name="add" id="AddToCartSticky" class="single-add-to-cart-button button accent {% unless product.selected_or_first_available_variant.available %}sold-out{% endunless %}" {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %} form="{{ product_form_id }}">
+				    <button type="submit" name="add" id="AddToCartSticky" class="single-add-to-cart-button button accent {% unless product.selected_or_first_available_variant.available %}sold-out{% endunless %}" {% if product.selected_or_first_available_variant.available == false or in_cart and purchase_limit == 1 %}disabled{% endif %} form="{{ product_form_id }}">
 							<span class="single-add-to-cart-button--text">
 								{%- liquid
 									if product.selected_or_first_available_variant.available == false
 										assign button_content = 'products.product.sold_out' | t
+									elsif in_cart and purchase_limit == 1
+										assign button_content = 'products.product.max_limit' | t
 									else
 										if product_template == 'pre-order'
 											assign button_content = 'products.product.pre_order' | t

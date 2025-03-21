@@ -117,6 +117,7 @@
       "add_to_cart": "Add to cart",
       "choose_options": "Choose options",
       "sold_out": "Sold out",
+      "max_limit": "Maximum purchase limit reached",
       "save_html": "Save {{ saved_amount }}",
       "unavailable": "Unavailable",
       "pre_order": "Pre-order",

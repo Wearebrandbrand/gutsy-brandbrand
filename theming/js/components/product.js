@@ -39,7 +39,7 @@ if (!customElements.get('variant-selects')) {
       checkProductIsPurchasable(this.dataset.url).then((purchasable) => {
         if (!this.currentVariant || !purchasable) {
           this.toggleAddButton(true, '', true);
-          this.setUnavailable();
+          this.setUnavailable(!purchasable);
         } else {
           this.updateMedia();
           if (this.updateUrl) {
@@ -266,7 +266,7 @@ if (!customElements.get('variant-selects')) {
       if (!modifyClass) return;
     }
 
-    setUnavailable() {
+    setUnavailable(max_limit = false) {
       const submitButtons = document.querySelectorAll('.single-add-to-cart-button');
       const price = document.getElementById(`price-${this.dataset.section}`);
       const price_fixed = document.getElementById(`price-${this.dataset.section}--sticky`);
@@ -274,7 +274,7 @@ if (!customElements.get('variant-selects')) {
       submitButtons.forEach((submitButton) => {
         const submitButtonText = submitButton.querySelector('.single-add-to-cart-button--text');
         if (!submitButton) return;
-        submitButtonText.textContent = window.theme.variantStrings.unavailable;
+        submitButtonText.textContent = max_limit ? window.theme.variantStrings.maxLimit : window.theme.variantStrings.unavailable;
         submitButton.classList.add('sold-out');
       });
       if (price) price.classList.add('visibility-hidden');

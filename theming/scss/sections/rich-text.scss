@@ -1,3 +1,7 @@
+.section-rich-text {
+    --section-spacing-desktop: 5rem;
+    --section-spacing-mobile: 3.438rem;
+}
 
 .rich-text {
     isolation: isolate;
@@ -82,4 +86,17 @@
 
 .rich-text.text-width-grid .rich-text__inner {
     max-width: var(--grid-width-row, 1380px);
+}
+
+.rich-text {
+    .subheading,
+    h3{
+        margin-bottom: 0;
+    }
+    h3 {
+        color: var(--color-accent-1);
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 0.1rem;
+    }
 }

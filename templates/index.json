@@ -24,7 +24,7 @@
             "heading_size": "h1",
             "content": "Lorum ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. A vel vulpurate bibendum magna cursus nunc.",
             "description_size": "medium",
-            "content_position": "middle-center",
+            "content_position": "bottom-left",
             "text_alignment": "left",
             "content_size": "large",
             "color_slidebg": "rgba(0,0,0,0)",
@@ -59,11 +59,14 @@
         "transition": "zoom",
         "controls": "arrows-with-numbers",
         "disable_top_spacing": true,
-        "disable_bottom_spacing": false
+        "disable_bottom_spacing": false,
+        "bottom_bar_image": "shopify://shop_images/rating-image.svg",
+        "bottom_bar_text": "4,8/5 op trustpilot"
       }
     },
     "rich_text_j6nVd9": {
       "type": "rich-text",
+      "class": "home-rich-text",
       "blocks": {
         "subheading_ErhWzb": {
           "type": "subheading",
@@ -93,7 +96,7 @@
         "color_heading": "#1a1c1d",
         "color_text": "#2c2d2e",
         "color_links": "#2c2d2e",
-        "disable_top_spacing": true,
+        "disable_top_spacing": false,
         "disable_bottom_spacing": true
       }
     },
@@ -104,6 +107,7 @@
           "type": "column",
           "settings": {
             "image_full_width": false,
+            "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
             "image_link": "",
             "title": "85% dierlijke eiwitten",
             "text": "<p>Onze brokken bevatten 85% dierlijke eiwitten van licht verteerbare insecten en smakelijke taurinerijke kip.</p>",
@@ -115,6 +119,7 @@
           "type": "column",
           "settings": {
             "image_full_width": false,
+            "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
             "image_link": "",
             "title": "Natuurlijke ingrediënten",
             "text": "<p>100% natuurlijke brokken met insecten, kip, groenten en fruit – ideaal voor kieskeurige eters.</p>",
@@ -126,6 +131,7 @@
           "type": "column",
           "settings": {
             "image_full_width": false,
+            "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
             "image_link": "",
             "title": "Gemaakt in belgië",
             "text": "<p>Lokaal geproduceerd met 90% Belgische ingrediënten binnen 160 km van Gent. Zo ondersteunen we lokale boeren.</p>",
@@ -147,13 +153,16 @@
         "mobile_swipe": false,
         "image_ratio": "adapt",
         "text_alignment": "left",
-        "heading_size": "h5",
+        "heading_size": "h4",
         "color_heading": "#1a1c1d",
         "marker_color": "#fd6262",
         "color_text": "#2c2d2e",
         "color_links": "#2c2d2e",
         "disable_top_spacing": false,
-        "disable_bottom_spacing": false
+        "disable_bottom_spacing": false,
+        "button_1_color": "accent",
+        "link_label": "Ontdek alle voordelen",
+        "link": "#"
       }
     },
     "featured_collection_jfCLBH": {

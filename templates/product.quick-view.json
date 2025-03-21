@@ -22,12 +22,17 @@
         "title": {
           "type": "title",
           "settings": {
-            "show_products_rating": true
+            "show_products_rating": true,
+            "show_products_rating_average": true,
+            "show_custom_badges": true
           }
         },
         "e196b5f8-d86c-4dcd-8840-980aac4eb6de": {
           "type": "description",
           "settings": {
+            "seo_text_max_height": 1000,
+            "seo_text_read_more": "Read more",
+            "seo_text_read_less": "Read less"
           }
         },
         "variant_picker": {
@@ -35,6 +40,8 @@
           "settings": {
             "picker_type": "button",
             "color_picker": true,
+            "color_picker_size": "regular",
+            "color_picker_use_variants": false,
             "variant_is_disabled": true
           }
         },
@@ -54,8 +61,11 @@
       ],
       "settings": {
         "show_taxes_included": true,
-        "media_aspect_ratio": "adapt",
-        "hide_variants": false
+        "thumbnail_position": "bottom",
+        "media_aspect_ratio": "square",
+        "hide_variants": true,
+        "media_fullwidth_mobile": true,
+        "media_show_prevnext_mobile": true
       }
     }
   },

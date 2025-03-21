@@ -117,6 +117,7 @@
       "add_to_cart": "In den Warenkorb legen",
       "choose_options": "Optionen wählen",
       "sold_out": "Ausverkauft",
+      "max_limit": "Maximales Kauflimit erreicht",
       "save_html": "Spare {{ saved_amount }}",
       "unavailable": "Nicht verfügbar",
       "pre_order": "Vorbestellen",

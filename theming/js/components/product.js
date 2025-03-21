@@ -277,8 +277,8 @@ if (!customElements.get('variant-selects')) {
         submitButtonText.textContent = max_limit ? window.theme.variantStrings.maxLimit : window.theme.variantStrings.unavailable;
         submitButton.classList.add('sold-out');
       });
-      if (price) price.classList.add('visibility-hidden');
-      if (price_fixed) price_fixed.classList.add('visibility-hidden');
+      if (price && !max_limit) price.classList.add('visibility-hidden');
+      if (price_fixed && !max_limit) price_fixed.classList.add('visibility-hidden');
     }
 
     setDisabled() {

@@ -103,7 +103,7 @@
 													</div>
 												</div>
 											</td>
-											{%- if item.available and item.metafields.custom.purchase_limit != 1 -%}
+											{%- if item.product.available and item.product.metafields.custom.purchase_limit != 1 -%}
 											<td class="product-quantity">
 												<quantity-selector class="quantity cart-update small-qty" data-id="{{ item.key | escape }}">
 												<button class="minus" type="button">{% render 'svg-icons' with 'minus' %}</button>

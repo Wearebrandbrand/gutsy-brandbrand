@@ -11,42 +11,39 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-      }
+      "settings": {}
     },
     "main-article": {
       "type": "main-article",
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "tags": {
           "type": "tags",
-          "settings": {
-          }
+          "settings": {}
         },
-				"post_navigation": {
+        "post_navigation": {
           "type": "post_navigation",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "title",
         "content",
         "tags",
-				"post_navigation"
+        "post_navigation"
       ],
       "settings": {
         "article_show_date": true,
-        "article_show_author": true
+        "article_show_author": true,
+        "article_show_nav": true,
+        "article_show_sharing": true
       }
     }
   },

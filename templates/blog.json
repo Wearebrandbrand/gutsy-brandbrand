@@ -11,14 +11,13 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-      }
+      "settings": {}
     },
     "main-blog-header": {
       "type": "main-blog-header",
       "settings": {
-        "heading": "Latest News",
-        "description": "<p>Add a short description for your blog.<\/p>",
+        "heading": "Ons blog",
+        "description": "<p>Bekijk meer nieuws en tips over Gutsy</p>",
         "show_category_list": true
       }
     },

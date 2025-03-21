@@ -12,7 +12,6 @@ class Cart {
   onChange(event) {
     if (event.target.type == 'number') {
       this.updateQuantity(event.target.dataset.index, event.target.value);
-      console.log('changed the data')
     } else if (event.target.getAttribute('id') == 'CartSpecialInstructions') {
       this.saveNotes();
     }

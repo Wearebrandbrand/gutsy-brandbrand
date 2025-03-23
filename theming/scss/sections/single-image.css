@@ -10,7 +10,6 @@
     padding: 0 50px;
   }
 }
-
 .single-image {
   text-align: center;
 }
@@ -29,7 +28,6 @@
     display: none;
   }
 }
-
 .single-image--desktop {
   display: none;
 }
@@ -39,18 +37,17 @@
     display: block;
   }
 }
-
 .single-image img,
 .single-image svg {
   margin: 0 auto;
 }
 
-.section-featured-image {
-  .thb-placeholder {
-    background-color: transparent;
-    max-width: 78rem;
-    margin: 0 auto;
-    border-radius: 1.25rem;
-    overflow: hidden;
-  }
+.section-featured-image .thb-placeholder {
+  background-color: transparent;
+  max-width: 78rem;
+  margin: 0 auto;
+  border-radius: 1.25rem;
+  overflow: hidden;
 }
+
+/*# sourceMappingURL=single-image.css.map */

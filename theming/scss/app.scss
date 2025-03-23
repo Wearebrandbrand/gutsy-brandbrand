@@ -23,6 +23,7 @@ Author URI: https://brandbrand.nl
   --color-accent-2: #E8D67A;
   --color-accent-3: #0C644A;
   --color-accent-4: #0A0A0B;
+  --color-accent-5: #F0E7B2;
   --color-light-1: #F4F5F5;
   --color-light-2: #FAFAFA;
   --color-light-3: #92969B;
@@ -6510,4 +6511,11 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   height: 30%;
   top: auto;
   bottom: -20%;
+}
+
+.breadcrumbs-section {
+  .columns {
+    max-width: 78rem;
+    margin: 0 auto;
+  }
 }

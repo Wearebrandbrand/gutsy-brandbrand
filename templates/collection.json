@@ -13,24 +13,8 @@
       "type": "breadcrumbs",
       "settings": {}
     },
-    "template-header": {
-      "type": "template-header",
-      "settings": {
-        "show_collection_image": false,
-        "collection_image_ratio": "adapt",
-        "collection_image_width": "standard",
-        "show_collection_description": true,
-        "seo_text_read_more": "Read more",
-        "seo_text_read_less": "Read less",
-        "seo_text_max_height": 150,
-        "show_subcollections": true,
-        "color_subcollection_bg": "#ffffff",
-        "color_subcollection_text": "#303c43",
-        "display_description": true
-      }
-    },
     "single_image_ykmzDH": {
-      "type": "single-image",
+      "type": "collection-single-image",
       "settings": {
         "full_width": false,
         "disable_top_spacing": true,
@@ -68,6 +52,23 @@
         "disable_bottom_spacing": false
       }
     },
+    
+    "template-header": {
+      "type": "template-header",
+      "settings": {
+        "show_collection_image": false,
+        "collection_image_ratio": "adapt",
+        "collection_image_width": "standard",
+        "show_collection_description": true,
+        "seo_text_read_more": "Read more",
+        "seo_text_read_less": "Read less",
+        "seo_text_max_height": 150,
+        "show_subcollections": true,
+        "color_subcollection_bg": "#ffffff",
+        "color_subcollection_text": "#303c43",
+        "display_description": true
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -75,7 +76,7 @@
         "columns_desktop": 3,
         "pagination_type": "paginated",
         "enable_filtering": false,
-        "enable_sorting": true,
+        "enable_sorting": false,
         "show_counts": false,
         "filter_color_swatches": false,
         "filters_collapsed": false,
@@ -123,9 +124,9 @@
   },
   "order": [
     "breadcrumbs",
-    "template-header",
     "single_image_ykmzDH",
     "collection_list_zXcK46",
+    "template-header",
     "product-grid",
     "a923b0af-87bd-4fac-ac50-7c5ad000c0d0"
   ]

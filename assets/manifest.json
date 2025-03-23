@@ -59,6 +59,12 @@
     "src": "theming/js/components/header.js",
     "isEntry": true
   },
+  "theming/js/components/list-collections.js": {
+    "file": "components--list-collections.js",
+    "name": "components--list-collections",
+    "src": "theming/js/components/list-collections.js",
+    "isEntry": true
+  },
   "theming/js/components/max-height.js": {
     "file": "components--max-height.js",
     "name": "components--max-height",
@@ -302,6 +308,11 @@
   "theming/scss/components/cart.scss": {
     "file": "components--cart.css",
     "src": "theming/scss/components/cart.scss",
+    "isEntry": true
+  },
+  "theming/scss/components/collection-product-grid.scss": {
+    "file": "components--collection-product-grid.css",
+    "src": "theming/scss/components/collection-product-grid.scss",
     "isEntry": true
   },
   "theming/scss/components/comments.scss": {

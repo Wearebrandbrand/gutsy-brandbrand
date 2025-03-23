@@ -644,6 +644,11 @@
     "src": "theming/scss/sections/tabbed-content.scss",
     "isEntry": true
   },
+  "theming/scss/sections/table-section.scss": {
+    "file": "sections--table-section.css",
+    "src": "theming/scss/sections/table-section.scss",
+    "isEntry": true
+  },
   "theming/scss/sections/template-header.scss": {
     "file": "sections--template-header.css",
     "src": "theming/scss/sections/template-header.scss",

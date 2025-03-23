@@ -93,3 +93,36 @@
     display: flex;
     align-items: center;
 }
+
+.logo-list {
+    --section-spacing-desktop: 6.875rem;
+    --section-spacing-mobile: 3.25rem;
+    .logo-list--inner {
+        max-width: 78rem;
+        margin: 0 auto;
+        @media only screen and (width <= 991px) {
+            --logo-columns: 2 !important;
+            grid-template-columns: repeat(var(--logo-columns), 1fr);
+            place-items: center;
+            grid-auto-flow: initial;
+            grid-auto-columns: initial;
+            gap: 1.625rem;
+            padding: 0;
+            max-width: 100%;
+        }
+        .logo-list--logo {
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+            flex-direction: column;
+            max-width: 17.5rem;
+            gap: 1.25rem;
+            .rte {
+                p {
+                    margin: 0;
+                    color: var(--color-secondary-dark);
+                }
+            }
+        }
+    }
+}

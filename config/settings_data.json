@@ -59,7 +59,8 @@
     "search_product_collection": "all",
     "search_product_collection_limit": 3,
     "search_product_list": [],
-    "content_for_index": []
+    "content_for_index": [],
+    "show_products_vendor": false
   },
   "presets": {
     "Default": {

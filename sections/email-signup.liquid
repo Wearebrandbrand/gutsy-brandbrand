@@ -37,6 +37,12 @@
 							<div class="description-size--{{ block.settings.description_size }}" {{ block.shopify_attributes }}><p>{{ block.settings.text }}</p></div>
 						{%- when 'form' -%}
 							{%- render 'email-signup-form' -%}
+							{% if block.settings.terms_text %}
+								<div class="email-form-agree">
+									{{ block.settings.terms_text }}
+									
+								</div>
+							{% endif %}
 						{%- when 'space' -%}
 							<div style="height: {{ block.settings.height | append: 'px' }}" {{ block.shopify_attributes }}></div>
 					{%- endcase -%}
@@ -225,7 +231,15 @@
 			{
         "type": "form",
         "name": "Newsletter form",
-				"limit": 1
+				"limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "terms_text",
+            "label": "Terms Text",
+            "default": "<p>Door je te registreren, ga je akkoord met <a href=\"#\">onze voorwaarden</a>.</p>"
+          }
+        ]
       },
       {
         "type": "space",

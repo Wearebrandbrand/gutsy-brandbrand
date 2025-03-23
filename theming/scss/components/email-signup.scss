@@ -57,3 +57,104 @@
     max-width: 380px;
     margin: 0 auto;
 }
+
+.email-signup {
+    .email-signup--inner {
+        .h2 {
+            line-height: 110%;
+            letter-spacing: 0.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .description-size--medium {
+            p {
+                max-width: 23.125rem;
+                margin: 0 auto;
+            }
+        }
+        .signup-container {
+            margin-top: 1.938rem;
+            @media only screen and (width <= 1023px) {
+                margin-top: 1.125rem;
+            }
+            form {
+                fieldset {
+                    .field {
+                        input {
+                            border-radius: 6.25rem;
+                            border: 0.125rem solid var(--color-light-2);
+                            background: var(--color-light-2);
+                            padding: 0.813rem 4.063rem 0.813rem  1.5rem;
+                            @media only screen and (width <= 1023px) {
+                                padding: 0.438rem 1.125rem 0.438rem 1.125rem;
+                            }
+                        }
+                        input,
+                        label {
+                            color: var(--color-secondary);
+                            font-family: var(--font-primary);
+                            font-size: var(--font-size-16);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            outline: none;
+                            @media only screen and (width <= 1023px) {
+                                font-size: var(--font-size-14);
+                            }
+                        }
+
+                        input:focus + label,
+                        input:not(:placeholder-shown)+label {
+                            border-radius: 0.5rem 0.5rem 0 0;
+                            background-color: var(--color-light-2);
+                        }
+                    }
+                    button {
+                        &.submit {
+                            border-radius: 6.25rem;
+                            background: var(--color-primary);
+                            max-width: 3.5rem;
+                            width: 100%;
+                            max-height: 2.9rem;
+                            right: 2px;
+                            top: 2px;
+                            --color-accent: #994F00;
+
+                            @media only screen and (width <= 1023px) {
+                                max-width: 3.125rem;
+                            }
+
+                            &:hover {
+                                background: var(--color-accent);
+                            }
+
+                            &:focus {
+                                background-color: var(--color-primary-focus);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .email-form-agree {
+            margin-top: 0.938rem;
+            p {
+                margin: 0;
+                color: var(--color-secondary);
+                text-align: center;
+                font-family: var(--font-primary);
+                font-size: var(--font-size-10);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                a {
+                    text-decoration-line: underline;
+                    text-decoration-style: solid;
+                    text-decoration-skip-ink: auto;
+                    text-decoration-thickness: auto;
+                    text-underline-offset: auto;
+                    text-underline-position: from-font;
+                }
+            }
+        }
+    }
+}

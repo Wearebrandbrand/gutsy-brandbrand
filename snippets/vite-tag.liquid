@@ -243,6 +243,8 @@
   {{ 'sections--spacer.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/tabbed-content.scss" or path == "../../theming/scss/sections/tabbed-content.scss" %}
   {{ 'sections--tabbed-content.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/table-section.scss" or path == "../../theming/scss/sections/table-section.scss" %}
+  {{ 'sections--table-section.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/template-header.scss" or path == "../../theming/scss/sections/template-header.scss" %}
   {{ 'sections--template-header.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/testimonials.scss" or path == "../../theming/scss/sections/testimonials.scss" %}

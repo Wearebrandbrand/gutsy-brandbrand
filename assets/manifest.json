@@ -474,6 +474,11 @@
     "src": "theming/scss/components/video.scss",
     "isEntry": true
   },
+  "theming/scss/extra/_hwtartz-font.scss": {
+    "file": "extra--_hwtartz-font.css",
+    "src": "theming/scss/extra/_hwtartz-font.scss",
+    "isEntry": true
+  },
   "theming/scss/extra/photoswipe.scss": {
     "file": "extra--photoswipe.css",
     "src": "theming/scss/extra/photoswipe.scss",

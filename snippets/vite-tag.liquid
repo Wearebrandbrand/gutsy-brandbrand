@@ -175,6 +175,8 @@
   {{ 'components--subheader.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/video.scss" or path == "../../theming/scss/components/video.scss" %}
   {{ 'components--video.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/extra/_hwtartz-font.scss" or path == "../../theming/scss/extra/_hwtartz-font.scss" %}
+  {{ 'extra--_hwtartz-font.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/extra/photoswipe.scss" or path == "../../theming/scss/extra/photoswipe.scss" %}
   {{ 'extra--photoswipe.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/extra/promotional-banner.scss" or path == "../../theming/scss/extra/promotional-banner.scss" %}

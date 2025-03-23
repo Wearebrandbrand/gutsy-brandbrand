@@ -2524,7 +2524,7 @@ scroll-shadow {
           rgba(var(--bg-body-rgb), 1));
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-full {
     transition: height 0.5s linear;
     height: calc(100vh - var(--announcement-height, 0px));
@@ -2535,32 +2535,32 @@ scroll-shadow {
     }
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-auto {
     min-height: auto;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-300 {
     min-height: 300px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-350 {
     min-height: 350px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-400 {
     min-height: 400px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-450 {
     min-height: 450px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .mobile-height-500 {
     min-height: 500px;
   }
@@ -3516,7 +3516,7 @@ h6,
   line-height: 120%;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (width <= 63.938rem) {
   .header {
     position: fixed;
     border-radius: 0.75rem;
@@ -4582,7 +4582,7 @@ input[type=submit] {
   appearance: none;
   transition: color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1), background-color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1);
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (width <= 63.938rem) {
   .button,
   input[type=submit] {
     font-size: var(--font-size-12);

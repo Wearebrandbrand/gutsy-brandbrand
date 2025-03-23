@@ -186,7 +186,7 @@
   text-align: right;
   margin-top: 4.125rem;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .section-header--button {
     text-align: center;
     margin-top: 1.375rem;
@@ -200,7 +200,7 @@
   font-weight: 600;
   line-height: 120%;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .section-header--button a {
     width: 100%;
     background-color: var(--color-primary);
@@ -218,7 +218,7 @@
     color: var(--color-light-2);
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (width <= 47.938rem) {
   .table-section .columns .section-header--button a {
     max-width: 100%;
   }
@@ -228,7 +228,7 @@
   margin-left: 0.625rem;
   --color-accent: var(--color-secondary);
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .section-header--button a span {
     display: none;
   }

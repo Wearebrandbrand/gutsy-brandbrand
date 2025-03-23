@@ -60,6 +60,18 @@
   padding: 1.25rem 0;
   max-width: 78rem;
   margin: 0 auto;
+  color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-16);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-decoration: none;
+}
+@media only screen and (width <= 1023px) {
+  .breadcrumbs {
+    font-size: var(--font-size-12);
+  }
 }
 .breadcrumbs a {
   color: var(--color-secondary);

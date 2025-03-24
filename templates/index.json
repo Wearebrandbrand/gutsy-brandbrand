@@ -312,9 +312,8 @@
         "columns": 4,
         "autoplay": true,
         "autoplay_length": 6,
-        "color_bg": "#1a3c32",
-        "color_heading": "#e8d67a",
-        "color_text": "#2C2D2E",
+        "color_bg": "#1A3C32",
+        "color_heading": "#E8D67A",
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }

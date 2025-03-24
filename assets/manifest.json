@@ -535,6 +535,11 @@
     "src": "theming/scss/sections/featured-product.scss",
     "isEntry": true
   },
+  "theming/scss/sections/figures.scss": {
+    "file": "sections--figures.css",
+    "src": "theming/scss/sections/figures.scss",
+    "isEntry": true
+  },
   "theming/scss/sections/gallery.scss": {
     "file": "sections--gallery.css",
     "src": "theming/scss/sections/gallery.scss",

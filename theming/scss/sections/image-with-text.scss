@@ -182,7 +182,7 @@
         gap: 2.5rem;
         margin-bottom: 5.938rem;
 
-        @media only screen and (max-width:  63.938rem) {
+        @media only screen and (max-width: 63.938rem) {
             padding: 1.125rem;
             margin-bottom: 4.5rem;
         }
@@ -199,13 +199,17 @@
             .image-with-text--content--inner {
                 margin-left: 0;
 
+                @media only screen and (max-width: 63.938rem) {
+                    margin-left: auto;
+                }
+
                 .h2 {
                     line-height: 110%;
                     letter-spacing: 0.1rem;
                     color: var(--color-light-2);
                     margin-bottom: 2.5rem;
 
-                    @media only screen and (max-width:  63.938rem) {
+                    @media only screen and (max-width: 63.938rem) {
                         margin-bottom: 1.5rem;
                     }
                 }
@@ -218,6 +222,96 @@
                     &:hover {
                         background: var(--color-accent-5);
                         border-color: var(--color-accent-5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.template-page-about {
+    .section-image-with-text{
+        .row{
+            justify-content: center;
+
+            .columns{
+                max-width: 75rem;
+
+                .image-with-text--image{
+                    border-radius: 1.25rem !important;
+                }
+
+                .image-with-text--content{
+                    padding-left: 1.25rem !important;
+                    background: transparent !important;
+                    padding-right: 1.25rem !important;
+
+                    @media only screen and (max-width: 63.938rem) {
+                        padding: .75rem 0 !important;
+                    }
+
+
+                    .image-with-text--content--inner {
+                        max-width: 30.5rem !important;
+                        margin-left: 0;
+
+                        @media only screen and (max-width: 63.938rem) {
+                            max-width: 100%;
+
+                            h3.h2{
+                                font-size: var(--font-size-24) !important;
+                                line-height: 120% !important;
+                                text-align: center;
+
+                                br{
+                                    display: none ;
+                                }
+                            }
+                        }
+
+                        h3.h2 {
+                            font-size: var(--font-size-40);
+                            line-height: 2.75rem;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        p {
+                            font-size: var(--font-size-16) !important;
+
+                            @media only screen and (max-width: 63.938rem) {
+                                font-size: var(--font-size-14) !important;
+                                line-height: 140% !important;
+                                text-align: center;
+                            }
+                        }
+
+                    }
+                }
+
+                .image-with-text.image_first{
+                    grid-template-columns: 36% 1fr;
+
+                    @media only screen and (max-width: 63.938rem) {
+                        grid-template-columns: 1fr;
+                        grid-template-areas: "media" "content" ;
+                    }
+
+                    .image-with-text--content{
+                        justify-content: flex-end;
+                    }
+
+                    .image-with-text--content--inner{
+                        margin-right: 0;
+                    }
+                }
+
+                .image-with-text.text_first{
+                    grid-template-columns: 1fr 36%;
+
+                    @media only screen and (max-width: 63.938rem) {
+                        grid-template-columns: 1fr;
+                        grid-template-areas: "media" "content" ;
                     }
                 }
             }

@@ -205,3 +205,99 @@
         }
     }
 }
+
+.template-page-about {
+    .multicolumn {
+        padding: 2.5rem 0 5.625rem;
+        background: var(--color-secondary-dark);
+        margin: 0;
+
+        @media only screen and (max-width: 47.938rem) {
+            padding: 1.875rem 0 2.5rem;
+        }
+
+        .section-header {
+            place-items: center;
+            place-content: center;
+            padding-bottom: 0.625rem;
+
+            .subheading {
+                line-height: 120%;
+                letter-spacing: -0.025rem;
+                color: var(--color-accent-2);
+                margin-bottom: 0.5rem;
+            }
+
+            h3 {
+                line-height: 120%;
+                letter-spacing: 0.14rem;
+                margin-bottom: 0.5rem;
+                color: var(--color-accent-2);
+            }
+
+            .section-header--description {
+                p {
+                    color: var(--color-light-1);
+                    text-align: center;
+                    font-family: var(--font-primary);
+                    font-size: var(--font-size-16);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    margin: 0;
+                }
+            }
+        }
+
+        .multicolumn__inner {
+            margin: 0;
+
+            .row {
+                gap: 2.5rem;
+
+                .multicolumn__column {
+                    max-width: 13.625rem;
+                    flex: 0 0 calc(20% - 2rem);
+
+                    @media only screen and (max-width: 47.938rem) {
+                        padding: 0;
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
+
+                    .multicolumn__image {
+                        width: 100% !important;
+                        margin-bottom: 2rem;
+
+                        @media only screen and (max-width: 47.938rem) {
+                            margin-bottom: 0.75rem;
+                        }
+                    }
+
+                    h4 {
+                        color: var(--color-light-2);
+                        line-height: 120%;
+                        letter-spacing: 0.06rem;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .rte {
+                        p {
+                            color: var(--color-light-1);
+                            font-size: var(--font-size-16);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            margin: 0;
+
+                            @media only screen and (max-width: 47.938rem) {
+                                font-size: var(--font-size-14);
+                                line-height: 140%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

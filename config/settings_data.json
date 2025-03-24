@@ -43,6 +43,7 @@
     "product_aspect_ratio": "square",
     "enable_quick_view": false,
     "enable_quick_add": true,
+    "show_products_vendor": false,
     "color_swatches_use_variants": true,
     "show_products_rating": true,
     "show_products_rating_average": true,
@@ -59,8 +60,7 @@
     "search_product_collection": "all",
     "search_product_collection_limit": 3,
     "search_product_list": [],
-    "content_for_index": [],
-    "show_products_vendor": false
+    "content_for_index": []
   },
   "presets": {
     "Default": {

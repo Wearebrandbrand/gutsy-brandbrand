@@ -41,7 +41,9 @@
 		</fieldset>
 		{%- if settings.email_terms_conditions_enable -%}
 			<div class="signup-container--terms">
-				<input type="checkbox" id="NewsletterTerms-{{ form.id }}" required>
+				{% comment %}
+					<input type="checkbox" id="NewsletterTerms-{{ form.id }}" required>
+				{% endcomment %}
 				<label for="NewsletterTerms-{{ form.id }}">
 					{{ 'sections.signup.i_agree' | t }}
 				</label>

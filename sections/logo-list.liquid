@@ -31,6 +31,11 @@
 						{{ 'image' | placeholder_svg_tag: 'placeholder_svg_tag' }}
 					</div>
         {% endif %}
+        {% if block.settings.text %}
+	        <div class="rte">
+						<p>{{ block.settings.text }}</p>
+					</div>
+				{% endif %}
 	    </a>
 	  {% endfor %}
 	</div>
@@ -136,6 +141,11 @@
         "type": "logo",
         "name": "Logo",
         "settings": [
+	        {
+						"type": "text",
+						"id": "text",
+						"label": "Logo text"
+					},
           {
             "type": "image_picker",
             "id": "image",

@@ -15,17 +15,9 @@
       "type": "footer",
       "blocks": {
         "ebdaaa5c-c47c-42ac-a830-30a799694755": {
-          "type": "text",
+          "type": "logo",
           "settings": {
-            "column_size": "large",
-            "text_alignment": "left",
-            "title": "",
-            "image": "shopify://shop_images/Vector.svg",
-            "text": "",
-            "text_size": "medium",
-            "button_text": "",
-            "button_link": "",
-            "show_social_links": true
+            "logo": "shopify://shop_images/Vector.svg"
           }
         },
         "d402e6d5-9d79-43ad-900a-cfaddc6cd9f8": {
@@ -33,7 +25,7 @@
           "settings": {
             "column_size": "small",
             "title": "Gutsy",
-            "menu": "main-menu"
+            "menu": "footer_left"
           }
         },
         "055d0c35-3f11-4f51-9e3d-eab55edb7a9b": {
@@ -41,15 +33,15 @@
           "settings": {
             "column_size": "small",
             "title": "Shop",
-            "menu": "main-menu"
+            "menu": "footer_2"
           }
         },
-        "menu_kMiHwE": {
+        "2ab8345e-9f63-4c80-b028-f4edae3633b5": {
           "type": "menu",
           "settings": {
             "column_size": "small",
             "title": "Support",
-            "menu": "footer"
+            "menu": "footer_3"
           }
         }
       },
@@ -57,15 +49,15 @@
         "ebdaaa5c-c47c-42ac-a830-30a799694755",
         "d402e6d5-9d79-43ad-900a-cfaddc6cd9f8",
         "055d0c35-3f11-4f51-9e3d-eab55edb7a9b",
-        "menu_kMiHwE"
+        "2ab8345e-9f63-4c80-b028-f4edae3633b5"
       ],
       "settings": {
-        "footer_reveal_animation": false,
+        "footer_reveal_animation": true,
         "copyright_text": "All rights reserved.",
         "show_language_switcher": true,
         "show_currency_switcher": true,
         "show_payment_icons": true,
-        "enable_follow_on_shop": true
+        "copyright_menu": "copyright"
       }
     }
   },

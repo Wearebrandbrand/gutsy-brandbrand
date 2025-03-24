@@ -11,6 +11,25 @@
 <theme-footer class="footer" id="footer">
   <div class="row">
     {%- for block in section.blocks -%}
+      {%- if block.type == 'logo' -%}
+        {%- liquid
+          assign column_class = 'small-12 medium-4 large-2'
+          case block.settings.column_size
+            when 'medium'
+              assign column_class = 'small-12 medium-3'
+            when 'large'
+              assign column_class = 'small-12 medium-4'
+          endcase
+        -%}
+        <div class="{{ column_class | escape }} columns widget--logo-column" {{ block.shopify_attributes }}>
+          <div class="logo-container">
+            {% render 'header-logo', header_settings: block.settings %}
+            <div class="footer-social-icons">
+              {%- render 'social-links', show_label: false -%}
+            </div>
+          </div>
+        </div>
+      {% endif %}
       {% if block.type == 'text' %}
         {%- liquid
           assign column_class = 'small-12 medium-4 large-2'
@@ -59,7 +78,11 @@
           <div class="widget widget--menu">
             <button class="thb-widget-title collapsible" tabindex="0">
               {{ block.settings.title }}
-              <span>{%- render 'svg-icons' with 'thb-collapsible-arrow' -%}</span>
+              <span>
+                <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.30943 0.625467C1.76969 0.165208 2.51592 0.165209 2.97618 0.625471L9.99992 7.64924L17.0237 0.625467C17.484 0.165208 18.2302 0.165209 18.6905 0.625471C19.1507 1.08573 19.1507 1.83196 18.6905 2.29222L10.8333 10.1494C10.6123 10.3704 10.3125 10.4946 9.99992 10.4946C9.68734 10.4946 9.38756 10.3704 9.16654 10.1494L1.30943 2.29222C0.849168 1.83196 0.849169 1.08573 1.30943 0.625467Z" fill="var(--color-light-2)"/>
+                </svg>
+              </span>
             </button>
             {%- if block.settings.menu != blank -%}
               <ul class="thb-widget-menu">
@@ -189,38 +212,55 @@
       {%- endif -%}
     {%- endfor -%}
   </div>
+  <div class="mid-footer">
+    <div class="row">
+      {%- if show_payment_icons -%}
+        <div class="footer-payment-icons">
+          {%- unless shop.enabled_payment_types == empty -%}
+            {%- for type in shop.enabled_payment_types -%}
+              <figure>{{ type | payment_type_svg_tag: class: 'payment-icons__icon' }}</figure>
+            {%- endfor -%}
+          {%- endunless -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
   <div class="sub-footer">
     <div class="row">
-      <div class="small-12 columns"><hr></div>
-      <div class="small-12 medium-8 columns">
-        {% render 'localization',
-          id: 'FooterLocalization',
-          show_language_switcher: show_language_switcher,
-          show_currency_switcher: show_currency_switcher,
-          open_top: true
-        %}
-      </div>
-      <div class="small-12 medium-4 columns">
-        {%- if show_payment_icons -%}
-          <div class="footer-payment-icons">
-            {%- unless shop.enabled_payment_types == empty -%}
-              {%- for type in shop.enabled_payment_types -%}
-                <figure>{{ type | payment_type_svg_tag: class: 'payment-icons__icon' }}</figure>
-              {%- endfor -%}
-            {%- endunless -%}
-          </div>
-        {%- endif -%}
-      </div>
-      <div class="small-12 columns">
+      <div class="small-12 columns copyright-text">
         <p>
-          &copy; {{ 'now' | date: '%Y' }}
-          {{ shop.name }}, {{ copyright_text }}
-          {{ powered_by_link }}
+          <b>
+          &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}.</b>
+          {{ copyright_text }}
+          
         </p>
         {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
           <div class="footer--follow-on-shop">
             {{ shop | login_button: action: 'follow' }}
           </div>
+        {%- endif -%}
+      </div>
+      <div class="small-12 columns menu-box">
+        {%- if section.settings.copyright_menu != blank -%}
+          <ul class="thb-widget-menu">
+            {% for link in section.settings.copyright_menu.links %}
+              {% assign has_sub_menu = false %}
+              {% if link.links.size > 0 %}
+                {% assign has_sub_menu = true %}
+              {% endif %}
+              <li class="{% if has_sub_menu %}menu-item-has-children{% endif %}{% if link.active %} active{% endif %}">
+                <a
+                  href="{{ link.url }}"
+                  title="{{ link.title | escape }}"
+                  {%- if link.active %}
+                    aria-current="page"
+                  {% endif -%}
+                >
+                  {{- link.title -}}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
         {%- endif -%}
       </div>
     </div>
@@ -276,11 +316,29 @@
       "id": "enable_follow_on_shop",
       "default": true,
       "label": "Enable Follow on Shop"
+    },
+    {
+      "type": "link_list",
+      "id": "copyright_menu",
+      "label": "Copyright Menu",
+      "info": "Select navigation to display on bottom footer"
     }
   ],
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image",
+          "info": "400 x 68 px .png recommended."
+        }
+      ]
     },
     {
       "type": "text",

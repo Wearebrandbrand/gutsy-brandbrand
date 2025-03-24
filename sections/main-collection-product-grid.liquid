@@ -1,4 +1,5 @@
 {{- 'components--facets.css' | asset_url | stylesheet_tag -}}
+{{- 'components--collection-product-grid.css' | asset_url | stylesheet_tag -}}
 {%- liquid
 	assign enable_filtering = section.settings.enable_filtering
 	assign enable_sorting = section.settings.enable_sorting
@@ -93,6 +94,7 @@
 {% schema %}
   {
     "name": "Product grid",
+	  "class": "section-collection-product-grid",
     "settings": [
 			{
         "type": "range",

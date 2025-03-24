@@ -73,7 +73,9 @@
 					{%- endfor -%}
 				</div>
 			</div>
-
+			{% if section.settings.link_label != blank %}
+					<a class="button {{ section.settings.button_1_color }}" href="{{ section.settings.link }}" role="button" title="{{ section.settings.link_label | escape }}">{{ section.settings.link_label }}</a>
+			{% endif %}
 		</div>
 	</div>
 </div>
@@ -246,7 +248,41 @@
 				"id": "disable_bottom_spacing",
 				"default": false,
 				"label": "Remove bottom spacing"
-			}
+			},
+	    {
+		    "type": "header",
+		    "content": "Button"
+      },
+      {
+        "type": "select",
+        "id": "button_1_color",
+        "label": "Color",
+        "options": [
+          {
+            "value": "regular",
+            "label": "Regular"
+          },
+          {
+            "value": "accent",
+            "label": "Accent"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          }
+        ],
+        "default": "accent"
+      },
+      {
+        "type": "text",
+        "id": "link_label",
+        "label": "Link label"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }
     ],
     "blocks": [
       {

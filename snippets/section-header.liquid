@@ -1,6 +1,9 @@
 {%- if section_heading != blank or section_description != blank -%}
 <div class="section-header">
 	<div class="section-header--content">
+		{%- if section_sub_heading -%}
+			<p class="subheading">{{ section_sub_heading }}</p>
+		{%- endif -%}
 		{%- if section_heading -%}
 			<h3 class="section-header--title">
 				{% render 'animated-marker-heading', heading: section_heading, style: marker_style, color: marker_color %}

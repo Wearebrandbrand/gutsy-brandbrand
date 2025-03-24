@@ -23,6 +23,8 @@
   <script src="{{ 'components--free-shipping.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/theming/js/components/header.js" or path == "../../theming/js/components/header.js" %}
   <script src="{{ 'components--header.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+{% elsif path == "/theming/js/components/list-collections.js" or path == "../../theming/js/components/list-collections.js" %}
+  <script src="{{ 'components--list-collections.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/theming/js/components/max-height.js" or path == "../../theming/js/components/max-height.js" %}
   <script src="{{ 'components--max-height.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/theming/js/components/mega-menu-sidebar.js" or path == "../../theming/js/components/mega-menu-sidebar.js" %}
@@ -107,6 +109,8 @@
   {{ 'components--breadcrumbs.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/cart.scss" or path == "../../theming/scss/components/cart.scss" %}
   {{ 'components--cart.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/components/collection-product-grid.scss" or path == "../../theming/scss/components/collection-product-grid.scss" %}
+  {{ 'components--collection-product-grid.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/comments.scss" or path == "../../theming/scss/components/comments.scss" %}
   {{ 'components--comments.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/compare-lightbox.scss" or path == "../../theming/scss/components/compare-lightbox.scss" %}
@@ -175,6 +179,8 @@
   {{ 'components--subheader.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/video.scss" or path == "../../theming/scss/components/video.scss" %}
   {{ 'components--video.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/extra/_hwtartz-font.scss" or path == "../../theming/scss/extra/_hwtartz-font.scss" %}
+  {{ 'extra--_hwtartz-font.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/extra/photoswipe.scss" or path == "../../theming/scss/extra/photoswipe.scss" %}
   {{ 'extra--photoswipe.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/extra/promotional-banner.scss" or path == "../../theming/scss/extra/promotional-banner.scss" %}
@@ -241,6 +247,8 @@
   {{ 'sections--spacer.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/tabbed-content.scss" or path == "../../theming/scss/sections/tabbed-content.scss" %}
   {{ 'sections--tabbed-content.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/table-section.scss" or path == "../../theming/scss/sections/table-section.scss" %}
+  {{ 'sections--table-section.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/template-header.scss" or path == "../../theming/scss/sections/template-header.scss" %}
   {{ 'sections--template-header.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/testimonials.scss" or path == "../../theming/scss/sections/testimonials.scss" %}

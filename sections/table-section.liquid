@@ -1,0 +1,188 @@
+{{- 'sections--table-section.css' | asset_url | stylesheet_tag -}}
+
+<div class="table-section">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="table-section-header table-header">
+        <div class="table-section-header-box">
+          {% if section.settings.sub_heading %}
+            <p class="subheading">{{ section.settings.sub_heading }}</p>
+          {% endif %}
+          {% if section.settings.heading %}
+            <h3 class="h2 ">{{ section.settings.heading }}</h3>
+          {% endif %}
+          {% if section.settings.description %}
+            <div class="rte">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="table-section-img-box">
+          <div class="img-container">
+            {%- if section.settings.image != blank -%}
+              {% assign image = section.settings.image %}
+              {% assign master_width = image.src.width | append: 'x' | append: image.src.height %}
+              {%- render 'responsive-image', image: image, sizes: master_width, retina: true -%}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder_svg_tag' }}
+            {%- endif -%}
+          </div>
+          <div class="img-container">
+            {%- if section.settings.image_2 != blank -%}
+              {% assign image = section.settings.image_2 %}
+              {% assign master_width = image.src.width | append: 'x' | append: image.src.height %}
+              {%- render 'responsive-image', image: image, sizes: master_width, retina: true -%}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'placeholder_svg_tag' }}
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+
+      <div class="table-section-body">
+        
+        {% for block in section.blocks %}
+          <div class="table-section-body-item table-section-header">
+            {% if block.settings.text %}
+              <div class="table-item-text table-section-header-box">
+                <h5>{{ block.settings.text }}</h5>
+              </div>
+            {% endif %}
+            <div class="table-section-img-box">
+              <div class="table-item-other-brand img-container">
+                
+                {% if block.settings.other_brand %}
+                  <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 17.4897C1 8.65319 8.16344 1.48975 17 1.48975C25.8366 1.48975 33 8.65319 33 17.4897C33 26.3263 25.8366 33.4897 17 33.4897C8.16344 33.4897 1 26.3263 1 17.4897Z" fill="#1A3C32"/>
+                    <path d="M1 17.4897C1 8.65319 8.16344 1.48975 17 1.48975C25.8366 1.48975 33 8.65319 33 17.4897C33 26.3263 25.8366 33.4897 17 33.4897C8.16344 33.4897 1 26.3263 1 17.4897Z" stroke="#1A3C32" stroke-width="2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.4428 11.1241C26.9208 11.5659 26.9502 12.3115 26.5084 12.7895L16.0896 24.0628C15.8665 24.3042 15.5528 24.4415 15.2241 24.4415C14.8954 24.4415 14.5816 24.3042 14.3586 24.0628L7.49163 16.6327C7.04985 16.1547 7.07922 15.409 7.55724 14.9672C8.03526 14.5255 8.78091 14.5548 9.2227 15.0329L15.2241 21.5265L24.7773 11.1897C25.2191 10.7117 25.9648 10.6823 26.4428 11.1241Z" fill="#FAFAFA"/>
+                  </svg>
+                {% else %}
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.09538 0.584942C1.55564 0.124681 2.30187 0.124681 2.76213 0.584942L9.24262 7.06544L15.7231 0.584942C16.1834 0.124681 16.9296 0.124681 17.3899 0.584942C17.8501 1.0452 17.8501 1.79143 17.3899 2.25169L10.9094 8.73219L17.39 15.2128C17.8503 15.6731 17.8503 16.4193 17.39 16.8796C16.9297 17.3398 16.1835 17.3398 15.7232 16.8796L9.24262 10.3989L2.76201 16.8796C2.30175 17.3398 1.55552 17.3398 1.09526 16.8796C0.634996 16.4193 0.634996 15.6731 1.09526 15.2128L7.57587 8.73219L1.09538 2.25169C0.635115 1.79143 0.635115 1.0452 1.09538 0.584942Z" fill="#1A3C32"/>
+                  </svg>
+                {% endif %}
+              
+              </div>
+              <div class="table-item-gutsy-brand img-container">
+                {% if block.settings.gutys_brand %}
+                  <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 17.4897C1 8.65319 8.16344 1.48975 17 1.48975C25.8366 1.48975 33 8.65319 33 17.4897C33 26.3263 25.8366 33.4897 17 33.4897C8.16344 33.4897 1 26.3263 1 17.4897Z" fill="#1A3C32"/>
+                    <path d="M1 17.4897C1 8.65319 8.16344 1.48975 17 1.48975C25.8366 1.48975 33 8.65319 33 17.4897C33 26.3263 25.8366 33.4897 17 33.4897C8.16344 33.4897 1 26.3263 1 17.4897Z" stroke="#1A3C32" stroke-width="2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.4428 11.1241C26.9208 11.5659 26.9502 12.3115 26.5084 12.7895L16.0896 24.0628C15.8665 24.3042 15.5528 24.4415 15.2241 24.4415C14.8954 24.4415 14.5816 24.3042 14.3586 24.0628L7.49163 16.6327C7.04985 16.1547 7.07922 15.409 7.55724 14.9672C8.03526 14.5255 8.78091 14.5548 9.2227 15.0329L15.2241 21.5265L24.7773 11.1897C25.2191 10.7117 25.9648 10.6823 26.4428 11.1241Z" fill="#FAFAFA"/>
+                  </svg>
+                {% else %}
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.09538 0.584942C1.55564 0.124681 2.30187 0.124681 2.76213 0.584942L9.24262 7.06544L15.7231 0.584942C16.1834 0.124681 16.9296 0.124681 17.3899 0.584942C17.8501 1.0452 17.8501 1.79143 17.3899 2.25169L10.9094 8.73219L17.39 15.2128C17.8503 15.6731 17.8503 16.4193 17.39 16.8796C16.9297 17.3398 16.1835 17.3398 15.7232 16.8796L9.24262 10.3989L2.76201 16.8796C2.30175 17.3398 1.55552 17.3398 1.09526 16.8796C0.634996 16.4193 0.634996 15.6731 1.09526 15.2128L7.57587 8.73219L1.09538 2.25169C0.635115 1.79143 0.635115 1.0452 1.09538 0.584942Z" fill="#1A3C32"/>
+                  </svg>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        
+      </div>
+  
+      <div class="section-header--button">
+				{% render 'text-button', url: section.settings.button_url, title: section.settings.button_text %}
+			</div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Table Section",
+  "class": "section-table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "Gutsy Voeding",
+      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub Heading",
+      "default": "Supermarkt voer VS.",
+      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Content",
+      "default": "<p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Table Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Table Image 1",
+      "info": "240 x 220 .jpg recommended."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Table Image 2",
+      "info": "240 x 220 .jpg recommended."
+    },
+    {
+      "type": "header",
+      "content": "Button Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Probeer het nu",
+      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "table_content",
+      "name": "Points",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Lorem ipsum dolor sit amet consectetur."
+        },
+        {
+          "type": "checkbox",
+          "id": "other_brand",
+          "label": "Other Brand",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "gutys_brand",
+          "label": "Gutys Brand",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table Section"
+    }
+  ]
+}
+{% endschema %}

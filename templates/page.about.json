@@ -208,6 +208,65 @@
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }
+    },
+    "our-team": {
+      "type": "our-team",
+      "blocks": {
+        "team_member_a": {
+          "type": "team_member",
+          "settings": {
+            "member_name": "JACK",
+            "member_post": "Co-Founder",
+            "member_image": "shopify://shop_images/IMG.png"
+          }
+        },
+        "team_member_b": {
+          "type": "team_member",
+          "settings": {
+            "member_name": "JACK",
+            "member_post": "Co-Founder",
+            "member_image": "shopify://shop_images/IMG.png"
+          }
+        },
+        "team_member_c": {
+          "type": "team_member",
+          "settings": {
+            "member_name": "JACK",
+            "member_post": "Co-Founder",
+            "member_image": "shopify://shop_images/IMG.png"
+          }
+        },
+        "team_member_d": {
+          "type": "team_member",
+          "settings": {
+            "member_name": "JACK",
+            "member_post": "Co-Founder",
+            "member_image": "shopify://shop_images/IMG.png"
+          }
+        },
+        "team_member_e": {
+          "type": "team_member",
+          "settings": {
+            "member_name": "JACK",
+            "member_post": "Co-Founder",
+            "member_image": "shopify://shop_images/IMG.png"
+          }
+        }
+      },
+      "block_order": [
+        "team_member_a",
+        "team_member_b",
+        "team_member_c",
+        "team_member_d",
+        "team_member_e"
+      ],
+      "settings": {
+        "sub_heading": "Ontmoet",
+        "heading": "het team",
+        "description": "",
+        "border_separator": false,
+        "border_separator_full": false
+      }
     }
   },
   "order": [
@@ -217,6 +276,7 @@
     "f9dfc74b-ea6d-4369-8439-7dce248b605c",
     "6669cf74-31f8-4f94-a562-b72e8c241d3b",
     "3c475617-855b-4e78-b265-b1ed05a760bb",
-    "6669cf74-31f8-4f94-a562-b72e8c241d3ba"
+    "6669cf74-31f8-4f94-a562-b72e8c241d3ba",
+    "our-team"
   ]
 }

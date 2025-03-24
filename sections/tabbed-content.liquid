@@ -1,3 +1,4 @@
+{{- 'sections--collapsible-content.css' | asset_url | stylesheet_tag -}}
 {{- 'sections--tabbed-content.css' | asset_url | stylesheet_tag -}}
 <script src="{{ 'sections--tabbed-content.js' | asset_url }}" defer="defer"></script>
 {%- liquid
@@ -44,6 +45,31 @@
 						{{ block.settings.text | newline_to_br }}
 						{{ block.settings.page.content }}
 						{{ block.settings.custom_liquid }}
+	
+						<div class="page-metafield section-collapsible-content">
+							<div calass="row">
+								<div class="columns small-12">
+										<div class="collapsible-content">
+											<div class="collapsible-content__inner">
+												{% for faq in page.metafields.custom.collapsible_content.value %}
+													<collapsible-row class="accordion" {{ block.shopify_attributes }}>
+														<details id="Details-{{ block.id }}-{{ section.id }}" {% if block.settings.open %}open{% endif %}>
+															<summary>
+																{{ faq.title }}
+																<span>{%- render 'svg-icons' with 'thb-collapsible-arrow' -%}</span>
+															</summary>
+															<div class="collapsible__content accordion__content rte" id="Accordion-{{ block.id }}-{{ section.id }}">
+																{{ faq.content }}
+															</div>
+														</details>
+													</collapsible-row>
+												{% endfor %}
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				{%- endfor -%}
 			</tabbed-content>

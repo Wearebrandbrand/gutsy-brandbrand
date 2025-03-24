@@ -74,43 +74,43 @@
     gap: 1.125rem;
   }
 }
-.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber {
+.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member {
   max-width: 20rem;
   width: 100%;
   text-align: center;
 }
 @media only screen and (max-width: 74.938rem) {
-  .our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber {
+  .our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member {
     max-width: 16rem;
   }
 }
 @media only screen and (max-width: 63.938rem) {
-  .our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber {
+  .our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member {
     max-width: 8.375rem;
   }
 }
-.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber .memeber-img {
+.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member .member-img {
   margin-bottom: 2rem;
 }
-.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber .memeber-img img {
+.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member .member-img img {
   width: 10.125rem;
   height: 10.125rem;
   border-radius: 100%;
   object-fit: cover;
 }
 @media only screen and (max-width: 63.938rem) {
-  .our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber .memeber-img img {
+  .our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member .member-img img {
     width: 7.875rem;
     height: 7.875rem;
   }
 }
-.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber .memeber-info h4 {
+.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member .member-info h4 {
   color: var(--color-accent-1);
   line-height: 120%; /* 28.8px */
   letter-spacing: 0.06rem;
   margin-bottom: 0.5rem;
 }
-.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-memeber .memeber-info p {
+.our-team-section .columns .our-team-section-body .our-team-section-body-box .our-team-member .member-info p {
   color: var(--color-secondary-dark);
   line-height: 140%;
   margin: 0;

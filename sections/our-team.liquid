@@ -23,8 +23,8 @@
         <div class="our-team-section-body-box">
 
           {% for block in section.blocks %}
-            <div class="our-team-memeber">
-              <div class="memeber-img">
+            <div class="our-team-member">
+              <div class="member-img">
                 {%- if block.settings.member_image != blank -%}
                   {% assign image = block.settings.member_image %}
                   {% assign master_width = image.src.width | append: 'x' | append: image.src.height %}
@@ -33,7 +33,7 @@
                   {{ 'image' | placeholder_svg_tag: 'placeholder_svg_tag' }}
                 {%- endif -%}
               </div>
-              <div class="memeber-info">
+              <div class="member-info">
                 {% if block.settings.member_name %}
                   <h4>{{ block.settings.member_name }}</h4>
                 {% endif %}

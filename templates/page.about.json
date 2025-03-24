@@ -22,7 +22,7 @@
         "subheading_rYrHwV": {
           "type": "subheading",
           "settings": {
-            "text": "Dit is het verhaal achter gutsy"
+            "text": "en dit is het verhaal achter Gutsy"
           }
         }
       },
@@ -31,8 +31,8 @@
         "subheading_rYrHwV"
       ],
       "settings": {
-        "image": "shopify://shop_images/DSCF2782.jpg",
-        "image_parallax": true,
+        "image": "shopify://shop_images/about-banner.png",
+        "image_parallax": false,
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",
         "full_width": false,
@@ -40,14 +40,15 @@
         "content_position": "bottom-left",
         "text_alignment": "left",
         "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30,
+        "overlay_color": "#F0E7B2",
+        "overlay_opacity": 0,
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }
     },
     "3dffb284-32e0-40fe-b93f-9a6ac28668ec": {
       "type": "spacer",
+      "disabled": true,
       "settings": {
         "spacer_mobile": 10,
         "spacer_desktop": 30,
@@ -60,12 +61,13 @@
       "blocks": {
         "db73f8a2-20e5-459a-9b76-0f22a981a6f5": {
           "type": "image",
+          "disabled": true,
           "settings": {}
         },
         "template--17918040834330__8653503a-90e7-446a-8f99-8905e1d4a2ac-16769132332abda0ff-1": {
           "type": "heading",
           "settings": {
-            "text": "Image with text |Heading|",
+            "text": "pRATEN EN DROMEN <br>AAN DE BAR",
             "marker_style": "style3",
             "heading_size": "h2",
             "marker_color": "#1fd76c"
@@ -74,7 +76,7 @@
         "template--17918040834330__8653503a-90e7-446a-8f99-8905e1d4a2ac-16769132332abda0ff-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Image with text description</p>"
+            "text": "<p>Ons verhaal begon 5 jaar geleden. Wij (Achilles en Jack) leerden elkaar kennen op de Universiteit Gent. Het werd al snel duidelijk dat we veel gemeen hebben. We houden allebei van de wereld ontdekken en van kroegavonden, maar bovenal: we delen een liefde voor de planeet en honden, vooral onze trouwe metgezellen Otis en Choco.</p>"
           }
         }
       },
@@ -84,18 +86,17 @@
         "template--17918040834330__8653503a-90e7-446a-8f99-8905e1d4a2ac-16769132332abda0ff-2"
       ],
       "settings": {
+        "image": "shopify://shop_images/About_1.png",
         "use_video": false,
         "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "medium",
         "full_width": false,
-        "layout": "image_first",
-        "content_position": "text-center",
+        "layout": "text_first",
+        "content_position": "text-left",
         "column_spacing": "medium",
-        "color_bg": "#ffffff",
-        "color_text": "#252f35",
-        "color_border": "#e2e2e2",
+        "color_text": "#1A3C32",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }
@@ -103,8 +104,8 @@
     "f9dfc74b-ea6d-4369-8439-7dce248b605c": {
       "type": "spacer",
       "settings": {
-        "spacer_mobile": 30,
-        "spacer_desktop": 20,
+        "spacer_mobile": 40,
+        "spacer_desktop": 120,
         "border_separator": false,
         "border_separator_full": false
       }
@@ -114,12 +115,13 @@
       "blocks": {
         "f3685e9f-bed4-46a7-9859-4c56dd6cfcbc": {
           "type": "image",
+          "disabled": true,
           "settings": {}
         },
         "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-1": {
           "type": "heading",
           "settings": {
-            "text": "Image with text |Heading|",
+            "text": "Beginnen experimenteren omtrent het recept",
             "marker_style": "style2",
             "heading_size": "h2",
             "marker_color": "#8662fd"
@@ -128,7 +130,7 @@
         "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2": {
           "type": "text",
           "settings": {
-            "text": "<p>Image with text description</p>"
+            "text": "<p>We hebben een manier gevonden om deze twee passies te combineren. We proberen allemaal bewuster en ecologischer te eten. Maar hoe zit het met het voedsel dat we onze honden voorschotelen? We besloten zelf met een antwoord op deze vraag te komen.</p>"
           }
         }
       },
@@ -138,18 +140,17 @@
         "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2"
       ],
       "settings": {
+        "image": "shopify://shop_images/About_2.png",
         "use_video": false,
         "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "medium",
         "full_width": false,
-        "layout": "text_first",
-        "content_position": "text-center",
+        "layout": "image_first",
+        "content_position": "text-left",
         "column_spacing": "medium",
-        "color_bg": "#ffffff",
-        "color_text": "#252f35",
-        "color_border": "#e2e2e2",
+        "color_text": "#1A3C32",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }
@@ -158,9 +159,54 @@
       "type": "spacer",
       "settings": {
         "spacer_mobile": 40,
-        "spacer_desktop": 70,
+        "spacer_desktop": 120,
         "border_separator": false,
         "border_separator_full": false
+      }
+    },
+    "6669cf74-31f8-4f94-a562-b72e8c241d3ba": {
+      "type": "image-with-text",
+      "blocks": {
+        "f3685e9f-bed4-46a7-9859-4c56dd6cfcbc": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        },
+        "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Gutsy is geboren!",
+            "marker_style": "style2",
+            "heading_size": "h2",
+            "marker_color": "#8662fd"
+          }
+        },
+        "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gutsy is hoogwaardig hondenvoer op basis van insecten dat gezonder is voor je hond en onze planeet.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f3685e9f-bed4-46a7-9859-4c56dd6cfcbc",
+        "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-1",
+        "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/About_3.png",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "full_width": false,
+        "layout": "text_first",
+        "content_position": "text-left",
+        "column_spacing": "medium",
+        "color_text": "#1A3C32",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
       }
     }
   },
@@ -170,6 +216,7 @@
     "8653503a-90e7-446a-8f99-8905e1d4a2ac",
     "f9dfc74b-ea6d-4369-8439-7dce248b605c",
     "6669cf74-31f8-4f94-a562-b72e8c241d3b",
-    "3c475617-855b-4e78-b265-b1ed05a760bb"
+    "3c475617-855b-4e78-b265-b1ed05a760bb",
+    "6669cf74-31f8-4f94-a562-b72e8c241d3ba"
   ]
 }

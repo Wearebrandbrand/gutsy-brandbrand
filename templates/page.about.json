@@ -227,11 +227,11 @@
             "image": "shopify://shop_images/Meat.png",
             "image_full_width": false,
             "image_link": "",
+            "percent_text": "18%",
             "title": "De vleesindustrie is verantwoordelijk voor",
             "text": "<p>VAN DE TOTALE wERELDWIJDE UITSTOOT</p>",
             "link_label": "",
-            "link": "",
-            "percent_text": "18%"
+            "link": ""
           }
         },
         "column_YJQBh9": {
@@ -240,11 +240,11 @@
             "image": "shopify://shop_images/Factory.png",
             "image_full_width": false,
             "image_link": "",
+            "percent_text": "20%",
             "title": "De diervoeder- industrie verbruikt",
             "text": "<p>van de totale vleesindustrie</p>",
             "link_label": "",
-            "link": "",
-            "percent_text": "20%"
+            "link": ""
           }
         },
         "text_YJQBh9": {
@@ -287,13 +287,11 @@
         "marker_color": "#fd6262",
         "color_text": "#E8D67A",
         "color_links": "#E8D67A",
-        "disable_top_spacing": false,
-        "disable_bottom_spacing": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
         "button_1_color": "accent",
         "bottom_heading": "Dat is",
-        "last_heading": "ELK. JAAR. OPNIEUW.",
-        "disable_top_spacing": true,
-        "disable_bottom_spacing": true
+        "last_heading": "ELK. JAAR. OPNIEUW."
       }
     },
     "insecten": {
@@ -380,8 +378,8 @@
         "heading": "Insect Dinner!",
         "sub_heading": "Winner, winner,",
         "description": "<p>Er zijn  talloze voordelen aan het eten van insecten. Wist je dat insecten...</p>",
-        "heading_size": "h4",
-        "columns_desktop": 5
+        "columns_desktop": 5,
+        "heading_size": "h4"
       }
     },
     "our-team": {
@@ -390,41 +388,41 @@
         "team_member_a": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
-            "member_post": "Co-Founder",
-            "member_image": "shopify://shop_images/IMG.png"
+            "member_post": "Co-Founder"
           }
         },
         "team_member_b": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
-            "member_post": "Co-Founder",
-            "member_image": "shopify://shop_images/IMG.png"
+            "member_post": "Co-Founder"
           }
         },
         "team_member_c": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
-            "member_post": "Co-Founder",
-            "member_image": "shopify://shop_images/IMG.png"
+            "member_post": "Co-Founder"
           }
         },
         "team_member_d": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
-            "member_post": "Co-Founder",
-            "member_image": "shopify://shop_images/IMG.png"
+            "member_post": "Co-Founder"
           }
         },
         "team_member_e": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
-            "member_post": "Co-Founder",
-            "member_image": "shopify://shop_images/IMG.png"
+            "member_post": "Co-Founder"
           }
         }
       },
@@ -436,11 +434,9 @@
         "team_member_e"
       ],
       "settings": {
-        "sub_heading": "Ontmoet",
         "heading": "het team",
-        "description": "",
-        "border_separator": false,
-        "border_separator_full": false
+        "sub_heading": "Ontmoet",
+        "description": ""
       }
     }
   },

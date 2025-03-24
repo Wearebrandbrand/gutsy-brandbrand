@@ -5,6 +5,16 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
 <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css'/>
 
+<style>
+  @media (max-width: 1079px) {
+    .stores-list__wrap-inner {
+      width: calc({{section.blocks.size}} * 100vw);
+      display: flex;
+      grid-column-gap: 1rem;
+    }
+  }
+</style>
+
 <div class="store-locator-section-inner">
     <div class="map-icon-svg hidden">{{ section.settings.map_icon_svg }}</div>
 

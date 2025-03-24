@@ -65,17 +65,21 @@
             letter-spacing: 0.1rem;
             margin-bottom: 0.5rem;
         }
+
         .description-size--medium {
             p {
                 max-width: 23.125rem;
                 margin: 0 auto;
             }
         }
+
         .signup-container {
             margin-top: 1.938rem;
-            @media only screen and (width <= 63.938rem) {
+
+            @media only screen and (max-width:  63.938rem) {
                 margin-top: 1.125rem;
             }
+
             form {
                 fieldset {
                     .field {
@@ -84,10 +88,12 @@
                             border: 0.125rem solid var(--color-light-2);
                             background: var(--color-light-2);
                             padding: 0.813rem 4.063rem 0.813rem  1.5rem;
-                            @media only screen and (width <= 63.938rem) {
-                                padding: 0.438rem 1.125rem 0.438rem 1.125rem;
+
+                            @media only screen and (max-width:  63.938rem) {
+                                padding: 0.438rem 1.125rem;
                             }
                         }
+
                         input,
                         label {
                             color: var(--color-secondary);
@@ -97,7 +103,8 @@
                             font-weight: 400;
                             line-height: 140%;
                             outline: none;
-                            @media only screen and (width <= 63.938rem) {
+
+                            @media only screen and (max-width:  63.938rem) {
                                 font-size: var(--font-size-14);
                             }
                         }
@@ -108,6 +115,7 @@
                             background-color: var(--color-light-2);
                         }
                     }
+
                     button {
                         &.submit {
                             border-radius: 6.25rem;
@@ -117,9 +125,10 @@
                             max-height: 2.9rem;
                             right: 2px;
                             top: 2px;
+
                             --color-accent: #994F00;
 
-                            @media only screen and (width <= 63.938rem) {
+                            @media only screen and (max-width:  63.938rem) {
                                 max-width: 3.125rem;
                             }
 
@@ -135,8 +144,10 @@
                 }
             }
         }
+
         .email-form-agree {
             margin-top: 0.938rem;
+
             p {
                 margin: 0;
                 color: var(--color-secondary);
@@ -146,6 +157,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
+
                 a {
                     text-decoration-line: underline;
                     text-decoration-style: solid;

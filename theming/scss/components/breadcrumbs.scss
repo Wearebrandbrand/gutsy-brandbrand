@@ -69,9 +69,11 @@
   font-weight: 600;
   line-height: 120%;
   text-decoration: none;
-  @media only screen and (width <= 63.938rem) {
+
+  @media only screen and (max-width:  63.938rem) {
     font-size: var(--font-size-12);
   }
+
   a {
     color: var(--color-secondary);
     font-family: var(--font-primary);
@@ -80,7 +82,8 @@
     font-weight: 600;
     line-height: 120%;
     text-decoration: none;
-    @media only screen and (width <= 63.938rem) {
+
+    @media only screen and (max-width:  63.938rem) {
       font-size: var(--font-size-12);
     }
   }

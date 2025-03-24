@@ -10,13 +10,13 @@ Author URI: https://brandbrand.nl
 @use 'extra/hwtartz-font';
 
 :root {
-  --font-primary: Poppins, sans-serif;
+  --font-primary: poppins, sans-serif;
   --font-heading: 'HWT Artz', sans-serif;
   --color-primary: #FF8500;
   --color-primary-focus: #FFB566;
   --color-primary-selected: #FFB566;
   --color-primary-disable: #F4F5F5;
-  --color-black: #000000;
+  --color-black: #000;
   --color-secondary: #3D3F43;
   --color-secondary-dark: #094E39;
   --color-accent-1: #1A3C32;
@@ -397,7 +397,8 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  @media only screen and (width <= 63.938rem) {
+
+  @media only screen and (max-width: 63.938rem) {
     font-size: var(--font-size-10);
     line-height: 130%;
     letter-spacing: 0.025rem;
@@ -2718,7 +2719,7 @@ scroll-shadow {
           rgba(var(--bg-body-rgb), 1));
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
   .mobile-height-full {
     transition: height 0.5s linear;
     height: calc(100vh - var(--announcement-height, 0px));
@@ -2731,37 +2732,37 @@ scroll-shadow {
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .mobile-height-auto {
     min-height: auto;
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .mobile-height-300 {
     min-height: 300px;
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .mobile-height-350 {
     min-height: 350px;
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .mobile-height-400 {
     min-height: 400px;
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .mobile-height-450 {
     min-height: 450px;
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .mobile-height-500 {
     min-height: 500px;
   }
@@ -2840,10 +2841,14 @@ scroll-shadow {
 
 .subheading {
   font-family: var(--font-primary) !important;
+
   --font-body-medium-weight: 700;
+
   letter-spacing: -0.4px;
   color: var(--color-accent-1);
+
   --font-heading-letter-spacing: 0;
+
   @media only screen and (max-width: 1024px) {
     text-align: center;
   }
@@ -3693,6 +3698,7 @@ h6,
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
+
   --color-header-links: var(--color-secondary);
   --color-header-links-hover: var(--color-accent);
 }
@@ -3721,6 +3727,7 @@ h6,
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
+
   --color-header-links: var(--color-secondary);
   --color-header-links-hover: var(--color-accent);
 }
@@ -3744,6 +3751,7 @@ h6,
 .header .menu-logo-container .header-right .thb-secondary-area a.thb-secondary-cart .thb-item-count {
   top: -0.9375rem;
   right: -0.9375rem;
+
   --color-accent: var(--color-primary)
 }
 
@@ -3761,12 +3769,12 @@ h6,
   line-height: 120%;
 }
 
-@media only screen and (width <= 63.938rem) {
+@media only screen and (max-width:  63.938rem) {
   .header {
     position: fixed;
     border-radius: 0.75rem;
     background: var(--color-light-2);
-    box-shadow: 0 0 0.625rem 0.125rem rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 0.625rem 0.125rem rgb(0 0 0 / 16%);
     max-width: calc(100% - 2rem);
     left: 1rem;
     overflow: hidden;
@@ -3853,6 +3861,7 @@ h6,
   .header .menu-logo-container .header-right .thb-secondary-area a.thb-secondary-cart .thb-item-count {
     --color-accent: var(--color-accent-2);
     --color-header-bg: var(--color-black);
+
     font-size: 0.5rem;
     top: -0.625rem;
     right: -0.938rem;
@@ -3861,18 +3870,15 @@ h6,
   .overflow-hidden::before {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
-    background: rgba(210, 211, 214, 0.10);
+    background: rgb(210 211 214 / 10%);
     backdrop-filter: blur(0.5rem);
     z-index: 1;
   }
 
-  .header:before {
+  .header::before {
     z-index: 2
   }
 
@@ -3884,8 +3890,8 @@ h6,
     left: 1rem;
     z-index: 1;
     border-radius: 0 0 0.75rem 0.75rem;
-    background: rgba(250, 250, 250, 0.75);
-    box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.25);
+    background: rgb(250 250 250 / 75%);
+    box-shadow: 0 0 1.25rem 0 rgb(0 0 0 / 25%);
     border: none;
     padding-top: 1.438rem;
     padding-bottom: 1.438rem;
@@ -3905,8 +3911,10 @@ h6,
     line-height: 120%;
     letter-spacing: 0.36px;
     text-transform: uppercase;
+
     --color-header-border: #C5C7C9 !important;
     --color-border: #C5C7C9 !important;
+
     padding: 0.625rem 0.938rem;
     min-height: 2.375rem;
   }
@@ -3922,7 +3930,7 @@ h6,
 
   .header .mobile-menu-drawer .mobile-menu-drawer--inner .mobile-menu .sub-menu {
     border-radius: 0 0 0.75rem 0.75rem;
-    background: rgba(210, 211, 214, 0.10);
+    background: rgb(210 211 214 / 10%);
     backdrop-filter: blur(0.5rem);
   }
 
@@ -4879,7 +4887,7 @@ input[type='submit'] {
   appearance: none;
   transition: color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1), background-color 0.25s cubic-bezier(0.104, 0.204, 0.492, 1);
 
-  @media only screen and (width <= 63.938rem) {
+  @media only screen and (max-width:  63.938rem) {
     font-size: var(--font-size-12);
     height: initial;
     padding: 0.375rem 0.875rem;
@@ -6200,7 +6208,7 @@ https://flickity.metafizzy.co
   z-index: 30;
   opacity: 0;
   cursor: pointer;
-  box-shadow: 0px 0px 1.25rem 0px rgba(10, 10, 11, 0.34) !important;
+  box-shadow: 0 0 1.25rem 0 rgb(10 10 11 / 34%) !important;
 }
 
 .flickity-nav svg {
@@ -6533,14 +6541,16 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   }
 }
 
-@media only screen and (width <= 63.938rem) {
+@media only screen and (max-width:  63.938rem) {
   .template-product,
   .template-collection,
   .template-page-contact {
     #main-content {
       padding-top: 4.875rem;
+
       .row {
         padding: 0 0.938rem;
+
         &.no-padding {
           padding: 0;
         }

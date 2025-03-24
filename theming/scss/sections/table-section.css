@@ -2,7 +2,7 @@
   padding: 8.125rem 0 6.75rem;
   overflow: hidden;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section {
     padding: 3.313rem 0 2rem;
   }
@@ -22,7 +22,7 @@
 .table-section .columns .table-section-header.table-header {
   flex-wrap: wrap;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-header.table-header .table-section-header-box {
     margin: 0 auto;
     width: 100%;
@@ -44,7 +44,7 @@
   letter-spacing: -0.025rem;
   margin-bottom: 0.5rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-header .table-section-header-box .subheading {
     font-size: var(--font-size-16);
     letter-spacing: -0.02rem;
@@ -55,7 +55,7 @@
   --font-heading-letter-spacing: 0.1rem;
   margin-bottom: 0.5rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-header .table-section-header-box .h2 {
     margin-bottom: 0.5rem;
     --font-heading-letter-spacing: 0.06rem;
@@ -71,7 +71,7 @@
   font-weight: 400;
   line-height: 140%;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-header .table-section-header-box .rte p {
     font-size: var(--font-size-14);
   }
@@ -81,7 +81,7 @@
   max-width: 33.313rem;
   width: 100%;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-header .table-section-img-box {
     max-width: 9.688rem;
     margin-left: auto;
@@ -93,7 +93,7 @@
   max-width: 15rem;
   width: 100%;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-header .table-section-img-box .img-container {
     max-width: 7.5rem;
   }
@@ -105,7 +105,7 @@
 .table-section .columns .table-section-body {
   margin-top: 2.125rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body {
     margin-top: -0.375rem;
   }
@@ -114,7 +114,7 @@
   padding: 1rem 0;
   border-bottom: 1px solid var(--color-black);
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body .table-section-body-item {
     padding: 0.875rem 0;
   }
@@ -123,7 +123,7 @@
   padding-bottom: 0;
   border-bottom: 0;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body .table-section-body-item .table-item-text {
     max-width: 100%;
     width: calc(100% - 9.688rem);
@@ -139,13 +139,13 @@
   line-height: 120%;
   letter-spacing: -0.025rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body .table-section-body-item .table-item-text h5 {
     font-size: var(--font-size-10);
     letter-spacing: 0.025rem;
   }
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body .table-section-body-item .table-section-img-box {
     margin: 0;
   }
@@ -161,7 +161,7 @@
   width: 1.063rem;
   height: 1.063rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body .table-section-body-item .table-section-img-box .img-container.table-item-other-brand img, .table-section .columns .table-section-body .table-section-body-item .table-section-img-box .img-container.table-item-other-brand svg {
     width: 0.563rem;
     height: 0.563rem;
@@ -175,7 +175,7 @@
   height: 2.125rem;
   object-fit: contain;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .table-section .columns .table-section-body .table-section-body-item .table-section-img-box .img-container.table-item-gutsy-brand img, .table-section .columns .table-section-body .table-section-body-item .table-section-img-box .img-container.table-item-gutsy-brand svg {
     padding: 0.25rem;
     width: 1rem;

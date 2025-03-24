@@ -1,8 +1,6 @@
-
 .announcement-bar, .announcement-bar--carousel .flickity-nav, .announcement-bar--carousel .flickity-nav svg path, .announcement-bar--item svg, .announcement-bar--item a {
   transition: all 0.25s cubic-bezier(0.104, 0.204, 0.492, 1);
 }
-
 
 .announcement-bar--inner {
   padding: 0 15px;
@@ -16,7 +14,6 @@
     padding: 0 50px;
   }
 }
-
 .announcement-bar-section {
   position: relative;
   z-index: 52;
@@ -134,24 +131,22 @@
   0% {
     transform: translateX(0%);
   }
-
   100% {
     transform: translateX(-100%);
   }
 }
-
 @keyframes marquee-right {
   0% {
     transform: translateX(-100%);
   }
-
   100% {
     transform: translateX(0%);
   }
 }
-
 @media only screen and (width <= 63.938rem) {
   .announcement-bar-section {
     display: none;
   }
 }
+
+/*# sourceMappingURL=announcement-bar.css.map */

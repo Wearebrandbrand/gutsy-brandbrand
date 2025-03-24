@@ -265,7 +265,7 @@
   --section-spacing-desktop: 3.875rem;
   overflow: hidden;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .customer-reviews {
     --section-spacing-mobile: 1.875rem;
   }
@@ -324,7 +324,7 @@
   object-fit: cover;
   width: 100%;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .customer-reviews .customer-reviews--carousel .columns .customer-reviews--review .customer-reviews--product img {
     height: 7.375rem;
   }
@@ -337,7 +337,7 @@
   place-content: space-between;
   height: calc(100% - 9.25rem);
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .customer-reviews .customer-reviews--carousel .columns .customer-reviews--review .customer-reviews--content {
     padding: 0.938rem 1.125rem;
     height: calc(100% - 7.375rem);
@@ -352,7 +352,7 @@
   letter-spacing: 0.03rem;
   margin: 0;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .customer-reviews .customer-reviews--carousel .columns .customer-reviews--review .customer-reviews--content p {
     font-size: var(--font-size-10);
     letter-spacing: 0.025rem;
@@ -375,7 +375,7 @@
   line-height: 130%;
   letter-spacing: 0.03rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .customer-reviews .customer-reviews--carousel .columns .customer-reviews--review .customer-reviews--content .customer-reviews--content-wrapper .customer-reviews--content-box .customer-reviews--author {
     font-size: var(--font-size-10);
     letter-spacing: 0.025rem;
@@ -394,7 +394,7 @@
   letter-spacing: -0.02rem;
   margin-bottom: 0.5rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .customer-reviews .customer-reviews--carousel .columns .customer-reviews--review .customer-reviews--content .customer-reviews--content-wrapper h6 {
     font-size: var(--font-size-14);
     letter-spacing: -0.018rem;

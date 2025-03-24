@@ -50,14 +50,10 @@
             "sizing_guide_page": ""
           }
         },
-        "quantity": {
-          "type": "quantity",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
         }
@@ -67,7 +63,6 @@
         "title",
         "0b3e272b-c86a-4dba-946c-c6912251371c",
         "variant_picker",
-        "quantity",
         "buy_buttons"
       ],
       "settings": {

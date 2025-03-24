@@ -141,3 +141,79 @@
 .tabbed-content--content.active {
     display: block;
 }
+
+.tabbed-content-wrapper {
+    --section-spacing-desktop: 5rem;
+    --section-spacing-mobile: 1.125rem;
+    .section-header {
+        padding-bottom: 1.5rem;
+        @media only screen and (width <= 63.938rem) {
+            padding-bottom: 1.125rem;
+            .section-header--title {
+                text-align: left;
+            }
+        }
+    }
+    .tabbed-content {
+        .tabbed-content--scroll {
+            display: flex;
+            .tabbed-content--tabs {
+                display: flex;
+                min-width: initial;
+                border-radius: 6.25rem;
+                background: var(--color-accent-5);
+                padding: 0.25rem;
+                button {
+                    color: var(--color-secondary-dark);
+                    text-align: center;
+                    font-family: var(--font-primary);
+                    font-size: var(--font-size-16);
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 130%;
+                    letter-spacing: -0.02rem;
+                    padding: 0.5rem 1rem;
+                    border-radius: 6.25rem;
+                    margin: 0;
+
+                    @media only screen and (width <= 63.938rem) {
+                        font-size: var(--font-size-14);
+                        line-height: 130%;
+                        letter-spacing: -0.018rem;
+                        padding: 0.375rem 1.125rem;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &.active {
+                        color: var(--color-light-2);
+                        background-color: var(--color-secondary-dark);
+                    }
+                }
+            }
+        }
+        .tabbed-content--content {
+            padding: 0.5rem 1.5rem;
+            p {
+                color: var(--color-secondary-dark);
+                font-family: var(--font-primary);
+                font-size: var(--font-size-16);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+
+                @media only screen and (width <= 63.938rem) {
+                    font-size: var(--font-size-14);
+                    line-height: 140%;
+                    letter-spacing: 0;
+                }
+
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

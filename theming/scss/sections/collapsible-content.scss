@@ -145,7 +145,7 @@
 
 .section-collapsible-content {
   margin-bottom: 6.25rem;
-  @media only screen and (width <= 1023px) {
+  @media only screen and (width <= 63.938rem) {
     margin-bottom: 5.375rem;
   }
   .columns {
@@ -189,7 +189,7 @@
               letter-spacing: -0.025rem;
               padding: 0.438rem 1.5rem;
 
-              @media only screen and (width <= 1023px) {
+              @media only screen and (width <= 63.938rem) {
                 padding: 0.5rem 1.125rem;
                 font-size: var(--font-size-14);
                 letter-spacing: -0.018rem;
@@ -203,7 +203,7 @@
                 svg {
                   transform: rotate(0);
                 }
-                @media only screen and (width <= 1023px) {
+                @media only screen and (width <= 63.938rem) {
                   right: 1.125rem;
                 }
               }
@@ -219,7 +219,7 @@
             }
             .collapsible__content {
               padding: 0.438rem 1.5rem;
-              @media only screen and (width <= 1023px) {
+              @media only screen and (width <= 63.938rem) {
                 padding: 0.5rem 1.125rem;
               }
             }

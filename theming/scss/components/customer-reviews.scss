@@ -279,7 +279,7 @@
   background-color: var(--color-bg);
   --section-spacing-desktop: 3.875rem;
   overflow: hidden;
-  @media only screen and (width <= 1023px) {
+  @media only screen and (width <= 63.938rem) {
     --section-spacing-mobile: 1.875rem;
   }
 
@@ -337,7 +337,7 @@
             object-fit: cover;
             width: 100%;
 
-            @media only screen and (width <= 1023px) {
+            @media only screen and (width <= 63.938rem) {
               height: 7.375rem;
             }
           }
@@ -351,7 +351,7 @@
           place-content: space-between;
           height: calc(100% - 9.25rem);
 
-          @media only screen and (width <= 1023px) {
+          @media only screen and (width <= 63.938rem) {
             padding: 0.938rem 1.125rem;
             height: calc(100% - 7.375rem);
           }
@@ -365,7 +365,7 @@
             letter-spacing: 0.03rem;
             margin: 0;
 
-            @media only screen and (width <= 1023px) {
+            @media only screen and (width <= 63.938rem) {
               font-size: var(--font-size-10);
               letter-spacing: 0.025rem;
             }
@@ -386,7 +386,7 @@
                 font-weight: 400;
                 line-height: 130%;
                 letter-spacing: 0.03rem;
-                @media only screen and (width <= 1023px) {
+                @media only screen and (width <= 63.938rem) {
                   font-size: var(--font-size-10);
                   letter-spacing: 0.025rem;
                 }
@@ -404,7 +404,7 @@
               line-height: 130%;
               letter-spacing: -0.02rem;
               margin-bottom: 0.5rem;
-              @media only screen and (width <= 1023px) {
+              @media only screen and (width <= 63.938rem) {
                 font-size: var(--font-size-14);
                 letter-spacing: -0.018rem;
               }

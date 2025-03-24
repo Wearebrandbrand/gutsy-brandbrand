@@ -68,7 +68,7 @@
   line-height: 120%;
   text-decoration: none;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .breadcrumbs {
     font-size: var(--font-size-12);
   }
@@ -82,7 +82,7 @@
   line-height: 120%;
   text-decoration: none;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .breadcrumbs a {
     font-size: var(--font-size-12);
   }

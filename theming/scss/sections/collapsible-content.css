@@ -141,7 +141,7 @@
 .section-collapsible-content {
   margin-bottom: 6.25rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .section-collapsible-content {
     margin-bottom: 5.375rem;
   }
@@ -182,7 +182,7 @@
   letter-spacing: -0.025rem;
   padding: 0.438rem 1.5rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .section-collapsible-content .columns .collapsible-content .collapsible-content__inner .accordion details summary {
     padding: 0.5rem 1.125rem;
     font-size: var(--font-size-14);
@@ -198,7 +198,7 @@
 .section-collapsible-content .columns .collapsible-content .collapsible-content__inner .accordion details summary span svg {
   transform: rotate(0);
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .section-collapsible-content .columns .collapsible-content .collapsible-content__inner .accordion details summary span {
     right: 1.125rem;
   }
@@ -209,7 +209,7 @@
 .section-collapsible-content .columns .collapsible-content .collapsible-content__inner .accordion details .collapsible__content {
   padding: 0.438rem 1.5rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .section-collapsible-content .columns .collapsible-content .collapsible-content__inner .accordion details .collapsible__content {
     padding: 0.5rem 1.125rem;
   }

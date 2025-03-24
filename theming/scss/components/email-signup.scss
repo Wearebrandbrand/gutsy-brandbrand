@@ -73,7 +73,7 @@
         }
         .signup-container {
             margin-top: 1.938rem;
-            @media only screen and (width <= 1023px) {
+            @media only screen and (width <= 63.938rem) {
                 margin-top: 1.125rem;
             }
             form {
@@ -84,7 +84,7 @@
                             border: 0.125rem solid var(--color-light-2);
                             background: var(--color-light-2);
                             padding: 0.813rem 4.063rem 0.813rem  1.5rem;
-                            @media only screen and (width <= 1023px) {
+                            @media only screen and (width <= 63.938rem) {
                                 padding: 0.438rem 1.125rem 0.438rem 1.125rem;
                             }
                         }
@@ -97,7 +97,7 @@
                             font-weight: 400;
                             line-height: 140%;
                             outline: none;
-                            @media only screen and (width <= 1023px) {
+                            @media only screen and (width <= 63.938rem) {
                                 font-size: var(--font-size-14);
                             }
                         }
@@ -119,7 +119,7 @@
                             top: 2px;
                             --color-accent: #994F00;
 
-                            @media only screen and (width <= 1023px) {
+                            @media only screen and (width <= 63.938rem) {
                                 max-width: 3.125rem;
                             }
 

@@ -67,7 +67,7 @@
 .email-signup .email-signup--inner .signup-container {
   margin-top: 1.938rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .email-signup .email-signup--inner .signup-container {
     margin-top: 1.125rem;
   }
@@ -78,7 +78,7 @@
   background: var(--color-light-2);
   padding: 0.813rem 4.063rem 0.813rem 1.5rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .email-signup .email-signup--inner .signup-container form fieldset .field input {
     padding: 0.438rem 1.125rem 0.438rem 1.125rem;
   }
@@ -93,7 +93,7 @@
   line-height: 140%;
   outline: none;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .email-signup .email-signup--inner .signup-container form fieldset .field input,
   .email-signup .email-signup--inner .signup-container form fieldset .field label {
     font-size: var(--font-size-14);
@@ -114,7 +114,7 @@
   top: 2px;
   --color-accent: #994F00;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .email-signup .email-signup--inner .signup-container form fieldset button.submit {
     max-width: 3.125rem;
   }

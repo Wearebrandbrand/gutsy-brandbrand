@@ -24,6 +24,7 @@ Author URI: https://brandbrand.nl
   --color-accent-3: #0C644A;
   --color-accent-4: #0A0A0B;
   --color-accent-5: #F0E7B2;
+  --color-accent-6: #FAF7E5;
   --color-light-1: #F4F5F5;
   --color-light-2: #FAFAFA;
   --color-light-3: #92969B;
@@ -394,7 +395,7 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  @media only screen and (width <= 1023px) {
+  @media only screen and (width <= 63.938rem) {
     font-size: var(--font-size-10);
     line-height: 130%;
     letter-spacing: 0.025rem;
@@ -6517,5 +6518,14 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   .columns {
     max-width: 78rem;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (width <= 63.938rem) {
+  .template-product,
+  .template-collection {
+    #main-content {
+      padding-top: 4.875rem;
+    }
   }
 }

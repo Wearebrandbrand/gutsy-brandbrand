@@ -9,7 +9,7 @@ facet-filters-form {
 .section-collection-product-grid {
   margin-top: 3rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .section-collection-product-grid {
     margin-top: 2.375rem;
   }
@@ -22,7 +22,7 @@ facet-filters-form {
   margin: 0;
   gap: 3.938rem 1rem;
 }
-@media only screen and (width <= 1023px) {
+@media only screen and (width <= 63.938rem) {
   .section-collection-product-grid .collection-container .sidebar-container .products {
     gap: 1.875rem 0.75rem;
   }
@@ -32,7 +32,7 @@ facet-filters-form {
   max-width: 20.25rem;
   flex: 0 0 calc(33.33% - 0.7rem);
 }
-@media only screen and (width <= 767px) {
+@media only screen and (width <= 47.938rem) {
   .section-collection-product-grid .collection-container .sidebar-container .products li {
     flex: 0 0 calc(50% - 0.4rem);
   }

@@ -95,7 +95,7 @@
   max-width: 78rem;
   margin: 0 auto;
 }
-@media only screen and (width <= 991px) {
+@media only screen and (width <= 61.938rem) {
   .logo-list .logo-list--inner {
     --logo-columns: 2 !important;
     grid-template-columns: repeat(var(--logo-columns), 1fr);

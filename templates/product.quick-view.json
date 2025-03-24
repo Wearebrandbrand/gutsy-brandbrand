@@ -52,7 +52,7 @@
         "buy_buttons"
       ],
       "settings": {
-        "show_taxes_included": true,
+        "show_taxes_included": false,
         "thumbnail_position": "bottom",
         "media_aspect_ratio": "square",
         "hide_variants": true,

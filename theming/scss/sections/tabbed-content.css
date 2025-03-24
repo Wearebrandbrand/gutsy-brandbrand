@@ -145,7 +145,7 @@
 .tabbed-content-wrapper .section-header {
   padding-bottom: 1.5rem;
 }
-@media only screen and (width <= 63.938rem) {
+@media only screen and (max-width: 63.938rem) {
   .tabbed-content-wrapper .section-header {
     padding-bottom: 1.125rem;
   }
@@ -176,7 +176,7 @@
   border-radius: 6.25rem;
   margin: 0;
 }
-@media only screen and (width <= 63.938rem) {
+@media only screen and (max-width: 63.938rem) {
   .tabbed-content-wrapper .tabbed-content .tabbed-content--scroll .tabbed-content--tabs button {
     font-size: var(--font-size-14);
     line-height: 130%;
@@ -204,7 +204,7 @@
   letter-spacing: -0.025rem;
   margin-bottom: 0.5rem;
 }
-@media only screen and (width <= 63.938rem) {
+@media only screen and (max-width: 63.938rem) {
   .tabbed-content-wrapper .tabbed-content .tabbed-content--content h5 {
     font-size: var(--font-size-16);
     letter-spacing: -0.02rem;
@@ -219,7 +219,7 @@
   font-weight: 400;
   line-height: 140%;
 }
-@media only screen and (width <= 63.938rem) {
+@media only screen and (max-width: 63.938rem) {
   .tabbed-content-wrapper .tabbed-content .tabbed-content--content p {
     font-size: var(--font-size-14);
     line-height: 140%;
@@ -228,6 +228,10 @@
 }
 .tabbed-content-wrapper .tabbed-content .tabbed-content--content p:last-of-type {
   margin: 0;
+}
+.tabbed-content-wrapper .tabbed-content .tabbed-content--content .page-metafeild {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .template-page-contact .columns {

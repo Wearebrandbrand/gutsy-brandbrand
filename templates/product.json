@@ -78,6 +78,89 @@
         "media_show_prevnext_mobile": true
       }
     },
+    "product-customer-reviews": {
+      "type": "product-customer-reviews",
+      "blocks": {
+        "review_a": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn",
+            "author_image": "shopify://shop_images/Product_image.jpg"
+          }
+        },
+        "review_b": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn",
+            "author_image": "shopify://shop_images/Product_image.jpg"
+          }
+        },
+        "review_c": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn",
+            "author_image": "shopify://shop_images/Product_image.jpg"
+          }
+        },
+        "review_d": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn",
+            "author_image": "shopify://shop_images/Product_image.jpg"
+          }
+        },
+        "review_e": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn",
+            "author_image": "shopify://shop_images/Product_image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "review_a",
+        "review_b",
+        "review_c",
+        "review_d",
+        "review_e"
+      ],
+      "settings": {
+        "heading": "Customer Reviews",
+        "description": "",
+        "columns": 4,
+        "autoplay": true,
+        "autoplay_length": 6,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "color_bg": "#1A3C32",
+        "color_heading": "#E8D67A"
+      }
+    },
     "245ee280-dfa9-4791-91ed-b65a153cc976": {
       "type": "tabbed-content",
       "blocks": {
@@ -162,6 +245,7 @@
     "breadcrumbs",
     "main-product",
     "245ee280-dfa9-4791-91ed-b65a153cc976",
+    "product-customer-reviews",
     "product-recommendations"
   ]
 }

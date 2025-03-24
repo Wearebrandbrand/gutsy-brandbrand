@@ -3012,6 +3012,7 @@ svg {
           .product-price-container {
             color: var(--color-light-2);
             text-align: center;
+
             .price {
               color: var(--color-light-2);
               font-family: var(--font-primary);
@@ -3062,12 +3063,15 @@ svg {
 .product-drawer {
   .product-button-cart {
     border-radius: 0.5rem;
+
     @media only screen and (max-width:  63.938rem) {
       position: initial;
     }
+
     .row {
       padding: 0;
     }
+
     .columns {
       .product-price-container {
         .price {

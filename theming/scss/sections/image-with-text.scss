@@ -182,35 +182,43 @@
         gap: 2.5rem;
         margin-bottom: 5.938rem;
 
-        @media only screen and (width <= 63.938rem) {
+        @media only screen and (max-width: 63.938rem) {
             padding: 1.125rem;
             margin-bottom: 4.5rem;
         }
+
         .image-with-text--image {
             max-width: 40.5rem;
         }
+
         .image-with-text--content {
             background-color: transparent;
             padding: 0;
             max-width: 28.125rem;
+
             .image-with-text--content--inner {
                 margin-left: 0;
-                @media only screen and (width <= 63.938rem) {
+
+                @media only screen and (max-width: 63.938rem) {
                     margin-left: auto;
                 }
+
                 .h2 {
                     line-height: 110%;
                     letter-spacing: 0.1rem;
                     color: var(--color-light-2);
                     margin-bottom: 2.5rem;
-                    @media only screen and (width <= 63.938rem) {
+
+                    @media only screen and (max-width: 63.938rem) {
                         margin-bottom: 1.5rem;
                     }
                 }
+
                 .button {
                     border: 0.125rem solid var(--color-accent-6);
                     background: var(--color-accent-6);
                     color: var(--color-accent-7);
+
                     &:hover {
                         background: var(--color-accent-5);
                         border-color: var(--color-accent-5);

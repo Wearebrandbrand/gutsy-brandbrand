@@ -21,7 +21,7 @@
     font-size: var(--font-size-24);
   }
 }
-.shopify-section.section-cliffers .cijfers__inner .row {
+.shopify-section.section-cliffers .figures__inner .row {
   column-gap: 2.5rem;
   justify-content: center;
   max-width: 53.875rem !important;
@@ -29,12 +29,12 @@
   flex-wrap: nowrap;
 }
 @media only screen and (max-width: 63.938rem) {
-  .shopify-section.section-cliffers .cijfers__inner .row {
+  .shopify-section.section-cliffers .figures__inner .row {
     flex-wrap: wrap;
     row-gap: 1.25rem;
   }
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns {
+.shopify-section.section-cliffers .figures__inner .row .columns {
   background: var(--color-primary-disable);
   border-radius: 1.25rem;
   padding: 2rem 1.5rem;
@@ -48,39 +48,39 @@
   max-width: 412px;
 }
 @media only screen and (max-width: 63.938rem) {
-  .shopify-section.section-cliffers .cijfers__inner .row .columns {
+  .shopify-section.section-cliffers .figures__inner .row .columns {
     flex-wrap: wrap;
   }
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns h3 {
+.shopify-section.section-cliffers .figures__inner .row .columns h3 {
   grid-area: heading;
   color: var(--color-secondary-dark);
   margin: 0;
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns figure {
+.shopify-section.section-cliffers .figures__inner .row .columns figure {
   grid-area: image;
   justify-self: flex-end;
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns .percent-text {
+.shopify-section.section-cliffers .figures__inner .row .columns .percent-text {
   grid-area: percent;
   color: #994F00;
   align-self: flex-end;
   text-align: left;
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns .percent-text h1 {
+.shopify-section.section-cliffers .figures__inner .row .columns .percent-text h1 {
   color: #994F00;
   margin: 0;
   line-height: 2.375rem;
 }
 @media only screen and (max-width: 63.938rem) {
-  .shopify-section.section-cliffers .cijfers__inner .row .columns .percent-text {
+  .shopify-section.section-cliffers .figures__inner .row .columns .percent-text {
     font-size: var(--font-size-24);
   }
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns .rte {
+.shopify-section.section-cliffers .figures__inner .row .columns .rte {
   grid-area: title;
 }
-.shopify-section.section-cliffers .cijfers__inner .row .columns .rte p {
+.shopify-section.section-cliffers .figures__inner .row .columns .rte p {
   font-family: var(--font-heading) !important;
   font-size: var(--font-size-40);
   color: #994F00;
@@ -88,7 +88,7 @@
   line-height: 110%;
 }
 @media only screen and (max-width: 63.938rem) {
-  .shopify-section.section-cliffers .cijfers__inner .row .columns .rte p {
+  .shopify-section.section-cliffers .figures__inner .row .columns .rte p {
     font-size: var(--font-size-24);
   }
 }
@@ -99,7 +99,7 @@
 }
 .shopify-section.section-cliffers .bottom-content h2 {
   color: var(--color-light-2);
-  padding-left: 0rem;
+  padding-left: 0;
   padding-top: 0.5rem;
 }
 .shopify-section.section-cliffers .bottom-content .row {
@@ -176,4 +176,4 @@
   }
 }
 
-/*# sourceMappingURL=cijfers.css.map */
+/*# sourceMappingURL=figures.css.map */

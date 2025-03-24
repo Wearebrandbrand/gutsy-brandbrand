@@ -189,8 +189,6 @@
   {{ 'sections--background-video.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/before-after-image.scss" or path == "../../theming/scss/sections/before-after-image.scss" %}
   {{ 'sections--before-after-image.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/theming/scss/sections/cijfers.scss" or path == "../../theming/scss/sections/cijfers.scss" %}
-  {{ 'sections--cijfers.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/collapsible-content.scss" or path == "../../theming/scss/sections/collapsible-content.scss" %}
   {{ 'sections--collapsible-content.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/collection-tabs.scss" or path == "../../theming/scss/sections/collection-tabs.scss" %}
@@ -201,6 +199,8 @@
   {{ 'sections--featured-collection.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/featured-product.scss" or path == "../../theming/scss/sections/featured-product.scss" %}
   {{ 'sections--featured-product.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/figures.scss" or path == "../../theming/scss/sections/figures.scss" %}
+  {{ 'sections--figures.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/gallery.scss" or path == "../../theming/scss/sections/gallery.scss" %}
   {{ 'sections--gallery.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/image-hotspots.scss" or path == "../../theming/scss/sections/image-hotspots.scss" %}

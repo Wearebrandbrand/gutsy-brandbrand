@@ -108,7 +108,6 @@
 .multicolumn {
     --section-spacing-desktop: 2.5rem;
     --section-spacing-mobile: 1.875rem;
-
     padding-bottom: 1.875rem;
 
     @media only screen and (min-width: 768px) {
@@ -121,16 +120,13 @@
 
     a {
         margin: 0;
-
         @media only screen and (max-width: 47.938rem) {
             width: 100%;
         }
-
         &.accent {
             border-radius: 6.25rem;
             border: 0.125rem solid var(--color-primary);
             background: var(--color-primary);
-
             &:hover {
                 background-color: var(--color-accent);
                 border-color: var(--color-accent);
@@ -140,30 +136,25 @@
 
     .multicolumn__inner {
         margin-bottom: 1.75rem;
-
         @media only screen and (min-width: 768px) {
             margin-bottom: 4rem;
         }
-
         .row {
             margin: 0;
             gap: 1rem;
             place-content: center;
-
             @media only screen and (max-width: 47.938rem) {
                 place-content: flex-start;
                 flex-wrap: nowrap;
                 padding: 0.313rem;
                 overflow: auto;
             }
-
             .multicolumn__column {
                 padding: 0;
                 margin: 0;
                 flex: 0 0 calc(33.33% - 0.7rem);
                 max-width: 16.313rem;
                 text-align: center;
-
                 @media only screen and (max-width: 47.938rem) {
                     border-radius: 0.75rem;
                     background: var(--color-light-2);
@@ -171,12 +162,10 @@
                     padding: 1.688rem 1rem 1.125rem;
                     min-width: 14.563rem;
                 }
-
                 .multicolumn__image {
                     width: 1.75rem !important;
                     margin-bottom: 1.2rem;
                 }
-
                 .h4 {
                     color: var(--color-accent-1);
                     font-weight: 700;
@@ -184,7 +173,6 @@
                     letter-spacing: 0.06rem;
                     margin-bottom: 0.5rem;
                 }
-
                 .rte {
                     p {
                         color: var(--color-secondary-dark);
@@ -195,9 +183,95 @@
                         font-weight: 400;
                         line-height: 140%;
                         margin: 0;
-
                         @media only screen and (min-width: 768px) {
                             font-size: var(--font-size-16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.template-page-about {
+    .multicolumn {
+        padding: 2.5rem 0 5.625rem;
+        background: var(--color-secondary-dark);
+        margin: 7.5rem 0 5rem;
+
+        @media only screen and (max-width: 47.938rem) {
+            padding: 1.875rem 0 2.5rem;
+            margin: 2.25rem 0 3.375rem;
+        }
+
+        .section-header {
+            place-items: center;
+            place-content: center;
+            padding-bottom: 0.625rem;
+            .subheading {
+                line-height: 120%;
+                letter-spacing: -0.025rem;
+                color: var(--color-accent-2);
+                margin-bottom: 0.5rem;
+            }
+            h3 {
+                line-height: 120%;
+                letter-spacing: 0.14rem;
+                margin-bottom: 0.5rem;
+                color: var(--color-accent-2);
+            }
+            .section-header--description {
+                p {
+                    color: var(--color-light-1);
+                    text-align: center;
+                    font-family: var(--font-primary);
+                    font-size: var(--font-size-16);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    margin: 0;
+                }
+            }
+        }
+        .multicolumn__inner {
+            margin: 0;
+            .row {
+                gap: 2.5rem;
+                .multicolumn__column {
+                    max-width: 13.625rem;
+                    flex: 0 0 calc(20% - 2rem);
+
+                    @media only screen and (max-width: 47.938rem) {
+                        padding: 0;
+                        background-color: transparent;
+                        box-shadow: none;
+                    }
+
+                    .multicolumn__image {
+                        width: 100% !important;
+                        margin-bottom: 2rem;
+                        @media only screen and (max-width: 47.938rem) {
+                            margin-bottom: 0.75rem;
+                        }
+                    }
+                    h4 {
+                        color: var(--color-light-2);
+                        line-height: 120%;
+                        letter-spacing: 0.06rem;
+                        margin-bottom: 0.5rem;
+                    }
+                    .rte {
+                        p {
+                            color: var(--color-light-1);
+                            font-size: var(--font-size-16);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            margin: 0;
+                            @media only screen and (max-width: 47.938rem) {
+                                font-size: var(--font-size-14);
+                                line-height: 140%;
+                            }
                         }
                     }
                 }

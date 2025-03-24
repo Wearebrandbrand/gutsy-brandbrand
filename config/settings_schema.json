@@ -181,7 +181,7 @@
       {
         "type": "range",
         "id": "grid_width",
-        "min": 1160,
+        "min": 1140,
         "max": 2840,
         "step": 20,
         "unit": "px",

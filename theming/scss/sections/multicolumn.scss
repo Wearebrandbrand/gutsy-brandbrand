@@ -197,11 +197,10 @@
     .multicolumn {
         padding: 2.5rem 0 5.625rem;
         background: var(--color-secondary-dark);
-        margin: 7.5rem 0 5rem;
+        margin: 0;
 
         @media only screen and (max-width: 47.938rem) {
             padding: 1.875rem 0 2.5rem;
-            margin: 2.25rem 0 3.375rem;
         }
 
         .section-header {

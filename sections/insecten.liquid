@@ -1,0 +1,65 @@
+{{- 'components--insecten.css' | asset_url | stylesheet_tag -}}
+
+<div class="page-width">
+    <div class="section-header--title">
+        {% if section.settings.heading %}
+            <h1 class="section-heading">
+                {{ section.settings.heading }}
+            </h1>
+        {% endif %}
+
+        {% if section.settings.description %}
+        <p class="section-description">{{ section.settings.description }}</p>
+        {% endif %}
+    </div>
+
+    <div class="image-box">
+{%- assign desktop_image = section.settings.desktop_image -%}
+{{ desktop_image | image_url: width: desktop_image.width | image_tag: class: 'desktop_image', loading: 'lazy' }}
+
+{%- assign mobile_image = section.settings.mobile_image -%}
+{{ mobile_image | image_url: width: mobile_image.width | image_tag: class: 'mobile_image', loading: 'lazy' }}
+    </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "insecten",
+  "class": "insecten-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "insecten"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

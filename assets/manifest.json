@@ -510,6 +510,11 @@
     "src": "theming/scss/sections/before-after-image.scss",
     "isEntry": true
   },
+  "theming/scss/sections/cijfers.scss": {
+    "file": "sections--cijfers.css",
+    "src": "theming/scss/sections/cijfers.scss",
+    "isEntry": true
+  },
   "theming/scss/sections/collapsible-content.scss": {
     "file": "sections--collapsible-content.css",
     "src": "theming/scss/sections/collapsible-content.scss",

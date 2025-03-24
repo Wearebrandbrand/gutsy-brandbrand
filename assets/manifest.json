@@ -600,9 +600,9 @@
     "src": "theming/scss/sections/multicolumn.scss",
     "isEntry": true
   },
-  "theming/scss/sections/our-team-section.scss": {
-    "file": "sections--our-team-section.css",
-    "src": "theming/scss/sections/our-team-section.scss",
+  "theming/scss/sections/our-team.scss": {
+    "file": "sections--our-team.css",
+    "src": "theming/scss/sections/our-team.scss",
     "isEntry": true
   },
   "theming/scss/sections/progress-bars.scss": {

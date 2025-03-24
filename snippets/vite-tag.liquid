@@ -225,8 +225,8 @@
   {{ 'sections--multi-page-with-navigation.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/multicolumn.scss" or path == "../../theming/scss/sections/multicolumn.scss" %}
   {{ 'sections--multicolumn.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/theming/scss/sections/our-team-section.scss" or path == "../../theming/scss/sections/our-team-section.scss" %}
-  {{ 'sections--our-team-section.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/our-team.scss" or path == "../../theming/scss/sections/our-team.scss" %}
+  {{ 'sections--our-team.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/progress-bars.scss" or path == "../../theming/scss/sections/progress-bars.scss" %}
   {{ 'sections--progress-bars.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/promotion-blocks.scss" or path == "../../theming/scss/sections/promotion-blocks.scss" %}

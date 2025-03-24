@@ -655,6 +655,11 @@
     "src": "theming/scss/sections/spacer.scss",
     "isEntry": true
   },
+  "theming/scss/sections/store-locator.scss": {
+    "file": "sections--store-locator.css",
+    "src": "theming/scss/sections/store-locator.scss",
+    "isEntry": true
+  },
   "theming/scss/sections/tabbed-content.scss": {
     "file": "sections--tabbed-content.css",
     "src": "theming/scss/sections/tabbed-content.scss",

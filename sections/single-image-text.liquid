@@ -40,64 +40,45 @@
 	</div>
 </div>
 {% schema %}
-  {
-    "name": "Single image with Text",
-		"class": "section-single-image section-single-image-with-text",
-    "settings": [
-	    {
-	      "type": "text",
-	      "id": "heading",
-	      "label": "Heading",
-	      "default": "Customer reviews"
-	    },
-	    {
-	      "type": "text",
-	      "id": "description",
-	      "label": "Sub Heading"
-	    },
-			{
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-      },
-			{
-        "type": "image_picker",
-        "id": "image_mobile",
-        "label": "Mobile image (optional)"
-      },
-			{
-				"type": "checkbox",
-				"id": "full_width",
-				"label": "Make section full width",
-				"default": false
-			},
-			{
-        "type": "header",
-        "content": "Spacing"
-      },
-			{
-				"type": "checkbox",
-				"id": "disable_top_spacing",
-				"default": false,
-				"label": "Remove top spacing"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_bottom_spacing",
-				"default": false,
-				"label": "Remove bottom spacing"
-			}
-    ],
-    "presets": [
-      {
-        "name": "Single image with Text"
-      }
-    ],
-		"enabled_on": {
-			"templates": ["*"],
-			"groups": [
-				"header", "footer"
-			]
+{
+	"name": "Single image with Text",
+	"class": "section-single-image section-single-image-with-text",
+	"settings": [
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"default": "Customer reviews"
+		},
+		{
+			"type": "text",
+			"id": "description",
+			"label": "Sub Heading"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "image_mobile",
+			"label": "Mobile image (optional)"
 		}
-  }
+	],
+	"presets": [
+		{
+			"name": "Single image with Text"
+		}
+	],
+	"enabled_on": {
+		"templates": [
+			"*"
+		],
+		"groups": [
+			"header",
+			"footer"
+		]
+	}
+}
 {% endschema %}

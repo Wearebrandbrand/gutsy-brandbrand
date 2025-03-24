@@ -249,6 +249,8 @@
   {{ 'sections--slideshow.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/spacer.scss" or path == "../../theming/scss/sections/spacer.scss" %}
   {{ 'sections--spacer.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/store-locator.scss" or path == "../../theming/scss/sections/store-locator.scss" %}
+  {{ 'sections--store-locator.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/tabbed-content.scss" or path == "../../theming/scss/sections/tabbed-content.scss" %}
   {{ 'sections--tabbed-content.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/table-section.scss" or path == "../../theming/scss/sections/table-section.scss" %}

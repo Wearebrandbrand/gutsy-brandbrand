@@ -1,0 +1,362 @@
+{{ "sections--store-locator.css" | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css'/>
+
+<style>
+  @media (max-width: 1079px) {
+    .stores-list__wrap-inner {
+      width: calc({{section.blocks.size}} * 100vw);
+      display: flex;
+      grid-column-gap: 1rem;
+    }
+  }
+</style>
+
+<div class="store-locator-section-inner">
+    <div class="map-icon-svg hidden">{{ section.settings.map_icon_svg }}</div>
+
+  {% for block in section.blocks %}
+    {%- case block.type -%}
+      {%- when 'heading' -%}
+        <h3 class="{{ block.settings.heading_size }}">{{ block.settings.text | escape }}</h3>
+    {%- endcase -%}
+  {% endfor %}
+    <div class="store-locator__wrap">
+        <div id="map" data-start="{{ section.settings.map_start_point }}"></div>
+        <div class="scroll-tag-mobile">Scroll {%- render 'icon-arrow' -%}</div>
+        <div class="stores-list__wrap">
+            <div class="query-wrap"></div>
+            <div class="stores-list__wrap-inner">
+                {%- for store in page.metafields.custom.stores.value -%}
+                    <div id="store-list-item-{{ forloop.index0 }}" class="store-list-item"
+                         data-coordinates="{{ store.coordinates }}" data-name="{{ store.name }}"
+                         data-id={{ forloop.index0 }}>
+                        <div class="store-list-item__header">
+                            <h4 class="color-primary-1 no-translate">{{ store.name }}</h4>
+                            <span id="distance"></span>
+                        </div>
+                        <p>{{ store.address }}</p>
+                        <div class="store-list-item__actions">
+                            <button id="view-store-btn-{{ forloop.index0 }}" data-id="{{ forloop.index0 }}"
+                                    class="button button-secondary button-small view-store-btn">View on map
+                            </button>
+                            {%- if store.website -%}
+                                <a class="link" href="{{ store.website }}" target="_blank">Website</a>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  const storesList = document.querySelector('.stores-list__wrap');
+
+  const storesListInner = document.querySelector('.stores-list__wrap-inner');
+
+  const mapStartPoint = document.querySelector('#map').getAttribute('data-start');
+
+  const stores = document.querySelectorAll('.store-list-item');
+
+  const viewStoreBtns = document.querySelectorAll('.view-store-btn');
+
+  const mapIconSvg = document.querySelector('.map-icon-svg').innerHTML;
+
+  const queryWrap = document.querySelector('.query-wrap');
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZ3V0c3lkb2ciLCJhIjoiY2t5eWlvbWI5MDRyMTJ1bzFkdXZjaTJpeCJ9.2vsIqE9GIYcEii9UJ6FKZA';
+  const map = new mapboxgl.Map({
+    container: 'map', // Container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
+    center: strToCo(mapStartPoint), // Starting position [lng, lat]
+    zoom: 7, // Starting zoom level
+  });
+
+  stores.forEach((store, i) => {
+    const html = `<span class="marker-inner" data-id="${i}">${store.getAttribute('data-name')}</span>`
+    const coordinates = strToCo(store.getAttribute('data-coordinates'));
+
+    const marker = new mapboxgl.Marker() // initialize a new marker
+    .setLngLat(coordinates) // Marker [lng, lat] coordinates
+    .addTo(map); // Add the marker to the map
+
+    const markers = document.querySelectorAll('.mapboxgl-marker');
+    markers.forEach((marker, i) => {
+      marker.innerHTML = "<span data-id=" + i + ">" + mapIconSvg + "</span>"
+    });
+
+  });
+
+  const geocoder = new MapboxGeocoder({
+    // Initialize the geocoder
+    accessToken: mapboxgl.accessToken, // Set the access token
+    mapboxgl: mapboxgl, // Set the mapbox-gl instance
+    marker: false, // Do not use the default marker style
+    placeholder: 'Search for places in Belgium', // Placeholder text for the search bar
+    bbox: [2.51357303225, 49.5294835476, 6.15665815596, 51.4750237087], // Boundary for Berkeley
+    proximity: {
+      longitude: -122.25948,
+      latitude: 37.87221
+    } // Coordinates of UC Berkeley
+  });
+  // Add the geocoder to the map
+  map.addControl(geocoder);
+
+  map.on('load', () => {
+
+    geocoder.on('result', (event) => {
+      const searchCoordinates = event.result.geometry.coordinates;
+
+      let storeResults = [];
+
+      queryWrap.innerHTML = "You searched for: <strong>" + event.result.place_name + "</strong>";
+
+      stores.forEach((store, i) => {
+        const coordinates = strToCo(store.getAttribute('data-coordinates'));
+        const resultObject = {
+          id: i,
+          distance: getDistanceFromLatLonInKm(searchCoordinates[1], searchCoordinates[0], coordinates[1], coordinates[0]),
+          coordinates: coordinates
+        }
+        storeResults.push(resultObject)
+      });
+
+      const sortedResults = storeResults.sort((a, b) => (a.distance > b.distance) ? 1 : -1)
+
+      storesListInner.innerHTML = "";
+
+      stores.forEach((store, i) => {
+        store.classList.remove('active')
+      });
+
+      const frag = document.createDocumentFragment();
+
+      sortedResults.forEach((result, i) => {
+        const storeId = result.id;
+
+        if (i === 0) {
+          const h4 = document.createElement("h4");
+          h4.innerHTML = "Closest by...";
+          h4.classList.add('color-primary-2');
+          h4.classList.add('store-list-inner-title');
+          frag.appendChild(h4)
+
+          map.flyTo({center: result.coordinates, zoom: 12})
+
+          stores[storeId].classList.add('active');
+
+          if (!stores[storeId].querySelector('.view-store-btn').classList.contains('active')) {
+            stores[storeId].querySelector('.view-store-btn').classList.add('active');
+            stores[storeId].querySelector('.view-store-btn').innerHTML = "Close";
+          }
+        }
+
+        frag.appendChild(stores[storeId]);
+        stores[storeId].querySelector('#distance').innerHTML = Math.ceil(result.distance) + "km";
+        if (i === 0) {
+          const h4 = document.createElement("h4");
+          h4.innerHTML = "Other stores...";
+          h4.classList.add('color-primary-2');
+          h4.classList.add('store-list-inner-title');
+          frag.appendChild(h4)
+        }
+      });
+
+      storesListInner.appendChild(frag)
+    })
+  });
+
+  const clearBtn = document.querySelector('.mapboxgl-ctrl-geocoder--button');
+  const searchInput = document.querySelector('.mapboxgl-ctrl-geocoder--input');
+
+  const markers = document.querySelectorAll('.mapboxgl-marker');
+
+  markers.forEach((marker, i) => {
+    marker.addEventListener('click', () => {
+      const id = marker.querySelector('span').getAttribute('data-id');
+      setStoreActive(id);
+    })
+  });
+
+  viewStoreBtns.forEach((btn, i) => {
+    btn.addEventListener('click', (e) => {
+      if (!btn.classList.contains('active')) {
+        const id = btn.getAttribute('data-id');
+        setStoreActive(id);
+      } else {
+        clearSelection();
+      }
+    })
+  });
+
+  clearBtn.addEventListener('click', () => {
+    clearSelection();
+  })
+
+  function setStoreActive(id) {
+    stores.forEach((store, i) => {
+      store.classList.remove('active');
+    });
+
+    const storeListItem = document.querySelector('#store-list-item-' + id)
+    storeListItem.classList.add('active');
+
+    const coordinates = strToCo(storeListItem.getAttribute('data-coordinates'));
+
+    viewStoreBtns.forEach((btn, i) => {
+      btn.classList.remove('active');
+      btn.innerHTML = "View on map"
+    });
+
+
+    const btn = document.querySelector('#view-store-btn-' + id);
+    btn.classList.add('active');
+    btn.innerHTML = "Close"
+
+    map.flyTo({center: coordinates, zoom: 12});
+
+    if (getDevice() === "mobile") {
+      const offset = storeListItem.offsetLeft;
+      storesList.scrollLeft = offset;
+    } else {
+      const offset = storeListItem.offsetTop;
+
+      storesList.scrollTop = offset;
+    }
+  }
+
+  function clearSelection() {
+    console.log("function runs");
+
+    searchInput.value = "";
+
+    viewStoreBtns.forEach((btn, i) => {
+      btn.classList.remove('active');
+      btn.innerHTML = "View on map"
+    });
+
+    stores.forEach((store, i) => {
+      store.classList.remove('active');
+    });
+
+    if (getDevice() === "mobile") {
+      storesList.scrollLeft = 0;
+    } else {
+      storesList.scrollTop = 0;
+    }
+
+    storesListInner.innerHTML = "";
+    queryWrap.innerHTML = "";
+
+    const frag = document.createDocumentFragment();
+
+    stores.forEach((store, i) => {
+      frag.appendChild(store)
+      store.querySelector('#distance').innerHTML = "";
+    });
+
+    storesListInner.appendChild(frag);
+
+    map.flyTo({center: strToCo(mapStartPoint), zoom: 7});
+  }
+
+  function getDevice() {
+    if (window.innerWidth > 1080) {
+      return "desktop";
+    } else {
+      return "mobile";
+    }
+  }
+
+  function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+    var R = 6371; // Radius of the earth in km
+    var dLat = deg2rad(lat2 - lat1);  // deg2rad below
+    var dLon = deg2rad(lon2 - lon1);
+    var a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2)
+    ;
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c; // Distance in km
+    return d;
+  }
+
+  function deg2rad(deg) {
+    return deg * (Math.PI / 180)
+  }
+
+  function strToCo(string) {
+    const array = string.split(',')
+    return array.reverse();
+  }
+</script>
+
+{%- schema -%}
+{
+  "name": "Store Locator",
+  "tag": "section",
+  "class": "store-locator-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "map_start_point",
+      "label": "Coördinaten Startpunt Kaart",
+      "default": "50.641111, 4.668056"
+    },
+    {
+      "type": "textarea",
+      "id": "map_icon_svg",
+      "label": "Map Icon Svg"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Background video"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "Small"
+            },
+            {
+              "value": "h1",
+              "label": "Medium"
+            },
+            {
+              "value": "h1-large",
+              "label": "Large"
+            },
+            {
+              "value": "h1-xlarge",
+              "label": "Extra large"
+            }
+          ],
+          "default": "h1-xlarge"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Store Locator"
+    }
+  ]
+}
+{%- endschema -%}

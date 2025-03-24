@@ -307,7 +307,7 @@
         "review_e"
       ],
       "settings": {
-        "heading": "Geliefd door <br/> MEER DAN 10.000 HONDEN",
+        "heading": "Geliefd door <br> MEER DAN 10.000 HONDEN",
         "description": "",
         "columns": 4,
         "autoplay": true,
@@ -462,13 +462,15 @@
         "text_D7hCXw": {
           "type": "text",
           "settings": {
-            "text": "Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. ",
+            "text": "Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.",
             "description_size": "medium"
           }
         },
         "form_4Uy7Me": {
           "type": "form",
-          "settings": {}
+          "settings": {
+            "terms_text": "<p>Door je te registreren, ga je akkoord met <a href=\"#\">onze voorwaarden</a>.</p>"
+          }
         }
       },
       "block_order": [
@@ -478,9 +480,9 @@
       ],
       "settings": {
         "full_width": true,
-        "color_bg": "#E8D67A",
-        "color_text": "#094E39",
-        "color_heading": "#1A3C32",
+        "color_bg": "#e8d67a",
+        "color_text": "#094e39",
+        "color_heading": "#1a3c32",
         "color_border": "#d3d3d3",
         "overlay_color": "#000000",
         "overlay_opacity": 0,

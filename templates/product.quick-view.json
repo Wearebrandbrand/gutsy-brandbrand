@@ -15,7 +15,7 @@
         "26a6ea49-e332-4310-8736-e77ad4f3ba02": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
+            "text": "",
             "text_style": "style_vendor"
           }
         },

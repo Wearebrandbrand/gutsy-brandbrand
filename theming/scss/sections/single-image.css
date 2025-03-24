@@ -51,6 +51,7 @@
   margin: 0 auto;
   border-radius: 1.25rem;
   overflow: hidden;
+  padding: 0;
 }
 .section-featured-image .thb-placeholder img,
 .section-featured-image .single-image img,
@@ -65,7 +66,7 @@
 .section-single-image-with-text .single-image {
   position: relative;
 }
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
   .section-single-image-with-text .single-image img {
     min-height: 15.625rem;
     width: 100%;
@@ -81,7 +82,7 @@
   margin: 0 auto;
   place-content: center;
 }
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
   .section-single-image-with-text .section-header {
     position: initial;
     margin-top: 1.125rem;
@@ -94,7 +95,7 @@
   line-height: 120%;
   letter-spacing: 0.14rem;
 }
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
   .section-single-image-with-text .section-header .section-header--content h1 {
     color: var(--color-accent-1);
   }
@@ -109,7 +110,7 @@
   letter-spacing: 0.08rem;
   margin: 0;
 }
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
   .section-single-image-with-text .section-header .section-header--content h3 {
     font-size: var(--font-size-20);
     letter-spacing: 0.05rem;

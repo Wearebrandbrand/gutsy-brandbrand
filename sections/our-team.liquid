@@ -1,0 +1,116 @@
+{{- 'sections--our-team-section.css' | asset_url | stylesheet_tag -}}
+
+<div class="our-team-section">
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="our-team-section-header our-team-header">
+        <div class="our-team-section-header-box">
+          {% if section.settings.sub_heading %}
+            <p class="subheading">{{ section.settings.sub_heading }}</p>
+          {% endif %}
+          {% if section.settings.heading %}
+            <h3 class="h2 ">{{ section.settings.heading }}</h3>
+          {% endif %}
+          {% if section.settings.description %}
+            <div class="rte">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      
+      <div class="our-team-section-body">
+        <div class="our-team-section-body-box">
+
+          {% for block in section.blocks %}
+            <div class="our-team-memeber">
+              <div class="memeber-img">
+                {%- if block.settings.member_image != blank -%}
+                  {% assign image = block.settings.member_image %}
+                  {% assign master_width = image.src.width | append: 'x' | append: image.src.height %}
+                  {%- render 'responsive-image', image: image, sizes: master_width, retina: true -%}
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder_svg_tag' }}
+                {%- endif -%}
+              </div>
+              <div class="memeber-info">
+                {% if block.settings.member_name %}
+                  <h4>{{ block.settings.member_name }}</h4>
+                {% endif %}
+                {% if block.settings.member_post %}
+                  <p>{{ block.settings.member_post }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our Team Section",
+  "class": "section-our-team",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title",
+      "default": "Gutsy Voeding",
+      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+    },
+    {
+      "type": "text",
+      "id": "sub_heading",
+      "label": "Sub Heading",
+      "default": "Supermarkt voer VS.",
+      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Content",
+      "default": "<p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "team_member",
+      "name": "Team Member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "member_image",
+          "label": "Member Image",
+          "info": "162 x 162 .jpg recommended."
+        },
+        {
+          "type": "text",
+          "id": "member_name",
+          "label": "Team Member Name",
+          "default": "Name"
+        },
+        {
+          "type": "text",
+          "id": "member_post",
+          "label": "Team Member Position",
+          "default": "Job Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Team Section"
+    }
+  ]
+}
+{% endschema %}

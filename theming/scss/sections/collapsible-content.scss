@@ -145,9 +145,11 @@
 
 .section-collapsible-content {
   margin-bottom: 6.25rem;
-  @media only screen and (width <= 63.938rem) {
+
+  @media only screen and (max-width:  63.938rem) {
     margin-bottom: 5.375rem;
   }
+
   .columns {
     .collapsible-content {
       max-width: 78rem;
@@ -172,12 +174,14 @@
       .collapsible-content__inner {
         display: grid;
         gap: 2rem;
+
         .accordion {
           border-radius: 1rem;
           border: 0.188rem solid var(--color-light-1);
           background: var(--color-light-1);
-          box-shadow: 0px 0px 0.5rem 0px rgba(47, 51, 57, 0.10);
+          box-shadow: 0 0 0.5rem 0 rgb(47 51 57 / 10%);
           margin: 0;
+
           details {
             summary {
               color: var(--color-accent-1);
@@ -189,7 +193,7 @@
               letter-spacing: -0.025rem;
               padding: 0.438rem 1.5rem;
 
-              @media only screen and (width <= 63.938rem) {
+              @media only screen and (max-width:  63.938rem) {
                 padding: 0.5rem 1.125rem;
                 font-size: var(--font-size-14);
                 letter-spacing: -0.018rem;
@@ -200,14 +204,17 @@
                 margin: 0;
                 top: 0.625rem;
                 right: 1.5rem;
+
                 svg {
                   transform: rotate(0);
                 }
-                @media only screen and (width <= 63.938rem) {
+
+                @media only screen and (max-width:  63.938rem) {
                   right: 1.125rem;
                 }
               }
             }
+
             &[open] {
               summary {
                 span {
@@ -217,9 +224,11 @@
                 }
               }
             }
+
             .collapsible__content {
               padding: 0.438rem 1.5rem;
-              @media only screen and (width <= 63.938rem) {
+
+              @media only screen and (max-width:  63.938rem) {
                 padding: 0.5rem 1.125rem;
               }
             }

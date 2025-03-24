@@ -66,7 +66,6 @@
     },
     "rich_text_j6nVd9": {
       "type": "rich-text",
-      "class": "home-rich-text",
       "blocks": {
         "subheading_ErhWzb": {
           "type": "subheading",
@@ -106,8 +105,8 @@
         "column_tjmMyV": {
           "type": "column",
           "settings": {
-            "image_full_width": false,
             "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
+            "image_full_width": false,
             "image_link": "",
             "title": "85% dierlijke eiwitten",
             "text": "<p>Onze brokken bevatten 85% dierlijke eiwitten van licht verteerbare insecten en smakelijke taurinerijke kip.</p>",
@@ -118,8 +117,8 @@
         "column_YJQBh9": {
           "type": "column",
           "settings": {
-            "image_full_width": false,
             "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
+            "image_full_width": false,
             "image_link": "",
             "title": "Natuurlijke ingrediënten",
             "text": "<p>100% natuurlijke brokken met insecten, kip, groenten en fruit – ideaal voor kieskeurige eters.</p>",
@@ -130,8 +129,8 @@
         "column_UUyLUt": {
           "type": "column",
           "settings": {
-            "image_full_width": false,
             "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
+            "image_full_width": false,
             "image_link": "",
             "title": "Gemaakt in belgië",
             "text": "<p>Lokaal geproduceerd met 90% Belgische ingrediënten binnen 160 km van Gent. Zo ondersteunen we lokale boeren.</p>",
@@ -171,6 +170,7 @@
         "heading": "Populaire producten",
         "marker_style": "style1",
         "description": "",
+        "button_text": "Shop Voeding",
         "collection": "all",
         "display_type": "carousel",
         "product_limit": 9,
@@ -180,8 +180,7 @@
         "show_progress_bar": false,
         "marker_color": "#fd6262",
         "disable_top_spacing": true,
-        "disable_bottom_spacing": true,
-        "button_text": "Shop Voeding"
+        "disable_bottom_spacing": true
       }
     },
     "table_section": {
@@ -313,10 +312,10 @@
         "columns": 4,
         "autoplay": true,
         "autoplay_length": 6,
-        "disable_top_spacing": false,
-        "disable_bottom_spacing": false,
         "color_bg": "#1A3C32",
-        "color_heading": "#E8D67A"
+        "color_heading": "#E8D67A",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
       }
     },
     "logo_list_fxpijU": {
@@ -325,32 +324,32 @@
         "logo_cRT8Aj": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/logo.svg",
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
         "logo_fqbhtk": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/logo.svg",
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
         "logo_dpNNVC": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/logo.svg",
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
         "logo_ABLQNz": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/logo.svg",
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         }

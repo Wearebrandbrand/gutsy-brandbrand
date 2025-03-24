@@ -277,9 +277,12 @@
 
 .customer-reviews {
   background-color: var(--color-bg);
+
   --section-spacing-desktop: 3.875rem;
+
   overflow: hidden;
-  @media only screen and (width <= 63.938rem) {
+
+  @media only screen and (max-width:  63.938rem) {
     --section-spacing-mobile: 1.875rem;
   }
 
@@ -292,6 +295,7 @@
     place-content: center;
     text-align: center;
     padding-bottom: 2.5rem;
+
     .section-header--content {
       .section-header--title {
         color: var(--color-heading);
@@ -303,25 +307,29 @@
   .customer-reviews--carousel {
     margin: 0 -0.75rem;
     overflow: initial;
-    @media only screen and (width <= 63.938rem){
+
+    @media only screen and (max-width:  63.938rem){
       margin: 0 -0.563rem;
     }
+
     .flickity-nav {
       display: none;
     }
+
     .flickity-viewport {
       overflow: initial;
     }
+
     .columns {
       max-width: 19.875rem;
       padding: 0 0.75rem;
       display: flex;
 
-      @media only screen and (width <= 74.938rem){
+      @media only screen and (max-width:  74.938rem){
         max-width: 16.5rem;
       }
 
-      @media only screen and (width <= 63.938rem){
+      @media only screen and (max-width:  63.938rem){
         max-width: 14.875rem;
         padding: 0 0.563rem;
       }
@@ -337,7 +345,7 @@
             object-fit: cover;
             width: 100%;
 
-            @media only screen and (width <= 63.938rem) {
+            @media only screen and (max-width:  63.938rem) {
               height: 7.375rem;
             }
           }
@@ -351,7 +359,7 @@
           place-content: space-between;
           height: calc(100% - 9.25rem);
 
-          @media only screen and (width <= 63.938rem) {
+          @media only screen and (max-width:  63.938rem) {
             padding: 0.938rem 1.125rem;
             height: calc(100% - 7.375rem);
           }
@@ -365,19 +373,22 @@
             letter-spacing: 0.03rem;
             margin: 0;
 
-            @media only screen and (width <= 63.938rem) {
+            @media only screen and (max-width:  63.938rem) {
               font-size: var(--font-size-10);
               letter-spacing: 0.025rem;
             }
           }
+
           .customer-reviews--content-wrapper {
             .customer-reviews--content-box {
               --color-star: var(--color-primary);
+
               display: flex;
               flex-wrap: wrap;
               place-items: center;
               place-content: space-between;
               margin-bottom: 0.5rem;
+
               .customer-reviews--author {
                 color: var(--color-light-3);
                 font-family: var(--font-primary);
@@ -386,15 +397,18 @@
                 font-weight: 400;
                 line-height: 130%;
                 letter-spacing: 0.03rem;
-                @media only screen and (width <= 63.938rem) {
+
+                @media only screen and (max-width:  63.938rem) {
                   font-size: var(--font-size-10);
                   letter-spacing: 0.025rem;
                 }
               }
+
               .star-rating {
                 margin: 0;
               }
             }
+
             h6 {
               color: var(--color-accent-1);
               font-family: var(--font-primary) !important;
@@ -404,15 +418,18 @@
               line-height: 130%;
               letter-spacing: -0.02rem;
               margin-bottom: 0.5rem;
-              @media only screen and (width <= 63.938rem) {
+
+              @media only screen and (max-width:  63.938rem) {
                 font-size: var(--font-size-14);
                 letter-spacing: -0.018rem;
               }
             }
+
             p {
               color: var(--color-secondary-dark);
             }
           }
+
           .customer-reviews--content-footer {
             p {
               color: var(--color-light-3);

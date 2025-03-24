@@ -69,7 +69,7 @@
     object-fit: cover;
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
     .multicolumn.swipe-on-mobile .row {
         display: grid;
         gap: 8px;
@@ -94,7 +94,7 @@
     }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width: 47.938rem) {
     .multicolumn.swipe-on-mobile .multicolumn__column {
         margin-bottom: 0;
         width: var(--mobile-swipe-width);
@@ -104,9 +104,11 @@
 .multicolumn.text-center .rte {
     padding: 0 15px;
 }
+
 .multicolumn {
     --section-spacing-desktop: 2.5rem;
     --section-spacing-mobile: 1.875rem;
+
     padding-bottom: 1.875rem;
 
     @media only screen and (min-width: 768px) {
@@ -120,7 +122,7 @@
     a {
         margin: 0;
 
-        @media only screen and (width <= 47.938rem) {
+        @media only screen and (max-width: 47.938rem) {
             width: 100%;
         }
 
@@ -142,17 +144,19 @@
         @media only screen and (min-width: 768px) {
             margin-bottom: 4rem;
         }
+
         .row {
             margin: 0;
             gap: 1rem;
             place-content: center;
 
-            @media only screen and (width <= 47.938rem) {
+            @media only screen and (max-width: 47.938rem) {
                 place-content: flex-start;
                 flex-wrap: nowrap;
                 padding: 0.313rem;
                 overflow: auto;
             }
+
             .multicolumn__column {
                 padding: 0;
                 margin: 0;
@@ -160,10 +164,10 @@
                 max-width: 16.313rem;
                 text-align: center;
 
-                @media only screen and (width <= 47.938rem) {
+                @media only screen and (max-width: 47.938rem) {
                     border-radius: 0.75rem;
                     background: var(--color-light-2);
-                    box-shadow: 0px 0px 0.25rem 0px rgba(0, 0, 0, 0.25);
+                    box-shadow: 0 0 0.25rem 0 rgb(0 0 0 / 25%);
                     padding: 1.688rem 1rem 1.125rem;
                     min-width: 14.563rem;
                 }

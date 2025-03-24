@@ -219,7 +219,7 @@
   min-height: calc(100% - 30px);
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .blog-posts.swipe-on-mobile .row {
     display: grid;
     gap: 10px;

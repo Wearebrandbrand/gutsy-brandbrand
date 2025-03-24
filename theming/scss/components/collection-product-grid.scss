@@ -1,6 +1,7 @@
 facet-filters-form {
   display: none;
 }
+
 .facets__form {
   .thb-filter-sort-count {
     display: none;
@@ -10,31 +11,38 @@ facet-filters-form {
 .section-collection-product-grid {
   margin-top: 3rem;
 
-  @media only screen and (width <= 63.938rem) {
+  @media only screen and (max-width: 63.938rem) {
     margin-top: 2.375rem;
   }
-  .small-12{
-    &.columns{
+
+  .small-12 {
+    &.columns {
       max-width: 67.625rem;
       margin: 0 auto;
     }
   }
+
   .collection-container {
     .sidebar-container {
       .products {
         margin: 0;
         gap: 3.938rem 1rem;
-        @media only screen and (width <= 63.938rem) {
+        justify-content: space-between;
+
+        @media only screen and (max-width: 63.938rem) {
           gap: 1.875rem 0.75rem;
         }
+
         li {
           padding: 0;
           max-width: 20.25rem;
           flex: 0 0 calc(33.33% - 0.7rem);
-          @media only screen and (width <= 47.938rem) {
+
+          @media only screen and (max-width: 47.938rem) {
             flex: 0 0 calc(50% - 0.4rem);
           }
-          .product-featured-image  {
+
+          .product-featured-image {
             margin: 0;
           }
         }

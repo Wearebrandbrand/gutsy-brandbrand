@@ -543,6 +543,7 @@
 
   .row {
     max-width: 79.875rem;
+
     --section-spacing-desktop: 1.75rem;
     --section-spacing-mobile: 0;
 
@@ -560,6 +561,7 @@
     @media only screen and (max-width: 63.938rem) {
       max-width: 100%;
       padding: 0;
+
       .columns {
         padding: 0;
 
@@ -573,6 +575,7 @@
 
   .desktop-normal {
     min-height: 52.813rem;
+
     @media only screen and (max-width: 74.938rem) {
       min-height: 34.313rem;
     }
@@ -702,6 +705,7 @@
           line-height: initial;
           position: relative;
           top: 0.125rem;
+
           @media only screen and (max-width: 63.938rem) {
             top: 0.063rem;
           }

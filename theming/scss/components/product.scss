@@ -1248,7 +1248,7 @@ div[role="button"] {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 5;
 }
 
@@ -2154,12 +2154,7 @@ svg {
 .rating-star {
   --letter-spacing: 0.3;
   --font-size: 1.5;
-  --percent: calc(
-          (
-          var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) /
-          (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))
-          ) * 100%
-  );
+  --percent: calc((var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) / (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))) * 100%);
 
   letter-spacing: calc(var(--letter-spacing) * 1rem);
   font-size: calc(var(--font-size) * 1rem);
@@ -2712,9 +2707,11 @@ svg {
   position: relative;
   padding-bottom: 5.625rem;
   overflow: hidden;
-  @media only screen and (width <= 63.938rem) {
+
+  @media only screen and (max-width:  63.938rem) {
     padding-bottom: 0;
   }
+
   .small-12 {
     &.columns {
       max-width: 78rem;
@@ -2728,7 +2725,7 @@ svg {
     gap: clamp(30px, 5%, 40px);
     grid-template-columns: minmax(45%, 740px) clamp(360px, 45%, var(--grid-width, 1280px) - 700px);
 
-    @media only screen and (width <= 47.938rem) {
+    @media only screen and (max-width:  47.938rem) {
       grid-template-columns: auto;
       gap: 0;
     }
@@ -2736,14 +2733,15 @@ svg {
     .product-gallery-sticky {
       max-width: 34.563rem;
 
-      @media only screen and (width <= 47.938rem) {
+      @media only screen and (max-width:  47.938rem) {
         max-width: 100%;
       }
 
       .product-gallery-container {
-        @media only screen and (width <= 47.938rem) {
+        @media only screen and (max-width:  47.938rem) {
           margin-bottom: 2.625rem;
         }
+
         .product-image-container {
           scroll-shadow {
             margin-top: 1rem;
@@ -2769,6 +2767,7 @@ svg {
 
         .star-rating-container {
           margin: 0;
+
           .star-rating {
             display: flex;
             flex-wrap: wrap;
@@ -2776,7 +2775,7 @@ svg {
             margin: 0;
             margin-bottom: 0.5rem;
 
-            @media only screen and (width <=63.938rem) {
+            @media only screen and (max-width: 63.938rem) {
               order: 1;
             }
 
@@ -2800,7 +2799,7 @@ svg {
               letter-spacing: 0.03rem;
               margin-left: 0.125rem;
 
-              @media only screen and (width <=63.938rem) {
+              @media only screen and (max-width: 63.938rem) {
                 font-size: var(--font-size-10);
                 letter-spacing: 0.025rem;
               }
@@ -2812,19 +2811,21 @@ svg {
           line-height: 110%;
           letter-spacing: 0.1rem;
           margin-bottom: 1.5rem;
-          @media only screen and (width <= 63.938rem) {
+
+          @media only screen and (max-width:  63.938rem) {
             margin-bottom: 1.125rem;
           }
         }
 
         .product-metafields {
           margin-bottom: 1rem;
+
           .usp-icons {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
 
-            @media only screen and (width <= 63.938rem) {
+            @media only screen and (max-width:  63.938rem) {
               img {
                 width: 2.25rem;
                 height: 2.25rem;
@@ -2836,10 +2837,13 @@ svg {
 
         .max-height {
           --max-height: initial !important;
+
           padding-bottom: 0;
           margin-bottom: 2rem;
+
           .max-height--inner {
             max-height: initial;
+
             .product-short-description {
               color: var(--color-secondary-dark);
               font-family: var(--font-primary);
@@ -2847,16 +2851,19 @@ svg {
               font-style: normal;
               font-weight: 400;
               line-height: 140%;
-              @media only screen and (width <= 63.938rem) {
+
+              @media only screen and (max-width:  63.938rem) {
                 font-size: var(--font-size-14);
               }
             }
           }
+
           .max-height--toggle {
             display: none;
           }
         }
       }
+
       variant-selects {
         .variations {
           .product-form__input {
@@ -2869,16 +2876,19 @@ svg {
               line-height: 120%;
               letter-spacing: -0.025rem;
               margin-bottom: 1.25rem;
+
               .form__label__value {
                 font-weight: 500;
               }
-              @media only screen and (width <= 63.938rem) {
+
+              @media only screen and (max-width:  63.938rem) {
                 font-size: var(--font-size-16);
                 margin-bottom: 1rem;
                 line-height: 120%;
                 letter-spacing: -0.02rem;
               }
             }
+
             label {
               min-width: 9.375rem;
               border-radius: 0.75rem;
@@ -2888,7 +2898,8 @@ svg {
               padding-left: 2.5rem;
               margin-right: 1rem;
               margin-bottom: 1rem;
-              @media only screen and (width <= 63.938rem) {
+
+              @media only screen and (max-width:  63.938rem) {
                 min-width: initial;
                 margin-right: 0.375rem;
                 margin-bottom: 0.375rem;
@@ -2924,21 +2935,26 @@ svg {
                 font-weight: 700;
                 line-height: 120%;
                 letter-spacing: -0.025rem;
-                @media only screen and (width <= 63.938rem) {
+
+                @media only screen and (max-width:  63.938rem) {
                   font-size: var(--font-size-14);
                   line-height: 130%;
                   letter-spacing: -0.018rem;
                 }
               }
             }
+
             input:checked + label {
               background-color: var(--color-accent-1);
-              &:before {
+
+              &::before {
                 border-color: var(--color-accent-6);
               }
+
               &::after {
                 background-color: var(--color-accent-6);
               }
+
               span {
                 color: var(--color-light-2);
               }
@@ -2946,6 +2962,7 @@ svg {
           }
         }
       }
+
       .product-button-cart {
         position: absolute;
         left: 0;
@@ -2953,22 +2970,27 @@ svg {
         bottom: 0;
         background-color: var(--color-accent-1);
         padding: 0.625rem 0;
-        @media only screen and (width <= 63.938rem) {
+
+        @media only screen and (max-width:  63.938rem) {
           position: fixed;
           z-index: 99;
         }
+
         .columns {
           display: flex;
           place-content: flex-end;
           place-items: center;
           gap: 1.5rem;
-          @media only screen and (width <= 63.938rem) {
+
+          @media only screen and (max-width:  63.938rem) {
             gap: 0.75rem;
           }
-          @media only screen and (width <= 35.938rem) {
+
+          @media only screen and (max-width:  35.938rem) {
             flex-wrap: wrap;
             place-content: center;
           }
+
           .total-text {
             color: var(--color-light-2);
             text-align: right;
@@ -2978,11 +3000,13 @@ svg {
             font-weight: 700;
             line-height: 120%;
             letter-spacing: -0.025rem;
-            @media only screen and (width <= 63.938rem) {
+
+            @media only screen and (max-width:  63.938rem) {
               font-size: var(--font-size-14);
               letter-spacing: .018rem;
             }
           }
+
           .product-price-container {
             .price {
               color: var(--color-light-2);
@@ -2995,18 +3019,22 @@ svg {
               text-transform: uppercase;
               margin: 0;
               min-width: initial;
-              @media only screen and (width <= 63.938rem) {
+
+              @media only screen and (max-width:  63.938rem) {
                 order: 3;
                 font-size: var(--font-size-14);
                 letter-spacing: 0.018rem;
               }
             }
           }
+
           .product--product-form {
             margin: 0;
-            @media only screen and (width <= 35.938rem) {
+
+            @media only screen and (max-width:  35.938rem) {
               width: 100%;
             }
+
             .single-add-to-cart-button {
               .single-add-to-cart-button--text {
                 display: flex;

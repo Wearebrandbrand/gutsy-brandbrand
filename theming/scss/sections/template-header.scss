@@ -146,12 +146,14 @@
 
 .template-header {
     padding: 0;
+
     .small-12{
         &.columns{
             max-width: 79.875rem;
             margin: 0 auto;
         }
     }
+
     .template-header--content {
         h1 {
             line-height: 110%;

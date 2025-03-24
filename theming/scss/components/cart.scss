@@ -233,7 +233,7 @@
   }
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
   .product-recommendations.swipe-on-mobile .products.row {
     margin: 0 -15px;
     width: calc(100% + 30px);

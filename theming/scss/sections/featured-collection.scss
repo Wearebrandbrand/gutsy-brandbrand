@@ -3,7 +3,7 @@
     overflow: hidden;
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
     .featured-collection .carousel__slide {
         width: var(--mobile-swipe-width);
     }
@@ -13,7 +13,7 @@
     padding: 0;
 }
 
-@media only screen and (width <= 47.938rem) {
+@media only screen and (max-width:  47.938rem) {
     .featured-collection.swipe-on-mobile .featured-collection__inner.display-type--grid .products.row {
         margin: 0 -15px;
         width: calc(100% + 30px);
@@ -48,17 +48,21 @@
         max-width: 71.25rem;
         margin: 0 auto;
         width: 100%;
-        @media only screen and (width <= 63.938rem) {
+
+        @media only screen and (max-width:  63.938rem) {
             padding: 0 4px;
         }
     }
+
     .section-header--button {
         text-align: right;
         margin-top: 4.125rem;
-        @media only screen and (width <= 63.938rem) {
+
+        @media only screen and (max-width:  63.938rem) {
             text-align: center;
             margin-top: 1.375rem;
         }
+
         a {
             color: var(--color-secondary);
             font-family: var(--font-primary);
@@ -66,7 +70,8 @@
             font-style: normal;
             font-weight: 600;
             line-height: 120%;
-            @media only screen and (width <= 63.938rem) {
+
+            @media only screen and (max-width:  63.938rem) {
                 width: 100%;
                 background-color: var(--color-accent-1);
                 color: var(--color-light-2);
@@ -78,21 +83,27 @@
                 line-height: 120%;
                 padding: 0.5rem 0.938rem;
                 max-width: 18rem;
+
                 &:hover {
                     background-color: var(--color-accent-3);
                     color: var(--color-primary);
                 }
             }
-            @media only screen and (width <= 47.938rem) {
+
+            @media only screen and (max-width:  47.938rem) {
                 max-width: 100%;
             }
+
             span {
                 display: flex;
                 margin-left: 0.625rem;
+
                 --color-accent: var(--color-secondary);
-                @media only screen and (width <= 63.938rem) {
+
+                @media only screen and (max-width:  63.938rem) {
                     display: none;
                 }
+
                 svg {
                     width: 0.875rem;
                     height: initial;

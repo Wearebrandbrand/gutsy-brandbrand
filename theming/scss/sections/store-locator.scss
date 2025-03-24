@@ -46,11 +46,11 @@
   }
 
   &.active {
-    background-color: rgb(var(--color-base-primary-1));
+    background-color: var(--color-secondary-dark);
     color: white;
 
     h4 {
-      color: rgb(var(--color-base-primary-3));
+      color: var(--color-light-1);
     }
 
     .link {

@@ -19,10 +19,16 @@
       "settings": {
         "heading": "Winkelzoeker",
         "description": "",
-        "image": "shopify://shop_images/contact_banner.jpg",
-        "full_width": false,
-        "disable_top_spacing": false,
-        "disable_bottom_spacing": false
+        "image": "shopify://shop_images/contact_banner.jpg"
+      }
+    },
+    "spacer_mXJfNm": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "border_separator": false,
+        "border_separator_full": false
       }
     },
     "store_locator_KyKHfz": {
@@ -48,6 +54,7 @@
   "order": [
     "main",
     "single_image_text_7X36GF",
+    "spacer_mXJfNm",
     "store_locator_KyKHfz"
   ]
 }

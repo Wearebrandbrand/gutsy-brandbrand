@@ -14,6 +14,17 @@
       "disabled": true,
       "settings": {}
     },
+    "single_image_text_7X36GF": {
+      "type": "single-image-text",
+      "settings": {
+        "heading": "Winkelzoeker",
+        "description": "",
+        "image": "shopify://shop_images/contact_banner.jpg",
+        "full_width": false,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
     "store_locator_KyKHfz": {
       "type": "store-locator",
       "blocks": {
@@ -36,6 +47,7 @@
   },
   "order": [
     "main",
+    "single_image_text_7X36GF",
     "store_locator_KyKHfz"
   ]
 }

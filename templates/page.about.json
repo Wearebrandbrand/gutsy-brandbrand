@@ -155,6 +155,7 @@
         "disable_bottom_spacing": true
       }
     },
+
     "3c475617-855b-4e78-b265-b1ed05a760bb": {
       "type": "spacer",
       "settings": {
@@ -219,7 +220,7 @@
       }
     },
     "FDC8HIJS_LQzPTY": {
-      "type": "figures",
+      "type": "cijfers",
       "blocks": {
         "column_tjmMyV": {
           "type": "column",
@@ -227,11 +228,11 @@
             "image": "shopify://shop_images/Meat.png",
             "image_full_width": false,
             "image_link": "",
-            "percent_text": "18%",
             "title": "De vleesindustrie is verantwoordelijk voor",
             "text": "<p>VAN DE TOTALE wERELDWIJDE UITSTOOT</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "percent_text": "18%"
           }
         },
         "column_YJQBh9": {
@@ -240,11 +241,11 @@
             "image": "shopify://shop_images/Factory.png",
             "image_full_width": false,
             "image_link": "",
-            "percent_text": "20%",
             "title": "De diervoeder- industrie verbruikt",
             "text": "<p>van de totale vleesindustrie</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "percent_text": "20%"
           }
         },
         "text_YJQBh9": {
@@ -287,11 +288,13 @@
         "marker_color": "#fd6262",
         "color_text": "#E8D67A",
         "color_links": "#E8D67A",
-        "disable_top_spacing": true,
-        "disable_bottom_spacing": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
         "button_1_color": "accent",
         "bottom_heading": "Dat is",
-        "last_heading": "ELK. JAAR. OPNIEUW."
+        "last_heading": "ELK. JAAR. OPNIEUW.",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
       }
     },
     "insecten": {
@@ -301,142 +304,6 @@
         "description": "Op deze grafiek zie je hoeveel land, water en CO2 wordt verbruikt om één kg eetbaar eiwit te produceren van rundvlees, lam, kip... en dan onze kleine redders.",
         "desktop_image": "shopify://shop_images/Desktop.png",
         "mobile_image": "shopify://shop_images/Mobile.png"
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_a": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
-            "image_link": "",
-            "title": "Hypoallergeen",
-            "text": "<p>Insecten zijn de meest zuivere dierlijke eiwitbron dat geen allergische reacties teweegbrengen.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_b": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
-            "image_link": "",
-            "title": "Pure proteine",
-            "text": "<p>Onze eiwitten bevatten een verteerbaarheids-score van 94,7%. We gebruiken alleen hoogwaardige en licht verteerbare eiwitten in onze hondenvoeding.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_c": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
-            "image_link": "",
-            "title": "Een ecologisch alternatief",
-            "text": "<p>De ecologische voetafdruk van insecten is 30 keer kleiner van die van rundvlees.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_d": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
-            "image_link": "",
-            "title": "Rijk aan vitaminen en  mineralen",
-            "text": "<p>Insecten bevatten essentiële vitaminen en mineralen waaronder ijzer, vitamine A, B2 en D.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_e": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
-            "image_link": "",
-            "title": "natuurlijke schoonmakers",
-            "text": "<p>De humane restatomen kunnen gereduceerd worden doordat insecten deze gebruiken als voedingsbronnen.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_a",
-        "column_b",
-        "column_c",
-        "column_d",
-        "column_e"
-      ],
-      "settings": {
-        "heading": "Insect Dinner!",
-        "sub_heading": "Winner, winner,",
-        "description": "<p>Er zijn  talloze voordelen aan het eten van insecten. Wist je dat insecten...</p>",
-        "columns_desktop": 5,
-        "heading_size": "h4"
-      }
-    },
-    "our-team": {
-      "type": "our-team",
-      "blocks": {
-        "team_member_a": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
-          }
-        },
-        "team_member_b": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
-          }
-        },
-        "team_member_c": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
-          }
-        },
-        "team_member_d": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
-          }
-        },
-        "team_member_e": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
-          }
-        }
-      },
-      "block_order": [
-        "team_member_a",
-        "team_member_b",
-        "team_member_c",
-        "team_member_d",
-        "team_member_e"
-      ],
-      "settings": {
-        "heading": "het team",
-        "sub_heading": "Ontmoet",
-        "description": ""
       }
     }
   },
@@ -450,8 +317,6 @@
     "6669cf74-31f8-4f94-a562-b72e8c241d3ba",
     "3c475617-855b-4e78-b265-b1ed05a760bdsb",
     "FDC8HIJS_LQzPTY",
-    "insecten",
-    "multicolumn",
-    "our-team"
+    "insecten"
   ]
 }

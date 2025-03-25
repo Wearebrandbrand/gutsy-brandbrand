@@ -155,6 +155,7 @@
         "disable_bottom_spacing": true
       }
     },
+
     "3c475617-855b-4e78-b265-b1ed05a760bb": {
       "type": "spacer",
       "settings": {
@@ -227,11 +228,11 @@
             "image": "shopify://shop_images/Meat.png",
             "image_full_width": false,
             "image_link": "",
-            "percent_text": "18%",
             "title": "De vleesindustrie is verantwoordelijk voor",
             "text": "<p>VAN DE TOTALE wERELDWIJDE UITSTOOT</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "percent_text": "18%"
           }
         },
         "column_YJQBh9": {
@@ -240,11 +241,11 @@
             "image": "shopify://shop_images/Factory.png",
             "image_full_width": false,
             "image_link": "",
-            "percent_text": "20%",
             "title": "De diervoeder- industrie verbruikt",
             "text": "<p>van de totale vleesindustrie</p>",
             "link_label": "",
-            "link": ""
+            "link": "",
+            "percent_text": "20%"
           }
         },
         "text_YJQBh9": {
@@ -287,20 +288,22 @@
         "marker_color": "#fd6262",
         "color_text": "#E8D67A",
         "color_links": "#E8D67A",
-        "disable_top_spacing": true,
-        "disable_bottom_spacing": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
         "button_1_color": "accent",
         "bottom_heading": "Dat is",
-        "last_heading": "ELK. JAAR. OPNIEUW."
+        "last_heading": "ELK. JAAR. OPNIEUW.",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
       }
     },
-    "insecten": {
-      "type": "insecten",
+    "insects": {
+      "type": "insects",
       "settings": {
         "heading": "Insecten als oplossing",
         "description": "Op deze grafiek zie je hoeveel land, water en CO2 wordt verbruikt om één kg eetbaar eiwit te produceren van rundvlees, lam, kip... en dan onze kleine redders.",
         "desktop_image": "shopify://shop_images/Desktop.png",
-        "mobile_image": "shopify://shop_images/Mobile.png"
+        "mobile_image": "shopify://shop_images/Container.png"
       }
     },
     "multicolumn": {
@@ -450,7 +453,7 @@
     "6669cf74-31f8-4f94-a562-b72e8c241d3ba",
     "3c475617-855b-4e78-b265-b1ed05a760bdsb",
     "FDC8HIJS_LQzPTY",
-    "insecten",
+    "insects",
     "multicolumn",
     "our-team"
   ]

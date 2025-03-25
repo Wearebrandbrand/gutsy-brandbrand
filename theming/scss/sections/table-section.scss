@@ -76,9 +76,11 @@
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
+            letter-spacing: normal;
 
             @media only screen and (max-width: 63.938rem) {
               font-size: var(--font-size-14);
+              letter-spacing: 0;
             }
           }
         }
@@ -136,6 +138,7 @@
           @media only screen and (max-width: 63.938rem) {
             max-width: 100%;
             width: calc(100% - 9.688rem);
+            padding-right: 0.875rem;
           }
 
           h5 {
@@ -237,7 +240,7 @@
         }
 
         @media only screen and (max-width: 47.938rem) {
-          max-width: 100%;
+          width: auto;
         }
 
         span {

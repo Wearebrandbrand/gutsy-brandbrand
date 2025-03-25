@@ -1,0 +1,40 @@
+.insects-section {
+  padding: 7.5rem 0;
+
+  @media only screen and (max-width: 50rem) {
+    padding: 2.5rem 0;
+  }
+
+  .page-width {
+    max-width: 67rem;
+    padding-inline: .938rem;
+    margin-inline: auto;
+    text-align: center;
+
+    h1, p {
+      margin-bottom: 1.5rem;
+      margin-top: 0;
+    }
+
+    img {
+      float: left;
+      width: 100%;
+      display: block;
+    }
+
+    .mobile_image {
+      display: none;
+    }
+
+    @media only screen and (max-width: 50rem) {
+      .mobile_image {
+        display: block;
+      }
+
+      .desktop_image {
+        display: none;
+      }
+    }
+
+  }
+}

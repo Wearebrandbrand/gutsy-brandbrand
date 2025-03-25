@@ -122,10 +122,6 @@
     a {
         margin: 0;
 
-        @media only screen and (max-width: 47.938rem) {
-            width: 100%;
-        }
-
         &.accent {
             border-radius: 6.25rem;
             border: 0.125rem solid var(--color-primary);
@@ -150,13 +146,6 @@
             gap: 1rem;
             place-content: center;
 
-            @media only screen and (max-width: 47.938rem) {
-                place-content: flex-start;
-                flex-wrap: nowrap;
-                padding: 0.313rem;
-                overflow: auto;
-            }
-
             .multicolumn__column {
                 padding: 0;
                 margin: 0;
@@ -165,39 +154,61 @@
                 text-align: center;
 
                 @media only screen and (max-width: 47.938rem) {
-                    border-radius: 0.75rem;
-                    background: var(--color-light-2);
-                    box-shadow: 0 0 0.25rem 0 rgb(0 0 0 / 25%);
-                    padding: 1.688rem 1rem 1.125rem;
-                    min-width: 14.563rem;
+                    min-width: 15.75rem;
+                    min-width: 15.75rem;
+                    display: flex;
+                    gap: 1.125rem;
                 }
 
                 .multicolumn__image {
                     width: 1.75rem !important;
                     margin-bottom: 1.2rem;
+
+                    @media only screen and (max-width: 47.938rem) {
+                        width: 1.625rem !important;
+                        margin-bottom: 0;
+                        top: 0.25rem;
+                        position: relative;
+                    }
                 }
 
-                .h4 {
-                    color: var(--color-accent-1);
-                    font-weight: 700;
-                    line-height: 120%;
-                    letter-spacing: 0.06rem;
-                    margin-bottom: 0.5rem;
-                }
+                .multicolumn__content {
+                    @media only screen and (max-width: 47.938rem) {
+                        max-width: calc(100% - (1.625rem + 1.125rem));
+                    }
 
-                .rte {
-                    p {
-                        color: var(--color-secondary-dark);
-                        text-align: center;
-                        font-family: var(--font-primary);
-                        font-size: var(--font-size-14);
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 140%;
-                        margin: 0;
+                    .h4 {
+                        color: var(--color-accent-1);
+                        font-weight: 700;
+                        line-height: 120%;
+                        letter-spacing: 0.06rem;
+                        margin-bottom: 0.5rem;
 
-                        @media only screen and (min-width: 768px) {
-                            font-size: var(--font-size-16);
+                        @media only screen and (max-width: 47.938rem) {
+                            min-height: 2.5rem;
+                            display: flex;
+                            place-items: center;
+                        }
+                    }
+
+                    .rte {
+                        p {
+                            color: var(--color-secondary-dark);
+                            text-align: center;
+                            font-family: var(--font-primary);
+                            font-size: var(--font-size-14);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            margin: 0;
+
+                            @media only screen and (min-width: 768px) {
+                                font-size: var(--font-size-16);
+                            }
+
+                            @media only screen and (max-width: 47.938rem) {
+                                text-align: left;
+                            }
                         }
                     }
                 }
@@ -211,6 +222,15 @@
         padding: 2.5rem 0 5.625rem;
         background: var(--color-secondary-dark);
         margin: 0;
+
+        .row {
+            @media only screen and (max-width: 47.938rem) {
+                place-content: flex-start;
+                flex-wrap: nowrap;
+                padding: 0.313rem;
+                overflow: auto;
+            }
+        }
 
         @media only screen and (max-width: 47.938rem) {
             padding: 1.875rem 0 2.5rem;
@@ -274,25 +294,27 @@
                         }
                     }
 
-                    h4 {
-                        color: var(--color-light-2);
-                        line-height: 120%;
-                        letter-spacing: 0.06rem;
-                        margin-bottom: 0.5rem;
-                    }
+                    .multicolumn__content {
+                        h4 {
+                            color: var(--color-light-2);
+                            line-height: 120%;
+                            letter-spacing: 0.06rem;
+                            margin-bottom: 0.5rem;
+                        }
 
-                    .rte {
-                        p {
-                            color: var(--color-light-1);
-                            font-size: var(--font-size-16);
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 140%;
-                            margin: 0;
-
-                            @media only screen and (max-width: 47.938rem) {
-                                font-size: var(--font-size-14);
+                        .rte {
+                            p {
+                                color: var(--color-light-1);
+                                font-size: var(--font-size-16);
+                                font-style: normal;
+                                font-weight: 400;
                                 line-height: 140%;
+                                margin: 0;
+
+                                @media only screen and (max-width: 47.938rem) {
+                                    font-size: var(--font-size-14);
+                                    line-height: 140%;
+                                }
                             }
                         }
                     }

@@ -139,6 +139,8 @@
   {{ 'components--header-mobile-navigation.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/info-box.scss" or path == "../../theming/scss/components/info-box.scss" %}
   {{ 'components--info-box.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/components/insects.scss" or path == "../../theming/scss/components/insects.scss" %}
+  {{ 'components--insects.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/list-collections.scss" or path == "../../theming/scss/components/list-collections.scss" %}
   {{ 'components--list-collections.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/login-register.scss" or path == "../../theming/scss/components/login-register.scss" %}

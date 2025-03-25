@@ -61,15 +61,17 @@
 									</div>
 								</figure>
 							{% endif %}
-							{% if block.settings.title != blank %}
-								<h4 class="{{ heading_size }}">{{ block.settings.title | newline_to_br }}</h4>
-							{% endif %}
-							{% if block.settings.text != blank %}
-								<div class="rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-							{% endif %}
-							{% if block.settings.link_label != blank %}
-								{% render 'text-button', url: block.settings.link, title: block.settings.link_label %}
-							{% endif %}
+							<div class="multicolumn__content">
+								{% if block.settings.title != blank %}
+									<h4 class="{{ heading_size }}">{{ block.settings.title | newline_to_br }}</h4>
+								{% endif %}
+								{% if block.settings.text != blank %}
+									<div class="rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+								{% endif %}
+								{% if block.settings.link_label != blank %}
+									{% render 'text-button', url: block.settings.link, title: block.settings.link_label %}
+								{% endif %}
+							</div>
 						</div>
 					{%- endfor -%}
 				</div>

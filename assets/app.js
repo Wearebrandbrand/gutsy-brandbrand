@@ -237,7 +237,6 @@ if (!customElements.get('product-card')) {
           if (video.classList.contains('hover')) {
             video.classList.remove('hover');
             let video_element = video.querySelector('video');
-            video_element.currentTime = 0;
             video_element.play();
             if (nav.length) {
               nav[index].classList.remove('active');
@@ -248,7 +247,6 @@ if (!customElements.get('product-card')) {
           if (!selvid.classList.contains('hover')) {
             selvid.classList.add('hover');
             let sel_video_element = selvid.querySelector('video');
-            sel_video_element.currentTime = 0;
             sel_video_element.play();
             if (nav.length) {
               nav[sel].classList.add('active');
@@ -262,6 +260,7 @@ if (!customElements.get('product-card')) {
           video.classList.remove('hover');
           let video_element = video.querySelector('video');
           video_element.pause();
+          video_element.currentTime = 0;
           if (nav.length) {
             nav[index].classList.remove('active');
           }

@@ -47,6 +47,10 @@
     padding: 3rem 0;
     margin: 7.813rem 0 5.813rem !important;
 
+    .button{
+        height: 3rem;
+    }
+
     @media only screen and (max-width:  47.938rem) {
         margin: 3rem 0 1.875rem !important;
         padding: 2.125rem 0 2.625rem;
@@ -118,18 +122,9 @@
                         padding: 0.813rem 1rem;
                         margin: 0;
 
-                        @media only screen and (max-width:  47.938rem) {
-                            padding: 0.475rem 1rem;
-                            height: initial;
-                        }
+
                     }
 
-                    label {
-                        @media only screen and (max-width:  47.938rem) {
-                            padding: 0.475rem 1rem;
-                            height: initial;
-                        }
-                    }
 
                     input:focus + label,
                     input:not(:placeholder-shown)+label,

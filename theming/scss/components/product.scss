@@ -756,6 +756,7 @@ div[role="button"] {
 .product-gallery-container .product-image-container .product-images {
   display: block;
   position: relative;
+  max-width: 100vw !important;
 }
 
 @media only screen and (min-width: 768px) {
@@ -819,6 +820,7 @@ div[role="button"] {
   bottom: 0;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .product-gallery-container.thumbnails-bottom scroll-shadow .product-thumbnail-container {
@@ -826,6 +828,7 @@ div[role="button"] {
   grid-auto-flow: column;
   grid-auto-columns: max-content;
   align-items: start;
+  max-width: calc(100vw - 2.5rem);
 }
 
 .product-gallery-container.thumbnails-bottom scroll-shadow .product-thumbnail-container .product-thumbnail {

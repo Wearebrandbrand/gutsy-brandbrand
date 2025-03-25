@@ -31,7 +31,7 @@
     }
   },
   "newsletter": {
-    "label": "E‑mail",
+    "label": "Jouw e-mail",
     "success": "Bedankt voor het abonneren"
   },
   "social": {
@@ -308,9 +308,9 @@
     "contact": {
       "form": {
         "name": "Naam",
-        "email": "E‑mail",
+        "email": "E-mailadres",
         "phone": "Telefoonnummer",
-        "comment": "Reactie",
+        "comment": "Uw vraag",
         "send": "Sturen",
         "post_success": "Bedankt dat je contact met ons hebt opgenomen. Je hoort zo snel mogelijk van ons.",
         "error_heading": "Pas het volgende aan:"

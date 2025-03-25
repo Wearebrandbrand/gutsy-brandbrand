@@ -20,7 +20,7 @@
             "icon": "none",
             "text": "Vandaag besteld, morgen in huis - Gratis verzending",
             "link": "",
-            "color_bg": "#FF8500",
+            "color_bg": "#1A3C32",
             "color_text": "#ffffff"
           }
         }
@@ -34,7 +34,7 @@
         "announcement_bar_layout": "carousel",
         "direction": "left",
         "speed": "20s",
-        "use_block_colors": false,
+        "use_block_colors": true,
         "autoplay": true,
         "autoplay_length": 5
       }

@@ -547,6 +547,11 @@
       .slideshow {
         border-bottom-left-radius: 0 !important;
         border-bottom-right-radius: 0 !important;
+
+        @media only screen and (max-width: 690px) {
+          min-height: 29.375rem;
+          max-height: 29.375rem;
+        }
       }
     }
 
@@ -563,6 +568,20 @@
       }
     }
 
+  }
+
+  @media only screen and (max-width: 690px) {
+    .flickity-viewport {
+      max-height: 29.375rem;
+
+      .slideshow__slide {
+        .slideshow__slide-bg {
+          img {
+            max-height: 15rem;
+          }
+        }
+      }
+    }
   }
 
   .desktop-normal {
@@ -585,12 +604,12 @@
       @media only screen and (max-width: 690px) {
         text-align: center;
         margin: 0 auto;
-        padding: 1rem 1.875rem 1.875rem;
+        padding: 1.125rem 1.688rem;
         background-color: var(--color-light-1);
         justify-content: center;
 
         .split-text {
-         color: var(--color-accent-1);
+          color: var(--color-accent-1);
         }
 
         .h1 {

@@ -52,7 +52,7 @@
       ],
       "settings": {
         "desktop_height": "desktop-height-550",
-        "mobile_height": "mobile-height-400",
+        "mobile_height": "mobile-height-500",
         "full_width": false,
         "autoplay": true,
         "autoplay_length": 5,
@@ -256,10 +256,10 @@
             "product_handle": "shopify://products/kerstdoos",
             "stars": "5",
             "heading": "Review Heading",
-            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "text": "Nono is een trotse moeder van 4 fantastische puppy's. Met Gutsy hebben we een perfect uitgebalanceerd dieet gevonden voor het hele gezin.",
             "time": "1 month ago",
-            "author": "Sofie & Quinn",
-            "author_image": "shopify://shop_images/Product_image.jpg"
+            "author": "Manon & Nono",
+            "author_image": "shopify://shop_images/Product_image.png"
           }
         },
         "review_c": {
@@ -280,10 +280,10 @@
             "product_handle": "shopify://products/kerstdoos",
             "stars": "5",
             "heading": "Review Heading",
-            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "text": "We hebben lang moeten zoeken naar het juiste voer voor Henry omdat hij allergisch is voor allerlei ingrediënten, maar dankzij Gutsy's hypoallergene hondenvoer behoren deze allergieën tot het verleden.",
             "time": "1 month ago",
-            "author": "Sofie & Quinn",
-            "author_image": "shopify://shop_images/Product_image.jpg"
+            "author": "Tom & Henry",
+            "author_image": "shopify://shop_images/Product_image-1.png"
           }
         },
         "review_e": {
@@ -292,7 +292,7 @@
             "product_handle": "shopify://products/kerstdoos",
             "stars": "5",
             "heading": "Review Heading",
-            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
             "time": "1 month ago",
             "author": "Sofie & Quinn",
             "author_image": "shopify://shop_images/Product_image.jpg"

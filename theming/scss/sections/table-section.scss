@@ -79,6 +79,7 @@
 
             @media only screen and (max-width: 63.938rem) {
               font-size: var(--font-size-14);
+              letter-spacing: 0;
             }
           }
         }
@@ -237,7 +238,7 @@
         }
 
         @media only screen and (max-width: 47.938rem) {
-          max-width: 100%;
+          width: auto;
         }
 
         span {

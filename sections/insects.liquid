@@ -113,57 +113,57 @@
 
 
 <script type="text/javascript">
-  const sectionScrollTop = document.querySelector('.insects-section').offsetTop;
-
-  if(window.scrollY >= sectionScrollTop - 200) {
-    animateGraph();
-  }
-
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY >= sectionScrollTop - 200) {
-      animateGraph();
-    }
-  })
+  let hasAnimated = false;
 
   function animateGraph() {
     const bars = document.querySelectorAll('.insects-graph__bar');
-
     const base = 350;
     const max = 200;
     const time = 4000;
     const interval = 100;
 
-    bars.forEach((bar, i) => {
-      const height = bar.getAttribute('data-value');
+    bars.forEach((bar) => {
+      const height = parseFloat(bar.getAttribute('data-value'));
+      const colorBar = bar.querySelector('.insects-graph__bar-color');
+      const span = bar.querySelector('span');
 
-      bar.querySelector('.insects-graph__bar-color').style.height = base / max * height + 'px';
+      // Set bar height
+      colorBar.style.height = (base / max * height) + 'px';
 
-      const span = bar.querySelector('span')
+      // Animate number
+      let current = 0;
+      const increment = height < 20 ? 0.5 : Math.ceil(height / (time / interval));
 
-      let increment = Math.ceil(parseInt(height)/(time/interval));
-      if (parseInt(height) < 20) {
-        increment = .5;
-      }
-
-      setInterval(function () {
-        let current = span.innerHTML;
-
-        if (parseFloat(height) > parseFloat(current)) {
-          if (increment === 0.5) {
-            span.innerHTML = (parseFloat(current) + increment).toFixed(1);
+      const updateCount = () => {
+        if (current < height) {
+          current += increment;
+          if (height < 20) {
+            span.innerHTML = Math.min(current, height).toFixed(1);
           } else {
-            span.innerHTML = parseFloat(current) + increment;
+            span.innerHTML = Math.min(current, height).toFixed(0);
           }
+          setTimeout(updateCount, interval);
         } else {
           span.innerHTML = height;
         }
-      }, interval * 2);
+      };
 
+      updateCount();
     });
-
   }
 
+  function onScroll() {
+    const section = document.querySelector('.insects-section');
+    const triggerPoint = section.offsetTop - 200;
+
+    if (!hasAnimated && window.scrollY >= triggerPoint) {
+      animateGraph();
+      hasAnimated = true;
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
 </script>
 
 {% schema %}

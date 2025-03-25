@@ -67,10 +67,8 @@
         "template--17918040834330__8653503a-90e7-446a-8f99-8905e1d4a2ac-16769132332abda0ff-1": {
           "type": "heading",
           "settings": {
-            "text": "pRATEN EN DROMEN <br>AAN DE BAR",
-            "marker_style": "style3",
-            "heading_size": "h2",
-            "marker_color": "#1fd76c"
+            "text": "PRATEN EN DROMEN <br>AAN DE BAR",
+            "heading_size": "h2"
           }
         },
         "template--17918040834330__8653503a-90e7-446a-8f99-8905e1d4a2ac-16769132332abda0ff-2": {
@@ -124,9 +122,7 @@
           "type": "heading",
           "settings": {
             "text": "Beginnen experimenteren omtrent het recept",
-            "marker_style": "style2",
-            "heading_size": "h2",
-            "marker_color": "#8662fd"
+            "heading_size": "h2"
           }
         },
         "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2": {
@@ -180,9 +176,7 @@
           "type": "heading",
           "settings": {
             "text": "Gutsy is geboren!",
-            "marker_style": "style2",
-            "heading_size": "h2",
-            "marker_color": "#8662fd"
+            "heading_size": "h2"
           }
         },
         "template--17918040834330__6669cf74-31f8-4f94-a562-b72e8c241d3b-16769132332abda0ff-2": {
@@ -282,7 +276,6 @@
       "settings": {
         "subheading": "De harde realiteit",
         "heading": "Exacte cijfers",
-        "marker_style": "style1",
         "description": "",
         "columns_desktop": 2,
         "mobile_swipe": false,
@@ -290,7 +283,6 @@
         "text_alignment": "center",
         "heading_size": "h3",
         "color_heading": "#e8d67a",
-        "marker_color": "#fd6262",
         "color_text": "#e8d67a",
         "color_links": "#e8d67a",
         "disable_top_spacing": true,
@@ -383,7 +375,6 @@
       "settings": {
         "heading": "Insect Dinner!",
         "sub_heading": "Winner, winner,",
-        "marker_style": "style1",
         "description": "<p>Er zijn  talloze voordelen aan het eten van insecten. Wist je dat insecten...</p>",
         "columns_desktop": 5,
         "mobile_swipe": false,
@@ -391,7 +382,6 @@
         "text_alignment": "left",
         "heading_size": "h4",
         "color_heading": "#1a1c1d",
-        "marker_color": "#FD6262",
         "color_text": "#2c2d2e",
         "color_links": "#2c2d2e",
         "disable_top_spacing": false,

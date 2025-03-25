@@ -337,11 +337,11 @@
           }
 
           @media only screen and (max-width: 75rem) {
-            grid-template-columns: 50% 1fr;
+            grid-template-columns: 50% 1fr !important;
           }
 
           @media only screen and (max-width: 63.938rem) {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr !important;
             grid-template-areas: "media" "content";
 
 
@@ -377,7 +377,7 @@
           }
 
           @media only screen and (max-width: 63.938rem) {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr !important;
             grid-template-areas: "media" "content";
           }
         }

@@ -35,7 +35,7 @@
 @media only screen and (min-width: 768px) {
     .logo-list--inner {
         gap: 20px;
-        grid-template-columns: repeat(var(--logo-columns), 1fr);
+        grid-template-columns: repeat(var(--logo-columns), minmax(17.5rem, 1fr));
     }
 }
 
@@ -119,7 +119,6 @@
             background-color: transparent;
             box-shadow: none;
             flex-direction: column;
-            max-width: 17.5rem;
             gap: 1.25rem;
 
             .rte {

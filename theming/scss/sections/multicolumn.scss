@@ -147,14 +147,16 @@
             place-content: center;
 
             .multicolumn__column {
-                padding: 0;
-                margin: 0;
-                flex: 0 0 calc(33.33% - 0.7rem);
-                max-width: 16.313rem;
+                &.medium-4 {
+                    flex: 0 0 calc(33.33% - 0.7rem);
+                    max-width: inherit;
+                    padding: 0;
+                    margin: 0;
+                }
+
                 text-align: center;
 
                 @media only screen and (max-width: 47.938rem) {
-                    min-width: 15.75rem;
                     min-width: 15.75rem;
                     display: flex;
                     gap: 1.125rem;
@@ -284,8 +286,12 @@
                 }
 
                 .multicolumn__column {
-                    max-width: 13.625rem;
-                    flex: 0 0 calc(20% - 2rem);
+                    &.large-1\/5 {
+                        padding: 0;
+                        margin: 0;
+                        max-width: 13.625rem;
+                        flex: 0 0 calc(20% - 2rem);
+                    }
 
                     @media only screen and (max-width: 47.938rem) {
                         padding: 0;
@@ -349,8 +355,4 @@
             }
         }
     }
-}
-
-.template-index .multicolumn .multicolumn__inner .row .multicolumn__column{
-    max-width: inherit;
 }

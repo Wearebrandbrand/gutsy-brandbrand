@@ -385,9 +385,9 @@
     "src": "theming/scss/components/info-box.scss",
     "isEntry": true
   },
-  "theming/scss/components/insecten.scss": {
-    "file": "components--insecten.css",
-    "src": "theming/scss/components/insecten.scss",
+  "theming/scss/components/insects.scss": {
+    "file": "components--insects.css",
+    "src": "theming/scss/components/insects.scss",
     "isEntry": true
   },
   "theming/scss/components/list-collections.scss": {

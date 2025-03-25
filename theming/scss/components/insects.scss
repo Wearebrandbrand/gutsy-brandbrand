@@ -1,37 +1,37 @@
-.insecten-section{
+.insecten-section {
   padding: 7.5rem 0;
 
-  @media only screen and (max-width: 50rem){
+  @media only screen and (max-width: 50rem) {
     padding: 2.5rem 0;
   }
 
-  .page-width{
+  .page-width {
     max-width: 67rem;
     padding-inline: .938rem;
     margin-inline: auto;
     text-align: center;
 
-    h1, p{
+    h1, p {
       margin-bottom: 1.5rem;
       margin-top: 0;
     }
 
-    img{
+    img {
       float: left;
       width: 100%;
       display: block;
     }
 
-    .mobile_image{
+    .mobile_image {
       display: none;
     }
 
     @media only screen and (max-width: 50rem) {
-      .mobile_image{
+      .mobile_image {
         display: block;
       }
 
-      .desktop_image{
+      .desktop_image {
         display: none;
       }
     }

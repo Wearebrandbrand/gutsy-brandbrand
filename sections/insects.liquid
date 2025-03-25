@@ -14,15 +14,157 @@
             {% endif %}
         </div>
 
-        <div class="image-box">
-            {%- assign desktop_image = section.settings.desktop_image -%}
-            {{ desktop_image | image_url: width: desktop_image.width | image_tag: class: 'desktop_image', loading: 'lazy' }}
-
-            {%- assign mobile_image = section.settings.mobile_image -%}
-            {{ mobile_image | image_url: width: mobile_image.width | image_tag: class: 'mobile_image', loading: 'lazy' }}
+        <div data-scroll class="insects-graph__wrap">
+            <div class="insects-graph__legend">
+                <div class="insects-graph__legend-item">
+                    <div id="legend-land" class="insects-graph__legend-color"></div>
+                    <span>Land (m²)</span>
+                </div>
+                <div class="insects-graph__legend-item">
+                    <div id="legend-emissions" class="insects-graph__legend-color"></div>
+                    <span>Emissions (Kg CO²)</span>
+                </div>
+                <div class="insects-graph__legend-item">
+                    <div id="legend-water" class="insects-graph__legend-color"></div>
+                    <span>Water (m³)</span>
+                </div>
+            </div>
+            <div class="insects-graph">
+                <div class="insects-graph__group">
+                    <div class="insects-graph__bars">
+                        <div data-value="200" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-land"></div>
+                        </div>
+                        <div data-value="125" class="insects-graph__bar ">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-emissions"></div>
+                        </div>
+                        <div data-value="110" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-water"></div>
+                        </div>
+                    </div>
+                    <div class="insects-graph__text">
+                        {{ 'sections.insects.cow' | t }}
+                    </div>
+                </div>
+                <div class="insects-graph__group">
+                    <div class="insects-graph__bars">
+                        <div data-value="180" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-land"></div>
+                        </div>
+                        <div data-value="100" class="insects-graph__bar ">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-emissions"></div>
+                        </div>
+                        <div data-value="90" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-water"></div>
+                        </div>
+                    </div>
+                    <div class="insects-graph__text">
+                        {{ 'sections.insects.sheep' | t }}
+                    </div>
+                </div>
+                <div class="insects-graph__group">
+                    <div class="insects-graph__bars">
+                        <div data-value="50" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-land"></div>
+                        </div>
+                        <div data-value="40" class="insects-graph__bar ">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-emissions"></div>
+                        </div>
+                        <div data-value="35" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-water"></div>
+                        </div>
+                    </div>
+                    <div class="insects-graph__text">
+                        {{ 'sections.insects.chicken' | t }}
+                    </div>
+                </div>
+                <div class="insects-graph__group">
+                    <div class="insects-graph__bars">
+                        <div data-value="7.5" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-land"></div>
+                        </div>
+                        <div data-value="10" class="insects-graph__bar ">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-emissions"></div>
+                        </div>
+                        <div data-value="5.5" class="insects-graph__bar">
+                            <span>0</span>
+                            <div class="insects-graph__bar-color color-water"></div>
+                        </div>
+                    </div>
+                    <div class="insects-graph__text">
+                        {{ 'sections.insects.insect' | t }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+  const sectionScrollTop = document.querySelector('.insects-section').offsetTop;
+
+  if(window.scrollY >= sectionScrollTop - 200) {
+    animateGraph();
+  }
+
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= sectionScrollTop - 200) {
+      animateGraph();
+    }
+  })
+
+  function animateGraph() {
+    const bars = document.querySelectorAll('.insects-graph__bar');
+
+    const base = 350;
+    const max = 200;
+    const time = 4000;
+    const interval = 100;
+
+    bars.forEach((bar, i) => {
+      const height = bar.getAttribute('data-value');
+
+      bar.querySelector('.insects-graph__bar-color').style.height = base / max * height + 'px';
+
+      const span = bar.querySelector('span')
+
+      let increment = Math.ceil(parseInt(height)/(time/interval));
+      if (parseInt(height) < 20) {
+        increment = .5;
+      }
+
+      setInterval(function () {
+        let current = span.innerHTML;
+
+        if (parseFloat(height) > parseFloat(current)) {
+          if (increment === 0.5) {
+            span.innerHTML = (parseFloat(current) + increment).toFixed(1);
+          } else {
+            span.innerHTML = parseFloat(current) + increment;
+          }
+        } else {
+          span.innerHTML = height;
+        }
+      }, interval * 2);
+
+    });
+
+  }
+
+</script>
 
 {% schema %}
 {

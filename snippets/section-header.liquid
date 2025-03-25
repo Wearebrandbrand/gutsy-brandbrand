@@ -6,7 +6,7 @@
 		{%- endif -%}
 		{%- if section_heading -%}
 			<h3 class="section-header--title">
-				{% render 'animated-marker-heading', heading: section_heading, style: marker_style, color: marker_color %}
+				{{ section_heading }}
 			</h3>
 		{%- endif -%}
 		{%- if section_description != blank -%}

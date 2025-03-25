@@ -1,13 +1,13 @@
 {{- 'sections--collection-tabs.css' | asset_url | stylesheet_tag -}}
 {%- liquid
   assign section_heading = section.settings.heading
-  assign marker_style = section.settings.marker_style
+
   assign section_description = section.settings.description
   assign columns_desktop = section.settings.columns_desktop
   assign show_progress_bar = section.settings.show_progress_bar
   assign product_limit = section.settings.product_limit
 
-  assign marker_color = section.settings.marker_color
+
 
   assign disable_top_spacing = section.settings.disable_top_spacing
   assign disable_bottom_spacing = section.settings.disable_bottom_spacing
@@ -33,9 +33,7 @@
         section_heading: section_heading,
         section_description: section_description,
         section_id: section.id,
-        blocks: section.blocks,
-        marker_color: marker_color,
-        marker_style: marker_style
+        blocks: section.blocks
       %}
       <slide-show
         id="product-grid-{{ section.id }}"
@@ -107,32 +105,7 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Collection Tabs",
-      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-    },
-    {
-      "type": "select",
-      "id": "marker_style",
-      "options": [
-        {
-          "value": "style1",
-          "label": "Basic"
-        },
-        {
-          "value": "style2",
-          "label": "Double"
-        },
-        {
-          "value": "style3",
-          "label": "Squiggle"
-        },
-        {
-          "value": "style4",
-          "label": "Zigzag"
-        }
-      ],
-      "default": "style1",
-      "label": "Marker"
+      "default": "Collection Tabs"
     },
     {
       "type": "richtext",
@@ -167,12 +140,6 @@
     {
       "type": "header",
       "content": "Colors"
-    },
-    {
-      "type": "color",
-      "id": "marker_color",
-      "label": "Marker",
-      "default": "#FD6262"
     },
     {
       "type": "header",

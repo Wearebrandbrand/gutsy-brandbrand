@@ -3,14 +3,14 @@
 <script src="{{ 'sections--tabbed-content.js' | asset_url }}" defer="defer"></script>
 {%- liquid
 	assign section_heading = section.settings.heading
-	assign marker_style = section.settings.marker_style
+
 	assign section_description = section.settings.description
 
 	assign text_size = section.settings.text_size
 	assign tab_alignment = section.settings.tab_alignment
 	assign text_alignment = section.settings.text_alignment
 
-	assign marker_color = section.settings.marker_color
+
 	assign color_text = section.settings.color_text
 	assign color_tabs = section.settings.color_tabs
 
@@ -28,7 +28,7 @@
 <div class="row">
 	<div class="small-12 columns">
 		<div class="tabbed-content-wrapper {% if has_bg -%}tabbed-content--has-bg{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-bg: {{ color_bg }}; --bg-body-rgb: {{ color_bg.rgb | replace: ' ' , ',' }}; --color-body: {{ color_text }}; --color-tabs: {{ color_tabs.rgb | replace: ' ' , ',' }};">
-			{% render 'section-header', section_heading: section_heading, section_description: section_description, marker_color: marker_color, marker_style: marker_style %}
+			{% render 'section-header', section_heading: section_heading, section_description: section_description %}
 			<tabbed-content class="tabbed-content tabs-{{ tab_alignment }} text-size--{{ text_size }}" selected-index="0">
 				<scroll-shadow class="tabbed-content--scroll">
 					<div class="tabbed-content--tabs tabs-{{ tab_alignment }}">
@@ -86,32 +86,7 @@
 				"type": "text",
 				"id": "heading",
 				"label": "Heading",
-				"default": "Tabbed content",
-				"info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-			},
-			{
-				"type": "select",
-				"id": "marker_style",
-				"options": [
-					{
-						"value": "style1",
-						"label": "Basic"
-					},
-					{
-						"value": "style2",
-						"label": "Double"
-					},
-					{
-						"value": "style3",
-						"label": "Squiggle"
-					},
-					{
-						"value": "style4",
-						"label": "Zigzag"
-					}
-				],
-				"default": "style1",
-				"label": "Marker"
+				"default": "Tabbed content"
 			},
 			{
 				"type": "richtext",
@@ -201,12 +176,6 @@
         "label": "Text",
         "default": "#2c2d2e"
       },
-			{
-				"type": "color",
-				"id": "marker_color",
-				"label": "Marker",
-				"default": "#FD6262"
-			},
 			{
 	      "type": "header",
 	      "content": "Spacing"

@@ -239,3 +239,17 @@
     }
   }
 }
+
+
+.section-collapsible-content .section-header {
+  @media only screen and (max-width:  63.938rem) {
+    .section-header--description{
+      text-align: center;
+      letter-spacing: normal;
+    }
+  }
+
+  h3{
+    margin-bottom: .5rem;
+  }
+}

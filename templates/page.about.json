@@ -87,6 +87,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/About_1.png",
+        "mobile_image": "shopify://shop_images/About_mobile1.png",
         "use_video": false,
         "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
@@ -141,6 +142,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/About_2.png",
+        "mobile_image": "shopify://shop_images/About_mobile2.png",
         "use_video": false,
         "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
@@ -196,6 +198,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/About_3.png",
+        "mobile_image": "shopify://shop_images/About_mobile3.png",
         "use_video": false,
         "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,

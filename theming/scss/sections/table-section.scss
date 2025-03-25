@@ -15,7 +15,7 @@
     .table-section-header {
       display: flex;
       place-content: space-between;
-      place-items: center;
+      place-items: flex-start;
       width: 100%;
 
       &.table-header {
@@ -254,7 +254,7 @@
           }
 
           svg {
-            width: 0.875rem;
+            width: 0.507rem;
             height: initial;
           }
         }

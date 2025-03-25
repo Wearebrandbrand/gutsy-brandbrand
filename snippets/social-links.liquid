@@ -8,9 +8,6 @@
 	{% if settings.social_instagram_link != blank %}
 	<li><a href="{{ settings.social_instagram_link }}" class="social instagram" target="_blank" rel="noreferrer" title="Instagram">{% render 'svg-icons' with 'instagram' %}{% if show_label %} <span>{{ 'social.links.instagram' | t }}</span>{% endif %}</a></li>
 	{% endif %}
-	{% if settings.social_youtube_link != blank %}
-	<li><a href="{{ settings.social_youtube_link }}" class="social youtube" target="_blank" rel="noreferrer" title="YouTube">{% render 'svg-icons' with 'youtube' %}{% if show_label %} <span>{{ 'social.links.youtube' | t }}</span>{% endif %}</a></li>
-	{% endif %}
 	{% if settings.social_pinterest_link != blank %}
 	<li><a href="{{ settings.social_pinterest_link }}" class="social pinterest" target="_blank" rel="noreferrer" title="Pinterest">{% render 'svg-icons' with 'pinterest' %}{% if show_label %} <span>{{ 'social.links.pinterest' | t }}</span>{% endif %}</a></li>
 	{% endif %}
@@ -19,6 +16,9 @@
 	{% endif %}
 	{% if settings.social_tiktok_link != blank %}
 	<li><a href="{{ settings.social_tiktok_link }}" class="social tiktok" target="_blank" rel="noreferrer" title="TikTok">{% render 'svg-icons' with 'tiktok' %}{% if show_label %} <span>{{ 'social.links.tiktok' | t }}</span>{% endif %}</a></li>
+	{% endif %}
+	{% if settings.social_youtube_link != blank %}
+		<li><a href="{{ settings.social_youtube_link }}" class="social youtube" target="_blank" rel="noreferrer" title="YouTube">{% render 'svg-icons' with 'youtube' %}{% if show_label %} <span>{{ 'social.links.youtube' | t }}</span>{% endif %}</a></li>
 	{% endif %}
 	{% if settings.social_linkedin_link != blank %}
 	<li><a href="{{ settings.social_linkedin_link }}" class="social linkedin" target="_blank" rel="noreferrer" title="Linkedin">{% render 'svg-icons' with 'linkedin' %}{% if show_label %} <span>{{ 'social.links.linkedin' | t }}</span>{% endif %}</a></li>

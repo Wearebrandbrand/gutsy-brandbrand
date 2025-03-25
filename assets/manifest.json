@@ -385,11 +385,6 @@
     "src": "theming/scss/components/info-box.scss",
     "isEntry": true
   },
-  "theming/scss/components/insecten.scss": {
-    "file": "components--insecten.css",
-    "src": "theming/scss/components/insecten.scss",
-    "isEntry": true
-  },
   "theming/scss/components/insects.scss": {
     "file": "components--insects.css",
     "src": "theming/scss/components/insects.scss",

@@ -12,12 +12,8 @@
 	assign video_autoplay = section.settings.video_autoplay
 	assign height = section.settings.height
 	assign content_position = section.settings.content_position
-	assign column_spacing = section.settings.column_spacing
 	assign desktop_image_width = section.settings.desktop_image_width
 	assign desktop_layout = section.settings.layout
-	assign color_bg = section.settings.color_bg
-	assign color_text = section.settings.color_text
-	assign color_border = section.settings.color_border
 	assign disable_top_spacing = section.settings.disable_top_spacing
 	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
 
@@ -36,11 +32,13 @@
 -%}
 <div class="row{% if full_width %} full-width-row{% endif %}">
 	<div class="small-12 columns">
-		<div class="image-with-text column-spacing--{{ column_spacing }} grid--image-{{ desktop_image_width }} {{ desktop_layout }} {{ content_position }} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-bg:{{ color_bg }};--color-text:{{ color_text }};--color-text-rgb: {{ color_text.rgb | replace: ' ' , ',' }}; --solid-button-background: {{ color_text }}; --solid-button-background-hover: {{ color_text | color_darken: 7 }}; --solid-button-label: {{ color_bg }};--bg-body: {{ color_bg }};--color-border: {{ color_border }}">
+		<div class="image-with-text grid--image-{{ desktop_image_width }} {{ desktop_layout }} {{ content_position }} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
 			<div class="image-with-text--image image-with-text--inner">
 				<div class="image-with-text--image-media aspect-ratio aspect-ratio--{{ height }}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
 					{%- assign mobile_image = section.settings.mobile_image -%}
-					{{ mobile_image | image_url: width: mobile_image.width | image_tag: class: 'mobile_image', loading: 'lazy' }}
+					{% if mobile_image %}
+						{{ mobile_image | image_url: width: mobile_image.width | image_tag: class: 'mobile_image', loading: 'lazy' }}
+					{% endif %}
 					{%- if use_video -%}
 						{%- if video_hosted != blank -%}
 							{{ video_hosted | video_tag: autoplay: video_autoplay, loop: true, controls: true, muted: video_autoplay, image_size: '630x' }}
@@ -118,388 +116,352 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Image with text",
-		"class": "section-image-with-text",
-    "settings": [
-			{
-				"type": "image_picker",
-				"id": "image",
-				"label": "Image",
-				"info": "1340 x 1340 .jpg recommended."
-			},
-			{
-				"type": "image_picker",
-				"id": "mobile_image",
-				"label": "Mobile Image",
-				"info": "1340 x 1340 .jpg recommended."
-			},
-			{
-				"type": "header",
-				"content": "Video"
-			},
-			{
-				"type": "checkbox",
-				"id": "use_video",
-				"default": false,
-				"label": "Use video instead of image"
-			},
-			{
-				"type": "video_url",
-        "id": "video",
-        "label": "Video URL",
-				"accept": [
-          "youtube",
-          "vimeo"
-        ],
-				"placeholder": "Use a YouTube or Vimeo URL",
-				"default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-				"info": "Video plays in a lightbox."
-      },
-			{
-			  "type": "video",
-			  "id": "video_hosted",
-			  "label": "Shopify-hosted video",
-				"info": "Overrides the Video URL setting."
-			},
-			{
-				"type": "checkbox",
-				"id": "video_autoplay",
-				"default": true,
-				"label": "Autoplay",
-				"info": "Video will be muted"
-			},
-			{
-				"type": "header",
-				"content": "Layout"
-			},
-			{
-	      "type": "select",
-	      "id": "height",
-	      "options": [
-	        {
-	          "value": "adapt",
-	          "label": "Adapt to image"
-	        },
-	        {
-	          "value": "small",
-	          "label": "Small"
-	        },
-	        {
-	          "value": "large",
-	          "label": "Large"
-	        }
-	      ],
-	      "default": "adapt",
-	      "label": "Image height"
-	    },
-			{
-				"type": "select",
-				"id": "desktop_image_width",
-				"options": [
-					{
-						"value": "small",
-						"label": "Small"
-					},
-					{
-						"value": "medium",
-						"label": "Medium"
-					},
-					{
-						"value": "large",
-						"label": "Large"
-					}
-				],
-				"default": "medium",
-				"label": "Desktop image width",
-				"info": "Image is automatically optimized for mobile."
-			},
-			{
-				"type": "checkbox",
-				"id": "full_width",
-				"label": "Make section full width",
-				"default": false
-			},
-			{
-	      "type": "select",
-	      "id": "layout",
-	      "options": [
-	        {
-	          "value": "image_first",
-	          "label": "Image first"
-	        },
-	        {
-	          "value": "text_first",
-	          "label": "Image second"
-	        }
-	      ],
-	      "default": "image_first",
-	      "label": "Desktop image placement",
-	      "info": "Image first is the default mobile layout."
-	    },
-			{
-				 "type": "select",
-				 "id": "content_position",
-				 "label": "Desktop content alignment",
-				 "options": [
-					 { "value": "text-center", "label": "Center" },
-					 { "value": "text-left", "label": "Left" },
-					 { "value": "text-right", "label": "Right" }
-				 ],
-				 "default": "text-left"
-			},
-			{
-	      "type": "select",
-	      "id": "column_spacing",
-	      "options": [
-	        {
-	          "value": "small",
-	          "label": "Small"
-	        },
-					{
-	          "value": "medium",
-	          "label": "Medium"
-	        },
-	        {
-	          "value": "large",
-	          "label": "Large"
-	        }
-	      ],
-	      "default": "medium",
-	      "label": "Column spacing"
-	    },
-			{
-	      "type": "header",
-	      "content": "Colors"
-	    },
-			{
-        "type": "color",
-        "id": "color_bg",
-        "label": "Background",
-        "default": "#ffffff"
-      },
-			{
-        "type": "color",
-        "id": "color_text",
-        "label": "Text",
-        "default": "#2c2d2e"
-      },
-			{
-        "type": "color",
-        "id": "color_border",
-        "label": "Borders",
-        "default": "#e2e2e2"
-      },
-			{
-				"type": "header",
-				"content": "Spacing"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_top_spacing",
-				"default": false,
-				"label": "Remove top spacing"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_bottom_spacing",
-				"default": false,
-				"label": "Remove bottom spacing"
-			}
+{
+  "name": "Image with text",
+  "class": "section-image-with-text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1340 x 1340 .jpg recommended."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image",
+      "info": "1340 x 1340 .jpg recommended."
+    },
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_video",
+      "default": false,
+      "label": "Use video instead of image"
+    },
+    {
+      "type": "video_url",
+      "id": "video",
+      "label": "Video URL",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "placeholder": "Use a YouTube or Vimeo URL",
+      "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+      "info": "Video plays in a lightbox."
+    },
+    {
+      "type": "video",
+      "id": "video_hosted",
+      "label": "Shopify-hosted video",
+      "info": "Overrides the Video URL setting."
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "default": true,
+      "label": "Autoplay",
+      "info": "Video will be muted"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "adapt",
+      "label": "Image height"
+    },
+    {
+      "type": "select",
+      "id": "desktop_image_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium",
+      "label": "Desktop image width",
+      "info": "Image is automatically optimized for mobile."
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Image second"
+        }
+      ],
+      "default": "image_first",
+      "label": "Desktop image placement",
+      "info": "Image first is the default mobile layout."
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Desktop content alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_top_spacing",
+      "default": false,
+      "label": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_bottom_spacing",
+      "default": false,
+      "label": "Remove bottom spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "subheading",
+      "name": "Subheading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Add a tagline"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Image with text",
+          "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+        },
+        {
+          "type": "select",
+          "id": "marker_style",
+          "options": [
+            {
+              "value": "style1",
+              "label": "Basic"
+            },
+            {
+              "value": "style2",
+              "label": "Double"
+            },
+            {
+              "value": "style3",
+              "label": "Squiggle"
+            },
+            {
+              "value": "style4",
+              "label": "Zigzag"
+            }
+          ],
+          "default": "style1",
+          "label": "Marker"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "h1",
+              "label": "Extra Large"
+            },
+            {
+              "value": "h2",
+              "label": "Large"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h4",
+              "label": "Small"
+            }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "marker_color",
+          "label": "Marker",
+          "default": "#FD6262"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Content",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "id": "button_text",
+          "type": "text",
+          "label": "Button label",
+          "default": "Shop Now",
+          "info": "Leave the label blank to hide the button."
+        },
+        {
+          "id": "button_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "name": "Empty space",
+      "settings": [
+        {
+          "type": "range",
+          "id": "height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Height",
+          "default": 50
+        }
+      ]
+    },
+    {
+      "type": "collapsible_tab",
+      "name": "Collapsible row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "info": "Include a heading that explains the content.",
+          "label": "Heading"
+        },
+        {
+          "type": "checkbox",
+          "id": "open",
+          "default": false,
+          "label": "Open by default"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Row content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Row content from page"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text",
+      "blocks": [
+        {
+          "type": "subheading"
+        },
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "*"
     ],
-    "blocks": [
-			{
-				"type": "image",
-				"name": "Image",
-				"limit": 1,
-				"settings": [
-					{
-						"type": "image_picker",
-						"id": "image",
-						"label": "Image"
-					}
-				]
-			},
-			{
-				"type": "subheading",
-				"name": "Subheading",
-				"settings": [
-					{
-						"type": "text",
-						"id": "text",
-						"label": "Text",
-						"default": "Add a tagline"
-					}
-				]
-			},
-			{
-				"type": "heading",
-				"name": "Heading",
-				"settings": [
-					{
-						"type": "text",
-						"id": "text",
-						"label": "Text",
-						"default": "Image with text",
-						"info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-					},
-					{
-						"type": "select",
-						"id": "marker_style",
-						"options": [
-							{
-								"value": "style1",
-								"label": "Basic"
-							},
-							{
-								"value": "style2",
-								"label": "Double"
-							},
-							{
-								"value": "style3",
-								"label": "Squiggle"
-							},
-							{
-								"value": "style4",
-								"label": "Zigzag"
-							}
-						],
-						"default": "style1",
-						"label": "Marker"
-					},
-					{
-						"type": "select",
-						"id": "heading_size",
-						"label": "Size",
-						"options": [
-							{
-								"value": "h1",
-								"label": "Extra Large"
-							},
-							{
-								"value": "h2",
-								"label": "Large"
-							},
-							{
-								"value": "h3",
-								"label": "Medium"
-							},
-							{
-								"value": "h4",
-								"label": "Small"
-							}
-						],
-						"default": "h3"
-					},
-					{
-			      "type": "header",
-			      "content": "Colors"
-			    },
-					{
-						"type": "color",
-						"id": "marker_color",
-						"label": "Marker",
-						"default": "#FD6262"
-					}
-				]
-			},
-			{
-        "type": "text",
-        "name": "Text",
-        "settings": [
-          {
-            "type": "richtext",
-            "id": "text",
-            "label": "Content",
-            "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-          }
-        ]
-      },
-			{
-        "type": "button",
-        "name": "Button",
-        "settings": [
-					{
-						"id": "button_text",
-						"type": "text",
-						"label": "Button label",
-						"default": "Shop Now",
-						"info": "Leave the label blank to hide the button."
-					},
-					{
-						"id": "button_link",
-						"type": "url",
-						"label": "Button link"
-					}
-        ]
-      },
-      {
-        "type": "space",
-        "name": "Empty space",
-        "settings": [
-          {
-            "type": "range",
-            "id": "height",
-            "min": 0,
-            "max": 100,
-            "step": 1,
-            "unit": "px",
-            "label": "Height",
-            "default": 50
-          }
-        ]
-      },
-			{
-				"type": "collapsible_tab",
-				"name": "Collapsible row",
-				"settings": [
-						{
-						"type": "text",
-						"id": "heading",
-						"default": "Collapsible row",
-						"info": "Include a heading that explains the content.",
-						"label": "Heading"
-					},
-					{
-						"type": "checkbox",
-						"id": "open",
-						"default": false,
-						"label": "Open by default"
-					},
-					{
-						"type": "richtext",
-						"id": "content",
-						"label": "Row content"
-					},
-					{
-						"type": "page",
-						"id": "page",
-						"label": "Row content from page"
-					}
-				]
-			}
-    ],
-    "presets": [
-      {
-        "name": "Image with text",
-				"blocks": [
-					{
-						"type": "subheading"
-					},
-					{
-						"type": "heading"
-					},
-					{
-						"type": "text"
-					}
-				]
-      }
-    ],
-		"enabled_on": {
-			"templates": ["*"],
-			"groups": [
-				"header", "footer"
-			]
-		}
+    "groups": [
+      "header",
+      "footer"
+    ]
   }
+}
 {% endschema %}

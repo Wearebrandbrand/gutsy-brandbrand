@@ -250,6 +250,7 @@
 
                         @media only screen and (max-width: 63.938rem) {
                             max-width: 100%;
+                            margin-inline: auto !important;
 
                             h3.h2{
                                 font-size: var(--font-size-24) !important;
@@ -287,6 +288,10 @@
                     @media only screen and (max-width: 63.938rem) {
                         grid-template-columns: 1fr;
                         grid-template-areas: "media" "content" ;
+
+                        .image-with-text--content--inner{
+                            margin-inline: auto !important;
+                        }
                     }
 
                     .image-with-text--content{

@@ -260,14 +260,19 @@
 
 
       .h1-xlarge, .subheading{
-        font-size: var(--font-size-24) !important;;
+        font-size: var(--font-size-40) !important;
         line-height: 120%;
         text-align: center !important;
         display: flex;
         align-items: center;
         justify-content: center;
         color: var(--color-accent-8) !important;
+
+        @media only screen and (max-width: 40rem) {
+          font-size: var(--font-size-24) !important;
+        }
       }
+
 
       .subheading{
         color: var(--color-accent-1) !important;

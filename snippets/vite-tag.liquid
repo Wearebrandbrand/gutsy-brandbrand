@@ -139,6 +139,8 @@
   {{ 'components--header-mobile-navigation.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/info-box.scss" or path == "../../theming/scss/components/info-box.scss" %}
   {{ 'components--info-box.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/components/insecten.scss" or path == "../../theming/scss/components/insecten.scss" %}
+  {{ 'components--insecten.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/list-collections.scss" or path == "../../theming/scss/components/list-collections.scss" %}
   {{ 'components--list-collections.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/login-register.scss" or path == "../../theming/scss/components/login-register.scss" %}
@@ -189,6 +191,8 @@
   {{ 'sections--background-video.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/before-after-image.scss" or path == "../../theming/scss/sections/before-after-image.scss" %}
   {{ 'sections--before-after-image.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/cijfers.scss" or path == "../../theming/scss/sections/cijfers.scss" %}
+  {{ 'sections--cijfers.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/collapsible-content.scss" or path == "../../theming/scss/sections/collapsible-content.scss" %}
   {{ 'sections--collapsible-content.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/collection-tabs.scss" or path == "../../theming/scss/sections/collection-tabs.scss" %}

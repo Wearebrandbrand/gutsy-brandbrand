@@ -385,6 +385,11 @@
     "src": "theming/scss/components/info-box.scss",
     "isEntry": true
   },
+  "theming/scss/components/insecten.scss": {
+    "file": "components--insecten.css",
+    "src": "theming/scss/components/insecten.scss",
+    "isEntry": true
+  },
   "theming/scss/components/list-collections.scss": {
     "file": "components--list-collections.css",
     "src": "theming/scss/components/list-collections.scss",
@@ -508,6 +513,11 @@
   "theming/scss/sections/before-after-image.scss": {
     "file": "sections--before-after-image.css",
     "src": "theming/scss/sections/before-after-image.scss",
+    "isEntry": true
+  },
+  "theming/scss/sections/cijfers.scss": {
+    "file": "sections--cijfers.css",
+    "src": "theming/scss/sections/cijfers.scss",
     "isEntry": true
   },
   "theming/scss/sections/collapsible-content.scss": {

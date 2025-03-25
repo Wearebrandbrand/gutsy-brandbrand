@@ -203,6 +203,12 @@
     }
   },
   "sections": {
+    "insects": {
+      "cow": "Vache",
+      "sheep": "Mouton",
+      "chicken": "Poulet",
+      "insect": "Insecte"
+    },
     "header": {
       "search": "Recherch",
       "search_for": "Rechercher n'importe quoi",

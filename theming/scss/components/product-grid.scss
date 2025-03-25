@@ -287,6 +287,14 @@
   .product-card .product-featured-image.thb-hover:hover .product-secondary-image {
     opacity: 1;
   }
+
+  .product-card .product-featured-image.thb-hover:hover .product-secondary-video {
+    opacity: 1;
+
+    video {
+      z-index: 10;
+    }
+  }
 }
 
 .product-card .product-featured-image-link {
@@ -321,6 +329,25 @@
 .product-card .product-featured-image-link .product-secondary-image {
   z-index: 10;
   opacity: 0;
+}
+
+.product-card .product-featured-image-link .product-secondary-video {
+  z-index: 10;
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  video {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+  }
 }
 
 .product-card .product-featured-image-link.aspect-ratio--square {

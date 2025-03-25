@@ -142,6 +142,10 @@
     display: block;
 }
 
+.section-tabbed-content {
+    overflow: hidden;
+}
+
 .tabbed-content-wrapper {
     --section-spacing-desktop: 5rem;
     --section-spacing-mobile: 1.125rem;

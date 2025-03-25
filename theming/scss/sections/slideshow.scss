@@ -577,7 +577,7 @@
       .slideshow__slide {
         .slideshow__slide-bg {
           img {
-            max-height: 15rem;
+            max-height: calc(100% - 200px);
           }
         }
       }

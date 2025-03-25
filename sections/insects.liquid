@@ -1,26 +1,27 @@
 {{- 'components--insects.css' | asset_url | stylesheet_tag -}}
 
-<div class="page-width">
-    <div class="section-header--title">
-        {% if section.settings.heading %}
-            <h1 class="section-heading">
-                {{ section.settings.heading }}
-            </h1>
-        {% endif %}
+<div class="insects-section">
+    <div class="page-width">
+        <div class="section-header--title">
+            {% if section.settings.heading %}
+                <h1 class="section-heading">
+                    {{ section.settings.heading }}
+                </h1>
+            {% endif %}
 
-        {% if section.settings.description %}
-        <p class="section-description">{{ section.settings.description }}</p>
-        {% endif %}
+            {% if section.settings.description %}
+                <p class="section-description">{{ section.settings.description }}</p>
+            {% endif %}
+        </div>
+
+        <div class="image-box">
+            {%- assign desktop_image = section.settings.desktop_image -%}
+            {{ desktop_image | image_url: width: desktop_image.width | image_tag: class: 'desktop_image', loading: 'lazy' }}
+
+            {%- assign mobile_image = section.settings.mobile_image -%}
+            {{ mobile_image | image_url: width: mobile_image.width | image_tag: class: 'mobile_image', loading: 'lazy' }}
+        </div>
     </div>
-
-    <div class="image-box">
-{%- assign desktop_image = section.settings.desktop_image -%}
-{{ desktop_image | image_url: width: desktop_image.width | image_tag: class: 'desktop_image', loading: 'lazy' }}
-
-{%- assign mobile_image = section.settings.mobile_image -%}
-{{ mobile_image | image_url: width: mobile_image.width | image_tag: class: 'mobile_image', loading: 'lazy' }}
-    </div>
-
 </div>
 
 {% schema %}

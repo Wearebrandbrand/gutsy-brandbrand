@@ -111,34 +111,43 @@
     </div>
 </div>
 
-
 <script type="text/javascript">
   let hasAnimated = false;
-  
-  function animateGraph() {
+
+  function updateBarSizes() {
     const bars = document.querySelectorAll('.insects-graph__bar');
     const base = 350;
     const max = 200;
-    const time = 4000;
-    const interval = 100;
-    
+
     bars.forEach((bar) => {
       const height = parseFloat(bar.getAttribute('data-value'));
       const colorBar = bar.querySelector('.insects-graph__bar-color');
-      const span = bar.querySelector('span');
-      
-      // Set bar height
+
+      // Reset dimensions
+      colorBar.style.width = '';
+      colorBar.style.height = '';
+
+      // Set dimension based on screen width
       if (window.innerWidth < 992) {
         colorBar.style.width = (base / max * height) + 'px';
       } else {
         colorBar.style.height = (base / max * height) + 'px';
       }
-      
-      // Animate number
+    });
+  }
+
+  function animateNumbers() {
+    const bars = document.querySelectorAll('.insects-graph__bar');
+    const time = 4000;
+    const interval = 100;
+
+    bars.forEach((bar) => {
+      const height = parseFloat(bar.getAttribute('data-value'));
+      const span = bar.querySelector('span');
+
       let current = 0;
       const increment = height < 20 ? 0.5 : Math.ceil(height / (time / interval));
-      
-      
+
       const updateCount = () => {
         if (current < height) {
           current += increment;
@@ -152,23 +161,31 @@
           span.innerHTML = height;
         }
       };
-      
+
       updateCount();
     });
   }
-  
+
   function onScroll() {
     const section = document.querySelector('.insects-section');
     const triggerPoint = section.offsetTop - 200;
-    
+
     if (!hasAnimated && window.scrollY >= triggerPoint) {
-      animateGraph();
+      updateBarSizes();  // Set initial size
+      animateNumbers();  // Animate numbers ONCE
       hasAnimated = true;
       window.removeEventListener('scroll', onScroll);
     }
   }
-  
+
+  function onResize() {
+    if (hasAnimated) {
+      updateBarSizes();  // Only resize, no re-animation
+    }
+  }
+
   window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onResize);
 </script>
 
 {% schema %}

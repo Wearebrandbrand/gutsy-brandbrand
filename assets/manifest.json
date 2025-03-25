@@ -59,6 +59,12 @@
     "src": "theming/js/components/header.js",
     "isEntry": true
   },
+  "theming/js/components/list-collections.js": {
+    "file": "components--list-collections.js",
+    "name": "components--list-collections",
+    "src": "theming/js/components/list-collections.js",
+    "isEntry": true
+  },
   "theming/js/components/max-height.js": {
     "file": "components--max-height.js",
     "name": "components--max-height",
@@ -304,6 +310,11 @@
     "src": "theming/scss/components/cart.scss",
     "isEntry": true
   },
+  "theming/scss/components/collection-product-grid.scss": {
+    "file": "components--collection-product-grid.css",
+    "src": "theming/scss/components/collection-product-grid.scss",
+    "isEntry": true
+  },
   "theming/scss/components/comments.scss": {
     "file": "components--comments.css",
     "src": "theming/scss/components/comments.scss",
@@ -372,6 +383,11 @@
   "theming/scss/components/info-box.scss": {
     "file": "components--info-box.css",
     "src": "theming/scss/components/info-box.scss",
+    "isEntry": true
+  },
+  "theming/scss/components/insecten.scss": {
+    "file": "components--insecten.css",
+    "src": "theming/scss/components/insecten.scss",
     "isEntry": true
   },
   "theming/scss/components/list-collections.scss": {
@@ -474,6 +490,11 @@
     "src": "theming/scss/components/video.scss",
     "isEntry": true
   },
+  "theming/scss/extra/_hwtartz-font.scss": {
+    "file": "extra--_hwtartz-font.css",
+    "src": "theming/scss/extra/_hwtartz-font.scss",
+    "isEntry": true
+  },
   "theming/scss/extra/photoswipe.scss": {
     "file": "extra--photoswipe.css",
     "src": "theming/scss/extra/photoswipe.scss",
@@ -517,6 +538,11 @@
   "theming/scss/sections/featured-product.scss": {
     "file": "sections--featured-product.css",
     "src": "theming/scss/sections/featured-product.scss",
+    "isEntry": true
+  },
+  "theming/scss/sections/figures.scss": {
+    "file": "sections--figures.css",
+    "src": "theming/scss/sections/figures.scss",
     "isEntry": true
   },
   "theming/scss/sections/gallery.scss": {
@@ -584,6 +610,11 @@
     "src": "theming/scss/sections/multicolumn.scss",
     "isEntry": true
   },
+  "theming/scss/sections/our-team.scss": {
+    "file": "sections--our-team.css",
+    "src": "theming/scss/sections/our-team.scss",
+    "isEntry": true
+  },
   "theming/scss/sections/progress-bars.scss": {
     "file": "sections--progress-bars.css",
     "src": "theming/scss/sections/progress-bars.scss",
@@ -634,9 +665,19 @@
     "src": "theming/scss/sections/spacer.scss",
     "isEntry": true
   },
+  "theming/scss/sections/store-locator.scss": {
+    "file": "sections--store-locator.css",
+    "src": "theming/scss/sections/store-locator.scss",
+    "isEntry": true
+  },
   "theming/scss/sections/tabbed-content.scss": {
     "file": "sections--tabbed-content.css",
     "src": "theming/scss/sections/tabbed-content.scss",
+    "isEntry": true
+  },
+  "theming/scss/sections/table-section.scss": {
+    "file": "sections--table-section.css",
+    "src": "theming/scss/sections/table-section.scss",
     "isEntry": true
   },
   "theming/scss/sections/template-header.scss": {

@@ -41,3 +41,104 @@
 .contact-form--text-column .contact-form-block {
     margin-bottom: 35px;
 }
+
+.contact-form {
+    background: var(--color-light-4);
+    padding: 3rem 0;
+    margin: 7.813rem 0 5.813rem !important;
+
+    .button{
+        height: 3rem;
+    }
+
+    @media only screen and (max-width:  47.938rem) {
+        margin: 3rem 0 1.875rem !important;
+        padding: 2.125rem 0 2.625rem;
+    }
+
+    .columns {
+        padding: 0;
+        max-width: 71.75rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .section-header {
+        .section-header--content {
+            max-width: 33.75rem;
+            margin: 0 auto;
+            text-align: center;
+
+            .section-header--title {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .contact-form--form-column {
+        margin-top: 2rem;
+
+        form {
+            .row {
+                gap: 1.5rem 2rem;
+
+                @media only screen and (max-width:  47.938rem) {
+                    gap: 1.125rem
+                }
+            }
+
+            .columns {
+                &.medium-6 {
+                    flex: 0 0 calc(50% - 1rem);
+
+                    @media only screen and (max-width:  47.938rem) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                .field {
+                    input,
+                    label,
+                    textarea {
+                        color: var(--color-secondary);
+                        font-family: var(--font-primary);
+                        font-size: var(--font-size-16);
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        outline: none;
+
+                        @media only screen and (max-width:  47.938rem) {
+                            font-size: var(--font-size-14);
+                            padding: 0 1rem;
+                        }
+                    }
+
+                    input,
+                    textarea {
+                        border-radius: 0.5rem;
+                        background: var(--color-light-1);
+                        padding: 0.813rem 1rem;
+                        margin: 0;
+
+
+                    }
+
+
+                    input:focus + label,
+                    input:not(:placeholder-shown)+label,
+                    textarea:focus + label,
+                    textarea:not(:placeholder-shown)+label {
+                        border-radius: 0.5rem 0.5rem 0 0;
+
+                        @media only screen and (max-width:  47.938rem) {
+                            padding: 0.1rem 0.5rem;
+                            zoom: 85%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

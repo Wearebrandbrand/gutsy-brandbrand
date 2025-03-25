@@ -1,0 +1,15 @@
+<div class="thb-header-mobile-left">
+	{% render 'header-mobile-toggle', header_settings: header_settings, blocks: blocks %}
+</div>
+<div class="menu-logo-container">
+	<div class="header-left">
+		{% render 'header-logo', header_settings: header_settings %}
+	</div>
+	<div class="header-right">
+		{% render 'header-full-menu', menu: header_settings.menu, blocks: blocks %}
+		{% render 'header-secondary-area', header_settings: header_settings %}
+		<div class="header-localization">
+			{%- render 'localization', id: 'HeaderLocalization', show_language_switcher: header_settings.show_language_switcher, show_currency_switcher: header_settings.show_currency_switcher -%}
+		</div>
+	</div>
+</div>

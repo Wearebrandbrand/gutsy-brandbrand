@@ -23,6 +23,8 @@
   <script src="{{ 'components--free-shipping.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/theming/js/components/header.js" or path == "../../theming/js/components/header.js" %}
   <script src="{{ 'components--header.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+{% elsif path == "/theming/js/components/list-collections.js" or path == "../../theming/js/components/list-collections.js" %}
+  <script src="{{ 'components--list-collections.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/theming/js/components/max-height.js" or path == "../../theming/js/components/max-height.js" %}
   <script src="{{ 'components--max-height.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/theming/js/components/mega-menu-sidebar.js" or path == "../../theming/js/components/mega-menu-sidebar.js" %}
@@ -107,6 +109,8 @@
   {{ 'components--breadcrumbs.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/cart.scss" or path == "../../theming/scss/components/cart.scss" %}
   {{ 'components--cart.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/components/collection-product-grid.scss" or path == "../../theming/scss/components/collection-product-grid.scss" %}
+  {{ 'components--collection-product-grid.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/comments.scss" or path == "../../theming/scss/components/comments.scss" %}
   {{ 'components--comments.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/compare-lightbox.scss" or path == "../../theming/scss/components/compare-lightbox.scss" %}
@@ -135,6 +139,8 @@
   {{ 'components--header-mobile-navigation.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/info-box.scss" or path == "../../theming/scss/components/info-box.scss" %}
   {{ 'components--info-box.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/components/insecten.scss" or path == "../../theming/scss/components/insecten.scss" %}
+  {{ 'components--insecten.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/list-collections.scss" or path == "../../theming/scss/components/list-collections.scss" %}
   {{ 'components--list-collections.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/login-register.scss" or path == "../../theming/scss/components/login-register.scss" %}
@@ -175,6 +181,8 @@
   {{ 'components--subheader.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/components/video.scss" or path == "../../theming/scss/components/video.scss" %}
   {{ 'components--video.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/extra/_hwtartz-font.scss" or path == "../../theming/scss/extra/_hwtartz-font.scss" %}
+  {{ 'extra--_hwtartz-font.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/extra/photoswipe.scss" or path == "../../theming/scss/extra/photoswipe.scss" %}
   {{ 'extra--photoswipe.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/extra/promotional-banner.scss" or path == "../../theming/scss/extra/promotional-banner.scss" %}
@@ -193,6 +201,8 @@
   {{ 'sections--featured-collection.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/featured-product.scss" or path == "../../theming/scss/sections/featured-product.scss" %}
   {{ 'sections--featured-product.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/figures.scss" or path == "../../theming/scss/sections/figures.scss" %}
+  {{ 'sections--figures.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/gallery.scss" or path == "../../theming/scss/sections/gallery.scss" %}
   {{ 'sections--gallery.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/image-hotspots.scss" or path == "../../theming/scss/sections/image-hotspots.scss" %}
@@ -219,6 +229,8 @@
   {{ 'sections--multi-page-with-navigation.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/multicolumn.scss" or path == "../../theming/scss/sections/multicolumn.scss" %}
   {{ 'sections--multicolumn.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/our-team.scss" or path == "../../theming/scss/sections/our-team.scss" %}
+  {{ 'sections--our-team.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/progress-bars.scss" or path == "../../theming/scss/sections/progress-bars.scss" %}
   {{ 'sections--progress-bars.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/promotion-blocks.scss" or path == "../../theming/scss/sections/promotion-blocks.scss" %}
@@ -239,8 +251,12 @@
   {{ 'sections--slideshow.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/spacer.scss" or path == "../../theming/scss/sections/spacer.scss" %}
   {{ 'sections--spacer.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/store-locator.scss" or path == "../../theming/scss/sections/store-locator.scss" %}
+  {{ 'sections--store-locator.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/tabbed-content.scss" or path == "../../theming/scss/sections/tabbed-content.scss" %}
   {{ 'sections--tabbed-content.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/theming/scss/sections/table-section.scss" or path == "../../theming/scss/sections/table-section.scss" %}
+  {{ 'sections--table-section.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/template-header.scss" or path == "../../theming/scss/sections/template-header.scss" %}
   {{ 'sections--template-header.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/theming/scss/sections/testimonials.scss" or path == "../../theming/scss/sections/testimonials.scss" %}

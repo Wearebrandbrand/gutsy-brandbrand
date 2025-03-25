@@ -1,5 +1,6 @@
 {{- 'sections--multicolumn.css' | asset_url | stylesheet_tag -}}
 {%- liquid
+	assign section_sub_heading = section.settings.sub_heading
 	assign section_heading = section.settings.heading
 	assign marker_style = section.settings.marker_style
 	assign section_description = section.settings.description
@@ -31,7 +32,7 @@
 <div class="multicolumn {% if mobile_swipe %} swipe-on-mobile{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %} text-alignment--{{ text_alignment }}" style="--color-heading: {{ color_heading }}; --color-text: {{ color_text }}; --color-accent: {{ color_links }}; --color-accent-rgb: {{ color_links.rgb | replace: ' ' , ',' }};">
 	<div class="row">
 		<div class="small-12 columns">
-			{% render 'section-header', section_heading: section_heading, section_description: section_description, marker_color: marker_color, marker_style: marker_style %}
+			{% render 'section-header', section_sub_heading: section_sub_heading, section_heading: section_heading, section_description: section_description, marker_color: marker_color, marker_style: marker_style %}
 			<div class="multicolumn__inner text-{{ text_alignment }}">
 				<div class="row align-stretch no-padding">
 					{%- for block in section.blocks -%}
@@ -60,20 +61,24 @@
 									</div>
 								</figure>
 							{% endif %}
-							{% if block.settings.title != blank %}
-								<h4 class="{{ heading_size }}">{{ block.settings.title | newline_to_br }}</h4>
-							{% endif %}
-							{% if block.settings.text != blank %}
-								<div class="rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
-							{% endif %}
-							{% if block.settings.link_label != blank %}
-								{% render 'text-button', url: block.settings.link, title: block.settings.link_label %}
-							{% endif %}
+							<div class="multicolumn__content">
+								{% if block.settings.title != blank %}
+									<h4 class="{{ heading_size }}">{{ block.settings.title | newline_to_br }}</h4>
+								{% endif %}
+								{% if block.settings.text != blank %}
+									<div class="rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+								{% endif %}
+								{% if block.settings.link_label != blank %}
+									{% render 'text-button', url: block.settings.link, title: block.settings.link_label %}
+								{% endif %}
+							</div>
 						</div>
 					{%- endfor -%}
 				</div>
 			</div>
-
+			{% if section.settings.link_label != blank %}
+					<a class="button {{ section.settings.button_1_color }}" href="{{ section.settings.link }}" role="button" title="{{ section.settings.link_label | escape }}">{{ section.settings.link_label }}</a>
+			{% endif %}
 		</div>
 	</div>
 </div>
@@ -88,6 +93,13 @@
         "label": "Heading",
         "default": "Multicolumn",
 				"info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
+      },
+      {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Sub Heading",
+        "default": "Winner, winner,",
+        "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
       },
 			{
 				"type": "select",
@@ -246,7 +258,41 @@
 				"id": "disable_bottom_spacing",
 				"default": false,
 				"label": "Remove bottom spacing"
-			}
+			},
+	    {
+		    "type": "header",
+		    "content": "Button"
+      },
+      {
+        "type": "select",
+        "id": "button_1_color",
+        "label": "Color",
+        "options": [
+          {
+            "value": "regular",
+            "label": "Regular"
+          },
+          {
+            "value": "accent",
+            "label": "Accent"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          }
+        ],
+        "default": "accent"
+      },
+      {
+        "type": "text",
+        "id": "link_label",
+        "label": "Link label"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      }
     ],
     "blocks": [
       {

@@ -1,0 +1,55 @@
+{{ 'sections--single-image.css' | asset_url | stylesheet_tag }}
+{%- liquid
+	assign full_width = section.settings.full_width
+	assign image = collection.image
+	assign disable_top_spacing = section.settings.disable_top_spacing
+	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+-%}
+<div class="single-image full-width--{{ full_width }} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
+	
+	{%- if image -%}
+		{%- liquid
+			assign master_width = image.src.width | append: 'x' | append: image.src.height
+
+			assign class = ''
+			if image_mobile
+				assign class = 'single-image--desktop'
+			endif
+			render 'responsive-image', image: image, class: class, sizes: master_width
+		-%}
+	{%- else -%}
+		<div class="thb-placeholder{% if image_mobile %} single-image--desktop{% endif %}">
+			{{ 'https://cdn.shopify.com/s/files/1/0728/2144/0765/files/banner_img.jpg' | img_tag }}
+		</div>
+	{%- endif -%}
+</div>
+{% schema %}
+  {
+    "name": "Collection Featured image",
+		"class": "section-featured-image",
+    "settings": [
+			{
+				"type": "checkbox",
+				"id": "full_width",
+				"label": "Make section full width",
+				"default": false
+			},
+			{
+        "type": "header",
+        "content": "Spacing"
+      },
+			{
+				"type": "checkbox",
+				"id": "disable_top_spacing",
+				"default": false,
+				"label": "Remove top spacing"
+			},
+			{
+				"type": "checkbox",
+				"id": "disable_bottom_spacing",
+				"default": false,
+				"label": "Remove bottom spacing"
+			}
+    ]
+  }
+{% endschema %}

@@ -13,20 +13,11 @@
   endif
 
   if show_on_specific_page and specific_page != blank and specific_page == request.path
-    assign show_popup = true  
-  else
-    if request.design_mode
-      assign show_popup = true
-      assign popup_delay = 999
-    endif
+    assign show_popup = true
   endif
 
   if disable_for_accounts and customer
     assign show_popup = false
-  endif
-
-  if request.design_mode
-    assign show_popup = true
   endif
 -%}
 {%- if show_popup -%}

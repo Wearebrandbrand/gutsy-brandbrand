@@ -69,7 +69,7 @@
     object-fit: cover;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.938rem) {
     .multicolumn.swipe-on-mobile .row {
         display: grid;
         gap: 8px;
@@ -94,7 +94,7 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.938rem) {
     .multicolumn.swipe-on-mobile .multicolumn__column {
         margin-bottom: 0;
         width: var(--mobile-swipe-width);
@@ -103,4 +103,254 @@
 
 .multicolumn.text-center .rte {
     padding: 0 15px;
+}
+
+.multicolumn {
+    --section-spacing-desktop: 2.5rem;
+    --section-spacing-mobile: 1.875rem;
+
+    padding-bottom: 1.875rem;
+
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 2.5rem;
+    }
+
+    .columns {
+        text-align: center;
+    }
+
+    a {
+        margin: 0;
+
+        &.accent {
+            border-radius: 6.25rem;
+            border: 0.125rem solid var(--color-primary);
+            background: var(--color-primary);
+
+            &:hover {
+                background-color: var(--color-accent);
+                border-color: var(--color-accent);
+            }
+        }
+    }
+
+    .multicolumn__inner {
+        margin-bottom: 1.75rem;
+
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 4rem;
+        }
+
+        .row {
+            margin: 0;
+            gap: 1rem;
+            place-content: center;
+
+            .multicolumn__column {
+                padding: 0;
+                margin: 0;
+                flex: 0 0 calc(33.33% - 0.7rem);
+                max-width: 16.313rem;
+                text-align: center;
+
+                @media only screen and (max-width: 47.938rem) {
+                    min-width: 15.75rem;
+                    min-width: 15.75rem;
+                    display: flex;
+                    gap: 1.125rem;
+                }
+
+                .multicolumn__image {
+                    width: 1.75rem !important;
+                    margin-bottom: 1.2rem;
+
+                    @media only screen and (max-width: 47.938rem) {
+                        width: 1.625rem !important;
+                        margin-bottom: 0;
+                        top: 0.25rem;
+                        position: relative;
+                    }
+                }
+
+                .multicolumn__content {
+                    @media only screen and (max-width: 47.938rem) {
+                        max-width: calc(100% - (1.625rem + 1.125rem));
+                    }
+
+                    .h4 {
+                        color: var(--color-accent-1);
+                        font-weight: 700;
+                        line-height: 120%;
+                        letter-spacing: 0.06rem;
+                        margin-bottom: 0.5rem;
+
+                        @media only screen and (max-width: 47.938rem) {
+                            min-height: 2.5rem;
+                            display: flex;
+                            place-items: center;
+                        }
+                    }
+
+                    .rte {
+                        p {
+                            color: var(--color-secondary-dark);
+                            text-align: center;
+                            font-family: var(--font-primary);
+                            font-size: var(--font-size-14);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                            margin: 0;
+
+                            @media only screen and (min-width: 768px) {
+                                font-size: var(--font-size-16);
+                            }
+
+                            @media only screen and (max-width: 47.938rem) {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.template-page-about {
+    .multicolumn {
+        padding: 2.5rem 0 5.625rem;
+        background: var(--color-secondary-dark);
+        margin: 0;
+
+        @media only screen and (max-width: 47.938rem) {
+            padding: 5rem 0 !important;
+        }
+
+        .row {
+            @media only screen and (max-width: 47.938rem) {
+                place-content: flex-start;
+                flex-wrap: nowrap;
+                padding: 0.313rem;
+                overflow: auto;
+            }
+        }
+
+        @media only screen and (max-width: 47.938rem) {
+            padding: 1.875rem 0 2.5rem;
+        }
+
+        .section-header {
+            place-items: center;
+            place-content: center;
+            padding-bottom: 0.625rem;
+
+            .subheading {
+                line-height: 120%;
+                letter-spacing: -0.025rem;
+                color: var(--color-accent-2);
+                margin-bottom: 0.5rem;
+            }
+
+            h3 {
+                line-height: 120%;
+                letter-spacing: 0.14rem;
+                margin-bottom: 0.5rem;
+                color: var(--color-accent-2);
+            }
+
+            .section-header--description {
+                p {
+                    color: var(--color-light-1);
+                    text-align: center;
+                    font-family: var(--font-primary);
+                    font-size: var(--font-size-16);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    margin: 0;
+                }
+            }
+        }
+
+        .multicolumn__inner {
+            margin: 0;
+
+            .row {
+                gap: 2.5rem;
+
+                @media only screen and (max-width: 47.938rem) {
+                    gap: 1.625rem;
+                }
+
+                .multicolumn__column {
+                    max-width: 13.625rem;
+                    flex: 0 0 calc(20% - 2rem);
+
+                    @media only screen and (max-width: 47.938rem) {
+                        padding: 0;
+                        background-color: transparent;
+                        box-shadow: none;
+                        flex-wrap: wrap;
+                        gap: 0;
+                        place-items: flex-start;
+                        place-content: flex-start;
+                        min-width: 13.25rem;
+                        flex: initial;
+                    }
+
+                    .multicolumn__image {
+                        width: 100% !important;
+                        margin-bottom: 2rem;
+
+                        @media only screen and (max-width: 47.938rem) {
+                            margin-bottom: 0.75rem;
+                            top: 0;
+                        }
+                    }
+
+                    .multicolumn__content {
+                        @media only screen and (max-width: 47.938rem) {
+                            max-width: 100%;
+                        }
+
+                        h4 {
+                            color: var(--color-light-2);
+                            line-height: 120%;
+                            letter-spacing: 0.06rem;
+                            margin-bottom: 0.5rem;
+
+                            @media only screen and (max-width: 47.938rem) {
+                                text-align: center;
+                                min-height: initial;
+                                place-content: center;
+                                place-items: center;
+                            }
+                        }
+
+                        .rte {
+                            p {
+                                color: var(--color-light-1);
+                                font-size: var(--font-size-16);
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                                margin: 0;
+
+                                @media only screen and (max-width: 47.938rem) {
+                                    font-size: var(--font-size-14);
+                                    line-height: 140%;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.template-index .multicolumn .multicolumn__inner .row .multicolumn__column{
+    max-width: inherit;
 }

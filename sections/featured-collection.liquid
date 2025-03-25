@@ -47,7 +47,7 @@
 <div class="featured-collection{% if mobile_swipe %} swipe-on-mobile{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
 	<div class="row">
 		<div class="small-12 columns">
-			{% render 'section-header', section_heading: section_heading, section_description: section_description, section_heading_button: section_heading_button, marker_color: marker_color, marker_style: marker_style %}
+			{% render 'section-header', section_heading: section_heading, section_description: section_description, marker_color: marker_color, marker_style: marker_style %}
 			<div class="featured-collection__inner display-type--{{ display_type }}">
 				<{{ element }} id="product-grid-{{ section.id }}" class="products row {{ display_type }}">
 					{%- if featured_collection != blank -%}
@@ -75,6 +75,10 @@
 					<div class="flickity-progress--bar"></div>
 				</div>
 				{%- endif -%}
+			</div>
+
+			<div class="section-header--button">
+				{% render 'text-button', url: section_heading_button.url, title: section.settings.button_text %}
 			</div>
 
 		</div>
@@ -122,6 +126,12 @@
       "id": "description",
       "label": "Description",
       "default": "<p>Describe your featured collection here</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Voeding"
     },
 		{
 			"type": "header",

@@ -8,12 +8,18 @@
 	assign cart_icon = header_settings.cart_icon | default: 'cart'
 -%}
 <div class="thb-secondary-area thb-header-right">
-	{%- unless header_settings.style == 'style4' -%}
-		{%- unless header_settings.minimized_search -%}
-			{%- render 'header-inline-search', header_settings: header_settings -%}
+	
+	{% unless header_settings.enable_search == false %}
+		{%- unless header_settings.style == 'style4' -%}
+			{%- unless header_settings.minimized_search -%}
+				{%- render 'header-inline-search', header_settings: header_settings -%}
+			{%- endunless -%}
 		{%- endunless -%}
-	{%- endunless -%}
-	<a class="thb-secondary-area-item thb-quick-search{% unless header_settings.minimized_search %} thb-quick-search--mobile-only{%- endunless -%}" href="{{ routes.search_url }}" title="{{ 'sections.header.search' | t }}">{%- render 'svg-icons' with 'search' -%}</a>
+	{% endunless %}
+	
+	{% unless header_settings.enable_search == false %}
+		<a class="thb-secondary-area-item thb-quick-search{% unless header_settings.minimized_search %} thb-quick-search--mobile-only{%- endunless -%}" href="{{ routes.search_url }}" title="{{ 'sections.header.search' | t }}">{%- render 'svg-icons' with 'search' -%}</a>
+	{% endunless %}
 	{%- if shop.customer_accounts_enabled -%}
     <a class="thb-secondary-area-item thb-secondary-myaccount" href="{{ profile_link | escape }}" title="{{ 'sections.header.my_account' | t }}">{%- render 'svg-icons' with 'myaccount' -%}</a>
   {%- endif -%}

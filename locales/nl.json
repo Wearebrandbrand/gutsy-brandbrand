@@ -31,7 +31,7 @@
     }
   },
   "newsletter": {
-    "label": "E‑mail",
+    "label": "Jouw e-mail",
     "success": "Bedankt voor het abonneren"
   },
   "social": {
@@ -114,9 +114,10 @@
       "on_sale": "Verkoop",
       "product_variants": "Productvarianten",
       "product_information": "Productinformatie",
-      "add_to_cart": "Voeg toe aan winkelkar",
+      "add_to_cart": "Voeg toe",
       "choose_options": "Opties kiezen",
       "sold_out": "Uitverkocht",
+      "max_limit": "Maximale aankooplimiet bereikt",
       "save_html": "Bespaar {{ saved_amount }}",
       "unavailable": "Niet beschikbaar",
       "pre_order": "Vooruitbestellen",
@@ -307,9 +308,9 @@
     "contact": {
       "form": {
         "name": "Naam",
-        "email": "E‑mail",
+        "email": "E-mailadres",
         "phone": "Telefoonnummer",
-        "comment": "Reactie",
+        "comment": "Uw vraag",
         "send": "Sturen",
         "post_success": "Bedankt dat je contact met ons hebt opgenomen. Je hoort zo snel mogelijk van ons.",
         "error_heading": "Pas het volgende aan:"

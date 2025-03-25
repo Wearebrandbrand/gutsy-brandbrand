@@ -208,6 +208,12 @@
     }
   },
   "sections": {
+    "insects": {
+      "cow": "Koe",
+      "sheep": "Schaap",
+      "chicken": "Kip",
+      "insect": "Insect"
+    },
     "header": {
       "search": "Zoek",
       "search_for": "Zoek nar iets",

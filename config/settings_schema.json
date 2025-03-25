@@ -701,6 +701,12 @@
       },
       {
         "type": "checkbox",
+        "id": "products_hover_videos",
+        "label": "Show video autoplay on hover",
+        "default": true
+      },
+      {
+        "type": "checkbox",
         "id": "enable_quick_view",
         "label": "Enable quick view",
         "default": true

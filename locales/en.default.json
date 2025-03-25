@@ -208,6 +208,12 @@
     }
   },
   "sections": {
+    "insects": {
+      "cow": "Cow",
+      "sheep": "Sheep",
+      "chicken": "Chicken",
+      "insect": "Insect"
+    },
     "header": {
       "search": "Search",
       "search_for": "Search for anything",

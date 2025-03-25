@@ -390,6 +390,11 @@
     "src": "theming/scss/components/insecten.scss",
     "isEntry": true
   },
+  "theming/scss/components/insects.scss": {
+    "file": "components--insects.css",
+    "src": "theming/scss/components/insects.scss",
+    "isEntry": true
+  },
   "theming/scss/components/list-collections.scss": {
     "file": "components--list-collections.css",
     "src": "theming/scss/components/list-collections.scss",

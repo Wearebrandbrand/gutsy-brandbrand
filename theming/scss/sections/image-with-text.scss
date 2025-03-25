@@ -242,13 +242,31 @@
                     border-radius: 1.25rem !important;
                 }
 
+                @media only screen and (max-width: 63.938rem) {
+                    .mobile_image + img{
+                        display: none;
+                    }
+
+                    .image-with-text--image-media{
+                        --ratio-percent: 10.625rem !important;
+
+                        background: var(--color-secondary-dark);
+                        border-radius: 0.75rem !important;
+
+                        .mobile_image{
+                            object-fit: contain;
+                            object-position: center center;
+                        }
+                    }
+                }
+
                 .image-with-text--content{
                     padding-left: 1.25rem !important;
                     background: transparent !important;
                     padding-right: 1.25rem !important;
 
                     @media only screen and (max-width: 63.938rem) {
-                        padding: .75rem 0 !important;
+                        padding: .75rem 0 0 !important;
                     }
 
 
@@ -280,22 +298,32 @@
                         p {
                             font-size: var(--font-size-16) !important;
 
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+
                             @media only screen and (max-width: 63.938rem) {
                                 font-size: var(--font-size-14) !important;
                                 line-height: 140% !important;
                                 text-align: center;
+
+
                             }
                         }
-
                     }
                 }
 
                 .image-with-text.image_first{
                     grid-template-columns: 36% 1fr;
 
+                    @media only screen and (max-width: 75rem) {
+                        grid-template-columns: 50% 1fr;
+                    }
+
                     @media only screen and (max-width: 63.938rem) {
                         grid-template-columns: 1fr;
                         grid-template-areas: "media" "content" ;
+
 
                         .image-with-text--content--inner{
                             margin-inline: auto !important;
@@ -313,6 +341,10 @@
 
                 .image-with-text.text_first{
                     grid-template-columns: 1fr 36%;
+
+                    @media only screen and (max-width: 75rem) {
+                        grid-template-columns: 1fr 50%;
+                    }
 
                     @media only screen and (max-width: 63.938rem) {
                         grid-template-columns: 1fr;

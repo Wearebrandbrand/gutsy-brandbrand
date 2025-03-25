@@ -223,6 +223,10 @@
         background: var(--color-secondary-dark);
         margin: 0;
 
+        @media only screen and (max-width: 47.938rem) {
+            padding: 5rem 0 !important;
+        }
+
         .row {
             @media only screen and (max-width: 47.938rem) {
                 place-content: flex-start;
@@ -275,6 +279,10 @@
             .row {
                 gap: 2.5rem;
 
+                @media only screen and (max-width: 47.938rem) {
+                    gap: 1.625rem;
+                }
+
                 .multicolumn__column {
                     max-width: 13.625rem;
                     flex: 0 0 calc(20% - 2rem);
@@ -283,6 +291,12 @@
                         padding: 0;
                         background-color: transparent;
                         box-shadow: none;
+                        flex-wrap: wrap;
+                        gap: 0;
+                        place-items: flex-start;
+                        place-content: flex-start;
+                        min-width: 13.25rem;
+                        flex: initial;
                     }
 
                     .multicolumn__image {
@@ -291,15 +305,27 @@
 
                         @media only screen and (max-width: 47.938rem) {
                             margin-bottom: 0.75rem;
+                            top: 0;
                         }
                     }
 
                     .multicolumn__content {
+                        @media only screen and (max-width: 47.938rem) {
+                            max-width: 100%;
+                        }
+
                         h4 {
                             color: var(--color-light-2);
                             line-height: 120%;
                             letter-spacing: 0.06rem;
                             margin-bottom: 0.5rem;
+
+                            @media only screen and (max-width: 47.938rem) {
+                                text-align: center;
+                                min-height: initial;
+                                place-content: center;
+                                place-items: center;
+                            }
                         }
 
                         .rte {
@@ -314,6 +340,7 @@
                                 @media only screen and (max-width: 47.938rem) {
                                     font-size: var(--font-size-14);
                                     line-height: 140%;
+                                    text-align: center;
                                 }
                             }
                         }

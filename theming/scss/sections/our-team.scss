@@ -70,6 +70,10 @@
     .our-team-section-body {
       margin-top: 2.5rem;
 
+      @media only screen and (max-width: 63.938rem) {
+        margin-top: 0.75rem;
+      }
+
       .our-team-section-body-box {
         display: flex;
         flex-wrap: wrap;
@@ -91,11 +95,15 @@
           }
 
           @media only screen and (max-width: 63.938rem) {
-            max-width: 8.375rem;
+            max-width: 7.875rem;
           }
 
           .member-img {
             margin-bottom: 2rem;
+
+            @media only screen and (max-width: 63.938rem) {
+              margin-bottom: 0.75rem;
+            }
 
             img {
               width: 10.125rem;

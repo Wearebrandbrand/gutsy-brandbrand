@@ -95,12 +95,7 @@
 							{%- when 'subheading' -%}
 								<p class="subheading" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
 							{%- when 'heading' -%}
-							{%- liquid
-								assign marker_style = block.settings.marker_style
-								assign marker_color = block.settings.marker_color
-								assign text = block.settings.text | newline_to_br
-							-%}
-								<h3 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{% render 'animated-marker-heading', heading: text, style: marker_style, color: marker_color %}</h3>
+								<h3 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.text | newline_to_br }}</h3>
 							{%- when 'text' -%}
 								<div class="rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
 							{%- when 'button' -%}
@@ -119,335 +114,300 @@
 <script src="{{ 'sections--layered-images-with-text.js' | asset_url }}" defer></script>
 {% schema %}
 {
-	"name": "Layered images with text",
-	"class": "section-layered-images-with-text",
-	"settings": [
-		{
-			"type": "image_picker",
-			"id": "image",
-			"label": "Main image"
-		},
-		{
-			"type": "select",
-			"id": "image_ratio",
-			"options": [
-				{
-					"value": "adapt",
-					"label": "Adapt to image"
-				},
-				{
-					"value": "portrait",
-					"label": "Portrait"
-				},
-				{
-					"value": "landscape",
-					"label": "Landscape"
-				},
-				{
-					"value": "square",
-					"label": "Square"
-				}
-			],
-			"default": "adapt",
-			"label": "First image ratio"
-		},
-		{
-			"type": "image_picker",
-			"id": "image_2",
-			"label": "Left image"
-		},
-		{
-			"type": "select",
-			"id": "image_ratio_2",
-			"options": [
-				{
-					"value": "adapt",
-					"label": "Adapt to image"
-				},
-				{
-					"value": "portrait",
-					"label": "Portrait"
-				},
-				{
-					"value": "landscape",
-					"label": "Landscape"
-				},
-				{
-					"value": "square",
-					"label": "Square"
-				}
-			],
-			"default": "adapt",
-			"label": "Second image ratio"
-		},
-		{
-			"type": "image_picker",
-			"id": "image_3",
-			"label": "Right image"
-		},
-		{
-			"type": "select",
-			"id": "image_ratio_3",
-			"options": [
-				{
-					"value": "adapt",
-					"label": "Adapt to image"
-				},
-				{
-					"value": "portrait",
-					"label": "Portrait"
-				},
-				{
-					"value": "landscape",
-					"label": "Landscape"
-				},
-				{
-					"value": "square",
-					"label": "Square"
-				}
-			],
-			"default": "adapt",
-			"label": "Third image ratio"
-		},
-		{
-			"type": "header",
-			"content": "Layout"
-		},
-		{
-			"type": "checkbox",
-			"id": "full_width",
-			"label": "Make section full width",
-			"default": false
-		},
-		{
-			"type": "select",
-			"id": "layout",
-			"options": [
-				{
-					"value": "image_first",
-					"label": "Image first"
-				},
-				{
-					"value": "text_first",
-					"label": "Image second"
-				}
-			],
-			"default": "image_first",
-			"label": "Desktop image placement",
-			"info": "Image first is the default mobile layout."
-		},
-		{
-			"type": "select",
-			"id": "content_alignment",
-			"label": "Desktop content alignment",
-			"options": [
-				{
-					"value": "text-center",
-					"label": "Center"
-				},
-				{
-					"value": "text-left",
-					"label": "Left"
-				},
-				{
-					"value": "text-right",
-					"label": "Right"
-				}
-			],
-			"default": "text-left"
-		},
-		{
-			"type": "select",
-			"id": "content_position",
-			"label": "Desktop content position",
-			"options": [
-				{
-					"value": "top",
-					"label": "Top"
-				},
-				{
-					"value": "middle",
-					"label": "Middle"
-				},
-				{
-					"value": "bottom",
-					"label": "Bottom"
-				}
-			],
-			"default": "middle"
-		},
-		{
-			"type": "header",
-			"content": "Spacing"
-		},
-		{
-			"type": "checkbox",
-			"id": "disable_top_spacing",
-			"default": false,
-			"label": "Remove top spacing"
-		},
-		{
-			"type": "checkbox",
-			"id": "disable_bottom_spacing",
-			"default": false,
-			"label": "Remove bottom spacing"
-		}
-	],
-	"blocks": [
-		{
-			"type": "subheading",
-			"name": "Subheading",
-			"settings": [
-				{
-					"type": "text",
-					"id": "text",
-					"label": "Text",
-					"default": "Add a tagline"
-				}
-			]
-		},
-		{
-			"type": "heading",
-			"name": "Heading",
-			"settings": [
-				{
-					"type": "text",
-					"id": "text",
-					"label": "Text",
-					"default": "Image with text",
-					"info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-				},
-				{
-					"type": "select",
-					"id": "marker_style",
-					"options": [
-						{
-							"value": "style1",
-							"label": "Basic"
-						},
-						{
-							"value": "style2",
-							"label": "Double"
-						},
-						{
-							"value": "style3",
-							"label": "Squiggle"
-						},
-						{
-							"value": "style4",
-							"label": "Zigzag"
-						}
-					],
-					"default": "style1",
-					"label": "Marker"
-				},
-				{
-					"type": "select",
-					"id": "heading_size",
-					"label": "Size",
-					"options": [
-						{
-							"value": "h1",
-							"label": "Extra Large"
-						},
-						{
-							"value": "h2",
-							"label": "Large"
-						},
-						{
-							"value": "h3",
-							"label": "Medium"
-						},
-						{
-							"value": "h4",
-							"label": "Small"
-						}
-					],
-					"default": "h3"
-				},
-				{
-					"type": "header",
-					"content": "Colors"
-				},
-				{
-					"type": "color",
-					"id": "marker_color",
-					"label": "Marker",
-					"default": "#FD6262"
-				}
-			]
-		},
-		{
-			"type": "text",
-			"name": "Text",
-			"settings": [
-				{
-					"type": "richtext",
-					"id": "text",
-					"label": "Content",
-					"default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
-				}
-			]
-		},
-		{
-			"type": "button",
-			"name": "Button",
-			"settings": [
-				{
-					"id": "button_text",
-					"type": "text",
-					"label": "Button label",
-					"default": "Shop Now",
-					"info": "Leave the label blank to hide the button."
-				},
-				{
-					"id": "button_link",
-					"type": "url",
-					"label": "Button link"
-				}
-			]
-		},
-		{
-			"type": "space",
-			"name": "Empty space",
-			"settings": [
-				{
-					"type": "range",
-					"id": "height",
-					"min": 0,
-					"max": 100,
-					"step": 1,
-					"unit": "px",
-					"label": "Height",
-					"default": 50
-				}
-			]
-		}
-	],
-	"presets": [
-		{
-			"name": "Layered images with text",
-			"blocks": [
-				{
-					"type": "subheading"
-				},
-				{
-					"type": "heading"
-				},
-				{
-					"type": "text"
-				}
-			]
-		}
-	],
-	"enabled_on": {
-		"templates": [
-			"*"
-		],
-		"groups": [
-			"header",
-			"footer"
-		]
-	}
+  "name": "Layered images with text",
+  "class": "section-layered-images-with-text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Main image"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "adapt",
+      "label": "First image ratio"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Left image"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_2",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "adapt",
+      "label": "Second image ratio"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Right image"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio_3",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        }
+      ],
+      "default": "adapt",
+      "label": "Third image ratio"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Image second"
+        }
+      ],
+      "default": "image_first",
+      "label": "Desktop image placement",
+      "info": "Image first is the default mobile layout."
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Desktop content alignment",
+      "options": [
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Desktop content position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "middle"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_top_spacing",
+      "default": false,
+      "label": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_bottom_spacing",
+      "default": false,
+      "label": "Remove bottom spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subheading",
+      "name": "Subheading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Add a tagline"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Image with text"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "h1",
+              "label": "Extra Large"
+            },
+            {
+              "value": "h2",
+              "label": "Large"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h4",
+              "label": "Small"
+            }
+          ],
+          "default": "h3"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Content",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "id": "button_text",
+          "type": "text",
+          "label": "Button label",
+          "default": "Shop Now",
+          "info": "Leave the label blank to hide the button."
+        },
+        {
+          "id": "button_link",
+          "type": "url",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "name": "Empty space",
+      "settings": [
+        {
+          "type": "range",
+          "id": "height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Height",
+          "default": 50
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Layered images with text",
+      "blocks": [
+        {
+          "type": "subheading"
+        },
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "*"
+    ],
+    "groups": [
+      "header",
+      "footer"
+    ]
+  }
 }
 {% endschema %}

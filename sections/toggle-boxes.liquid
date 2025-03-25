@@ -2,7 +2,6 @@
 <script src="{{ 'sections--toggle-boxes.js' | asset_url }}" defer="defer"></script>
 {%- liquid
     assign section_heading = section.settings.heading
-    assign marker_style = section.settings.marker_style
     assign section_description = section.settings.description
     assign columns_desktop = section.settings.columns_desktop
     assign column_spacing = section.settings.column_spacing
@@ -12,7 +11,6 @@
 
     assign color_bg = section.settings.color_bg
     assign color_heading = section.settings.color_heading
-    assign marker_color = section.settings.marker_color
     assign color_text = section.settings.color_text
     assign color_link = section.settings.color_link
 
@@ -22,7 +20,7 @@
 <div class="toggle-boxes section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
     <div class="row">
         <div class="small-12 columns">
-            {%- render 'section-header', section_heading: section_heading, section_description: section_description, marker_color: marker_color, marker_style: marker_style -%}
+            {%- render 'section-header', section_heading: section_heading, section_description: section_description -%}
         </div>
     </div>
     <div class="toggle-boxes--inner column-spacing--{{ column_spacing }}{% if mobile_swipe %} swipe-on-mobile{% endif %}"
@@ -82,31 +80,6 @@
       "id": "heading",
       "label": "Heading",
       "default": "Toggle boxes",
-      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-    },
-    {
-      "type": "select",
-      "id": "marker_style",
-      "options": [
-        {
-          "value": "style1",
-          "label": "Basic"
-        },
-        {
-          "value": "style2",
-          "label": "Double"
-        },
-        {
-          "value": "style3",
-          "label": "Squiggle"
-        },
-        {
-          "value": "style4",
-          "label": "Zigzag"
-        }
-      ],
-      "default": "style1",
-      "label": "Marker"
     },
     {
       "type": "richtext",
@@ -208,12 +181,6 @@
       "id": "color_heading",
       "label": "Heading",
       "default": "#1a1c1d"
-    },
-    {
-      "type": "color",
-      "id": "marker_color",
-      "label": "Marker",
-      "default": "#FD6262"
     },
     {
       "type": "color",

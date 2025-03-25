@@ -58,6 +58,19 @@
 
     img {
       border-radius: 1.25rem;
+
+      @media only screen and (max-width:  63.938rem) {
+        min-height: 7.75rem;
+        object-fit: cover;
+        object-position: left;
+        border-radius: 0.75rem;
+      }
+    }
+  }
+
+  .single-image {
+    @media only screen and (max-width:  63.938rem) {
+      padding: 0 0.938rem;
     }
   }
 }

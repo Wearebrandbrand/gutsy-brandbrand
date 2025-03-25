@@ -1,7 +1,7 @@
 {{- 'sections--figures.css' | asset_url | stylesheet_tag -}}
 {%- liquid
     assign section_heading = section.settings.heading
-    assign marker_style = section.settings.marker_style
+
     assign section_description = section.settings.description
     assign columns_desktop = section.settings.columns_desktop
     assign heading_size = section.settings.heading_size
@@ -10,7 +10,7 @@
     assign text_alignment = section.settings.text_alignment
 
     assign color_heading = section.settings.color_heading
-    assign marker_color = section.settings.marker_color
+
     assign color_text = section.settings.color_text
     assign color_links = section.settings.color_links
 
@@ -34,7 +34,7 @@
             {% if section.settings.subheading != blank %}
                 <h5 class="subheading">{{ section.settings.subheading }}</h5>
             {% endif %}
-            {% render 'section-header', section_heading: section_heading, section_description: section_description, marker_color: marker_color, marker_style: marker_style %}
+            {% render 'section-header', section_heading: section_heading, section_description: section_description %}
             <div class="figures__inner text-{{ text_alignment }}">
                 <div class="row align-stretch no-padding">
                     {%- for block in section.blocks -%}
@@ -134,32 +134,7 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Multicolumn",
-      "info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-    },
-    {
-      "type": "select",
-      "id": "marker_style",
-      "options": [
-        {
-          "value": "style1",
-          "label": "Basic"
-        },
-        {
-          "value": "style2",
-          "label": "Double"
-        },
-        {
-          "value": "style3",
-          "label": "Squiggle"
-        },
-        {
-          "value": "style4",
-          "label": "Zigzag"
-        }
-      ],
-      "default": "style1",
-      "label": "Marker"
+      "default": "Multicolumn"
     },
     {
       "type": "richtext",
@@ -260,12 +235,6 @@
       "id": "color_heading",
       "label": "Heading",
       "default": "#1a1c1d"
-    },
-    {
-      "type": "color",
-      "id": "marker_color",
-      "label": "Marker",
-      "default": "#FD6262"
     },
     {
       "type": "color",

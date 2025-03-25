@@ -6487,47 +6487,6 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   background: var(--badge-text, #fff);
 }
 
-.animated-marker {
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-}
-
-.animated-marker .svg-marker {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.animated-marker .svg-marker--style1 {
-  width: 100%;
-  height: 30%;
-  top: auto;
-  bottom: -20%;
-}
-
-.animated-marker .svg-marker--style2 {
-  width: 100%;
-  height: 40%;
-  top: auto;
-  bottom: -30%;
-}
-
-.animated-marker .svg-marker--style3 {
-  width: 100%;
-  height: 30%;
-  top: auto;
-  bottom: -20%;
-}
-
-.animated-marker .svg-marker--style4 {
-  width: 100%;
-  height: 30%;
-  top: auto;
-  bottom: -20%;
-}
-
 .breadcrumbs-section {
   .columns {
     max-width: 78rem;

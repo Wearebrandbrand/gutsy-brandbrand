@@ -1214,38 +1214,6 @@ if (!customElements.get('quick-view')) {
 }
 
 /**
- *  @class
- *  @function AnimatedMarkers
- */
-class AnimatedMarkers {
-
-  constructor() {
-    this.markers = document.querySelectorAll('.svg-marker path');
-    this.animations_enabled = document.body.classList.contains('animations-true') && typeof gsap !== 'undefined';
-
-    if (this.animations_enabled && this.markers.length) {
-      this.setupEventListeners();
-    }
-  }
-
-  setupEventListeners() {
-    this.markers.forEach((marker, i) => {
-      gsap.from(marker, {
-        duration: 1,
-        ease: 'power4.inOut',
-        drawSVG: "0%",
-        scrollTrigger: {
-          trigger: marker,
-          start: 'top 70%',
-          end: 'bottom 80%'
-        }
-      });
-    });
-  }
-
-}
-
-/**
  *  @function addIdToRecentlyViewed
  */
 function addIdToRecentlyViewed(handle) {
@@ -1282,10 +1250,6 @@ function addIdToRecentlyViewed(handle) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  if (typeof AnimatedMarkers !== 'undefined') {
-    new AnimatedMarkers();
-  }
   if (typeof FooterMenuToggle !== 'undefined') {
     new FooterMenuToggle();
   }

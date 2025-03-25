@@ -91,11 +91,9 @@
 						{% endif %}
 						{% if block.settings.heading %}
 						{%- liquid
-							assign marker_style = block.settings.marker_style
-							assign marker_color = block.settings.marker_color
 							assign text = block.settings.heading | newline_to_br
 						-%}
-							<h3 class="{{ heading_size }}">{% render 'animated-marker-heading', heading: text, style: marker_style, color: marker_color %}</h3>
+							<h3 class="{{ heading_size }}">{{ text }}</h3>
 						{% endif %}
 						{% if block.settings.content %}
 							<div class="rte description-size--{{ description_size }}">{{ block.settings.content }}</div>
@@ -115,242 +113,214 @@
 </scrolling-content>
 
 {% schema %}
-  {
-    "name": "Scrolling content",
-		"class": "section-scrolling-content",
-    "settings": [
-			{
-	      "type": "select",
-	      "id": "desktop_layout",
-	      "options": [
-	        {
-	          "value": "image_first",
-	          "label": "Image first"
-	        },
-	        {
-	          "value": "text_first",
-	          "label": "Image second"
-	        }
-	      ],
-	      "default": "text_first",
-	      "label": "Desktop image placement",
-	      "info": "Image first is the default mobile layout."
-	    },
-			{
-				"type": "checkbox",
-				"id": "mobile_swipe",
-				"default": true,
-				"label": "Enable swipe on mobile"
-			},
-			{
-				"type": "checkbox",
-				"id": "dots",
-				"default": true,
-				"label": "Enable dots"
-			},
-			{
-	      "type": "header",
-	      "content": "Colors"
-	    },
-			{
-        "type": "color",
-        "id": "color_bg",
-        "label": "Background",
-        "default": "transparent"
-      },
-			{
-				"type": "color",
-				"id": "color_heading",
-				"label": "Heading",
-				"default": "#1a1c1d"
-			},
-			{
-				"type": "color",
-				"id": "color_text",
-				"label": "Text",
-				"default": "#2c2d2e"
-			},
-			{
-				"type": "color",
-				"id": "color_links",
-				"label": "Links",
-				"default": "#2c2d2e"
-			},
-			{
-	      "type": "header",
-	      "content": "Spacing"
-	    },
-			{
-				"type": "checkbox",
-				"id": "disable_top_spacing",
-				"default": false,
-				"label": "Remove top spacing"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_bottom_spacing",
-				"default": false,
-				"label": "Remove bottom spacing"
-			}
+{
+  "name": "Scrolling content",
+  "class": "section-scrolling-content",
+  "settings": [
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Image second"
+        }
+      ],
+      "default": "text_first",
+      "label": "Desktop image placement",
+      "info": "Image first is the default mobile layout."
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_swipe",
+      "default": true,
+      "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "dots",
+      "default": true,
+      "label": "Enable dots"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "color_heading",
+      "label": "Heading",
+      "default": "#1a1c1d"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "color",
+      "id": "color_links",
+      "label": "Links",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_top_spacing",
+      "default": false,
+      "label": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_bottom_spacing",
+      "default": false,
+      "label": "Remove bottom spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section",
+      "name": "Section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1280 x 1280 .jpg recommended."
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "default": "badge"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "subheading"
+        },
+        {
+          "type": "textarea",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            {
+              "value": "large",
+              "label": "Large"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "small",
+              "label": "Small"
+            }
+          ],
+          "default": "small"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Description",
+          "default": "<p>Add a descriptive text here for your slide.</p>"
+        },
+        {
+          "type": "select",
+          "id": "description_size",
+          "label": "Size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "Large"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h4",
+              "label": "Small"
+            }
+          ],
+          "default": "h3"
+        },
+        {
+          "id": "button_text",
+          "type": "text",
+          "label": "Button label",
+          "default": "Shop Now",
+          "info": "Leave the label blank to hide the button."
+        },
+        {
+          "id": "button_link",
+          "type": "url",
+          "label": "Button link"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "color_bg_badge",
+          "label": "Badge background",
+          "default": "#3f72e5"
+        },
+        {
+          "type": "color",
+          "id": "color_badge",
+          "label": "Badge text",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling content",
+      "blocks": [
+        {
+          "type": "section"
+        },
+        {
+          "type": "section"
+        },
+        {
+          "type": "section"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "*"
     ],
-    "blocks": [
-      {
-        "type": "section",
-        "name": "Section",
-        "settings": [
-					{
-						"type": "image_picker",
-						"id": "image",
-						"label": "Image",
-						"info": "1280 x 1280 .jpg recommended."
-					},
-					{
-            "type": "text",
-            "id": "badge",
-            "label": "Badge",
-            "default": "badge"
-          },
-					{
-            "type": "text",
-            "id": "subheading",
-            "label": "Subheading",
-            "default": "subheading"
-          },
-          {
-            "type": "textarea",
-            "id": "heading",
-            "label": "Heading",
-            "default": "Heading",
-						"info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-          },
-					{
-						"type": "select",
-						"id": "marker_style",
-						"options": [
-							{
-								"value": "style1",
-								"label": "Basic"
-							},
-							{
-								"value": "style2",
-								"label": "Double"
-							},
-							{
-								"value": "style3",
-								"label": "Squiggle"
-							},
-							{
-								"value": "style4",
-								"label": "Zigzag"
-							}
-						],
-						"default": "style1",
-						"label": "Marker"
-					},
-					{
-						"type": "select",
-						"id": "heading_size",
-						"label": "Heading size",
-						"options": [
-							{
-								"value": "large",
-								"label": "Large"
-							},
-							{
-								"value": "medium",
-								"label": "Medium"
-							},
-							{
-								"value": "small",
-								"label": "Small"
-							}
-						],
-						"default": "small"
-					},
-          {
-            "type": "richtext",
-            "id": "content",
-            "label": "Description",
-            "default": "<p>Add a descriptive text here for your slide.</p>"
-          },
-					{
-						"type": "select",
-						"id": "description_size",
-						"label": "Size",
-						"options": [
-							{
-								"value": "h2",
-								"label": "Large"
-							},
-							{
-								"value": "h3",
-								"label": "Medium"
-							},
-							{
-								"value": "h4",
-								"label": "Small"
-							}
-						],
-						"default": "h3"
-					},
-          {
-            "id": "button_text",
-            "type": "text",
-            "label": "Button label",
-            "default": "Shop Now",
-						"info": "Leave the label blank to hide the button."
-          },
-          {
-            "id": "button_link",
-            "type": "url",
-            "label": "Button link"
-          },
-					{
-			      "type": "header",
-			      "content": "Colors"
-			    },
-					{
-						"type": "color",
-						"id": "marker_color",
-						"label": "Marker",
-						"default": "#FD6262"
-					},
-					{
-		        "type": "color",
-		        "id": "color_bg_badge",
-		        "label": "Badge background",
-		        "default": "#3f72e5"
-		      },
-					{
-		        "type": "color",
-		        "id": "color_badge",
-		        "label": "Badge text",
-		        "default": "#ffffff"
-		      }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Scrolling content",
-				"blocks": [
-					{
-						"type": "section"
-					},
-					{
-						"type": "section"
-					},
-					{
-						"type": "section"
-					}
-				]
-      }
-    ],
-		"enabled_on": {
-			"templates": ["*"],
-			"groups": [
-				"header", "footer"
-			]
-		}
+    "groups": [
+      "header",
+      "footer"
+    ]
   }
+}
 {% endschema %}

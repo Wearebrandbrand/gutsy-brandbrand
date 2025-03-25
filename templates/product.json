@@ -84,7 +84,7 @@
       }
     },
     "245ee280-dfa9-4791-91ed-b65a153cc976": {
-      "type": "tabbed-content",
+      "type": "main-product-tabbed-content",
       "blocks": {
         "tab_XLUwrV": {
           "type": "tab",

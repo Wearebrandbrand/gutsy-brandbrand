@@ -229,10 +229,12 @@
             &[open] {
               summary {
                 color: var(--color-accent-3);
+
                 span {
                   .plus-icon {
                     display: none;
                   }
+
                   .minus-icon {
                     display: flex;
                   }

@@ -178,6 +178,10 @@
         display: grid;
         gap: 2rem;
 
+		@media only screen and (max-width:  47.938rem) {
+			gap: 1.125rem;
+		}
+
         .accordion {
           border-radius: 1rem;
           border: 0.188rem solid var(--color-light-1);

@@ -48,14 +48,16 @@
                       {{ 'product-1' | placeholder_svg_tag }}
                     </div>
                   {%- endif -%}
-                  <quick-view class="customer-reviews--quick-view" data-product-handle="{{ review_product.handle }}">
-                    {%- render 'svg-icons' with 'thb-add-to-cart' %}
-                    {%- unless review_product == empty -%}
-                      <div class="loading-overlay">
-                        {% render 'svg-icons' with 'thb-loading' %}
-                      </div>
-                    {%- endunless -%}
-                  </quick-view>
+                  {% if review_product.handle != blank %}
+                    <quick-view class="customer-reviews--quick-view" data-product-handle="{{ review_product.handle }}">
+                      {%- render 'svg-icons' with 'thb-add-to-cart' %}
+                      {%- unless review_product == empty -%}
+                        <div class="loading-overlay">
+                          {% render 'svg-icons' with 'thb-loading' %}
+                        </div>
+                      {%- endunless -%}
+                    </quick-view>
+                  {% endif %}
                 </div>
               
               <div class="customer-reviews--content">

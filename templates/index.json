@@ -146,9 +146,9 @@
         "heading": "",
         "description": "",
         "columns_desktop": 3,
+        "layout": "normal",
         "mobile_swipe": false,
         "image_ratio": "adapt",
-        "layout": "normal",
         "text_alignment": "center",
         "heading_size": "h4",
         "color_heading": "#1a1c1d",
@@ -304,7 +304,6 @@
       "settings": {
         "heading": "Geliefd door <br> MEER DAN 10.000 HONDEN",
         "description": "",
-        "columns": 4,
         "autoplay": true,
         "autoplay_length": 6,
         "color_bg": "#1A3C32",
@@ -435,7 +434,6 @@
         "color_heading": "#1A3C32",
         "color_text": "#094E39",
         "color_links": "#2c2d2e",
-        "color_border": "#dadce0",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }
@@ -474,7 +472,6 @@
         "color_bg": "#e8d67a",
         "color_text": "#094e39",
         "color_heading": "#1a3c32",
-        "color_border": "#d3d3d3",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
         "disable_top_spacing": false,

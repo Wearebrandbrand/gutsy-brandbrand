@@ -39,8 +39,8 @@
         "content_width": "large",
         "content_position": "bottom-left",
         "text_alignment": "left",
-        "text_color": "#fafafa",
         "heading_color": "#F0E7B2",
+        "text_color": "#fafafa",
         "overlay_color": "#f0e7b2",
         "overlay_opacity": 0,
         "disable_top_spacing": true,
@@ -91,16 +91,12 @@
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "small",
-        "full_width": false,
         "layout": "text_first",
         "content_position": "text-left",
-        "column_spacing": "medium",
-        "color_bg": "#ffffff",
         "text_color": "",
-        "color_border": "#e2e2e2",
         "disable_top_spacing": true,
-        "layout_type": "left-right-image-section",
-        "disable_bottom_spacing": true
+        "disable_bottom_spacing": true,
+        "layout_type": "left-right-image-section"
       }
     },
     "f9dfc74b-ea6d-4369-8439-7dce248b605c": {
@@ -146,16 +142,11 @@
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "small",
-        "full_width": false,
         "layout": "image_first",
         "content_position": "text-left",
-        "column_spacing": "medium",
-        "color_bg": "#ffffff",
-        "color_text": "#1a3c32",
-        "color_border": "#e2e2e2",
         "disable_top_spacing": true,
-        "layout_type": "left-right-image-section",
-        "disable_bottom_spacing": true
+        "disable_bottom_spacing": true,
+        "layout_type": "left-right-image-section"
       }
     },
     "3c475617-855b-4e78-b265-b1ed05a760bb": {
@@ -201,16 +192,11 @@
         "video_autoplay": true,
         "height": "adapt",
         "desktop_image_width": "small",
-        "full_width": false,
         "layout": "text_first",
         "content_position": "text-left",
-        "column_spacing": "medium",
-        "color_bg": "#ffffff",
-        "color_text": "#1a3c32",
-        "color_border": "#e2e2e2",
-        "layout_type": "left-right-image-section",
         "disable_top_spacing": true,
-        "disable_bottom_spacing": true
+        "disable_bottom_spacing": true,
+        "layout_type": "left-right-image-section"
       }
     },
     "3c475617-855b-4e78-b265-b1ed05a760bdsb": {
@@ -392,8 +378,6 @@
         "heading_size": "h4",
         "color_heading": "#1a1c1d",
         "color_text": "#2c2d2e",
-        "column_heading_color": "#094E39",
-        "column_text_color": "#994F00",
         "color_links": "#2c2d2e",
         "disable_top_spacing": false,
         "disable_bottom_spacing": false,

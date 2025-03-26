@@ -113,8 +113,7 @@
           "settings": {
             "tab_label": "Voedingsgids",
             "icon": "none",
-            "image": "{{ product.metafields.custom.specification.value }}",
-            "empty_field_label": "N/A"
+            "image": "{{ product.metafields.custom.specification.value }}"
           }
         },
         "tab_q9hJfd": {

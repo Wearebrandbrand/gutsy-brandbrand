@@ -1,8 +1,11 @@
 {{- 'components--insects.css' | asset_url | stylesheet_tag -}}
 
+{% assign heading-color = section.settings.heading-color %}
+{% assign text-color = section.settings.text-color %}
+
 <div class="insects-section">
     <div class="page-width">
-        <div class="section-header--title">
+        <div class="section-header--title" style="--text-color: {{text-color}}; --heading-color: {{heading-color}};">
             {% if section.settings.heading %}
                 <h3 class="section-heading">
                     {{ section.settings.heading }}
@@ -203,6 +206,16 @@
       "type": "text",
       "id": "description",
       "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "heading-color",
+      "label": "Heading Color"
+    },
+    {
+      "type": "color",
+      "id": "text-color",
+      "label": "Text Color"
     }
   ],
   "presets": [

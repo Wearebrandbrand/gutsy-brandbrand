@@ -10,9 +10,10 @@
     assign text_alignment = section.settings.text_alignment
 
     assign color_heading = section.settings.color_heading
-
     assign color_text = section.settings.color_text
-    assign color_links = section.settings.color_links
+    assign color_heading = section.settings.color_heading
+    assign column_text_color = section.settings.column_text_color
+    assign column_heading_color = section.settings.column_heading_color
 
     assign disable_top_spacing = section.settings.disable_top_spacing
     assign disable_bottom_spacing = section.settings.disable_bottom_spacing
@@ -28,7 +29,7 @@
             assign columns_desktop_class = 'medium-1/5 large-1/5'
     endcase
 -%}
-<div class="figures {% if mobile_swipe %} swipe-on-mobile{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %} text-alignment--{{ text_alignment }}" style="--color-heading: {{ color_heading }}; --color-text: {{ color_text }}; --color-accent: {{ color_links }}; --color-accent-rgb: {{ color_links.rgb | replace: ' ' , ',' }};">
+<div class="figures {% if mobile_swipe %} swipe-on-mobile{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %} text-alignment--{{ text_alignment }}" style="--color-heading: {{ color_heading }}; --color-text: {{ color_text }}; --color-accent: {{ color_links }}; --color-accent-rgb: {{ color_links.rgb | replace: ' ' , ',' }}; --column-heading-color: {{ column_heading_color }}; --column-text-color: {{ column_text_color }};">
     <div class="row">
         <div class="small-12 columns">
             {% if section.settings.subheading != blank %}
@@ -240,6 +241,18 @@
       "type": "color",
       "id": "color_text",
       "label": "Text",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "color",
+      "id": "column_heading_color",
+      "label": "Column Heading Color",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "color",
+      "id": "column_text_color",
+      "label": "Column Text Color",
       "default": "#2c2d2e"
     },
     {

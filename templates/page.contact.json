@@ -53,6 +53,7 @@
         "heading": "FAQ",
         "description": "",
         "text_size": "small",
+        "spacing_option": "medium",
         "tab_alignment": "left",
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",

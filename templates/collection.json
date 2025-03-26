@@ -43,7 +43,7 @@
         "show_progress_bar": false,
         "mobile_swipe": true,
         "heading_position": "bottom-center",
-        "text_color": "#2C2D2E",
+        "text_color": "#1A3C32",
         "overlay_color": "transparent",
         "overlay_opacity": 30,
         "disable_top_spacing": false,

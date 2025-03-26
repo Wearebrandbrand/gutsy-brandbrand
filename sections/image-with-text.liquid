@@ -30,9 +30,9 @@
         endif
     endif
 -%}
-<div class="row{% if full_width %} full-width-row{% endif %}">
+<div class="row{% if full_width %} full-width-row{% endif %} {{ section.settings.layout_type }}">
     <div class="small-12 columns">
-        <div class="image-with-text grid--image-{{ desktop_image_width }} {{ desktop_layout }} {{ content_position }} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}">
+        <div class="image-with-text grid--image-{{ desktop_image_width }} {{ desktop_layout }} {{ content_position }} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-text: {{ section.settings.text_color }}">
             <div class="image-with-text--image image-with-text--inner">
                 <div class="image-with-text--image-media aspect-ratio aspect-ratio--{{ height }}"
                      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
@@ -256,6 +256,15 @@
     },
     {
       "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    },
+    {
+      "type": "header",
       "content": "Spacing"
     },
     {
@@ -269,6 +278,26 @@
       "id": "disable_bottom_spacing",
       "default": false,
       "label": "Remove bottom spacing"
+    },
+    {
+      "type": "select",
+      "id": "layout_type",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "box_container",
+          "label": "Box Container"
+        },
+        {
+          "value": "left-right-image-section",
+          "label": "Left Right Image"
+        }
+      ],
+      "default": "normal",
+      "label": "Layout type"
     }
   ],
   "blocks": [

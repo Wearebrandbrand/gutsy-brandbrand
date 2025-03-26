@@ -6495,20 +6495,8 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   }
 }
 
-.template-page-contact {
-  .section-newsletter {
-    .full-width-row-full {
-      .columns {
-        max-width: 100%;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width:  63.938rem) {
-  .template-product,
-  .template-collection,
-  .template-page-contact {
+  .show-padding-top {
     #main-content {
       padding-top: 4.875rem;
 
@@ -6518,16 +6506,6 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
         &.no-padding {
           padding: 0;
         }
-      }
-    }
-  }
-}
-
-.template-page-contact {
-  #main-content {
-    .section-newsletter {
-      .row {
-        padding: 0;
       }
     }
   }

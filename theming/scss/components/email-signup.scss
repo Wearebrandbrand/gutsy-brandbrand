@@ -70,12 +70,14 @@
             line-height: 110%;
             letter-spacing: 0.1rem;
             margin-bottom: 0.5rem;
+            color: var(--color-heading);
         }
 
         .description-size--medium {
             p {
                 max-width: 23.125rem;
                 margin: 0 auto;
+                color: var(--color-body);
             }
         }
 

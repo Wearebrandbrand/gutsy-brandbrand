@@ -159,8 +159,11 @@
 
       .section-header {
         .section-header--content {
+          * {
+            color: var(--color-heading);
+          }
+
           .subheading {
-            color: var(--color-accent-1);
             font-size: var(--font-size-20);
             font-style: normal;
             font-weight: 700;
@@ -175,6 +178,10 @@
         display: grid;
         gap: 2rem;
 
+		@media only screen and (max-width:  47.938rem) {
+			gap: 1.125rem;
+		}
+
         .accordion {
           border-radius: 1rem;
           border: 0.188rem solid var(--color-light-1);
@@ -184,7 +191,7 @@
 
           details {
             summary {
-              color: var(--color-accent-1);
+              color: var(--color-heading);
               font-family: var(--font-primary);
               font-size: var(--font-size-20);
               font-style: normal;
@@ -228,7 +235,7 @@
 
             &[open] {
               summary {
-                color: var(--color-accent-3);
+                color: var(--color-text);
 
                 span {
                   .plus-icon {
@@ -246,7 +253,7 @@
               padding: 0.438rem 1.5rem;
 
               p {
-                color: var(--color-secondary-dark);
+                color: var(--color-text);
                 font-family: var(--font-primary);
                 font-size: var(--font-size-16);
                 font-style: normal;

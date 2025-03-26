@@ -174,7 +174,7 @@
   }
 }
 
-.template-page-contact {
+.box_container {
   .image-with-text {
     background-color: var(--color-accent-1);
     padding: 1.5rem;
@@ -240,9 +240,9 @@
 }
 
 
-.template-page-about {
+
   .section-image-with-text {
-    .row {
+    .row.left-right-image-section {
       justify-content: center;
 
       .columns {
@@ -384,4 +384,3 @@
       }
     }
   }
-}

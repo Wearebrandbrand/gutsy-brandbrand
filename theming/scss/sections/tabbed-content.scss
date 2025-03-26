@@ -170,7 +170,7 @@
                 display: flex;
                 min-width: initial;
                 border-radius: 6.25rem;
-                background: var(--color-accent-5);
+                background: var(--color-tabs);
                 padding: 0.25rem;
 
                 @media (max-width: 35.5rem){
@@ -182,7 +182,7 @@
                 }
 
                 button {
-                    color: var(--color-secondary-dark);
+                    color: var(--color-tabs-button);
                     text-align: center;
                     font-family: var(--font-primary);
                     font-size: var(--font-size-16);
@@ -202,7 +202,7 @@
                     }
 
                     @media (max-width: 35.5rem){
-                        background: var(--color-accent-5);
+                        background: var(--color-tabs);
                     }
 
                     &::after {
@@ -211,7 +211,7 @@
 
                     &.active {
                         color: var(--color-light-2);
-                        background-color: var(--color-secondary-dark);
+                        background-color: var(--color-tabs-button);
                     }
                 }
             }
@@ -225,7 +225,7 @@
             }
 
             h5 {
-                color: var(--color-accent-1);
+                color: var(--color-body);
                 font-family: var(--font-primary);
                 font-size: var(--font-size-20);
                 font-style: normal;
@@ -242,7 +242,7 @@
             }
 
             p {
-                color: var(--color-secondary-dark);
+                color: var(--color-body);
                 font-family: var(--font-primary);
                 font-size: var(--font-size-16);
                 font-style: normal;

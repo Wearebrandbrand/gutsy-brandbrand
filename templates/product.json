@@ -142,8 +142,8 @@
         "tab_alignment": "left",
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
-        "color_tabs": "#303c43",
-        "color_text": "#303c43",
+        "color_tabs": "#F0E7B2",
+        "color_text": "#094E39",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true
       }

@@ -137,8 +137,7 @@
       "settings": {
         "heading": "Product details",
         "description": "",
-        "text_size": "small",
-        "tab_alignment": "center",
+        "tab_alignment": "left",
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
         "color_tabs": "#f0e7b2",

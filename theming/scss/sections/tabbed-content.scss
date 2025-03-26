@@ -163,6 +163,24 @@
     }
 
     .tabbed-content {
+        &.tabs-left {
+            .tabbed-content--scroll {
+                place-content: flex-start;
+            }
+        }
+
+        &.tabs-center {
+            .tabbed-content--scroll {
+                place-content: center;
+            }
+        }
+
+        &.tabs-right {
+            .tabbed-content--scroll {
+                place-content: flex-end;
+            }
+        }
+
         .tabbed-content--scroll {
             display: flex;
 

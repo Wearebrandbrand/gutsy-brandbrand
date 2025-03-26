@@ -199,12 +199,14 @@
               line-height: 120%;
               letter-spacing: -0.025rem;
               padding: 0.438rem 1.5rem;
+              padding-right: 4rem;
 
               @media only screen and (max-width:  63.938rem) {
                 padding: 0.5rem 1.125rem;
                 font-size: var(--font-size-14);
                 letter-spacing: -0.018rem;
                 line-height: 130%;
+                padding-right: 3rem;
               }
 
               span {

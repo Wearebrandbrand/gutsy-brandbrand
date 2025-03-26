@@ -4,9 +4,9 @@
     <div class="page-width">
         <div class="section-header--title">
             {% if section.settings.heading %}
-                <h1 class="section-heading">
+                <h3 class="section-heading">
                     {{ section.settings.heading }}
-                </h1>
+                </h3>
             {% endif %}
 
             {% if section.settings.description %}
@@ -18,15 +18,15 @@
             <div class="insects-graph__legend">
                 <div class="insects-graph__legend-item">
                     <div id="legend-land" class="insects-graph__legend-color"></div>
-                    <span>Land (m²)</span>
+                  <span>Land <span>(m²)</span></span>
                 </div>
                 <div class="insects-graph__legend-item">
                     <div id="legend-emissions" class="insects-graph__legend-color"></div>
-                    <span>Emissions (Kg CO²)</span>
+                    <span>Emissions <span>(Kg CO²)</span></span>
                 </div>
                 <div class="insects-graph__legend-item">
                     <div id="legend-water" class="insects-graph__legend-color"></div>
-                    <span>Water (m³)</span>
+                    <span>Water <span>(m³)</span></span>
                 </div>
             </div>
             <div class="insects-graph">
@@ -111,26 +111,40 @@
     </div>
 </div>
 
-
 <script type="text/javascript">
   let hasAnimated = false;
 
-  function animateGraph() {
+  function updateBarSizes() {
     const bars = document.querySelectorAll('.insects-graph__bar');
     const base = 350;
     const max = 200;
+
+    bars.forEach((bar) => {
+      const height = parseFloat(bar.getAttribute('data-value'));
+      const colorBar = bar.querySelector('.insects-graph__bar-color');
+
+      // Reset dimensions
+      colorBar.style.width = '';
+      colorBar.style.height = '';
+
+      // Set dimension based on screen width
+      if (window.innerWidth < 992) {
+        colorBar.style.width = (base / max * height) + 'px';
+      } else {
+        colorBar.style.height = (base / max * height) + 'px';
+      }
+    });
+  }
+
+  function animateNumbers() {
+    const bars = document.querySelectorAll('.insects-graph__bar');
     const time = 4000;
     const interval = 100;
 
     bars.forEach((bar) => {
       const height = parseFloat(bar.getAttribute('data-value'));
-      const colorBar = bar.querySelector('.insects-graph__bar-color');
       const span = bar.querySelector('span');
 
-      // Set bar height
-      colorBar.style.height = (base / max * height) + 'px';
-
-      // Animate number
       let current = 0;
       const increment = height < 20 ? 0.5 : Math.ceil(height / (time / interval));
 
@@ -157,19 +171,27 @@
     const triggerPoint = section.offsetTop - 200;
 
     if (!hasAnimated && window.scrollY >= triggerPoint) {
-      animateGraph();
+      updateBarSizes();  // Set initial size
+      animateNumbers();  // Animate numbers ONCE
       hasAnimated = true;
       window.removeEventListener('scroll', onScroll);
     }
   }
 
+  function onResize() {
+    if (hasAnimated) {
+      updateBarSizes();  // Only resize, no re-animation
+    }
+  }
+
   window.addEventListener('scroll', onScroll);
+  window.addEventListener('resize', onResize);
 </script>
 
 {% schema %}
 {
   "name": "insects",
-  "class": "insects-section",
+  "class": "shopify-insects-section",
   "tag": "section",
   "settings": [
     {

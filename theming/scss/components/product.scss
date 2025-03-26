@@ -2706,10 +2706,13 @@ svg {
   }
 }
 
+.template-product {
+  overflow-x: hidden;
+}
+
 .thb-product-detail {
   position: relative;
-  padding-bottom: 5.625rem;
-  overflow: hidden;
+  padding-bottom: 0;
 
   @media only screen and (max-width: 63.938rem) {
     padding-bottom: 0;
@@ -2967,12 +2970,13 @@ svg {
       }
 
       .product-button-cart {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
         background-color: var(--color-accent-1);
         padding: 0.625rem 0;
+        z-index: 6;
 
         @media only screen and (max-width: 63.938rem) {
           position: fixed;

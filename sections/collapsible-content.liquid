@@ -32,7 +32,16 @@
 							<details id="Details-{{ block.id }}-{{ section.id }}" {% if block.settings.open %}open{% endif %}>
 								<summary>
 									{{ block.settings.heading | default: block.settings.page.title }}
-									<span>{% render 'svg-icons' with 'thb-collapsible-arrow' -%}</span>
+									<span>
+									<div class="plus-icon">
+										{% render 'svg-icons' with 'thb-collapsible-arrow' -%}
+									</div>
+									<div class="minus-icon">
+										<svg width="28" height="4" viewBox="0 0 28 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 2C0.5 1.17157 1.17157 0.5 2 0.5H26C26.8284 0.5 27.5 1.17157 27.5 2C27.5 2.82843 26.8284 3.5 26 3.5H2C1.17157 3.5 0.5 2.82843 0.5 2Z" fill="#0C644A"/>
+										</svg>
+									</div>
+									</span>
 								</summary>
 								<div class="collapsible__content accordion__content rte" id="Accordion-{{ block.id }}-{{ section.id }}">
 									{{ block.settings.content }}

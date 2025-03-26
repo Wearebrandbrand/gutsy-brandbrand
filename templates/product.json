@@ -108,15 +108,6 @@
             "custom_liquid": "<ul class=\"ingredients-list mobile-scroll text-center\">\n {% for item in product.metafields.custom.ingredients.value %}\n <li>\n{% if item.image %}\n <img src=\"{{ item.image | img_url: 'medium' }}\" alt=\"{{ item.title }}\" />{% endif %}<h4>{{ item.title }}</h4><p>{{ item.description }}</p></li>{% endfor %}</ul>"
           }
         },
-        "specification_jifejJ": {
-          "type": "specification",
-          "settings": {
-            "tab_label": "Voedingsgids",
-            "icon": "none",
-            "image": "{{ product.metafields.custom.specification.value }}",
-            "empty_field_label": "N/A"
-          }
-        },
         "tab_q9hJfd": {
           "type": "tab",
           "settings": {
@@ -126,6 +117,14 @@
             "text_columns": "1",
             "page": "",
             "custom_liquid": "{% if product.metafields.custom.contents.value %}<ul class=\"ingredients-list text-center inhoud\"> {% for item in product.metafields.custom.contents.value %} <li><h4>{{ item.heading }}</h4><p>{{ item.description }}</p></li>{% endfor %}</ul>{% endif %}"
+          }
+        },
+        "specification_jifejJ": {
+          "type": "specification",
+          "settings": {
+            "tab_label": "Voedingsgids",
+            "icon": "none",
+            "image": "{{ product.metafields.custom.specification.value }}"
           }
         }
       },
@@ -141,8 +140,9 @@
         "tab_alignment": "left",
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
-        "color_tabs": "#F0E7B2",
-        "color_text": "#094E39",
+        "color_tabs": "#f0e7b2",
+        "tab_color_bg": "#094E39",
+        "color_text": "#094e39",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true
       }

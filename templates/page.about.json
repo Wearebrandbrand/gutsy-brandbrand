@@ -99,7 +99,7 @@
         "text_color": "",
         "color_border": "#e2e2e2",
         "disable_top_spacing": true,
-        "layout_type": "zigzag",
+        "layout_type": "left-right-image-section",
         "disable_bottom_spacing": true
       }
     },
@@ -154,7 +154,7 @@
         "color_text": "#1a3c32",
         "color_border": "#e2e2e2",
         "disable_top_spacing": true,
-        "layout_type": "zigzag",
+        "layout_type": "left-right-image-section",
         "disable_bottom_spacing": true
       }
     },
@@ -208,7 +208,7 @@
         "color_bg": "#ffffff",
         "color_text": "#1a3c32",
         "color_border": "#e2e2e2",
-        "layout_type": "zigzag",
+        "layout_type": "left-right-image-section",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }

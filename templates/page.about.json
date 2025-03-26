@@ -379,7 +379,7 @@
         "columns_desktop": 5,
         "mobile_swipe": false,
         "image_ratio": "adapt",
-        "text_alignment": "left",
+        "text_alignment": "center",
         "heading_size": "h4",
         "color_heading": "#1a1c1d",
         "color_text": "#2c2d2e",

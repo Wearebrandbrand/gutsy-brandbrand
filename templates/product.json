@@ -105,7 +105,7 @@
             "text": "",
             "text_columns": "1",
             "page": "",
-            "custom_liquid": ""
+            "custom_liquid": "<ul class=\"ingredients-list mobile-scroll text-center\">\n {% for item in product.metafields.custom.ingredients.value %}\n <li>\n{% if item.image %}\n <img src=\"{{ item.image | img_url: 'medium' }}\" alt=\"{{ item.title }}\" />{% endif %}<h4>{{ item.title }}</h4><p>{{ item.description }}</p></li>{% endfor %}</ul>"
           }
         },
         "specification_jifejJ": {
@@ -125,7 +125,7 @@
             "text": "",
             "text_columns": "1",
             "page": "",
-            "custom_liquid": ""
+            "custom_liquid": "{% if product.metafields.custom.contents.value %}<ul class=\"ingredients-list text-center inhoud\"> {% for item in product.metafields.custom.contents.value %} <li><h4>{{ item.heading }}</h4><p>{{ item.description }}</p></li>{% endfor %}</ul>{% endif %}"
           }
         }
       },

@@ -16,6 +16,7 @@
 
 	assign disable_top_spacing = section.settings.disable_top_spacing
 	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+	assign tab_color_bg = section.settings.tab_color_bg
 
 	assign color_bg = section.settings.color_bg | downcase
 	assign color_body_bg = settings.color_body_bg | downcase
@@ -27,7 +28,7 @@
 -%}
 <div class="row">
 	<div class="small-12 columns">
-		<div class="tabbed-content-wrapper {% if has_bg -%}tabbed-content--has-bg{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-bg: {{ color_bg }}; --bg-body-rgb: {{ color_bg.rgb | replace: ' ' , ',' }}; --color-body: {{ color_text }}; --color-tabs: {{ color_tabs.rgb | replace: ' ' , ',' }};">
+		<div class="tabbed-content-wrapper {% if has_bg -%}tabbed-content--has-bg{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-bg: {{ color_bg }}; --bg-body-rgb: {{ color_bg.rgb | replace: ' ' , ',' }}; --color-body: {{ color_text }}; --color-tabs: {{ color_tabs }}; --color-tabs-button: {{ tab_color_bg }};">
 			{% render 'section-header', section_heading: section_heading, section_description: section_description %}
 			<tabbed-content class="tabbed-content tabs-{{ tab_alignment }} text-size--{{ text_size }}" selected-index="0">
 				<scroll-shadow class="tabbed-content--scroll">
@@ -169,6 +170,12 @@
         "id": "color_tabs",
         "label": "Tabs",
         "default": "#2c2d2e"
+      },
+      {
+        "type": "color",
+        "id": "tab_color_bg",
+        "label": "Tab Button Background",
+        "default": "#094E39"
       },
 			{
         "type": "color",

@@ -171,36 +171,29 @@
       place-content: center;
 
       .multicolumn__column {
-          &.medium-6 {
-              flex: 0 0 calc(50% - 0.7rem);
-              max-width: inherit;
-              padding: 0;
-              margin: 0;
-          }
+        &.medium-6 {
+          flex: 0 0 calc(50% - 1rem);
+          max-width: inherit;
+          padding: 0;
+          margin: 0;
+        }
 
         &.medium-4 {
-          flex: 0 0 calc(33.33% - 0.7rem);
+          flex: 0 0 calc(33.33% - 1rem);
           max-width: inherit;
           padding: 0;
           margin: 0;
         }
 
         &.medium-3 {
-          flex: 0 0 calc(25% - 0.7rem);
+          flex: 0 0 calc(25% - 1rem);
           max-width: inherit;
           padding: 0;
           margin: 0;
         }
 
         &.medium-1\/5 {
-          flex: 0 0 calc(20% - 0.7rem);
-          max-width: inherit;
-          padding: 0;
-          margin: 0;
-        }
-
-        &.medium-4 {
-          flex: 0 0 calc(33.33% - 0.7rem);
+          flex: 0 0 calc(20% - 1rem);
           max-width: inherit;
           padding: 0;
           margin: 0;
@@ -211,7 +204,7 @@
           display: flex;
           gap: 1.125rem;
 
-          &.medium-6, &.medium-4, &.medium-3, &.medium-5, &.medium-2{
+          &.medium-6, &.medium-4, &.medium-3, &.medium-5, &.medium-2 {
             flex: 0 0 100%;
           }
         }
@@ -340,11 +333,43 @@
         }
 
         .multicolumn__column {
+          &.medium-6 {
+            flex: 0 0 calc(50% - 2.5rem);
+
+            @media only screen and (max-width: 47.938rem) {
+              flex: 0 0 calc(50% - 1.625rem);
+            }
+          }
+
+          &.medium-4 {
+            flex: 0 0 calc(33.33% - 2.5rem);
+
+            @media only screen and (max-width: 47.938rem) {
+              flex: 0 0 calc(33.33% - 1.625rem);
+            }
+          }
+
+          &.medium-3 {
+            flex: 0 0 calc(25% - 2.5rem);
+
+            @media only screen and (max-width: 47.938rem) {
+              flex: 0 0 calc(25% - 1.625rem);
+            }
+          }
+
+          &.medium-1\/5 {
+            flex: 0 0 calc(20% - 2.5rem);
+
+            @media only screen and (max-width: 47.938rem) {
+              flex: 0 0 calc(20% - 1.625rem);
+            }
+          }
+
           &.large-1\/5 {
             padding: 0;
             margin: 0;
             max-width: 13.625rem;
-            flex: 0 0 calc(20% - 2rem);
+            flex: 0 0 calc(20% - 2.5rem);
           }
 
           @media only screen and (max-width: 47.938rem) {

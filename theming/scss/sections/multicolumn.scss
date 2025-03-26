@@ -240,8 +240,9 @@
     }
 }
 
-.template-page-about {
-    .multicolumn {
+
+.multicolumn {
+    &.carousel {
         padding: 2.5rem 0 5.625rem;
         background: var(--color-secondary-dark);
         margin: 0;

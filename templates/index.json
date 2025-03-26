@@ -148,6 +148,7 @@
         "columns_desktop": 3,
         "mobile_swipe": false,
         "image_ratio": "adapt",
+        "layout": "normal",
         "text_alignment": "center",
         "heading_size": "h4",
         "color_heading": "#1a1c1d",

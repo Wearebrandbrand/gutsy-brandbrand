@@ -377,6 +377,7 @@
         "sub_heading": "Winner, winner,",
         "description": "<p>Er zijn  talloze voordelen aan het eten van insecten. Wist je dat insecten...</p>",
         "columns_desktop": 5,
+        "layout": "carousel",
         "mobile_swipe": false,
         "image_ratio": "adapt",
         "text_alignment": "center",

@@ -3286,13 +3286,21 @@ h6,
 
 .header--inner {
   width: 100%;
-  max-width: var(--grid-width, 1280px);
+  max-width: 90rem;
   margin: 0 auto;
   display: grid;
   column-gap: 20px;
   align-items: center;
   grid-template-columns: 1fr auto 1fr;
   min-height: 60px;
+  padding-left: 3.438rem;
+  padding-right: 1.875rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .header--inner {
+    padding-inline: 0;
+  }
 }
 
 @media only screen and (min-width: 1068px) {

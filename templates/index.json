@@ -90,8 +90,8 @@
         "text_position": "center",
         "text_alignment": "center",
         "color_bg": "rgba(0,0,0,0)",
-        "color_heading": "#1a1c1d",
-        "color_text": "#2c2d2e",
+        "color_heading": "#1A3C32",
+        "color_text": "#fff",
         "color_links": "#2c2d2e",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true

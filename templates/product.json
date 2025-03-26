@@ -111,7 +111,7 @@
         "specification_jifejJ": {
           "type": "specification",
           "settings": {
-            "tab_label": "Inhoud",
+            "tab_label": "Voedingsgids",
             "icon": "none",
             "image": "{{ product.metafields.custom.specification.value }}",
             "empty_field_label": "N/A"
@@ -120,7 +120,7 @@
         "tab_q9hJfd": {
           "type": "tab",
           "settings": {
-            "tab_label": "Voedingsgids",
+            "tab_label": "Inhoud",
             "icon": "none",
             "text": "",
             "text_columns": "1",
@@ -132,8 +132,8 @@
       "block_order": [
         "tab_XLUwrV",
         "tab_MbeGK6",
-        "specification_jifejJ",
-        "tab_q9hJfd"
+        "tab_q9hJfd",
+        "specification_jifejJ"
       ],
       "settings": {
         "heading": "Product details",

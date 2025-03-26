@@ -97,6 +97,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame.jpg",
+        "layout_type": "box_container",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }

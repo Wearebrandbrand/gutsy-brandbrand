@@ -231,7 +231,7 @@
     <div class="product-button-cart">
       <div class="row">
         <div class="small-12 columns">
-          <div class="total-text">Totaal</div>
+          <div class="total-text">{{ 'sections.cart.total' | t }}</div>
           <div class="product-price-container">
             <div class="no-js-hidden" id="price-{{ section.id }}">
               {% render 'product-price', product: product, use_variant: true, show_badges: true, show_custom_badges: block.settings.show_custom_badges %}

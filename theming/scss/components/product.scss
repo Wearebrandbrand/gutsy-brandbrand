@@ -3070,6 +3070,7 @@ svg {
     .product-button-cart {
       border-radius: 0.5rem;
       position: relative;
+      width: fit-content;
 
       @media only screen and (max-width: 63.938rem) {
         position: initial;
@@ -3080,7 +3081,9 @@ svg {
       }
 
       .columns {
-        place-content: space-evenly;
+        display: flex;
+        flex-flow: row wrap;
+        place-content: start;
 
         .product-price-container {
           .price {

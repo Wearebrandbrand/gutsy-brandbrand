@@ -391,6 +391,31 @@
   margin-bottom: 0;
 }
 
+.product-card--tag {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  border-radius: 8px;
+  background: var(--color-tag);
+  display: flex;
+  padding: 6px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+
+  .tag {
+    color: var(--color-light-2);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-16);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+  }
+}
+
 .product-card--badges {
   position: absolute;
   z-index: 30;

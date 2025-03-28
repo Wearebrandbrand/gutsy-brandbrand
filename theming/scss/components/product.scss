@@ -2895,6 +2895,33 @@ svg {
               }
             }
 
+            .form__description {
+              &__value {
+                color: var(--color-secondary);
+                font-size: var(--font-size-12);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0.48px;
+                margin-bottom: 1rem;
+              }
+            }
+
+            .form__label__value {
+              display: flex;
+              flex-flow: column;
+              align-items: flex-end;
+
+              .form__label__subtitle {
+                text-align: right;
+                font-size: var(--font-size-12);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0.48px;
+              }
+            }
+
             label {
               min-width: 9.375rem;
               border-radius: 0.75rem;

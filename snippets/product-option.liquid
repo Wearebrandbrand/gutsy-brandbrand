@@ -4,6 +4,7 @@
 	endif
 
 	assign handle = option.name | replace: ' ', '-' | downcase | escape
+	assign product_option_descriptions = product.metafields.brandbrand.product_option_descriptions.value
 -%}
 {%- case option_type -%}
 {%- when 'dropdown' -%}
@@ -33,8 +34,21 @@
 		</div>
 	</fieldset>
 {%- when 'button' -%}
+	{%- liquid
+
+		for description in product_option_descriptions
+			assign handle_desc = description.label | replace: ' ', '-' | downcase | escape
+			if handle_desc == handle
+				assign option_description = description.text
+			endif
+		endfor
+
+	-%}
 	<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
-		<div class="form__label">{{ option.name }}: <span class="form__label__value">{{ option.selected_value }}</span>{{ sizing_link }}</div>
+		<div class="form__label">{{ option.name }}</div>
+		{% if option_description %}
+		<div class="form__description"><div class="form__description__value">{{- option_description | metafield_tag | replace: "metafield-rich_text_field", "metafield-rich_text_field rte" -}}</div></div>
+		{% endif %}
 		{%- for value in option.values -%}
 			<input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}{{ appended }}"
 						name="{{ option.name | append: appended }}"
@@ -45,8 +59,27 @@
 						{% unless value.available %}class="is-disabled"{% endunless %}
 						{% if option.selected_value == value %}checked{% endif %}
 			>
+			{%- liquid
+
+				for variant in product.variants
+					if variant.title contains value
+						if variant.metafields
+							assign subtitle_object = variant.metafields.brandbrand.product_option_subtitle.value
+							assign subtitle_handle = subtitle_object.label | replace: ' ', '-' | downcase | escape
+							assign subtitle = subtitle_object.subtitle
+							break
+						endif
+					endif
+				endfor
+			-%}
 			<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}{{ appended }}">
-				<span>{{ value }}</span>
+				<span class="form__label__value">{{ value }}
+					{% if handle == subtitle_handle and subtitle != blank %}
+						<span class="form__label__subtitle">
+							{{ subtitle }}
+						</span>
+					{% endif %}
+				</span>
 			</label>
 		{%- endfor -%}
 	</fieldset>

@@ -45,7 +45,7 @@
 
 	-%}
 	<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
-		<div class="form__label">{{ option.name }}</div>
+		<div class="form__label">{{ option.name }}<span class="form__label__value visually-hidden">{{ option.selected_value }}</span>{{ sizing_link }}</div>
 		{% if option_description %}
 		<div class="form__description"><div class="form__description__value">{{- option_description | metafield_tag | replace: "metafield-rich_text_field", "metafield-rich_text_field rte" -}}</div></div>
 		{% endif %}

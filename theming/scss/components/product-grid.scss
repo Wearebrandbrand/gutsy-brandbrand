@@ -915,10 +915,6 @@
     .product-card-box {
       max-width: calc(100% - 4.75rem);
 
-      @media only screen and (max-width:  63.938rem) {
-        max-width: 100%;
-      }
-
       .product-card-title {
         color: var(--color-secondary-dark);
         font-family: var(--font-primary) !important;
@@ -996,10 +992,6 @@
       display: flex;
       max-width: 2.875rem;
       margin: 0;
-
-      @media only screen and (max-width:  63.938rem) {
-        display: none;
-      }
 
       .button {
         margin: 0;

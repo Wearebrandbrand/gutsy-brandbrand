@@ -21,6 +21,7 @@ Author URI: https://brandbrand.nl
   --color-secondary: #3D3F43;
   --color-secondary-dark: #094E39;
   --color-tag: #1A323C;
+  --color-body: #1A3C32;
   --color-accent-1: #1A3C32;
   --color-accent-2: #E8D67A;
   --color-accent-3: #0C644A;
@@ -45,6 +46,9 @@ Author URI: https://brandbrand.nl
   --font-size-56: 3.5rem;
   --color-accent-hover: var(--color-primary);
   --color-accent: #994F00;
+  --input-border-radius: 8px;
+  --input-border-radius-m: 12px;
+  --input-border-radius-l: 16px;
 }
 
 #wrapper .click-capture,
@@ -5489,10 +5493,16 @@ select.resize-select {
 .quantity {
   display: inline-flex;
   position: relative;
-  border: 1px solid var(--color-form-border);
-  padding: 0 32px;
-  border-radius: var(--input-border-radius, 6px);
+  padding: 0 40px;
+  border-radius: var(--input-border-radius-l, 16px);
+  background-color: var(--color-accent-5);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .quantity .qty {
@@ -5505,10 +5515,12 @@ select.resize-select {
   border: 0;
   justify-content: center;
   background: transparent;
-  font-size: 0.8125rem;
-  font-weight: 400;
   margin: 0;
   outline: 0;
+  color: var(--color-accent-1);
+  font-weight: bold;
+  font-size: var(--font-size-20);
+
 }
 
 .no-js .quantity .qty {
@@ -5526,7 +5538,7 @@ select.resize-select {
 }
 
 .quantity.small-qty {
-  padding: 0 25px;
+  padding: 0 30px;
 }
 
 .quantity.small-qty .qty {
@@ -5536,7 +5548,7 @@ select.resize-select {
 
 .quantity.small-qty .minus,
 .quantity.small-qty .plus {
-  width: 25px;
+  width: 30px;
   height: 34px;
 }
 
@@ -5552,20 +5564,10 @@ select.resize-select {
   align-items: center;
   top: 0;
   left: 0;
-  width: 32px;
+  width: 40px;
   cursor: pointer;
   background: transparent;
   user-select: none;
-}
-
-.quantity .minus svg,
-.quantity .plus svg {
-  opacity: 0.8;
-}
-
-.quantity .minus:hover svg,
-.quantity .plus:hover svg {
-  opacity: 1;
 }
 
 .no-js .quantity .minus, .no-js

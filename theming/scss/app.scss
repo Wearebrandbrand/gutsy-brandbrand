@@ -5640,7 +5640,7 @@ select.disable-display::after {
 }
 
 .subscription-option {
-  max-width: 60%;
+  max-width: 66%;
 
   label {
     display: flex;
@@ -5649,7 +5649,8 @@ select.disable-display::after {
     .form__label__value {
       display: flex;
       flex-flow: row wrap !important;
-      gap: 3rem;
+      min-width: calc(100% - 4rem);
+      justify-content: space-between;
 
       &_discount {
         color: var(--color-accent-3) !important;

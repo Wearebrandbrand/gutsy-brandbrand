@@ -5604,6 +5604,80 @@ select.resize-select {
   pointer-events: none;
 }
 
+.select-wrapper {
+  position: relative;
+}
+
+/* Only works in Chrome, Safari, Edge (not Firefox) */
+select.disable-display {
+  color: transparent !important;
+  text-shadow: none !important;
+  position: relative;
+}
+
+.fake-label {
+  position: absolute;
+  top: 50%;
+  left: 1.1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000;
+  font-size: inherit;
+  z-index: 2;
+}
+
+select.disable-display::after {
+  content: attr(data-label);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: black;
+  font-size: inherit;
+}
+
+.subscription-option {
+  max-width: 60%;
+
+  label {
+    display: flex;
+    flex-flow: column;
+
+    .form__label__value {
+      display: flex;
+      flex-flow: row wrap !important;
+      gap: 3rem;
+
+      &_discount {
+        color: var(--color-accent-3) !important;
+      }
+    }
+
+    .form__description {
+      margin-left: 2rem;
+      margin-top: 1rem;
+
+      &__value {
+        color: var(--color-secondary-dark) !important;
+        font-weight: 400;
+        font-size: var(--font-size-16) !important;
+      }
+    }
+
+    .select-wrapper {
+      width: 100%;
+
+      select {
+        width: 100%;
+        background: white;
+      }
+    }
+  }
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

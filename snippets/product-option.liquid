@@ -3,8 +3,14 @@
 		assign appended = '--sticky'
 	endif
 
+	assign delivery_options = "Delivery, Levering, Regelmaat, Regularity" | split: ", "
 	assign handle = option.name | replace: ' ', '-' | downcase | escape
 	assign product_option_descriptions = product.metafields.brandbrand.product_option_descriptions.value
+	assign option_name = option.name
+	assign delivery_type = false
+	if delivery_options contains option_name
+		assign delivery_type = true
+	endif
 -%}
 {%- case option_type -%}
 {%- when 'dropdown' -%}
@@ -34,17 +40,197 @@
 		</div>
 	</fieldset>
 {%- when 'button' -%}
-	{%- liquid
+	{% if delivery_type %}
+		{%- liquid
+			assign one_time_labels = "Eenmalig, One time, Een keer, éénmalig" | split: ", "
+			assign one_time_value = null
+			assign one_time_selected = false
+			assign subscription_selected = false
+			assign first_subscription_label = null
 
-		for description in product_option_descriptions
-			assign handle_desc = description.label | replace: ' ', '-' | downcase | escape
-			if handle_desc == handle
-				assign option_description = description.text
-			endif
-		endfor
+			for value in option.values
+				assign is_one_time = false
 
-	-%}
-	<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
+				if one_time_labels contains value
+					assign one_time_value = value
+					assign index = forloop.index0
+					assign is_one_time = true
+				endif
+				if option.selected_value == one_time_value
+					assign one_time_selected = true
+				else
+					assign subscription_selected = true
+				endif
+
+				if first_subscription_label == null and is_one_time == false
+					assign first_subscription_label = value
+				endif
+			endfor
+
+			for description in product_option_descriptions
+				assign handle_desc = description.label | replace: ' ', '-' | downcase | escape
+				if handle_desc == handle
+					assign option_description = description.text
+				endif
+			endfor
+		-%}
+		<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
+			<div class="form__label">{{ option.name }}<span class="form__label__value visually-hidden">{{ option.selected_value }}</span>{{ sizing_link }}</div>
+			{% if option_description %}
+				<div class="form__description"><div class="form__description__value">{{- option_description | metafield_tag | replace: "metafield-rich_text_field", "metafield-rich_text_field rte" -}}</div></div>
+			{% endif %}
+			{%- for value in option.values -%}
+				{% if value == one_time_value %}
+					{%- liquid
+						for variant in product.variants
+							if variant.title contains value
+								if variant.metafields
+									assign subtitle_object = variant.metafields.brandbrand.product_option_subtitle.value
+									assign subtitle_handle = subtitle_object.label | replace: ' ', '-' | downcase | escape
+									assign subtitle = subtitle_object.subtitle
+									break
+								endif
+							endif
+						endfor
+					-%}
+					<input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}{{ appended }}"
+						   name="{{ option.name | append: appended }}"
+						   value="one_time_purchase"
+						   form="{{ product_form_id }}"
+						   data-product-url="{{ value.product_url }}"
+						   data-option-value-id="{{ value.id }}"
+						   data-option-value="{{ value.name }}"
+						   {% unless value.available %}class="is-disabled"{% endunless %}
+						   {% if one_time_selected %}checked{% endif %}
+					>
+					<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}{{ appended }}">
+						<span class="form__label__value">{{ value }}
+							{% if handle == subtitle_handle and subtitle != blank %}
+								<span class="form__label__subtitle">
+									{{ subtitle }}
+								</span>
+							{% endif %}
+						</span>
+					</label>
+				{% endif %}
+			{%- endfor -%}
+
+			<div class="custom-option custom-option-{{ option.name | replace: ' ', '_' }} subscription-option">
+				<input type="radio" id="{{ section.id }}-{{ option.position }}-1{{ appended }}"
+					   name="{{ option.name | append: appended }}"
+					   value="subscription"
+					   form="{{ product_form_id }}"
+					   {% if subscription_selected %}checked{% endif %}
+				>
+				<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}{{ appended }}">
+						<span class="form__label__value">{{ 'general.subscription.title' | t }}<span class="form__label__value_discount">-10%</span></span>
+						<div class="form__description"><div class="form__description__value">{{ 'general.subscription.description' | t }}</div></div>
+						<div class="select select-wrapper">
+							<select id="Option-{{ section.id }}-{{ forloop.index0 }}{{ appended }}"
+									name="options[{{ option.name | escape | append: appended }}]"
+									form="{{ product_form_id }}"
+									class="disable-display"
+							>
+								{%- for value in option.values -%}
+										<option
+												value="{{ value | escape }}"
+												data-product-url="{{ value.product_url }}"
+												data-option-value-id="{{ value.id }}"
+												{% unless value.available %}disabled{% endunless %}
+												{% if value == one_time_value %}style="display: none"{% endif %}
+										>
+											{{ value }}
+										</option>
+								{%- endfor -%}
+							</select>
+							{% if subscription_selected %}
+								<div class="fake-label">{{ option.selected_value }}</div>
+							{% else %}
+								<div class="fake-label">{{ first_subscription_label }}</div>
+							{% endif %}
+						<div class="select-arrow">{%- render 'svg-icons' with 'thb-select' -%}</div>
+					</div>
+				</label>
+			</div>
+		</fieldset>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const fieldsets = document.querySelectorAll('fieldset[data-handle]');
+
+				fieldsets.forEach(function (fieldset) {
+					const subscriptionRadio = fieldset.querySelector('input[type="radio"][value="subscription"]');
+					const oneTimeRadio = fieldset.querySelector('input[type="radio"][value="one_time_purchase"]');
+					const oneTimeValue = fieldset.querySelector('input[type="radio"][value="one_time_purchase"]')?.dataset?.optionValue;
+					const select = fieldset.querySelector('select');
+
+					if (!select || !subscriptionRadio || !oneTimeRadio) return;
+
+					function updateFakeLabel(fieldset, show, label) {
+						const wrapper = fieldset.querySelector('.select-wrapper');
+						const fakeLabel = wrapper.querySelector('.fake-label');
+						const select = wrapper.querySelector('select');
+
+						if (show && label) {
+							fakeLabel.textContent = label;
+							fakeLabel.classList.remove('visually-hidden');
+							select.classList.add('disable-display');
+						} else {
+							fakeLabel.textContent = '';
+							fakeLabel.classList.add('visually-hidden');
+							select.classList.remove('disable-display');
+						}
+					}
+
+					// 1. When subscription radio is clicked, select first valid subscription option
+					subscriptionRadio.addEventListener('change', function () {
+						if (subscriptionRadio.checked) {
+							const firstSubscription = Array.from(select.options).find(opt => opt.value !== oneTimeValue && !opt.disabled);
+							if (firstSubscription) {
+								select.value = firstSubscription.value;
+								select.dispatchEvent(new Event('change', { bubbles: true }));
+							}
+
+							updateFakeLabel(fieldset, false);
+						}
+					});
+
+					// 2. When one-time is selected, set the dropdown to the one-time value
+					oneTimeRadio.addEventListener('change', function () {
+						console.log(oneTimeValue);
+						if (this.checked && oneTimeValue) {
+							select.value = oneTimeValue;
+							select.dispatchEvent(new Event('change', { bubbles: true }));
+
+							const fakeLabelText = Array.from(select.options).find(
+									opt => opt.value !== oneTimeValue && !opt.disabled
+							)?.text;
+							updateFakeLabel(fieldset, true, fakeLabelText);
+
+
+							// Add masking class
+							select.classList.add('disable-display');
+						}
+					});
+
+					// 3. When dropdown is changed manually, update radio selection
+					select.addEventListener('change', function () {
+						if (select.value === oneTimeValue) {
+							oneTimeRadio.checked = true;
+
+							const fakeLabelText = Array.from(select.options).find(
+									opt => opt.value !== oneTimeValue && !opt.disabled
+							)?.text;
+							updateFakeLabel(fieldset, true, fakeLabelText);
+						} else {
+							subscriptionRadio.checked = true;
+							updateFakeLabel(fieldset, false);
+						}
+					});
+				});
+			});
+		</script>
+	{% else %}
+		<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
 		<div class="form__label">{{ option.name }}<span class="form__label__value visually-hidden">{{ option.selected_value }}</span>{{ sizing_link }}</div>
 		{% if option_description %}
 		<div class="form__description"><div class="form__description__value">{{- option_description | metafield_tag | replace: "metafield-rich_text_field", "metafield-rich_text_field rte" -}}</div></div>
@@ -83,6 +269,7 @@
 			</label>
 		{%- endfor -%}
 	</fieldset>
+	{% endif %}
 {%- when 'color' -%}
 	{%- liquid
 	assign custom_colors = settings.color_swatches | newline_to_br | split: '<br />'

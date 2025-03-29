@@ -9,6 +9,10 @@
  */
 {
   "general": {
+    "subscription": {
+      "title": "Abonnement",
+      "description": "Op ieder moment te wijzigen of annuleren"
+    },
     "continue_shopping": "Verder winkelen",
     "close": "Sluiten",
     "cart_drawer": {

@@ -2988,6 +2988,11 @@ svg {
               span {
                 color: var(--color-light-2);
               }
+
+              .form__label__value_discount,
+              .form__description__value {
+                color: var(--color-light-1) !important;
+              }
             }
           }
         }

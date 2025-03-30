@@ -29,10 +29,10 @@
       {%- endif -%}
       <h1 class="product-title">{{ product.title }}</h1>
   
-      {% if product.metafields.custom.usp_icons %}
+      {% if product.metafields.brandbrand.product_detail_usp_icons %}
       <div class="product-metafields">
         <div class="usp-icons">
-          {% for image in product.metafields.custom.usp_icons.value %}
+          {% for image in product.metafields.brandbrand.product_detail_usp_icons.value %}
             <img src="{{ image | img_url: '200x' }}" alt="USP Icon">
           {% endfor %}
         </div>

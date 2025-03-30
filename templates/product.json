@@ -158,6 +158,9 @@
       "block_order": [
         "judge_me_reviews_review_widget_H8VWyW"
       ],
+      "custom_css": [
+        ".app-wrapper {background-color: #d2d3d6;}"
+      ],
       "settings": {
         "section_width": "full-width-row",
         "disable_top_spacing": false,
@@ -170,7 +173,7 @@
         "heading": "Andere bekeken ook",
         "description": "",
         "mobile_swipe": true,
-        "product_limit": 6,
+        "product_limit": 4,
         "columns_desktop": 4,
         "disable_top_spacing": false,
         "disable_bottom_spacing": false

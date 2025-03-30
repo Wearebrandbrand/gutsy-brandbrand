@@ -82,7 +82,7 @@ export default defineConfig({
     cors: {
       origin: [
         /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/,
-        'https://gutsy-bonfire-dev.myshopify.com'
+        'https://gutsy-bonfire.myshopify.com'
       ]
     }
   }

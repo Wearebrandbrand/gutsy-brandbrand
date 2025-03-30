@@ -109,6 +109,7 @@
           img,
           svg {
             width: 100%;
+            object-fit: contain;
           }
         }
       }

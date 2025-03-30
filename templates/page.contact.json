@@ -50,12 +50,12 @@
       "settings": {
         "heading": "FAQ",
         "description": "",
-        "text_size": "small",
         "tab_alignment": "left",
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
-        "color_tabs": "#F0E7B2",
-        "color_text": "#094E39",
+        "color_tabs": "#f0e7b2",
+        "tab_color_bg": "#094E39",
+        "color_text": "#094e39",
         "spacing_option": "medium",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true
@@ -95,6 +95,14 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Frame.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_position": "text-left",
+        "text_color": "",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true,
         "layout_type": "box_container"
@@ -113,13 +121,15 @@
         "text_D7hCXw": {
           "type": "text",
           "settings": {
-            "text": "Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. ",
+            "text": "Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.",
             "description_size": "medium"
           }
         },
         "form_4Uy7Me": {
           "type": "form",
-          "settings": {}
+          "settings": {
+            "terms_text": "<p>Door je te registreren, ga je akkoord met <a href=\"#\">onze voorwaarden</a>.</p>"
+          }
         }
       },
       "block_order": [
@@ -129,9 +139,9 @@
       ],
       "settings": {
         "full_width": true,
-        "color_bg": "#E8D67A",
-        "color_text": "#094E39",
-        "color_heading": "#1A3C32",
+        "color_bg": "#e8d67a",
+        "color_text": "#094e39",
+        "color_heading": "#1a3c32",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
         "disable_top_spacing": false,

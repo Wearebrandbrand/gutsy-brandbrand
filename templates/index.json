@@ -60,7 +60,6 @@
         "controls": "arrows-with-numbers",
         "disable_top_spacing": true,
         "disable_bottom_spacing": false,
-        "bottom_bar_image": "shopify://shop_images/rating-image.svg",
         "bottom_bar_text": "4,8/5 op trustpilot"
       }
     },
@@ -91,7 +90,7 @@
         "text_alignment": "center",
         "color_bg": "rgba(0,0,0,0)",
         "color_heading": "#1A3C32",
-        "color_text": "#fff",
+        "color_text": "#ffffff",
         "color_links": "#2c2d2e",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true
@@ -103,7 +102,6 @@
         "column_tjmMyV": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
             "image_full_width": false,
             "image_link": "",
             "title": "85% dierlijke eiwitten",
@@ -115,7 +113,6 @@
         "column_YJQBh9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
             "image_full_width": false,
             "image_link": "",
             "title": "Natuurlijke ingrediënten",
@@ -127,7 +124,6 @@
         "column_UUyLUt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Vector_e0e98883-2b80-434b-9c6c-2982ba78838e.svg",
             "image_full_width": false,
             "image_link": "",
             "title": "Gemaakt in belgië",
@@ -144,6 +140,7 @@
       ],
       "settings": {
         "heading": "",
+        "sub_heading": "Winner, winner,",
         "description": "",
         "columns_desktop": 3,
         "layout": "normal",
@@ -224,8 +221,6 @@
         "heading": "Gutsy Voeding",
         "sub_heading": "Supermarkt voer VS.",
         "description": "<p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.</p>",
-        "image": "shopify://shop_images/52b6d6b7-221c-49d5-9f5e-d8c3a6fd856b.png",
-        "image_2": "shopify://shop_images/06505a46-6137-4329-ad98-32e5c2351e7c.png",
         "button_text": "Probeer het nu",
         "button_url": "#"
       }
@@ -241,8 +236,7 @@
             "heading": "Review Heading",
             "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
             "time": "1 month ago",
-            "author": "Sofie & Quinn",
-            "author_image": "shopify://shop_images/Product_image.jpg"
+            "author": "Sofie & Quinn"
           }
         },
         "review_b": {
@@ -253,8 +247,7 @@
             "heading": "Review Heading",
             "text": "Nono is een trotse moeder van 4 fantastische puppy's. Met Gutsy hebben we een perfect uitgebalanceerd dieet gevonden voor het hele gezin.",
             "time": "1 month ago",
-            "author": "Manon & Nono",
-            "author_image": "shopify://shop_images/Product_image.png"
+            "author": "Manon & Nono"
           }
         },
         "review_c": {
@@ -265,8 +258,7 @@
             "heading": "Review Heading",
             "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
             "time": "1 month ago",
-            "author": "Sofie & Quinn",
-            "author_image": "shopify://shop_images/Product_image.jpg"
+            "author": "Sofie & Quinn"
           }
         },
         "review_d": {
@@ -277,8 +269,7 @@
             "heading": "Review Heading",
             "text": "We hebben lang moeten zoeken naar het juiste voer voor Henry omdat hij allergisch is voor allerlei ingrediënten, maar dankzij Gutsy's hypoallergene hondenvoer behoren deze allergieën tot het verleden.",
             "time": "1 month ago",
-            "author": "Tom & Henry",
-            "author_image": "shopify://shop_images/Product_image-1.png"
+            "author": "Tom & Henry"
           }
         },
         "review_e": {
@@ -289,8 +280,7 @@
             "heading": "Review Heading",
             "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
             "time": "1 month ago",
-            "author": "Sofie & Quinn",
-            "author_image": "shopify://shop_images/Product_image.jpg"
+            "author": "Sofie & Quinn"
           }
         }
       },
@@ -306,8 +296,8 @@
         "description": "",
         "autoplay": true,
         "autoplay_length": 6,
-        "color_bg": "#1A3C32",
-        "color_heading": "#E8D67A",
+        "color_bg": "#1a3c32",
+        "color_heading": "#e8d67a",
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }
@@ -319,7 +309,6 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
-            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
@@ -327,7 +316,6 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
-            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
@@ -335,7 +323,6 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
-            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
@@ -343,7 +330,6 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
-            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         }
@@ -431,8 +417,8 @@
         "sub_heading": "FAQ",
         "description": "<p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.</p>",
         "color_bg": "rgba(0,0,0,0)",
-        "color_heading": "#1A3C32",
-        "color_text": "#094E39",
+        "color_heading": "#1a3c32",
+        "color_text": "#094e39",
         "color_links": "#2c2d2e",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true

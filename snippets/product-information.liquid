@@ -203,7 +203,7 @@
       {{ block.shopify_attributes }}
     >
       <label class="form__label quantity__label">{{ 'products.product.quantity.label' | t }}</label>
-      <quantity-selector class="quantity">
+      <quantity-selector class="quantity" id="quantity-selector-{{ section.id }}-{{ product.id }}">
         <button class="minus" type="button" aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}">
           {% render 'svg-icons' with 'minus' %}
         </button>

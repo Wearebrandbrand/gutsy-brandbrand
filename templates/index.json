@@ -275,7 +275,51 @@
             "author": "Tom & Henry"
           }
         },
+        "review_MANqk4": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "We hebben lang moeten zoeken naar het juiste voer voor Henry omdat hij allergisch is voor allerlei ingrediënten, maar dankzij Gutsy's hypoallergene hondenvoer behoren deze allergieën tot het verleden.",
+            "time": "1 month ago",
+            "author": "Tom & Henry"
+          }
+        },
+        "review_YQ6B7m": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "We hebben lang moeten zoeken naar het juiste voer voor Henry omdat hij allergisch is voor allerlei ingrediënten, maar dankzij Gutsy's hypoallergene hondenvoer behoren deze allergieën tot het verleden.",
+            "time": "1 month ago",
+            "author": "Tom & Henry"
+          }
+        },
         "review_e": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn"
+          }
+        },
+        "review_t7t4WM": {
+          "type": "review",
+          "settings": {
+            "product_handle": "shopify://products/kerstdoos",
+            "stars": "5",
+            "heading": "Review Heading",
+            "text": "Quinn is gek op Gutsy. Ze heeft haar kom nog nooit zo snel leeg gegeten. Het beste van alles is dat ze niet eens doorheeft dat ze haar steentje bijdraagt aan het klimaat.",
+            "time": "1 month ago",
+            "author": "Sofie & Quinn"
+          }
+        },
+        "review_DyPHaL": {
           "type": "review",
           "settings": {
             "product_handle": "shopify://products/kerstdoos",
@@ -292,10 +336,14 @@
         "review_b",
         "review_c",
         "review_d",
-        "review_e"
+        "review_MANqk4",
+        "review_YQ6B7m",
+        "review_e",
+        "review_t7t4WM",
+        "review_DyPHaL"
       ],
       "settings": {
-        "heading": "Geliefd door <br> MEER DAN 10.000 HONDEN",
+        "heading": "Geliefd door  MEER DAN 10.000 HONDEN",
         "description": "",
         "autoplay": true,
         "autoplay_length": 6,

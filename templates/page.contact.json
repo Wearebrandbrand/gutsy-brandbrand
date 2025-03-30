@@ -35,7 +35,7 @@
           "type": "tab",
           "settings": {
             "tab_label": "Bezorgen & Retourneren",
-            "icon": "none",
+            "icon": "map_pin",
             "text": "<h5>Producten</h5><p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. A vel vulputate bibendum magna cursus nunc. </p>",
             "text_columns": "1",
             "page": "",

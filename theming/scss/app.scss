@@ -5640,7 +5640,11 @@ select.disable-display::after {
 }
 
 .subscription-option {
-  max-width: 66%;
+  max-width: calc(66% - 0.3rem);
+
+  @media only screen and (max-width: 63.938rem) {
+    max-width: calc(66% - 0.6rem);
+  }
 
   label {
     display: flex;

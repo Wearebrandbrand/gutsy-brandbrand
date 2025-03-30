@@ -88,7 +88,6 @@
             {%- endif -%}
             {%- if show_custom_badges -%}
                 {%- liquid
-                    # Custom badges
                     assign product_tags = product.tags
                     assign badge_tags_1 = settings.custom_product_badge_group_1_tag_names | split: ', '
                     assign badge_tags_2 = settings.custom_product_badge_group_2_tag_names | split: ', '

@@ -27,26 +27,59 @@ if (!customElements.get('quantity-selector')) {
     constructor() {
       super();
       this.input = this.querySelector('.qty');
+
+      // Default to the input's step
       this.step = this.input.getAttribute('step');
+
+      this.urlKey = '';
+
+      // Only persist step if on a product page
+      if (window.location.pathname.includes('/products/')) {
+        this.urlKey = `qtyForProduct--${window.location.pathname.replace('/products/', '')}`;
+        const savedQty = localStorage.getItem(this.urlKey);
+
+        if (savedQty !== null) {
+          this.input.value = savedQty;
+          this.input.setAttribute('value', savedQty);
+          this.updateTotalAmount(savedQty);
+
+          setTimeout(() => {
+            this.input.value = savedQty;
+            this.updateTotalAmount(parseInt(savedQty));
+          }, 10);
+        } else {
+          this.input.value = 1;
+          localStorage.setItem(this.urlKey, '1');
+          this.updateTotalAmount(1);
+        }
+      } else {
+        this.input.value = 1;
+        this.updateTotalAmount(1);
+      }
+
       this.changeEvent = new Event('change', {
         bubbles: true
       });
+
+
       // Create buttons
       this.subtract = this.querySelector('.minus');
       this.add = this.querySelector('.plus');
 
       // Add functionality to buttons
-      this.subtract.addEventListener('click', () => this.change_quantity(-1 * this.step));
-      this.add.addEventListener('click', () => this.change_quantity(1 * this.step));
+      this.subtract.addEventListener('click', () => this.change_quantity(-1 * this.step, this.urlKey));
+      this.add.addEventListener('click', () => this.change_quantity(1 * this.step, this.urlKey));
 
       this.validateQtyRules();
+      this.input.setAttribute('value', 1 * this.step);
+      this.updateTotalAmount(1 * this.step)
     }
 
     connectedCallback() {
       this.classList.add('buttons_added');
     }
 
-    change_quantity(change) {
+    change_quantity(change, urlKey) {
       // Get current value
       let quantity = Number(this.input.value);
 
@@ -75,6 +108,10 @@ if (!customElements.get('quantity-selector')) {
       this.input.dispatchEvent(this.changeEvent);
 
       this.validateQtyRules();
+
+      if (this.urlKey !== '') {
+        localStorage.setItem(urlKey, quantity.toString());
+      }
 
       this.updateTotalAmount(quantity);
     }
@@ -110,9 +147,10 @@ if (!customElements.get('quantity-selector')) {
       }
 
       var amount = productPriceContainer.querySelector('.amount');
-      var totalAmount = priceData.dataset.priceAmount * quantity;
+      var priceAmount = priceData.dataset.priceAmount;
+      var totalAmount = priceAmount * quantity;
 
-      if (!totalAmount) {
+      if (!totalAmount || !Shopify.formatMoney) {
         return;
       }
 
@@ -1225,6 +1263,8 @@ if (!customElements.get('quick-view')) {
         this.drawer.querySelector('.side-panel-close').focus();
 
         setTimeout(() => {
+          initSubscriptionUI(this.drawer.querySelector('#Product-Drawer-Content'));
+
           let slider = this.drawer.querySelector('#Product-Slider');
 
           slider.reInit();
@@ -1242,6 +1282,74 @@ if (!customElements.get('quick-view')) {
   }
 
   customElements.define('quick-view', QuickView);
+}
+
+function initSubscriptionUI(scope = document) {
+  const fieldsets = scope.querySelectorAll('fieldset[data-handle]');
+
+  fieldsets.forEach(function (fieldset) {
+    const subscriptionRadio = fieldset.querySelector('input[type="radio"][value="subscription"]');
+    const oneTimeRadio = fieldset.querySelector('input[type="radio"][value="one_time_purchase"]');
+    const oneTimeValue = oneTimeRadio?.dataset?.optionValue;
+    const select = fieldset.querySelector('select');
+
+    if (!select || !subscriptionRadio || !oneTimeRadio) return;
+
+    function updateFakeLabel(fieldset, show, label) {
+      const wrapper = fieldset.querySelector('.select-wrapper');
+      const fakeLabel = wrapper.querySelector('.fake-label');
+      const select = wrapper.querySelector('select');
+
+      if (show && label) {
+        fakeLabel.textContent = label;
+        fakeLabel.classList.remove('visually-hidden');
+        select.classList.add('disable-display');
+      } else {
+        fakeLabel.textContent = '';
+        fakeLabel.classList.add('visually-hidden');
+        select.classList.remove('disable-display');
+      }
+    }
+
+    subscriptionRadio.addEventListener('change', function () {
+      if (subscriptionRadio.checked) {
+        const firstSubscription = Array.from(select.options).find(opt => opt.value !== oneTimeValue && !opt.disabled);
+        if (firstSubscription) {
+          select.value = firstSubscription.value;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        updateFakeLabel(fieldset, false);
+      }
+    });
+
+    oneTimeRadio.addEventListener('change', function () {
+      if (this.checked && oneTimeValue) {
+        select.value = oneTimeValue;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+
+        const fakeLabelText = Array.from(select.options).find(
+          opt => opt.value !== oneTimeValue && !opt.disabled
+        )?.text;
+
+        updateFakeLabel(fieldset, true, fakeLabelText);
+        select.classList.add('disable-display');
+      }
+    });
+
+    select.addEventListener('change', function () {
+      if (select.value === oneTimeValue) {
+        oneTimeRadio.checked = true;
+
+        const fakeLabelText = Array.from(select.options).find(
+          opt => opt.value !== oneTimeValue && !opt.disabled
+        )?.text;
+        updateFakeLabel(fieldset, true, fakeLabelText);
+      } else {
+        subscriptionRadio.checked = true;
+        updateFakeLabel(fieldset, false);
+      }
+    });
+  });
 }
 
 /**
@@ -1280,65 +1388,11 @@ function addIdToRecentlyViewed(handle) {
   }
 }
 
-if (typeof Shopify === "undefined") {
-  Shopify = {};
-}
-if (!Shopify.formatMoney) {
-  Shopify.formatMoney = function (cents) {
-    var value = "",
-      placeholderRegex = /\{\{\s*(\w+)\s*\}\}/,
-      formatString = window.theme.settings.money_with_currency_format || "${{amount}}";
-
-    if (typeof cents == "string") {
-      cents = cents.replace(".", "");
-    }
-
-    function defaultOption(opt, def) {
-      return typeof opt == "undefined" ? def : opt;
-    }
-
-    function formatWithDelimiters(number, precision, thousands, decimal) {
-      precision = defaultOption(precision, 2);
-      thousands = defaultOption(thousands, ",");
-      decimal = defaultOption(decimal, ".");
-
-      if (isNaN(number) || number == null) {
-        return 0;
-      }
-
-      number = (number / 100.0).toFixed(precision);
-
-      var parts = number.split("."),
-        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + thousands),
-        cents = parts[1] ? decimal + parts[1] : "";
-
-      return dollars + cents;
-    }
-
-    switch (formatString.match(placeholderRegex)[1]) {
-      case "amount":
-        value = formatWithDelimiters(cents, 2);
-        break;
-      case "amount_no_decimals":
-        value = formatWithDelimiters(cents, 0);
-        break;
-      case "amount_with_comma_separator":
-        value = formatWithDelimiters(cents, 2, ".", ",");
-        break;
-      case "amount_no_decimals_with_comma_separator":
-        value = formatWithDelimiters(cents, 0, ".", ",");
-        break;
-      case "amount_no_decimals_with_space_separator":
-        value = formatWithDelimiters(cents, 0, " ", " ");
-        break;
-    }
-
-    return formatString.replace(placeholderRegex, value);
-  };
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof FooterMenuToggle !== 'undefined') {
     new FooterMenuToggle();
+  }
+  if (typeof initSubscriptionUI !== 'undefined') {
+    initSubscriptionUI();
   }
 });

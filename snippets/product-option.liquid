@@ -74,7 +74,7 @@
 				endif
 			endfor
 		-%}
-		<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
+		<fieldset class="product-form__input product-form__input--block product-form__input--subscription" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
 			<div class="form__label">{{ option.name }}<span class="form__label__value visually-hidden">{{ option.selected_value }}</span>{{ sizing_link }}</div>
 			{% if option_description %}
 				<div class="form__description"><div class="form__description__value">{{- option_description | metafield_tag | replace: "metafield-rich_text_field", "metafield-rich_text_field rte" -}}</div></div>
@@ -153,82 +153,6 @@
 				</label>
 			</div>
 		</fieldset>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const fieldsets = document.querySelectorAll('fieldset[data-handle]');
-
-				fieldsets.forEach(function (fieldset) {
-					const subscriptionRadio = fieldset.querySelector('input[type="radio"][value="subscription"]');
-					const oneTimeRadio = fieldset.querySelector('input[type="radio"][value="one_time_purchase"]');
-					const oneTimeValue = fieldset.querySelector('input[type="radio"][value="one_time_purchase"]')?.dataset?.optionValue;
-					const select = fieldset.querySelector('select');
-
-					if (!select || !subscriptionRadio || !oneTimeRadio) return;
-
-					function updateFakeLabel(fieldset, show, label) {
-						const wrapper = fieldset.querySelector('.select-wrapper');
-						const fakeLabel = wrapper.querySelector('.fake-label');
-						const select = wrapper.querySelector('select');
-
-						if (show && label) {
-							fakeLabel.textContent = label;
-							fakeLabel.classList.remove('visually-hidden');
-							select.classList.add('disable-display');
-						} else {
-							fakeLabel.textContent = '';
-							fakeLabel.classList.add('visually-hidden');
-							select.classList.remove('disable-display');
-						}
-					}
-
-					// 1. When subscription radio is clicked, select first valid subscription option
-					subscriptionRadio.addEventListener('change', function () {
-						if (subscriptionRadio.checked) {
-							const firstSubscription = Array.from(select.options).find(opt => opt.value !== oneTimeValue && !opt.disabled);
-							if (firstSubscription) {
-								select.value = firstSubscription.value;
-								select.dispatchEvent(new Event('change', { bubbles: true }));
-							}
-
-							updateFakeLabel(fieldset, false);
-						}
-					});
-
-					// 2. When one-time is selected, set the dropdown to the one-time value
-					oneTimeRadio.addEventListener('change', function () {
-						console.log(oneTimeValue);
-						if (this.checked && oneTimeValue) {
-							select.value = oneTimeValue;
-							select.dispatchEvent(new Event('change', { bubbles: true }));
-
-							const fakeLabelText = Array.from(select.options).find(
-									opt => opt.value !== oneTimeValue && !opt.disabled
-							)?.text;
-							updateFakeLabel(fieldset, true, fakeLabelText);
-
-
-							// Add masking class
-							select.classList.add('disable-display');
-						}
-					});
-
-					// 3. When dropdown is changed manually, update radio selection
-					select.addEventListener('change', function () {
-						if (select.value === oneTimeValue) {
-							oneTimeRadio.checked = true;
-
-							const fakeLabelText = Array.from(select.options).find(
-									opt => opt.value !== oneTimeValue && !opt.disabled
-							)?.text;
-							updateFakeLabel(fieldset, true, fakeLabelText);
-						} else {
-							subscriptionRadio.checked = true;
-							updateFakeLabel(fieldset, false);
-						}
-					});
-				});
-			});
-		</script>
 	{% else %}
 		<fieldset class="product-form__input product-form__input--block" data-index="option{{ forloop.index }}" data-handle="{{ handle }}">
 		<div class="form__label">{{ option.name }}<span class="form__label__value visually-hidden">{{ option.selected_value }}</span>{{ sizing_link }}</div>

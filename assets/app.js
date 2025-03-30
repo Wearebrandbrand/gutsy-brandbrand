@@ -34,7 +34,7 @@ if (!customElements.get('quantity-selector')) {
       this.urlKey = '';
 
       // Only persist step if on a product page
-      if (window.location.pathname.includes('/products/')) {
+      if (window.location.pathname.includes('/products/') && !this.input.closest('cart-drawer') instanceof HTMLElement) {
         this.urlKey = `qtyForProduct--${window.location.pathname.replace('/products/', '')}`;
         const savedQty = localStorage.getItem(this.urlKey);
 
@@ -47,14 +47,7 @@ if (!customElements.get('quantity-selector')) {
             this.input.value = savedQty;
             this.updateTotalAmount(parseInt(savedQty));
           }, 10);
-        } else {
-          this.input.value = 1;
-          localStorage.setItem(this.urlKey, '1');
-          this.updateTotalAmount(1);
         }
-      } else {
-        this.input.value = 1;
-        this.updateTotalAmount(1);
       }
 
       this.changeEvent = new Event('change', {
@@ -71,7 +64,6 @@ if (!customElements.get('quantity-selector')) {
       this.add.addEventListener('click', () => this.change_quantity(1 * this.step, this.urlKey));
 
       this.validateQtyRules();
-      this.input.setAttribute('value', 1 * this.step);
       this.updateTotalAmount(1 * this.step)
     }
 

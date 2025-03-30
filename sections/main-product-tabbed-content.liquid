@@ -33,7 +33,9 @@
 				<scroll-shadow class="tabbed-content--scroll">
 					<div class="tabbed-content--tabs tabs-{{ tab_alignment }}">
 						{%- for block in section.blocks -%}
-						<button class="{% if forloop.index == 1 %} active{%- endif -%}" {{ block.shopify_attributes }}>{% render 'svg-icons-inline', icon: block.settings.icon %} {{ block.settings.tab_label }}</button>
+                            {% if block.settings.tab_label != blank %}
+                                <button id="product-details-{{ block.settings.tab_label | replace: ' ', '-' | downcase | escape }}" class="{% if forloop.index == 1 %} active{%- endif -%}" {{ block.shopify_attributes }}>{% render 'svg-icons-inline', icon: block.settings.icon %} {{ block.settings.tab_label }}</button>
+                            {% endif %}
 						{%- endfor -%}
 					</div>
 				</scroll-shadow>

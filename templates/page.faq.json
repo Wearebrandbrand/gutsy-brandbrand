@@ -11,13 +11,18 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-      }
+      "settings": {}
     },
     "template-header": {
       "type": "template-header",
       "settings": {
+        "show_collection_image": false,
+        "collection_image_ratio": "adapt",
+        "collection_image_width": "standard",
         "show_collection_description": true,
+        "seo_text_read_more": "Read more",
+        "seo_text_read_less": "Read less",
+        "seo_text_max_height": 150,
         "show_subcollections": true,
         "color_subcollection_bg": "#ffffff",
         "color_subcollection_text": "#2c2d2e",
@@ -48,26 +53,40 @@
         "2b0c443e-42f0-4f0a-bc32-c1ed57bbb6a8": {
           "type": "page",
           "settings": {
-            "page": ""
+            "page": "about-us"
           }
         },
         "b23bdf26-fa77-43fc-92ba-e8778bc2ec51": {
           "type": "page",
           "settings": {
-            "page": ""
+            "page": "all-benefits"
           }
         },
         "adcd3cc4-1c22-459f-9ea3-de32ad5a529a": {
           "type": "page",
           "settings": {
-            "page": ""
+            "page": "become-a-reseller"
+          }
+        },
+        "page_gAfLPM": {
+          "type": "page",
+          "settings": {
+            "page": "contact"
+          }
+        },
+        "page_jxfyFi": {
+          "type": "page",
+          "settings": {
+            "page": "gdpr-compliance"
           }
         }
       },
       "block_order": [
         "2b0c443e-42f0-4f0a-bc32-c1ed57bbb6a8",
         "b23bdf26-fa77-43fc-92ba-e8778bc2ec51",
-        "adcd3cc4-1c22-459f-9ea3-de32ad5a529a"
+        "adcd3cc4-1c22-459f-9ea3-de32ad5a529a",
+        "page_gAfLPM",
+        "page_jxfyFi"
       ],
       "settings": {
         "heading": "",

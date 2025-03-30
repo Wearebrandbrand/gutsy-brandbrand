@@ -39,7 +39,7 @@
         "content_width": "large",
         "content_position": "bottom-left",
         "text_alignment": "left",
-        "heading_color": "#F0E7B2",
+        "heading_color": "#f0e7b2",
         "text_color": "#fafafa",
         "overlay_color": "#f0e7b2",
         "overlay_opacity": 0,
@@ -144,6 +144,7 @@
         "desktop_image_width": "small",
         "layout": "image_first",
         "content_position": "text-left",
+        "text_color": "",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true,
         "layout_type": "left-right-image-section"
@@ -194,6 +195,7 @@
         "desktop_image_width": "small",
         "layout": "text_first",
         "content_position": "text-left",
+        "text_color": "",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true,
         "layout_type": "left-right-image-section"
@@ -274,8 +276,8 @@
         "heading_size": "h3",
         "color_heading": "#e8d67a",
         "color_text": "#fafafa",
-        "column_heading_color": "#094E39",
-        "column_text_color": "#994F00",
+        "column_heading_color": "#094e39",
+        "column_text_color": "#994f00",
         "color_links": "#e8d67a",
         "disable_top_spacing": true,
         "disable_bottom_spacing": true,
@@ -291,8 +293,8 @@
       "settings": {
         "heading": "Insecten als oplossing",
         "description": "Op deze grafiek zie je hoeveel land, water en CO2 wordt verbruikt om één kg eetbaar eiwit te produceren van rundvlees, lam, kip... en dan onze kleine redders.",
-        "heading-color": "#1A3C32",
-        "text-color": "#094E39"
+        "heading-color": "#1a3c32",
+        "text-color": "#094e39"
       }
     },
     "multicolumn": {
@@ -301,7 +303,6 @@
         "column_a": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Hypoallergeen",
@@ -313,7 +314,6 @@
         "column_b": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Pure proteine",
@@ -325,7 +325,6 @@
         "column_c": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Een ecologisch alternatief",
@@ -337,7 +336,6 @@
         "column_d": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Rijk aan vitaminen en  mineralen",
@@ -349,7 +347,6 @@
         "column_e": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "natuurlijke schoonmakers",
@@ -392,7 +389,6 @@
         "team_member_a": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -400,7 +396,6 @@
         "team_member_b": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -408,7 +403,6 @@
         "team_member_c": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -416,7 +410,6 @@
         "team_member_d": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -424,7 +417,6 @@
         "team_member_e": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }

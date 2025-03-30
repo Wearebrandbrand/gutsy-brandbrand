@@ -24,15 +24,15 @@
     <div class="product-title-container" {{ block.shopify_attributes }}>
       {%- if block.settings.show_products_rating and product.metafields.reviews.rating.value != blank -%}
         <div class="star-rating-container">
-          <div class="star-rating" style="--star-rating: {{ product.metafields.reviews.rating.value.rating }};">{%- if block.settings.show_products_rating_average %}<span class="body-font">{{ product.metafields.reviews.rating.value.rating | round: 2 }}</span>{%- endif -%}</div>
+          <div class="star-rating" style="--star-rating: {{ product.metafields.reviews.rating.value.rating }};">{%- if block.settings.show_products_rating_average %}<span class="body-font">{{ product.metafields.reviews.rating.value.rating | round: 2 }} ({{ 'products.product.reviews' | t: count: product.metafields.reviews.rating_count.value }})</span>{%- endif -%}</div>
         </div>
       {%- endif -%}
       <h1 class="product-title">{{ product.title }}</h1>
   
-      {% if product.metafields.custom.usp_icons %}
+      {% if product.metafields.brandbrand.product_detail_usp_icons %}
       <div class="product-metafields">
         <div class="usp-icons">
-          {% for image in product.metafields.custom.usp_icons.value %}
+          {% for image in product.metafields.brandbrand.product_detail_usp_icons.value %}
             <img src="{{ image | img_url: '200x' }}" alt="USP Icon">
           {% endfor %}
         </div>
@@ -203,7 +203,7 @@
       {{ block.shopify_attributes }}
     >
       <label class="form__label quantity__label">{{ 'products.product.quantity.label' | t }}</label>
-      <quantity-selector class="quantity">
+      <quantity-selector class="quantity" id="quantity-selector-{{ section.id }}-{{ product.id }}">
         <button class="minus" type="button" aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}">
           {% render 'svg-icons' with 'minus' %}
         </button>

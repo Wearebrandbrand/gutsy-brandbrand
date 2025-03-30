@@ -56,7 +56,8 @@
         "show_language_switcher": true,
         "show_currency_switcher": true,
         "show_payment_icons": true,
-        "copyright_menu": "copyright"
+        "enable_follow_on_shop": true,
+        "copyright_menu": ""
       }
     }
   },

@@ -3948,6 +3948,7 @@ h6,
     border-radius: 0 0 0.75rem 0.75rem;
     background: rgb(210 211 214 / 10%);
     backdrop-filter: blur(0.5rem);
+    height: calc(100% + 23px);
   }
 
   .header .mobile-menu-drawer .mobile-menu-drawer--inner .thb-mobile-menu-footer {
@@ -4425,7 +4426,6 @@ h6,
   left: 0;
   height: calc(100dvh - 100%);
   background: rgba(var(--color-overlay-rgb), 0.4);
-  backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   opacity: 0;
   z-index: 1;
@@ -5799,7 +5799,6 @@ select.disable-display::after {
   align-items: center;
   transform: none;
   background: rgba(var(--bg-body-rgb), 0.5);
-  backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
 

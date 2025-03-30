@@ -289,7 +289,6 @@
   z-index: -1;
   transform: translate3d(0, 0, 0);
   backdrop-filter: blur(var(--bg-blur, 20px));
-  backdrop-filter: blur(var(--bg-blur, 20px));
 }
 
 @media only screen and (min-width: 768px) {

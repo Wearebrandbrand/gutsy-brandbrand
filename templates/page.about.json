@@ -303,6 +303,7 @@
         "column_a": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Hypoallergeen",
@@ -314,6 +315,7 @@
         "column_b": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Pure proteine",
@@ -325,6 +327,7 @@
         "column_c": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Een ecologisch alternatief",
@@ -336,6 +339,7 @@
         "column_d": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "Rijk aan vitaminen en  mineralen",
@@ -347,6 +351,7 @@
         "column_e": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/IMG.jpg",
             "image_full_width": true,
             "image_link": "",
             "title": "natuurlijke schoonmakers",
@@ -389,6 +394,7 @@
         "team_member_a": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -396,6 +402,7 @@
         "team_member_b": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -403,6 +410,7 @@
         "team_member_c": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -410,6 +418,7 @@
         "team_member_d": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -417,6 +426,7 @@
         "team_member_e": {
           "type": "team_member",
           "settings": {
+            "member_image": "shopify://shop_images/IMG.png",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }

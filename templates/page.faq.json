@@ -32,10 +32,83 @@
     "2d069af4-09a1-41c9-9acd-ebe6af0120b5": {
       "type": "spacer",
       "settings": {
-        "spacer_mobile": 0,
-        "spacer_desktop": 0,
+        "spacer_mobile": 100,
+        "spacer_desktop": 100,
         "border_separator": true,
         "border_separator_full": false
+      }
+    },
+    "collapsible_content_WCGiax": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_tab_YrmbCK": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "open": false,
+            "content": "",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_Kzi9B7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "open": false,
+            "content": "",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_LbpYTc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "open": false,
+            "content": "",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_ba4GBw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "open": false,
+            "content": "",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_7TWtcC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "open": false,
+            "content": "",
+            "page": "",
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_YrmbCK",
+        "collapsible_tab_Kzi9B7",
+        "collapsible_tab_LbpYTc",
+        "collapsible_tab_ba4GBw",
+        "collapsible_tab_7TWtcC"
+      ],
+      "settings": {
+        "heading": "Collapsible content",
+        "sub_heading": "",
+        "description": "<p>Add a short description for this section</p>",
+        "color_bg": "transparent",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
       }
     },
     "c891bb6f-e801-4e8b-8cf6-000d80e079ce": {
@@ -50,30 +123,6 @@
     "5594af96-165f-4553-9a68-209c7b2d02cc": {
       "type": "multi-page-with-navigation",
       "blocks": {
-        "2b0c443e-42f0-4f0a-bc32-c1ed57bbb6a8": {
-          "type": "page",
-          "settings": {
-            "page": "about-us"
-          }
-        },
-        "b23bdf26-fa77-43fc-92ba-e8778bc2ec51": {
-          "type": "page",
-          "settings": {
-            "page": "all-benefits"
-          }
-        },
-        "adcd3cc4-1c22-459f-9ea3-de32ad5a529a": {
-          "type": "page",
-          "settings": {
-            "page": "become-a-reseller"
-          }
-        },
-        "page_gAfLPM": {
-          "type": "page",
-          "settings": {
-            "page": "contact"
-          }
-        },
         "page_jxfyFi": {
           "type": "page",
           "settings": {
@@ -82,10 +131,6 @@
         }
       },
       "block_order": [
-        "2b0c443e-42f0-4f0a-bc32-c1ed57bbb6a8",
-        "b23bdf26-fa77-43fc-92ba-e8778bc2ec51",
-        "adcd3cc4-1c22-459f-9ea3-de32ad5a529a",
-        "page_gAfLPM",
         "page_jxfyFi"
       ],
       "settings": {
@@ -101,6 +146,7 @@
     "breadcrumbs",
     "template-header",
     "2d069af4-09a1-41c9-9acd-ebe6af0120b5",
+    "collapsible_content_WCGiax",
     "c891bb6f-e801-4e8b-8cf6-000d80e079ce",
     "5594af96-165f-4553-9a68-209c7b2d02cc"
   ]

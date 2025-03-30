@@ -78,7 +78,7 @@
         "display_captions": false,
         "hide_variants": false,
         "lightbox": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "media_fullwidth_mobile": true,
         "media_show_prevnext_mobile": true
       }
@@ -141,7 +141,7 @@
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
         "color_tabs": "#f0e7b2",
-        "tab_color_bg": "#094E39",
+        "tab_color_bg": "#094e39",
         "color_text": "#094e39",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true

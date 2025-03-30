@@ -60,6 +60,7 @@
         "controls": "arrows-with-numbers",
         "disable_top_spacing": true,
         "disable_bottom_spacing": false,
+        "bottom_bar_image": "shopify://shop_images/rating-image.svg",
         "bottom_bar_text": "4,8/5 op trustpilot"
       }
     },

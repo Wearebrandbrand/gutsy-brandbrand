@@ -84,14 +84,14 @@
       }
     },
     "245ee280-dfa9-4791-91ed-b65a153cc976": {
-      "type": "tabbed-content",
+      "type": "main-product-tabbed-content",
       "blocks": {
         "tab_XLUwrV": {
           "type": "tab",
           "settings": {
             "tab_label": "Gutsy",
             "icon": "none",
-            "text": "<p>Duurzame hondenvoeding door zelfs de moeilijkste eters. Niet goed, geld terug</p>",
+            "text": "{{ product.description }}",
             "text_columns": "1",
             "page": "",
             "custom_liquid": ""
@@ -105,47 +105,44 @@
             "text": "",
             "text_columns": "1",
             "page": "",
-            "custom_liquid": ""
-          }
-        },
-        "specification_jifejJ": {
-          "type": "specification",
-          "settings": {
-            "tab_label": "Inhoud",
-            "icon": "none",
-            "content": "",
-            "empty_field_label": "N/A"
+            "custom_liquid": "<ul class=\"ingredients-list mobile-scroll text-center\">\n {% for item in product.metafields.custom.ingredients.value %}\n <li>\n{% if item.image %}\n <img src=\"{{ item.image | img_url: 'medium' }}\" alt=\"{{ item.title }}\" />{% endif %}<h4>{{ item.title }}</h4><p>{{ item.description }}</p></li>{% endfor %}</ul>"
           }
         },
         "tab_q9hJfd": {
           "type": "tab",
           "settings": {
-            "tab_label": "Voedingsgids",
+            "tab_label": "Inhoud",
             "icon": "none",
             "text": "",
             "text_columns": "1",
             "page": "",
-            "custom_liquid": ""
+            "custom_liquid": "{% if product.metafields.custom.contents.value %}<ul class=\"ingredients-list text-center inhoud\"> {% for item in product.metafields.custom.contents.value %} <li><h4>{{ item.heading }}</h4><p>{{ item.description }}</p></li>{% endfor %}</ul>{% endif %}"
+          }
+        },
+        "specification_jifejJ": {
+          "type": "specification",
+          "settings": {
+            "tab_label": "Voedingsgids",
+            "icon": "none",
+            "image": "{{ product.metafields.custom.specification.value }}"
           }
         }
       },
       "block_order": [
         "tab_XLUwrV",
         "tab_MbeGK6",
-        "specification_jifejJ",
-        "tab_q9hJfd"
+        "tab_q9hJfd",
+        "specification_jifejJ"
       ],
       "settings": {
         "heading": "Product details",
-        "marker_style": "style1",
         "description": "",
-        "text_size": "small",
         "tab_alignment": "left",
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
-        "color_tabs": "#303c43",
-        "color_text": "#303c43",
-        "marker_color": "#fd6262",
+        "color_tabs": "#f0e7b2",
+        "tab_color_bg": "#094E39",
+        "color_text": "#094e39",
         "disable_top_spacing": false,
         "disable_bottom_spacing": true
       }

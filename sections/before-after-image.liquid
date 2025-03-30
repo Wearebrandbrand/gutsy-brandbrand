@@ -1,7 +1,6 @@
 {{- 'sections--before-after-image.css' | asset_url | stylesheet_tag -}}
 {%- liquid
 	assign section_heading = section.settings.heading
-	assign marker_style = section.settings.marker_style
 	assign section_description = section.settings.description
 	assign badge_text = section.settings.badge_text
 	assign image_position = section.settings.image_position
@@ -10,7 +9,6 @@
 	assign mobile_height = section.settings.mobile_height
 	assign initial_position = section.settings.initial_position
 
-	assign marker_color = section.settings.marker_color
 	assign line_color = section.settings.line_color
 	assign color_bg_badge = section.settings.color_bg_badge
 	assign color_badge = section.settings.color_badge
@@ -43,7 +41,7 @@
 				</div>
 				{%- endif -%}
 				{%- if section_heading -%}
-				<h3 class="{{ section.settings.heading_size }}">{% render 'animated-marker-heading', heading: section_heading, style: marker_style, color: marker_color %}</h3>
+				<h3 class="{{ section.settings.heading_size }}">{{ section_heading }}</h3>
 				{%- endif -%}
 				{%- if section_description != blank -%}
 					<div class="rte">
@@ -117,32 +115,7 @@
 				"type": "text",
 				"id": "heading",
 				"label": "Heading",
-				"default": "Image Comparison",
-				"info": "Wrap your text between | to add animated markers. For example: Animated |marker| will underline marker text."
-			},
-			{
-				"type": "select",
-				"id": "marker_style",
-				"options": [
-					{
-						"value": "style1",
-						"label": "Basic"
-					},
-					{
-						"value": "style2",
-						"label": "Double"
-					},
-					{
-						"value": "style3",
-						"label": "Squiggle"
-					},
-					{
-						"value": "style4",
-						"label": "Zigzag"
-					}
-				],
-				"default": "style1",
-				"label": "Marker"
+				"default": "Image Comparison"
 			},
 			{
 				"type": "select",
@@ -269,12 +242,6 @@
 			{
 				"type": "header",
 				"content": "Colors"
-			},
-			{
-				"type": "color",
-				"id": "marker_color",
-				"label": "Marker",
-				"default": "#FD6262"
 			},
 			{
 				"type": "color",

@@ -5,19 +5,17 @@
 	assign section_heading = section.settings.heading
 
 	assign section_description = section.settings.description
-	
-	assign spacing_option = section.settings.spacing_option
 
 	assign tab_alignment = section.settings.tab_alignment
 	assign text_alignment = section.settings.text_alignment
-	
-	
-		assign color_text = section.settings.color_text
-		assign color_tabs = section.settings.color_tabs
-	
-		assign disable_top_spacing = section.settings.disable_top_spacing
-		assign disable_bottom_spacing = section.settings.disable_bottom_spacing
+
+
+	assign color_text = section.settings.color_text
+	assign color_tabs = section.settings.color_tabs
 	assign tab_color_bg = section.settings.tab_color_bg
+
+	assign disable_top_spacing = section.settings.disable_top_spacing
+	assign disable_bottom_spacing = section.settings.disable_bottom_spacing
 
 	assign color_bg = section.settings.color_bg | downcase
 	assign color_body_bg = settings.color_body_bg | downcase
@@ -27,11 +25,11 @@
 		assign has_bg = false
 	endif
 -%}
-<div class="row {{ spacing_option }}">
+<div class="row">
 	<div class="small-12 columns">
 		<div class="tabbed-content-wrapper {% if has_bg -%}tabbed-content--has-bg{% endif %} section-spacing{% if disable_top_spacing %} section-spacing--disable-top{% endif %}{% if disable_bottom_spacing %} section-spacing--disable-bottom{% endif %}" style="--color-bg: {{ color_bg }}; --bg-body-rgb: {{ color_bg.rgb | replace: ' ' , ',' }}; --color-body: {{ color_text }}; --color-tabs: {{ color_tabs }}; --color-tabs-button: {{ tab_color_bg }};">
 			{% render 'section-header', section_heading: section_heading, section_description: section_description %}
-			<tabbed-content class="tabbed-content tabs-{{ tab_alignment }} " selected-index="0">
+			<tabbed-content class="tabbed-content tabs-{{ tab_alignment }}" selected-index="0">
 				<scroll-shadow class="tabbed-content--scroll">
 					<div class="tabbed-content--tabs tabs-{{ tab_alignment }}">
 						{%- for block in section.blocks -%}
@@ -42,7 +40,18 @@
 				{%- for block in section.blocks -%}
 					<div class="tabbed-content--content text-{{ text_alignment }}{% if forloop.index == 1 %} active{%- endif -%}" style="--columns: {{ block.settings.text_columns }};">
 						{%- if block.type == 'specification' -%}
-							{%- render 'product-specification-table', block: block -%}
+							{% assign image = block.settings.image %}
+							{%- if image -%}
+								{%- liquid
+									assign master_width = image.src.width | append: 'x' | append: image.src.height
+									assign class = nil
+		
+									if image_mobile != blank
+										assign class = 'image-hotspots--desktop'
+									endif
+								 -%}
+								{%- render 'responsive-image', image: image, sizes: master_width, class: class -%}
+							{%- endif -%}
 						{%- endif -%}
 						{{ block.settings.text | newline_to_br }}
 						{{ block.settings.page.content }}
@@ -96,7 +105,6 @@
 				"label": "Description",
 				"default": "<p>Add a short description for this section</p>"
 			},
-
 			{
 				"type": "select",
 				"id": "tab_alignment",
@@ -169,22 +177,6 @@
 	      "type": "header",
 	      "content": "Spacing"
 	    },
-	    {
-				"type": "select",
-				"id": "spacing_option",
-				"label": "Spacing",
-				"options": [
-					{
-						"value": "normal",
-						"label": "Normal"
-					},
-					{
-						"value": "medium",
-						"label": "Medium"
-					}
-				],
-				"default": "normal"
-			},
 			{
 				"type": "checkbox",
 				"id": "disable_top_spacing",
@@ -628,17 +620,9 @@
 						"label": "Icon"
 					},
 					{
-						"type": "textarea",
-						"id": "content",
-						"label": "Metafields",
-						"info": "Include a list of labels and product metafield keys below, separated by a colon, one per line. Example: Color:custom.color"
-					},
-					{
-						"type": "text",
-						"id": "empty_field_label",
-						"default": "N/A",
-						"label": "Empty field text",
-						"info": "Text to use for empty fields"
+						"type": "image_picker",
+						"id": "image",
+						"label": "Image"
 					}
         ]
       }

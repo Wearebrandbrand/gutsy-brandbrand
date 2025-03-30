@@ -41,12 +41,6 @@
     "src": "theming/js/components/facets.js",
     "isEntry": true
   },
-  "theming/js/components/footer.js": {
-    "file": "components--footer.js",
-    "name": "components--footer",
-    "src": "theming/js/components/footer.js",
-    "isEntry": true
-  },
   "theming/js/components/free-shipping.js": {
     "file": "components--free-shipping.js",
     "name": "components--free-shipping",

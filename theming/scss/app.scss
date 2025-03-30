@@ -20,6 +20,8 @@ Author URI: https://brandbrand.nl
   --color-black: #000;
   --color-secondary: #3D3F43;
   --color-secondary-dark: #094E39;
+  --color-tag: #1A323C;
+  --color-body: #1A3C32;
   --color-accent-1: #1A3C32;
   --color-accent-2: #E8D67A;
   --color-accent-3: #0C644A;
@@ -28,6 +30,7 @@ Author URI: https://brandbrand.nl
   --color-accent-6: #FAF7E5;
   --color-accent-7: #3C350C;
   --color-accent-8: #B39E23;
+  --color-accent-9: #331A00;
   --color-light-1: #F4F5F5;
   --color-light-2: #FAFAFA;
   --color-light-3: #92969B;
@@ -43,6 +46,9 @@ Author URI: https://brandbrand.nl
   --font-size-56: 3.5rem;
   --color-accent-hover: var(--color-primary);
   --color-accent: #994F00;
+  --input-border-radius: 8px;
+  --input-border-radius-m: 12px;
+  --input-border-radius-l: 16px;
 }
 
 #wrapper .click-capture,
@@ -1931,7 +1937,6 @@ summary {
   display: flex;
   flex: 1;
   backface-visibility: hidden;
-  clip-path: inset(0 var(--footer-width-percent, 0%) 0% round var(--footer-border-radius, 0));
   min-height: calc(100vh - var(--header-height, 0px) - var(--announcement-height, 0px));
   flex-direction: column;
   background: var(--bg-body, #f5f5f5);
@@ -2315,7 +2320,6 @@ table.no-borders tfoot td:first-child {
   max-width: 540px;
   overflow-x: hidden;
   transform: translateX(100%);
-  border-radius: var(--block-border-radius, 16px) 0 0 var(--block-border-radius, 16px);
 
   --bg-body-rgb: var(--color-drawer-bg-rgb);
 }
@@ -3285,13 +3289,21 @@ h6,
 
 .header--inner {
   width: 100%;
-  max-width: var(--grid-width, 1280px);
+  max-width: 90rem;
   margin: 0 auto;
   display: grid;
   column-gap: 20px;
   align-items: center;
   grid-template-columns: 1fr auto 1fr;
   min-height: 60px;
+  padding-left: 3.438rem;
+  padding-right: 1.875rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .header--inner {
+    padding-inline: 0;
+  }
 }
 
 @media only screen and (min-width: 1068px) {
@@ -5481,10 +5493,16 @@ select.resize-select {
 .quantity {
   display: inline-flex;
   position: relative;
-  border: 1px solid var(--color-form-border);
-  padding: 0 32px;
-  border-radius: var(--input-border-radius, 6px);
+  padding: 0 40px;
+  border-radius: var(--input-border-radius-l, 16px);
+  background-color: var(--color-accent-5);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
 }
 
 .quantity .qty {
@@ -5497,10 +5515,12 @@ select.resize-select {
   border: 0;
   justify-content: center;
   background: transparent;
-  font-size: 0.8125rem;
-  font-weight: 400;
   margin: 0;
   outline: 0;
+  color: var(--color-accent-1);
+  font-weight: bold;
+  font-size: var(--font-size-20);
+
 }
 
 .no-js .quantity .qty {
@@ -5518,7 +5538,7 @@ select.resize-select {
 }
 
 .quantity.small-qty {
-  padding: 0 25px;
+  padding: 0 30px;
 }
 
 .quantity.small-qty .qty {
@@ -5528,7 +5548,7 @@ select.resize-select {
 
 .quantity.small-qty .minus,
 .quantity.small-qty .plus {
-  width: 25px;
+  width: 30px;
   height: 34px;
 }
 
@@ -5544,20 +5564,10 @@ select.resize-select {
   align-items: center;
   top: 0;
   left: 0;
-  width: 32px;
+  width: 40px;
   cursor: pointer;
   background: transparent;
   user-select: none;
-}
-
-.quantity .minus svg,
-.quantity .plus svg {
-  opacity: 0.8;
-}
-
-.quantity .minus:hover svg,
-.quantity .plus:hover svg {
-  opacity: 1;
 }
 
 .no-js .quantity .minus, .no-js
@@ -5592,6 +5602,85 @@ select.resize-select {
 
 .remove svg {
   pointer-events: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+/* Only works in Chrome, Safari, Edge (not Firefox) */
+select.disable-display {
+  color: transparent !important;
+  text-shadow: none !important;
+  position: relative;
+}
+
+.fake-label {
+  position: absolute;
+  top: 50%;
+  left: 1.1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000;
+  font-size: inherit;
+  z-index: 2;
+}
+
+select.disable-display::after {
+  content: attr(data-label);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: black;
+  font-size: inherit;
+}
+
+.subscription-option {
+  max-width: calc(66% - 0.3rem);
+
+  @media only screen and (max-width: 63.938rem) {
+    max-width: calc(66% - 0.6rem);
+  }
+
+  label {
+    display: flex;
+    flex-flow: column;
+
+    .form__label__value {
+      display: flex;
+      flex-flow: row wrap !important;
+      min-width: calc(100% - 4rem);
+      justify-content: space-between;
+
+      &_discount {
+        color: var(--color-accent-3) !important;
+      }
+    }
+
+    .form__description {
+      margin-left: 2rem;
+      margin-top: 1rem;
+
+      &__value {
+        color: var(--color-secondary-dark) !important;
+        font-weight: 400;
+        font-size: var(--font-size-16) !important;
+      }
+    }
+
+    .select-wrapper {
+      width: 100%;
+
+      select {
+        width: 100%;
+        background: white;
+      }
+    }
+  }
 }
 
 .badge {
@@ -6487,47 +6576,6 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   background: var(--badge-text, #fff);
 }
 
-.animated-marker {
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-}
-
-.animated-marker .svg-marker {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.animated-marker .svg-marker--style1 {
-  width: 100%;
-  height: 30%;
-  top: auto;
-  bottom: -20%;
-}
-
-.animated-marker .svg-marker--style2 {
-  width: 100%;
-  height: 40%;
-  top: auto;
-  bottom: -30%;
-}
-
-.animated-marker .svg-marker--style3 {
-  width: 100%;
-  height: 30%;
-  top: auto;
-  bottom: -20%;
-}
-
-.animated-marker .svg-marker--style4 {
-  width: 100%;
-  height: 30%;
-  top: auto;
-  bottom: -20%;
-}
-
 .breadcrumbs-section {
   .columns {
     max-width: 78rem;
@@ -6535,20 +6583,8 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
   }
 }
 
-.template-page-contact {
-  .section-newsletter {
-    .full-width-row-full {
-      .columns {
-        max-width: 100%;
-      }
-    }
-  }
-}
-
 @media only screen and (max-width:  63.938rem) {
-  .template-product,
-  .template-collection,
-  .template-page-contact {
+  .show-padding-top {
     #main-content {
       padding-top: 4.875rem;
 
@@ -6558,16 +6594,6 @@ input[type='radio'], .field label, .custom-checkbox[type='checkbox'], .custom-ch
         &.no-padding {
           padding: 0;
         }
-      }
-    }
-  }
-}
-
-.template-page-contact {
-  #main-content {
-    .section-newsletter {
-      .row {
-        padding: 0;
       }
     }
   }

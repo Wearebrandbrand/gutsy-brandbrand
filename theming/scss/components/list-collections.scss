@@ -342,8 +342,7 @@
 
         .collection-card--content {
           .collection-card--link {
-            color: var(--color-accent-1);
-            text-align: center;
+            color: var(--collection-text-color);
             font-family: var(--font-heading);
             font-size: var(--font-size-24);
             font-style: normal;
@@ -353,8 +352,7 @@
 
             @media only screen and (max-width:  1023px) {
               font-size: var(--font-size-16);
-              color: var(--color-accent-1);
-              text-align: center;
+              color: var(--collection-text-color);
               font-family: var(--font-primary);
               letter-spacing: -0.02rem;
             }

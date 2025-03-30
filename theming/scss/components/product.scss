@@ -1194,10 +1194,6 @@ div[role="button"] {
   max-width: 100%;
 }
 
-.thb-product-detail .quantity {
-  margin-bottom: 30px;
-}
-
 .thb-product-detail .complementary-products.product-recommendations--loaded {
   margin-bottom: 20px;
 }
@@ -2706,10 +2702,13 @@ svg {
   }
 }
 
+.template-product {
+  overflow-x: hidden;
+}
+
 .thb-product-detail {
   position: relative;
-  padding-bottom: 5.625rem;
-  overflow: hidden;
+  padding-bottom: 0;
 
   @media only screen and (max-width: 63.938rem) {
     padding-bottom: 0;
@@ -2892,18 +2891,52 @@ svg {
               }
             }
 
+            .subscription-option {
+              .form__label__value {
+                margin: 0;
+              }
+            }
+
+            .form__description {
+              &__value {
+                color: var(--color-secondary);
+                font-size: var(--font-size-12);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0.48px;
+                margin-bottom: 1rem;
+              }
+            }
+
+            .form__label__value {
+              display: flex;
+              flex-flow: column;
+              align-items: flex-end;
+              margin: 0 0 0 2rem;
+
+              .form__label__subtitle {
+                text-align: right;
+                font-size: var(--font-size-12);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0.48px;
+              }
+            }
+
             label {
-              min-width: 9.375rem;
               border-radius: 0.75rem;
+              min-width: calc(33% - 1rem);
               background: var(--color-accent-5);
-              padding: 0.563rem 1rem;
               place-content: flex-end;
-              padding-left: 2.5rem;
               margin-right: 1rem;
               margin-bottom: 1rem;
+              padding: 0.75rem;
+              height: fit-content;
 
               @media only screen and (max-width: 63.938rem) {
-                min-width: initial;
+                min-width: calc(33% - 0.375rem);
                 margin-right: 0.375rem;
                 margin-bottom: 0.375rem;
               }
@@ -2961,18 +2994,25 @@ svg {
               span {
                 color: var(--color-light-2);
               }
+
+              .form__label__value_discount,
+              .form__description__value {
+                color: var(--color-light-1) !important;
+              }
             }
           }
         }
       }
 
       .product-button-cart {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
         background-color: var(--color-accent-1);
+        border-top: solid 2px var(--color-accent-3);
         padding: 0.625rem 0;
+        z-index: 6;
 
         @media only screen and (max-width: 63.938rem) {
           position: fixed;
@@ -3066,6 +3106,7 @@ svg {
     .product-button-cart {
       border-radius: 0.5rem;
       position: relative;
+      width: 100%;
 
       @media only screen and (max-width: 63.938rem) {
         position: initial;
@@ -3076,12 +3117,14 @@ svg {
       }
 
       .columns {
-        place-content: space-evenly;
+        display: flex;
+        flex-flow: row wrap;
+        place-content: flex-start;
 
         .product-price-container {
-          .price {
-            place-content: center;
-          }
+          text-align: left;
+          flex: 1;
+          justify-items: flex-start;
         }
       }
     }

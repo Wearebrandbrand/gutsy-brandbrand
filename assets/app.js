@@ -27,26 +27,59 @@ if (!customElements.get('quantity-selector')) {
     constructor() {
       super();
       this.input = this.querySelector('.qty');
+
+      // Default to the input's step
       this.step = this.input.getAttribute('step');
+
+      this.urlKey = '';
+
+      // Only persist step if on a product page
+      if (window.location.pathname.includes('/products/')) {
+        this.urlKey = `qtyForProduct--${window.location.pathname.replace('/products/', '')}`;
+        const savedQty = localStorage.getItem(this.urlKey);
+
+        if (savedQty !== null) {
+          this.input.value = savedQty;
+          this.input.setAttribute('value', savedQty);
+          this.updateTotalAmount(savedQty);
+
+          setTimeout(() => {
+            this.input.value = savedQty;
+            this.updateTotalAmount(parseInt(savedQty));
+          }, 10);
+        } else {
+          this.input.value = 1;
+          localStorage.setItem(this.urlKey, '1');
+          this.updateTotalAmount(1);
+        }
+      } else {
+        this.input.value = 1;
+        this.updateTotalAmount(1);
+      }
+
       this.changeEvent = new Event('change', {
         bubbles: true
       });
+
+
       // Create buttons
       this.subtract = this.querySelector('.minus');
       this.add = this.querySelector('.plus');
 
       // Add functionality to buttons
-      this.subtract.addEventListener('click', () => this.change_quantity(-1 * this.step));
-      this.add.addEventListener('click', () => this.change_quantity(1 * this.step));
+      this.subtract.addEventListener('click', () => this.change_quantity(-1 * this.step, this.urlKey));
+      this.add.addEventListener('click', () => this.change_quantity(1 * this.step, this.urlKey));
 
       this.validateQtyRules();
+      this.input.setAttribute('value', 1 * this.step);
+      this.updateTotalAmount(1 * this.step)
     }
 
     connectedCallback() {
       this.classList.add('buttons_added');
     }
 
-    change_quantity(change) {
+    change_quantity(change, urlKey) {
       // Get current value
       let quantity = Number(this.input.value);
 
@@ -75,6 +108,12 @@ if (!customElements.get('quantity-selector')) {
       this.input.dispatchEvent(this.changeEvent);
 
       this.validateQtyRules();
+
+      if (this.urlKey !== '') {
+        localStorage.setItem(urlKey, quantity.toString());
+      }
+
+      this.updateTotalAmount(quantity);
     }
 
     validateQtyRules() {
@@ -87,6 +126,36 @@ if (!customElements.get('quantity-selector')) {
         const max = parseInt(this.input.max);
         this.add.classList.toggle('disabled', value >= max);
       }
+    }
+
+    updateTotalAmount(quantity) {
+      var informationGroup = this.input.closest('.product-information--inner');
+      if (!informationGroup) {
+        return;
+      }
+      var productPriceContainer = informationGroup.querySelector('.product-button-cart .product-price-container');
+
+      if (!productPriceContainer) {
+        return;
+      }
+
+      var priceData = productPriceContainer.querySelector('ins');
+
+      // Make sure we have the price amount.
+      if (!priceData?.dataset?.priceAmount) {
+        return;
+      }
+
+      var amount = productPriceContainer.querySelector('.amount');
+      var priceAmount = priceData.dataset.priceAmount;
+      var totalAmount = priceAmount * quantity;
+
+      if (!totalAmount || !Shopify.formatMoney) {
+        return;
+      }
+
+      amount.innerHTML = Shopify.formatMoney(totalAmount);
+
     }
   }
 
@@ -237,7 +306,6 @@ if (!customElements.get('product-card')) {
           if (video.classList.contains('hover')) {
             video.classList.remove('hover');
             let video_element = video.querySelector('video');
-            video_element.currentTime = 0;
             video_element.play();
             if (nav.length) {
               nav[index].classList.remove('active');
@@ -248,7 +316,6 @@ if (!customElements.get('product-card')) {
           if (!selvid.classList.contains('hover')) {
             selvid.classList.add('hover');
             let sel_video_element = selvid.querySelector('video');
-            sel_video_element.currentTime = 0;
             sel_video_element.play();
             if (nav.length) {
               nav[sel].classList.add('active');
@@ -262,6 +329,7 @@ if (!customElements.get('product-card')) {
           video.classList.remove('hover');
           let video_element = video.querySelector('video');
           video_element.pause();
+          video_element.currentTime = 0;
           if (nav.length) {
             nav[index].classList.remove('active');
           }
@@ -1195,6 +1263,8 @@ if (!customElements.get('quick-view')) {
         this.drawer.querySelector('.side-panel-close').focus();
 
         setTimeout(() => {
+          initSubscriptionUI(this.drawer.querySelector('#Product-Drawer-Content'));
+
           let slider = this.drawer.querySelector('#Product-Slider');
 
           slider.reInit();
@@ -1214,36 +1284,72 @@ if (!customElements.get('quick-view')) {
   customElements.define('quick-view', QuickView);
 }
 
-/**
- *  @class
- *  @function AnimatedMarkers
- */
-class AnimatedMarkers {
+function initSubscriptionUI(scope = document) {
+  const fieldsets = scope.querySelectorAll('fieldset[data-handle]');
 
-  constructor() {
-    this.markers = document.querySelectorAll('.svg-marker path');
-    this.animations_enabled = document.body.classList.contains('animations-true') && typeof gsap !== 'undefined';
+  fieldsets.forEach(function (fieldset) {
+    const subscriptionRadio = fieldset.querySelector('input[type="radio"][value="subscription"]');
+    const oneTimeRadio = fieldset.querySelector('input[type="radio"][value="one_time_purchase"]');
+    const oneTimeValue = oneTimeRadio?.dataset?.optionValue;
+    const select = fieldset.querySelector('select');
 
-    if (this.animations_enabled && this.markers.length) {
-      this.setupEventListeners();
+    if (!select || !subscriptionRadio || !oneTimeRadio) return;
+
+    function updateFakeLabel(fieldset, show, label) {
+      const wrapper = fieldset.querySelector('.select-wrapper');
+      const fakeLabel = wrapper.querySelector('.fake-label');
+      const select = wrapper.querySelector('select');
+
+      if (show && label) {
+        fakeLabel.textContent = label;
+        fakeLabel.classList.remove('visually-hidden');
+        select.classList.add('disable-display');
+      } else {
+        fakeLabel.textContent = '';
+        fakeLabel.classList.add('visually-hidden');
+        select.classList.remove('disable-display');
+      }
     }
-  }
 
-  setupEventListeners() {
-    this.markers.forEach((marker, i) => {
-      gsap.from(marker, {
-        duration: 1,
-        ease: 'power4.inOut',
-        drawSVG: "0%",
-        scrollTrigger: {
-          trigger: marker,
-          start: 'top 70%',
-          end: 'bottom 80%'
+    subscriptionRadio.addEventListener('change', function () {
+      if (subscriptionRadio.checked) {
+        const firstSubscription = Array.from(select.options).find(opt => opt.value !== oneTimeValue && !opt.disabled);
+        if (firstSubscription) {
+          select.value = firstSubscription.value;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
         }
-      });
+        updateFakeLabel(fieldset, false);
+      }
     });
-  }
 
+    oneTimeRadio.addEventListener('change', function () {
+      if (this.checked && oneTimeValue) {
+        select.value = oneTimeValue;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+
+        const fakeLabelText = Array.from(select.options).find(
+          opt => opt.value !== oneTimeValue && !opt.disabled
+        )?.text;
+
+        updateFakeLabel(fieldset, true, fakeLabelText);
+        select.classList.add('disable-display');
+      }
+    });
+
+    select.addEventListener('change', function () {
+      if (select.value === oneTimeValue) {
+        oneTimeRadio.checked = true;
+
+        const fakeLabelText = Array.from(select.options).find(
+          opt => opt.value !== oneTimeValue && !opt.disabled
+        )?.text;
+        updateFakeLabel(fieldset, true, fakeLabelText);
+      } else {
+        subscriptionRadio.checked = true;
+        updateFakeLabel(fieldset, false);
+      }
+    });
+  });
 }
 
 /**
@@ -1283,11 +1389,10 @@ function addIdToRecentlyViewed(handle) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  if (typeof AnimatedMarkers !== 'undefined') {
-    new AnimatedMarkers();
-  }
   if (typeof FooterMenuToggle !== 'undefined') {
     new FooterMenuToggle();
+  }
+  if (typeof initSubscriptionUI !== 'undefined') {
+    initSubscriptionUI();
   }
 });

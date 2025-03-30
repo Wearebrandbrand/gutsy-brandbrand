@@ -1,0 +1,8 @@
+{%- liquid
+	assign tag = product_card_product.metafields.brandbrand.product_label
+-%}
+{% if tag != blank %}
+	<span class="product-card--tag">
+		<span class="tag">{{ tag }}</span>
+	</span>
+{% endif %}

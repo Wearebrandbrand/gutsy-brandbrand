@@ -3,7 +3,6 @@
   assign show_language_switcher = section.settings.show_language_switcher
   assign show_currency_switcher = section.settings.show_currency_switcher
   assign show_payment_icons = section.settings.show_payment_icons
-  assign footer_reveal_animation = section.settings.footer_reveal_animation
 -%}
 
 <link rel="stylesheet" href="{{ 'components--footer.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -266,19 +265,10 @@
     </div>
   </div>
 </theme-footer>
-{% if footer_reveal_animation %}
-  <script src="{{ 'components--footer.js' | asset_url }}" defer="defer"></script>
-{% endif %}
 {% schema %}
 {
   "name": "Footer",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "footer_reveal_animation",
-      "default": false,
-      "label": "Enable reveal animation"
-    },
     {
       "type": "text",
       "id": "copyright_text",

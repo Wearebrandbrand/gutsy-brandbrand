@@ -86,6 +86,7 @@
         min-height: 15.625rem;
         width: 100%;
         object-fit: cover;
+		border-radius: 0.75rem;
       }
     }
   }
@@ -114,6 +115,7 @@
 
         @media only screen and (max-width:  47.938rem) {
           color: var(--color-accent-1);
+		  margin-bottom: 0;
         }
       }
 
@@ -132,58 +134,6 @@
           letter-spacing: 0.05rem;
           color: var(--color-secondary-dark);
         }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width:  81.25rem) {
-  .template-page-contact .section-single-image-with-text .single-image {
-    padding-inline: 1.5rem;
-  }
-}
-
-@media only screen and (max-width:  68.75rem) {
-  .template-page-contact .section-single-image-with-text .single-image {
-    padding-inline: 3rem;
-  }
-}
-
-
-@media only screen and (max-width:  47.938rem) {
-  .template-page-contact {
-    .section-single-image-with-text {
-      .single-image {
-        padding-inline: 1rem;
-
-        img{
-          border-radius: 0.75rem;
-        }
-
-        .section-header--content h1{
-          margin-bottom: 0;
-        }
-      }
-
-
-    }
-
-    .section-header{
-      display: none;
-    }
-
-    .collapsible-content__inner{
-      gap: 1.125rem !important;
-    }
-
-  }
-
-  .section-contact-form{
-    .contact-form .columns{
-      margin: 0;
-
-      .row{
-        row-gap: 1.125rem;
       }
     }
   }

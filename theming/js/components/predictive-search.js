@@ -124,7 +124,6 @@ if (!customElements.get('search-form')) {
     }
 
     close() {
-      console.log('close');
       this.predictiveSearchResults.setAttribute('inert', '');
       document.body.classList.remove('open-search');
     }

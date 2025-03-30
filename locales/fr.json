@@ -9,6 +9,10 @@
  */
 {
   "general": {
+    "subscription": {
+      "title": "Abonnement",
+      "description": "Modifier ou annuler à tout moment"
+    },
     "continue_shopping": "Continuer vos achats",
     "close": "Fermer",
     "cart_drawer": {

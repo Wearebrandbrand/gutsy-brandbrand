@@ -124,7 +124,7 @@
           "settings": {
             "tab_label": "Voedingsgids",
             "icon": "none",
-            "image": "{{ product.metafields.brandbrand.specification.value }}"
+            "image": "{{ product.metafields.feeding_guideline.image.value }}"
           }
         }
       },

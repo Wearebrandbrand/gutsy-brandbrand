@@ -20,7 +20,7 @@
             "icon": "none",
             "text": "Vandaag besteld, morgen in huis - Gratis verzending",
             "link": "",
-            "color_bg": "#1A3C32",
+            "color_bg": "#1a3c32",
             "color_text": "#ffffff"
           }
         }
@@ -42,9 +42,9 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo": "shopify://shop_images/logo.svg",
         "sticky_header": true,
         "full_width": false,
+        "logo": "shopify://shop_images/logo.svg",
         "logo_height_range": 26,
         "logo_height_range_mobile": 26,
         "style": "style6",

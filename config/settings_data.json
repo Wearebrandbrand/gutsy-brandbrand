@@ -57,6 +57,8 @@
     "color_badge_sale": "#c62a32",
     "article_card_border": false,
     "color_swatches": "",
+    "free_shipping": true,
+    "free_shipping_minimum": "40",
     "search_menu": "",
     "search_product_collection": "all",
     "search_product_collection_limit": 3,

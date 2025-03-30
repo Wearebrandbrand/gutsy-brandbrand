@@ -24,7 +24,7 @@
     <div class="product-title-container" {{ block.shopify_attributes }}>
       {%- if block.settings.show_products_rating and product.metafields.reviews.rating.value != blank -%}
         <div class="star-rating-container">
-          <div class="star-rating" style="--star-rating: {{ product.metafields.reviews.rating.value.rating }};">{%- if block.settings.show_products_rating_average %}<span class="body-font">{{ product.metafields.reviews.rating.value.rating | round: 2 }}</span>{%- endif -%}</div>
+          <div class="star-rating" style="--star-rating: {{ product.metafields.reviews.rating.value.rating }};">{%- if block.settings.show_products_rating_average %}<span class="body-font">{{ product.metafields.reviews.rating.value.rating | round: 2 }} ({{ 'products.product.reviews' | t: count: product.metafields.reviews.rating_count.value }})</span>{%- endif -%}</div>
         </div>
       {%- endif -%}
       <h1 class="product-title">{{ product.title }}</h1>

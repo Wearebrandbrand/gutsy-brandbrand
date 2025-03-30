@@ -133,8 +133,8 @@
       },
       "include_taxes": "Inclusief btw.",
       "reviews": {
-        "one": "{{ count }} recensie",
-        "other": "{{ count }} recensies"
+        "one": "{{ count }} review",
+        "other": "{{ count }} reviews"
       },
       "available": {
         "one": "Verkrijgbaar in {{ count }} kleur",

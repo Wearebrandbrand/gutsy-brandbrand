@@ -360,6 +360,7 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
@@ -367,6 +368,7 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
@@ -374,6 +376,7 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         },
@@ -381,6 +384,7 @@
           "type": "logo",
           "settings": {
             "text": "Lorem ipsum dolor sit amet consectetur.",
+            "image": "shopify://shop_images/logo.svg",
             "link": ""
           }
         }

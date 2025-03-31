@@ -17,7 +17,6 @@ facet-filters-form {
 
   .small-12 {
     &.columns {
-      max-width: 67.625rem;
       margin: 0 auto;
     }
   }
@@ -27,8 +26,7 @@ facet-filters-form {
       .products {
         &.medium-up-3 {
           margin: 0;
-          gap: 3.938rem 1rem;
-          justify-content: space-between;
+          gap: 4rem 1rem;
 
           @media only screen and (max-width: 63.938rem) {
             gap: 1.875rem 0.75rem;
@@ -36,11 +34,16 @@ facet-filters-form {
 
           li {
             padding: 0;
-            max-width: 20.25rem;
             flex: 0 0 calc(33.33% - 0.7rem);
+            display: flex;
+            justify-content: center;
 
             @media only screen and (max-width: 47.938rem) {
               flex: 0 0 calc(50% - 0.4rem);
+            }
+
+            .product-card {
+              max-width: 20.25rem;
             }
           }
         }

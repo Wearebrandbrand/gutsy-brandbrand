@@ -52,6 +52,7 @@
     },
     "template-header": {
       "type": "template-header",
+      "disabled": true,
       "settings": {
         "show_collection_image": false,
         "collection_image_ratio": "adapt",

@@ -3,10 +3,10 @@
 		assign appended = '--sticky'
 	endif
 
-	assign delivery_options = "Delivery, Levering, Regelmaat, Regularity" | split: ", "
-	assign handle = option.name | replace: ' ', '-' | downcase | escape
-	assign product_option_descriptions = product.metafields.brandbrand.product_option_descriptions.value
+	assign delivery_options = "Delivery, Levering, Regelmaat, Regularity, Livraison" | split: ", "
 	assign option_name = option.name
+	assign handle = option_name | replace: ' ', '-' | downcase | escape
+	assign product_option_descriptions = product.metafields.brandbrand.product_option_descriptions.value
 	assign delivery_type = false
 	if delivery_options contains option_name
 		assign delivery_type = true
@@ -42,7 +42,7 @@
 {%- when 'button' -%}
 	{% if delivery_type %}
 		{%- liquid
-			assign one_time_labels = "Eenmalig, One time, Een keer, éénmalig" | split: ", "
+			assign one_time_labels = "Eenmalig, One time, one-time, Een keer, éénmalig, une fois" | split: ", "
 			assign one_time_value = null
 			assign one_time_selected = false
 			assign subscription_selected = false

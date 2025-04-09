@@ -405,9 +405,9 @@
         "collapsible_tab_TPEG7r": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Is Gutsy graanvrij?",
             "open": false,
-            "content": "<p>Nono is een trotse moeder van 4 fantastische puppy's. Met Gutsy hebben we een perfect uitgebalanceerd dieet gevonden voor het hele gezin.</p>",
+            "content": "<p>Onze brokjes zijn<strong>100% graan en gluten vrij</strong>.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -415,9 +415,9 @@
         "collapsible_tab_qdNayG": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Is Gutsy interessant bij moeilijke eters?",
             "open": false,
-            "content": "",
+            "content": "<p>Gutsy is bij <strong>Testaankoop </strong>verkozen bij de top van België. Dit wil zeggen dat 18/20 honden onze voeding boven andere brokken verkiezen. Dit komt omdat we gebruik maken van een receptuur (kip&insect) die 85% dierlijke eiwitten bevat.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -425,9 +425,9 @@
         "collapsible_tab_nPxCxi": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Mijn hond heeft een gevoelige maag",
             "open": false,
-            "content": "",
+            "content": "<p>Ons voer is<strong>hypoallergeen</strong>, wat betekent dat het geschikt is voor honden met een gevoelige maag. Onze eiwitten hebben een<strong>verteerbaarheidscore van 94,7 %</strong>. We hebben onze natuurlijke ingrediënten zorgvuldig gekozen zodat allergieën tot het verleden behoren.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -435,19 +435,19 @@
         "collapsible_tab_3B7eWE": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Mijn hond is allergisch aan kip",
             "open": false,
-            "content": "",
-            "page": "",
+            "content": "<p>Een 5-10% van de honden kan een kip allergie hebben. Om deze honden toch een oplossing te bieden hebben we met gutsy <strong>een volledig hypoallergene variant</strong>: White Fish & insect.</p>",
+            "page": "fish-insect-landing-page",
             "custom_liquid": ""
           }
         },
         "collapsible_tab_6tkmnw": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Hoe overschakelen van de vorige voeding naar Gutsy?",
             "open": false,
-            "content": "",
+            "content": "<p>De Go-To Gutsy handleiding:</p><p><strong>Dag 1-2</strong>: 25% Gutsy + 75% huidige voeding</p><p><strong>Dag 3-4</strong>: 50% Gutsy + 50% huidige voeding</p><p><strong>Dag 5-6</strong>: 75% Gutsy + 25% huidige voeding</p><p><strong>Dag 7</strong>: Laat het avontuur beginnen met een belachelijk lekkere kom Gutsy.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -463,7 +463,7 @@
       "settings": {
         "heading": "VEELGESTELDE VRAGEN",
         "sub_heading": "FAQ",
-        "description": "<p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.</p>",
+        "description": "<p>Ontdek meer over Gutsy</p>",
         "color_bg": "rgba(0,0,0,0)",
         "color_heading": "#1a3c32",
         "color_text": "#094e39",

@@ -68,7 +68,7 @@
             "background": "#f0e7b2",
             "border_color": "rgba(0,0,0,0)",
             "input_border_color": "#d3d3d3",
-            "border_radius": 10,
+            "border_radius": 0,
             "font_weight": "",
             "heading_font_weight": "500",
             "block_margin_top": 0,

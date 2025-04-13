@@ -114,7 +114,6 @@
         "column_YJQBh9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/carrot.svg",
             "image_full_width": false,
             "image_link": "",
             "title": "Natuurlijke ingrediënten",
@@ -485,7 +484,7 @@
         "text_D7hCXw": {
           "type": "text",
           "settings": {
-            "text": "Geniet als abbonnee minstens 1 maal per maand van een exclusieve aanbieding",
+            "text": "Abbonnee's genieten minstens 1 maal per maand van een exclusieve aanbieding!",
             "description_size": "medium"
           }
         },

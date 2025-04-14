@@ -149,62 +149,55 @@
         "link": ""
       }
     },
-    "featured_product_gzwYyY": {
-      "type": "featured-product",
+    "image_with_text_TjxyB9": {
+      "type": "image-with-text",
       "blocks": {
-        "title_azjK46": {
-          "type": "title",
+        "subheading_g638aG": {
+          "type": "subheading",
           "settings": {
-            "show_products_rating": true,
-            "show_products_rating_average": true,
-            "show_custom_badges": true
+            "text": "Florence - 69 jaar"
           }
         },
-        "variant_picker_BFH83W": {
-          "type": "variant_picker",
+        "heading_VPhRcE": {
+          "type": "heading",
           "settings": {
-            "picker_type": "button",
-            "color_picker": true,
-            "color_picker_size": "regular",
-            "color_picker_use_variants": false,
-            "variant_is_disabled": true,
-            "sizing_guide_text": "Sizing guide",
-            "sizing_guide_icon": "ruler",
-            "sizing_guide_page": ""
+            "text": "Pammeke is eindelijk van zijn allergieën vanaf",
+            "heading_size": "h3"
           }
         },
-        "quantity_xPTaVJ": {
-          "type": "quantity",
-          "settings": {}
-        },
-        "buy_buttons_9j8QJ9": {
-          "type": "buy_buttons",
+        "text_tdpUPc": {
+          "type": "text",
           "settings": {
-            "show_dynamic_checkout": true
+            "text": "<p>Pammeke krijgt de white fish & insect van Gutsy. Voordien had ze last van jeuk en uitslag. 2 weken nadat ik haar Gutsy ben beginnen te geven zijn al deze symptomen weggegaan.</p>"
+          }
+        },
+        "button_qxAaTE": {
+          "type": "button",
+          "settings": {
+            "button_text": "Bestel nu",
+            "button_link": "shopify://products/white-fish-insects-large-adult-copy"
           }
         }
       },
       "block_order": [
-        "title_azjK46",
-        "variant_picker_BFH83W",
-        "quantity_xPTaVJ",
-        "buy_buttons_9j8QJ9"
+        "subheading_g638aG",
+        "heading_VPhRcE",
+        "text_tdpUPc",
+        "button_qxAaTE"
       ],
       "settings": {
-        "heading": "Featured product",
-        "description": "<p>Add a short description for this featured product</p>",
-        "product": "chicken-munchies-large-adult-juo",
-        "show_taxes_included": true,
-        "thumbnail_position": "left",
-        "media_aspect_ratio": "adapt",
-        "display_captions": true,
-        "hide_variants": false,
-        "lightbox": true,
-        "enable_video_looping": false,
-        "media_fullwidth_mobile": true,
-        "media_show_prevnext_mobile": true,
+        "image": "shopify://shop_images/image_banner_mami_cc4985a5-5c09-4eb7-8394-26840ac2973d.png",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_position": "text-left",
+        "text_color": "",
         "disable_top_spacing": false,
-        "disable_bottom_spacing": false
+        "disable_bottom_spacing": false,
+        "layout_type": "normal"
       }
     }
   },
@@ -214,6 +207,6 @@
     "main",
     "spacer_jBAeqR",
     "multicolumn_3PgeaW",
-    "featured_product_gzwYyY"
+    "image_with_text_TjxyB9"
   ]
 }

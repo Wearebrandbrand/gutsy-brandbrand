@@ -156,7 +156,7 @@
         "disable_bottom_spacing": false,
         "button_1_color": "accent",
         "link_label": "Ontdek alle voordelen",
-        "link": "#"
+        "link": "shopify://collections/all"
       }
     },
     "featured_collection_jfCLBH": {
@@ -187,6 +187,22 @@
             "gutys_brand": true
           }
         },
+        "table_content_RXUeMA": {
+          "type": "table_content",
+          "settings": {
+            "text": "Goedgekeurd bij de top van Testaankoop",
+            "other_brand": false,
+            "gutys_brand": true
+          }
+        },
+        "table_content_mRD67D": {
+          "type": "table_content",
+          "settings": {
+            "text": "Graanvrij",
+            "other_brand": false,
+            "gutys_brand": true
+          }
+        },
         "table_block_d": {
           "type": "table_content",
           "settings": {
@@ -210,22 +226,15 @@
             "other_brand": false,
             "gutys_brand": true
           }
-        },
-        "table_content_mRD67D": {
-          "type": "table_content",
-          "settings": {
-            "text": "Graanvrij",
-            "other_brand": false,
-            "gutys_brand": true
-          }
         }
       },
       "block_order": [
         "table_block_b",
+        "table_content_RXUeMA",
+        "table_content_mRD67D",
         "table_block_d",
         "table_block_a",
-        "table_block_c",
-        "table_content_mRD67D"
+        "table_block_c"
       ],
       "settings": {
         "heading": "Gutsy Voeding",
@@ -234,7 +243,7 @@
         "image": "shopify://shop_images/52b6d6b7-221c-49d5-9f5e-d8c3a6fd856b.png",
         "image_2": "shopify://shop_images/06505a46-6137-4329-ad98-32e5c2351e7c.png",
         "button_text": "Probeer het nu",
-        "button_url": "#"
+        "button_url": "shopify://collections/all"
       }
     },
     "customer_review": {
@@ -398,6 +407,63 @@
         "color_logo_bg": "#ffffff"
       }
     },
+    "image_hotspots_q7kyCz": {
+      "type": "image-hotspots",
+      "blocks": {
+        "hotspot_fpHXXP": {
+          "type": "hotspot",
+          "settings": {
+            "heading": "Witte vis & Insect",
+            "description": "Voor alle rassen.",
+            "x_position": 67,
+            "y_position": 70,
+            "x_position_mobile": 20,
+            "y_position_mobile": 20
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_fpHXXP"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_banner_mami_cc4985a5-5c09-4eb7-8394-26840ac2973d.png",
+        "heading": "Pammeke geraakte eindelijk van haar allergieën vanaf!",
+        "heading_size": "h3",
+        "description": "<p>Al na 2 weken Gutsy white fish & insect geraakte Pammeke van haar jeuk vanaf. Daarnaast vindt ze het ook nog eens waanzinnig lekker.</p>",
+        "badge_text": "Hyppoallergeen",
+        "image_position": "image_first",
+        "color_bg_badge": "#1a3c32",
+        "color_badge": "#ffffff",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
+    "rich_text_eBpcff": {
+      "type": "rich-text",
+      "blocks": {
+        "button_MJPPq8": {
+          "type": "button",
+          "settings": {
+            "link_label": "Ontdek het hier",
+            "link": "shopify://products/white-fish-insects-puppy-copy"
+          }
+        }
+      },
+      "block_order": [
+        "button_MJPPq8"
+      ],
+      "settings": {
+        "text_width": "xlarge",
+        "text_position": "center",
+        "text_alignment": "center",
+        "color_bg": "transparent",
+        "color_heading": "#1a1c1d",
+        "color_text": "#2c2d2e",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
+    },
     "collapsible_content_Jdkgrc": {
       "type": "collapsible-content",
       "blocks": {
@@ -520,6 +586,8 @@
     "table_section",
     "customer_review",
     "logo_list_fxpijU",
+    "image_hotspots_q7kyCz",
+    "rich_text_eBpcff",
     "collapsible_content_Jdkgrc",
     "email_signup_dALWqF"
   ]

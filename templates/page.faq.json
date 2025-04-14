@@ -44,9 +44,9 @@
         "collapsible_tab_YrmbCK": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Is Gutsy getest door experts?",
             "open": false,
-            "content": "",
+            "content": "<p>Onze voeding is deskundig getest door een uitgebreid team van voedingsdeskundigen aan de<strong>Universiteit van Gent</strong>die dag en nacht hebben gewerkt om een fantastische brok te produceren die tot de beste in zijn klasse behoort in zowel <strong>smaak- als verteringstests.</strong></p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -54,9 +54,9 @@
         "collapsible_tab_Kzi9B7": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Is Gutsy graanvrij?",
             "open": false,
-            "content": "",
+            "content": "<p>Onze brokjes zijn <strong>100% graan en gluten vrij</strong>.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -103,7 +103,7 @@
         "heading": "Collapsible content",
         "sub_heading": "",
         "description": "<p>Add a short description for this section</p>",
-        "color_bg": "transparent",
+        "color_bg": "rgba(0,0,0,0)",
         "color_heading": "#1a1c1d",
         "color_text": "#2c2d2e",
         "color_links": "#2c2d2e",

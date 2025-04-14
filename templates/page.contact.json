@@ -12,7 +12,7 @@
     "single-image-text": {
       "type": "single-image-text",
       "settings": {
-        "heading": "Contact",
+        "heading": "Meest gestelde vragen",
         "description": "Ontdek meer over gutsy",
         "image": "shopify://shop_images/contact_banner.jpg"
       }
@@ -27,16 +27,38 @@
             "icon": "none",
             "text": "<h5>Producten</h5><p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. A vel vulputate bibendum magna cursus nunc. </p>",
             "text_columns": "1",
-            "page": "shopify://pages/faq",
+            "page": "faq",
             "custom_liquid": ""
           }
         },
-        "tab_MbeGK6": {
+        "tab_HVcPPy": {
           "type": "tab",
           "settings": {
-            "tab_label": "Bezorgen & Retourneren",
+            "tab_label": "Voedingsgids",
             "icon": "none",
-            "text": "<h5>Producten</h5><p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. A vel vulputate bibendum magna cursus nunc. </p>",
+            "text": "<p>Add a short description for this tabbed section</p>",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "tab_myeHQH": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Verzending, Levering en Betaling",
+            "icon": "none",
+            "text": "<p>Add a short description for this tabbed section</p>",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "tab_9ehGrk": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Account en Abonnement",
+            "icon": "none",
+            "text": "<p>Add a short description for this tabbed section</p>",
             "text_columns": "1",
             "page": "",
             "custom_liquid": ""
@@ -45,7 +67,9 @@
       },
       "block_order": [
         "tab_XLUwrV",
-        "tab_MbeGK6"
+        "tab_HVcPPy",
+        "tab_myeHQH",
+        "tab_9ehGrk"
       ],
       "settings": {
         "heading": "FAQ",
@@ -54,7 +78,7 @@
         "text_alignment": "left",
         "color_bg": "rgba(0,0,0,0)",
         "color_tabs": "#f0e7b2",
-        "tab_color_bg": "#094E39",
+        "tab_color_bg": "#094e39",
         "color_text": "#094e39",
         "spacing_option": "medium",
         "disable_top_spacing": false,
@@ -65,7 +89,7 @@
       "type": "contact-form",
       "settings": {
         "heading": "andere vraag?",
-        "description": "<p>Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non. A vel vulputate bibendum magna cursus nunc.</p>",
+        "description": "<p>Wij beantwoorden deze graag! Stuur ons een bericht en we komen binnenkort bij jou terug.</p>",
         "show_phone_number": false,
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
@@ -85,7 +109,7 @@
           "type": "button",
           "settings": {
             "button_text": "Shop",
-            "button_link": "#"
+            "button_link": "shopify://collections/all"
           }
         }
       },
@@ -121,7 +145,7 @@
         "text_D7hCXw": {
           "type": "text",
           "settings": {
-            "text": "Lorem ipsum dolor sit amet consectetur. Eu gravida feugiat nunc a non.",
+            "text": "Abonnee's krijgen minstens 1 maal per maand een exclusieve aanbieding!",
             "description_size": "medium"
           }
         },

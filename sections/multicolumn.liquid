@@ -40,15 +40,13 @@
 								{%- liquid
 									assign ratio = 1
 									assign max_width = block.settings.image.width | divided_by: 2 | append: 'px'
+									assign image_width = block.settings.image_width | append: 'px'
 									assign image_link = block.settings.image_link
 									if image_ratio == 'adapt'
 										assign ratio = block.settings.image.aspect_ratio
 									endif
-									if block.settings.image_full_width
-										assign max_width = '100%'
-									endif
 								-%}
-								<figure class="multicolumn__image" style="width: {{ max_width }};">
+								<figure class="multicolumn__image" style="width: {{ image_width }};">
 									<div class="multicolumn__image--inner aspect-ratio aspect-ratio--{{ image_ratio }}" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
 										{% if image_link != blank %}
 											<a href="{{ image_link }}">
@@ -115,22 +113,22 @@
 			"default": 4,
 			"label": "Number of columns on desktop"
 		},
-    {
-      "type": "select",
-      "id": "layout",
-      "options": [
-        {
-          "value": "normal",
-          "label": "Normal"
-        },
-        {
-          "value": "carousel",
-          "label": "Carousel"
-        }
-      ],
-      "default": "normal",
-      "label": "Layout"
-    },
+		{
+			"type": "select",
+			"id": "layout",
+			"options": [
+				{
+					"value": "normal",
+					"label": "Normal"
+				},
+				{
+					"value": "carousel",
+					"label": "Carousel"
+				}
+			],
+			"default": "normal",
+			"label": "Layout"
+		},
 		{
 			"type": "checkbox",
 			"id": "mobile_swipe",
@@ -290,10 +288,14 @@
 					"info": "770 x 770 .jpg recommended."
 				},
 				{
-					"type": "checkbox",
-					"id": "image_full_width",
-					"label": "Fit image to column",
-					"default": false
+					"type": "range",
+					"id": "image_width",
+					"label": "Image Width",
+					"min": 50,
+					"max": 300,
+					"step": 10,
+					"unit": "px",
+					"default": 50
 				},
 				{
 					"type": "url",

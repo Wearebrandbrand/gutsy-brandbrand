@@ -106,288 +106,300 @@
 </div>
 <script src="{{ 'sections--before-after-image.js' | asset_url }}" defer="defer"></script>
 {% schema %}
-  {
-    "name": "Before/after image",
-		"class": "section-before-after",
-		"max_blocks": 2,
-    "settings": [
-			{
-				"type": "text",
-				"id": "heading",
-				"label": "Heading",
-				"default": "Image Comparison"
-			},
-			{
-				"type": "select",
-				"id": "heading_size",
-				"label": "Size",
-				"options": [
-					{
-						"value": "h1",
-						"label": "Extra Large"
-					},
-					{
-						"value": "h2",
-						"label": "Large"
-					},
-					{
-						"value": "h3",
-						"label": "Medium"
-					},
-					{
-						"value": "h4",
-						"label": "Small"
-					}
-				],
-				"default": "h3"
-			},
-			{
-				"type": "richtext",
-				"id": "description",
-				"label": "Description",
-				"default": "<p>Add a short description for your image comparison</p>"
-			},
-			{
-				"type": "text",
-				"id": "badge_text",
-				"label": "Text",
-				"default": "Badge"
-			},
-			{
-	      "type": "select",
-	      "id": "image_position",
-	      "options": [
-	        {
-	          "value": "image_first",
-	          "label": "Image first"
-	        },
-	        {
-	          "value": "text_first",
-	          "label": "Image second"
-	        },
-	        {
-	          "value": "image_top",
-	          "label": "Image bottom"
-	        }
-	      ],
-	      "default": "image_first",
-	      "label": "Desktop image placement"
-	    },
-			{
-				"type": "select",
-				"id": "desktop_height",
-				"label": "Desktop height",
-				"options": [
-					{
-						"value": "desktop-height-image",
-						"label": "Adapt to image"
-					},
-					{
-						"value": "desktop-height-450",
-						"label": "450px"
-					},
-					{
-						"value": "desktop-height-550",
-						"label": "550px"
-					},
-					{
-						"value": "desktop-height-650",
-						"label": "650px"
-					},
-					{
-						"value": "desktop-height-750",
-						"label": "750px"
-					}
-				],
-				"default": "desktop-height-650"
-			},
-			{
-				"type": "select",
-				"id": "mobile_height",
-				"label": "Mobile height",
-				"options": [
-					{
-						"value": "mobile-height-image",
-						"label": "Adapt to image"
-					},
-					{
-						"value": "mobile-height-350",
-						"label": "350px"
-					},
-					{
-						"value": "mobile-height-400",
-						"label": "400px"
-					},
-					{
-						"value": "mobile-height-450",
-						"label": "450px"
-					},
-					{
-						"value": "mobile-height-500",
-						"label": "500px"
-					}
-				],
-				"default": "mobile-height-500"
-			},
-			{
-				"type": "range",
-				"id": "initial_position",
-				"min": 0,
-				"max": 100,
-				"step": 1,
-				"unit": "%",
-				"label": "Drag initial position",
-				"default": 50
-			},
-			{
-				"type": "header",
-				"content": "Colors"
-			},
-			{
-				"type": "color",
-				"id": "line_color",
-				"label": "Lines",
-				"default": "#3f72e5"
-			},
-			{
-				"type": "color",
-				"id": "color_bg_badge",
-				"label": "Badge background",
-				"default": "#3f72e5"
-			},
-			{
-				"type": "color",
-				"id": "color_badge",
-				"label": "Badge text",
-				"default": "#ffffff"
-			},
-			{
-	      "type": "header",
-	      "content": "Spacing"
-	    },
-			{
-				"type": "checkbox",
-				"id": "disable_top_spacing",
-				"default": false,
-				"label": "Remove top spacing"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_bottom_spacing",
-				"default": false,
-				"label": "Remove bottom spacing"
-			}
-    ],
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Image",
-        "settings": [
-					{
-						"type": "image_picker",
-						"id": "image",
-						"label": "Image",
-						"info": "1340 x 650 .jpg recommended."
-					},
-					{
-						"type": "image_picker",
-						"id": "mobile_image",
-						"label": "Mobile image (optional)"
-					},
-					{
-						"type": "text",
-						"id": "title",
-						"default": "Column",
-						"label": "Heading"
-					},
-					{
-						"type": "select",
-						"id": "heading_size",
-						"label": "Heading size",
-						"options": [
-							{
-								"value": "h1",
-								"label": "Extra large"
-							},
-							{
-								"value": "h2",
-								"label": "Large"
-							},
-							{
-								"value": "h3",
-								"label": "Medium"
-							},
-							{
-								"value": "h4",
-								"label": "Small"
-							}
-						],
-						"default": "h3"
-					},
-					{
-						 "type": "select",
-						 "id": "heading_position",
-						 "label": "Heading position",
-						 "options": [
-							 { "value": "top", "label": "Top" },
-							 { "value": "center", "label": "Center" },
-							 { "value": "bottom", "label": "Bottom" }
-						 ],
-						 "default": "top"
-					},
-					{
-			      "type": "header",
-			      "content": "Colors"
-			    },
-					{
-						"type": "color",
-						"id": "text_bg",
-						"label": "Text background",
-						"default": "#ffffff"
-					},
-					{
-						"type": "color",
-						"id": "text_color",
-						"label": "Text",
-						"default": "#2c2d2e"
-					},
-					{
-						"type": "color",
-						"id": "overlay_color",
-						"label": "Overlay",
-						"default": "#000000"
-					},
-					{
-						"type": "range",
-						"id": "overlay_opacity",
-						"min": 0,
-						"max": 100,
-						"step": 1,
-						"unit": "%",
-						"label": "Overlay opacity",
-						"default": 0
-					}
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Before/after image",
-				"blocks": [
-					{
-						"type": "image"
-					},
-					{
-						"type": "image"
-					}
-				]
-      }
-    ],
-		"enabled_on": {
-			"templates": ["*"],
-			"groups": [
-				"header", "footer"
+{
+	"name": "Before/after image",
+	"class": "section-before-after",
+	"max_blocks": 2,
+	"settings": [
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"default": "Image Comparison"
+		},
+		{
+			"type": "select",
+			"id": "heading_size",
+			"label": "Size",
+			"options": [
+				{
+					"value": "h1",
+					"label": "Extra Large"
+				},
+				{
+					"value": "h2",
+					"label": "Large"
+				},
+				{
+					"value": "h3",
+					"label": "Medium"
+				},
+				{
+					"value": "h4",
+					"label": "Small"
+				}
+			],
+			"default": "h3"
+		},
+		{
+			"type": "richtext",
+			"id": "description",
+			"label": "Description",
+			"default": "<p>Add a short description for your image comparison</p>"
+		},
+		{
+			"type": "text",
+			"id": "badge_text",
+			"label": "Text",
+			"default": "Badge"
+		},
+		{
+			"type": "select",
+			"id": "image_position",
+			"options": [
+				{
+					"value": "image_first",
+					"label": "Image first"
+				},
+				{
+					"value": "text_first",
+					"label": "Image second"
+				},
+				{
+					"value": "image_top",
+					"label": "Image bottom"
+				}
+			],
+			"default": "image_first",
+			"label": "Desktop image placement"
+		},
+		{
+			"type": "select",
+			"id": "desktop_height",
+			"label": "Desktop height",
+			"options": [
+				{
+					"value": "desktop-height-image",
+					"label": "Adapt to image"
+				},
+				{
+					"value": "desktop-height-450",
+					"label": "450px"
+				},
+				{
+					"value": "desktop-height-550",
+					"label": "550px"
+				},
+				{
+					"value": "desktop-height-650",
+					"label": "650px"
+				},
+				{
+					"value": "desktop-height-750",
+					"label": "750px"
+				}
+			],
+			"default": "desktop-height-650"
+		},
+		{
+			"type": "select",
+			"id": "mobile_height",
+			"label": "Mobile height",
+			"options": [
+				{
+					"value": "mobile-height-image",
+					"label": "Adapt to image"
+				},
+				{
+					"value": "mobile-height-350",
+					"label": "350px"
+				},
+				{
+					"value": "mobile-height-400",
+					"label": "400px"
+				},
+				{
+					"value": "mobile-height-450",
+					"label": "450px"
+				},
+				{
+					"value": "mobile-height-500",
+					"label": "500px"
+				}
+			],
+			"default": "mobile-height-500"
+		},
+		{
+			"type": "range",
+			"id": "initial_position",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"label": "Drag initial position",
+			"default": 50
+		},
+		{
+			"type": "header",
+			"content": "Colors"
+		},
+		{
+			"type": "color",
+			"id": "line_color",
+			"label": "Lines",
+			"default": "#3f72e5"
+		},
+		{
+			"type": "color",
+			"id": "color_bg_badge",
+			"label": "Badge background",
+			"default": "#3f72e5"
+		},
+		{
+			"type": "color",
+			"id": "color_badge",
+			"label": "Badge text",
+			"default": "#ffffff"
+		},
+		{
+			"type": "header",
+			"content": "Spacing"
+		},
+		{
+			"type": "checkbox",
+			"id": "disable_top_spacing",
+			"default": false,
+			"label": "Remove top spacing"
+		},
+		{
+			"type": "checkbox",
+			"id": "disable_bottom_spacing",
+			"default": false,
+			"label": "Remove bottom spacing"
+		}
+	],
+	"blocks": [
+		{
+			"type": "image",
+			"name": "Image",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image",
+					"info": "1340 x 650 .jpg recommended."
+				},
+				{
+					"type": "image_picker",
+					"id": "mobile_image",
+					"label": "Mobile image (optional)"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"default": "Column",
+					"label": "Heading"
+				},
+				{
+					"type": "select",
+					"id": "heading_size",
+					"label": "Heading size",
+					"options": [
+						{
+							"value": "h1",
+							"label": "Extra large"
+						},
+						{
+							"value": "h2",
+							"label": "Large"
+						},
+						{
+							"value": "h3",
+							"label": "Medium"
+						},
+						{
+							"value": "h4",
+							"label": "Small"
+						}
+					],
+					"default": "h3"
+				},
+				{
+					"type": "select",
+					"id": "heading_position",
+					"label": "Heading position",
+					"options": [
+						{
+							"value": "top",
+							"label": "Top"
+						},
+						{
+							"value": "center",
+							"label": "Center"
+						},
+						{
+							"value": "bottom",
+							"label": "Bottom"
+						}
+					],
+					"default": "top"
+				},
+				{
+					"type": "header",
+					"content": "Colors"
+				},
+				{
+					"type": "color",
+					"id": "text_bg",
+					"label": "Text background",
+					"default": "#ffffff"
+				},
+				{
+					"type": "color",
+					"id": "text_color",
+					"label": "Text",
+					"default": "#2c2d2e"
+				},
+				{
+					"type": "color",
+					"id": "overlay_color",
+					"label": "Overlay",
+					"default": "#000000"
+				},
+				{
+					"type": "range",
+					"id": "overlay_opacity",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"unit": "%",
+					"label": "Overlay opacity",
+					"default": 0
+				}
 			]
 		}
-  }
+	],
+	"presets": [
+		{
+			"name": "Before/after image",
+			"blocks": [
+				{
+					"type": "image"
+				},
+				{
+					"type": "image"
+				}
+			]
+		}
+	],
+	"enabled_on": {
+		"templates": [
+			"*"
+		],
+		"groups": [
+			"header",
+			"footer"
+		]
+	}
+}
 {% endschema %}

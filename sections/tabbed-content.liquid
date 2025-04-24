@@ -47,30 +47,41 @@
 						{{ block.settings.text | newline_to_br }}
 						{{ block.settings.page.content }}
 						{{ block.settings.custom_liquid }}
-	
-						<div class="page-metafield section-collapsible-content">
-							<div calass="row">
-								<div class="columns small-12">
-										<div class="collapsible-content">
-											<div class="collapsible-content__inner">
-												{% for faq in page.metafields.custom.collapsible_content.value %}
-													<collapsible-row class="accordion" {{ block.shopify_attributes }}>
-														<details id="Details-{{ block.id }}-{{ section.id }}" {% if block.settings.open %}open{% endif %}>
-															<summary>
-																{{ faq.title }}
-																<span>{%- render 'svg-icons' with 'thb-collapsible-arrow' -%}</span>
-															</summary>
-															<div class="collapsible__content accordion__content rte" id="Accordion-{{ block.id }}-{{ section.id }}">
-																{{ faq.content }}
-															</div>
-														</details>
-													</collapsible-row>
-												{% endfor %}
-											</div>
-										</div>
-								</div>
-							</div>
-						</div>
+                      {%-
+                        liquid
+                        assign tablabel = block.settings.tab_label
+
+                      -%}
+
+                      {% if page.metafields.brandbrand.collapsible_content.value != blank %}
+                        <div class="page-metafield section-collapsible-content">
+                          <div class="row">
+                            <div class="columns small-12">
+                              <div class="collapsible-content">
+                                <div class="collapsible-content__inner">
+                                  {% for faq in page.metafields.brandbrand.collapsible_content.value %}
+                                    {% assign tablabel_clean = tablabel | downcase | strip %}
+                                    {% assign reference_clean = faq.reference | downcase | strip %}
+                                    {% if tablabel_clean == reference_clean %}
+                                    <collapsible-row class="accordion" {{ block.shopify_attributes }}>
+                                      <details id="Details-{{ block.id }}-{{ section.id }}" {% if block.settings.open %}open{% endif %}>
+                                        <summary>
+                                          {{ faq.title }}
+                                          <span>{%- render 'svg-icons' with 'thb-collapsible-arrow' -%}</span>
+                                        </summary>
+                                        <div class="collapsible__content accordion__content rte" id="Accordion-{{ block.id }}-{{ section.id }}">
+                                          {{ faq.content }}
+                                        </div>
+                                      </details>
+                                    </collapsible-row>
+                                    {% endif %}
+                                  {% endfor %}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
 
 					</div>
 				{%- endfor -%}
@@ -80,590 +91,592 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Tabbed content",
-		"class": "section-tabbed-content",
-    "settings": [
-			{
-				"type": "text",
-				"id": "heading",
-				"label": "Heading",
-				"default": "Tabbed content"
-			},
-			{
-				"type": "richtext",
-				"id": "description",
-				"label": "Description",
-				"default": "<p>Add a short description for this section</p>"
-			},
-
-			{
-				"type": "select",
-				"id": "tab_alignment",
-				"label": "Tab alignment",
-				"options": [
-					{
-						"value": "left",
-						"label": "Left"
-					},
-					{
-						"value": "center",
-						"label": "Center"
-					},
-					{
-						"value": "right",
-						"label": "Right"
-					}
-				],
-				"default": "left"
-			},
-			{
-				"type": "select",
-				"id": "text_alignment",
-				"label": "Content alignment",
-				"options": [
-					{
-						"value": "left",
-						"label": "Left"
-					},
-					{
-						"value": "center",
-						"label": "Center"
-					},
-					{
-						"value": "right",
-						"label": "Right"
-					}
-				],
-				"default": "left"
-			},
-			{
-	      "type": "header",
-	      "content": "Colors"
-	    },
-			{
-        "type": "color",
-        "id": "color_bg",
-        "label": "Background",
-        "default": "transparent"
-      },
-			{
-        "type": "color",
-        "id": "color_tabs",
-        "label": "Tabs",
-        "default": "#2c2d2e"
-      },
-      {
-        "type": "color",
-        "id": "tab_color_bg",
-        "label": "Tab Button Background",
-        "default": "#094E39"
-      },
-			{
-        "type": "color",
-        "id": "color_text",
-        "label": "Text",
-        "default": "#2c2d2e"
-      },
-			{
-	      "type": "header",
-	      "content": "Spacing"
-	    },
-	    {
-				"type": "select",
-				"id": "spacing_option",
-				"label": "Spacing",
-				"options": [
-					{
-						"value": "normal",
-						"label": "Normal"
-					},
-					{
-						"value": "medium",
-						"label": "Medium"
-					}
-				],
-				"default": "normal"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_top_spacing",
-				"default": false,
-				"label": "Remove top spacing"
-			},
-			{
-				"type": "checkbox",
-				"id": "disable_bottom_spacing",
-				"default": false,
-				"label": "Remove bottom spacing"
-			}
+{
+  "name": "Tabbed content",
+  "class": "section-tabbed-content",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Tabbed content"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Add a short description for this section</p>"
+    },
+    {
+      "type": "select",
+      "id": "tab_alignment",
+      "label": "Tab alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "color_tabs",
+      "label": "Tabs",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "color",
+      "id": "tab_color_bg",
+      "label": "Tab Button Background",
+      "default": "#094E39"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text",
+      "default": "#2c2d2e"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "select",
+      "id": "spacing_option",
+      "label": "Spacing",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_top_spacing",
+      "default": false,
+      "label": "Remove top spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "disable_bottom_spacing",
+      "default": false,
+      "label": "Remove bottom spacing"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_label",
+          "default": "Tab label",
+          "label": "Label"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "apple",
+              "label": "Apple"
+            },
+            {
+              "value": "banana",
+              "label": "Banana"
+            },
+            {
+              "value": "bottle",
+              "label": "Bottle"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "carrot",
+              "label": "Carrot"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "dairy",
+              "label": "Dairy"
+            },
+            {
+              "value": "dairy_free",
+              "label": "Dairy free"
+            },
+            {
+              "value": "dryer",
+              "label": "Dryer"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            },
+            {
+              "value": "gluten_free",
+              "label": "Gluten free"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "iron",
+              "label": "Iron"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "leather",
+              "label": "Leather"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "lipstick",
+              "label": "Lipstick"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "nut_free",
+              "label": "Nut free"
+            },
+            {
+              "value": "pants",
+              "label": "Pants"
+            },
+            {
+              "value": "paw_print",
+              "label": "Paw print"
+            },
+            {
+              "value": "pepper",
+              "label": "Pepper"
+            },
+            {
+              "value": "perfume",
+              "label": "Perfume"
+            },
+            {
+              "value": "plane",
+              "label": "Plane"
+            },
+            {
+              "value": "plant",
+              "label": "Plant"
+            },
+            {
+              "value": "price_tag",
+              "label": "Price tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "recycle",
+              "label": "Recycle"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "serving_dish",
+              "label": "Serving dish"
+            },
+            {
+              "value": "shirt",
+              "label": "Shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "Shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "snowflake",
+              "label": "Snowflake"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "stopwatch",
+              "label": "Stopwatch"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "washing",
+              "label": "Washing"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add a short description for this tabbed section</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_columns",
+          "label": "Desktop columns",
+          "options": [
+            {
+              "value": "1",
+              "label": "One column"
+            },
+            {
+              "value": "2",
+              "label": "Two columns"
+            },
+            {
+              "value": "3",
+              "label": "Three columns"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Tab content from page"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations. For product description, you can use product description between tags."
+        }
+      ]
+    },
+    {
+      "type": "specification",
+      "name": "Specifications",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_label",
+          "default": "Specifications",
+          "label": "Label"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "apple",
+              "label": "Apple"
+            },
+            {
+              "value": "banana",
+              "label": "Banana"
+            },
+            {
+              "value": "bottle",
+              "label": "Bottle"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "carrot",
+              "label": "Carrot"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "dairy",
+              "label": "Dairy"
+            },
+            {
+              "value": "dairy_free",
+              "label": "Dairy free"
+            },
+            {
+              "value": "dryer",
+              "label": "Dryer"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            },
+            {
+              "value": "gluten_free",
+              "label": "Gluten free"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "iron",
+              "label": "Iron"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "leather",
+              "label": "Leather"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "lipstick",
+              "label": "Lipstick"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "nut_free",
+              "label": "Nut free"
+            },
+            {
+              "value": "pants",
+              "label": "Pants"
+            },
+            {
+              "value": "paw_print",
+              "label": "Paw print"
+            },
+            {
+              "value": "pepper",
+              "label": "Pepper"
+            },
+            {
+              "value": "perfume",
+              "label": "Perfume"
+            },
+            {
+              "value": "plane",
+              "label": "Plane"
+            },
+            {
+              "value": "plant",
+              "label": "Plant"
+            },
+            {
+              "value": "price_tag",
+              "label": "Price tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "recycle",
+              "label": "Recycle"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "serving_dish",
+              "label": "Serving dish"
+            },
+            {
+              "value": "shirt",
+              "label": "Shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "Shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "snowflake",
+              "label": "Snowflake"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "stopwatch",
+              "label": "Stopwatch"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "washing",
+              "label": "Washing"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Metafields",
+          "info": "Include a list of labels and product metafield keys below, separated by a colon, one per line. Example: Color:custom.color"
+        },
+        {
+          "type": "text",
+          "id": "empty_field_label",
+          "default": "N/A",
+          "label": "Empty field text",
+          "info": "Text to use for empty fields"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabbed content",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "*"
     ],
-    "blocks": [
-      {
-        "type": "tab",
-        "name": "Tab",
-        "settings": [
-					{
-						"type": "text",
-						"id": "tab_label",
-						"default": "Tab label",
-						"label": "Label"
-					},
-					{
-						"type": "select",
-						"id": "icon",
-						"options": [
-							{
-								"value": "none",
-								"label": "None"
-							},
-							{
-								"value": "apple",
-								"label": "Apple"
-							},
-							{
-								"value": "banana",
-								"label": "Banana"
-							},
-							{
-								"value": "bottle",
-								"label": "Bottle"
-							},
-							{
-								"value": "box",
-								"label": "Box"
-							},
-							{
-								"value": "carrot",
-								"label": "Carrot"
-							},
-							{
-								"value": "chat_bubble",
-								"label": "Chat bubble"
-							},
-							{
-								"value": "check_mark",
-								"label": "Check mark"
-							},
-							{
-								"value": "clipboard",
-								"label": "Clipboard"
-							},
-							{
-								"value": "dairy",
-								"label": "Dairy"
-							},
-							{
-								"value": "dairy_free",
-								"label": "Dairy free"
-							},
-							{
-								"value": "dryer",
-								"label": "Dryer"
-							},
-							{
-								"value": "eye",
-								"label": "Eye"
-							},
-							{
-								"value": "fire",
-								"label": "Fire"
-							},
-							{
-								"value": "gluten_free",
-								"label": "Gluten free"
-							},
-							{
-								"value": "heart",
-								"label": "Heart"
-							},
-							{
-								"value": "iron",
-								"label": "Iron"
-							},
-							{
-								"value": "leaf",
-								"label": "Leaf"
-							},
-							{
-								"value": "leather",
-								"label": "Leather"
-							},
-							{
-								"value": "lightning_bolt",
-								"label": "Lightning bolt"
-							},
-							{
-								"value": "lipstick",
-								"label": "Lipstick"
-							},
-							{
-								"value": "lock",
-								"label": "Lock"
-							},
-							{
-								"value": "map_pin",
-								"label": "Map pin"
-							},
-							{
-								"value": "nut_free",
-								"label": "Nut free"
-							},
-							{
-								"value": "pants",
-								"label": "Pants"
-							},
-							{
-								"value": "paw_print",
-								"label": "Paw print"
-							},
-							{
-								"value": "pepper",
-								"label": "Pepper"
-							},
-							{
-								"value": "perfume",
-								"label": "Perfume"
-							},
-							{
-								"value": "plane",
-								"label": "Plane"
-							},
-							{
-								"value": "plant",
-								"label": "Plant"
-							},
-							{
-								"value": "price_tag",
-								"label": "Price tag"
-							},
-							{
-								"value": "question_mark",
-								"label": "Question mark"
-							},
-							{
-								"value": "recycle",
-								"label": "Recycle"
-							},
-							{
-								"value": "return",
-								"label": "Return"
-							},
-							{
-								"value": "ruler",
-								"label": "Ruler"
-							},
-							{
-								"value": "serving_dish",
-								"label": "Serving dish"
-							},
-							{
-								"value": "shirt",
-								"label": "Shirt"
-							},
-							{
-								"value": "shoe",
-								"label": "Shoe"
-							},
-							{
-								"value": "silhouette",
-								"label": "Silhouette"
-							},
-							{
-								"value": "snowflake",
-								"label": "Snowflake"
-							},
-							{
-								"value": "star",
-								"label": "Star"
-							},
-							{
-								"value": "stopwatch",
-								"label": "Stopwatch"
-							},
-							{
-								"value": "truck",
-								"label": "Truck"
-							},
-							{
-								"value": "washing",
-								"label": "Washing"
-							}
-						],
-						"default": "none",
-						"label": "Icon"
-					},
-					{
-		        "type": "richtext",
-		        "id": "text",
-		        "label": "Text",
-		        "default": "<p>Add a short description for this tabbed section</p>"
-		      },
-					{
-						"type": "select",
-						"id": "text_columns",
-						"label": "Desktop columns",
-						"options": [
-							{
-								"value": "1",
-								"label": "One column"
-							},
-							{
-								"value": "2",
-								"label": "Two columns"
-							},
-							{
-								"value": "3",
-								"label": "Three columns"
-							}
-						],
-						"default": "1"
-					},
-	        {
-	          "type": "page",
-		        "id": "page",
-	          "label": "Tab content from page"
-	        },
-					{
-						"type": "liquid",
-						"id": "custom_liquid",
-						"label": "Custom liquid",
-						"info": "Add app snippets or other Liquid code to create advanced customizations. For product description, you can use {{ product.description }}"
-					}
-        ]
-      },
-			{
-        "type": "specification",
-        "name": "Specifications",
-				"limit": 1,
-        "settings": [
-					{
-						"type": "text",
-						"id": "tab_label",
-						"default": "Specifications",
-						"label": "Label"
-					},
-					{
-						"type": "select",
-						"id": "icon",
-						"options": [
-							{
-								"value": "none",
-								"label": "None"
-							},
-							{
-								"value": "apple",
-								"label": "Apple"
-							},
-							{
-								"value": "banana",
-								"label": "Banana"
-							},
-							{
-								"value": "bottle",
-								"label": "Bottle"
-							},
-							{
-								"value": "box",
-								"label": "Box"
-							},
-							{
-								"value": "carrot",
-								"label": "Carrot"
-							},
-							{
-								"value": "chat_bubble",
-								"label": "Chat bubble"
-							},
-							{
-								"value": "check_mark",
-								"label": "Check mark"
-							},
-							{
-								"value": "clipboard",
-								"label": "Clipboard"
-							},
-							{
-								"value": "dairy",
-								"label": "Dairy"
-							},
-							{
-								"value": "dairy_free",
-								"label": "Dairy free"
-							},
-							{
-								"value": "dryer",
-								"label": "Dryer"
-							},
-							{
-								"value": "eye",
-								"label": "Eye"
-							},
-							{
-								"value": "fire",
-								"label": "Fire"
-							},
-							{
-								"value": "gluten_free",
-								"label": "Gluten free"
-							},
-							{
-								"value": "heart",
-								"label": "Heart"
-							},
-							{
-								"value": "iron",
-								"label": "Iron"
-							},
-							{
-								"value": "leaf",
-								"label": "Leaf"
-							},
-							{
-								"value": "leather",
-								"label": "Leather"
-							},
-							{
-								"value": "lightning_bolt",
-								"label": "Lightning bolt"
-							},
-							{
-								"value": "lipstick",
-								"label": "Lipstick"
-							},
-							{
-								"value": "lock",
-								"label": "Lock"
-							},
-							{
-								"value": "map_pin",
-								"label": "Map pin"
-							},
-							{
-								"value": "nut_free",
-								"label": "Nut free"
-							},
-							{
-								"value": "pants",
-								"label": "Pants"
-							},
-							{
-								"value": "paw_print",
-								"label": "Paw print"
-							},
-							{
-								"value": "pepper",
-								"label": "Pepper"
-							},
-							{
-								"value": "perfume",
-								"label": "Perfume"
-							},
-							{
-								"value": "plane",
-								"label": "Plane"
-							},
-							{
-								"value": "plant",
-								"label": "Plant"
-							},
-							{
-								"value": "price_tag",
-								"label": "Price tag"
-							},
-							{
-								"value": "question_mark",
-								"label": "Question mark"
-							},
-							{
-								"value": "recycle",
-								"label": "Recycle"
-							},
-							{
-								"value": "return",
-								"label": "Return"
-							},
-							{
-								"value": "ruler",
-								"label": "Ruler"
-							},
-							{
-								"value": "serving_dish",
-								"label": "Serving dish"
-							},
-							{
-								"value": "shirt",
-								"label": "Shirt"
-							},
-							{
-								"value": "shoe",
-								"label": "Shoe"
-							},
-							{
-								"value": "silhouette",
-								"label": "Silhouette"
-							},
-							{
-								"value": "snowflake",
-								"label": "Snowflake"
-							},
-							{
-								"value": "star",
-								"label": "Star"
-							},
-							{
-								"value": "stopwatch",
-								"label": "Stopwatch"
-							},
-							{
-								"value": "truck",
-								"label": "Truck"
-							},
-							{
-								"value": "washing",
-								"label": "Washing"
-							}
-						],
-						"default": "none",
-						"label": "Icon"
-					},
-					{
-						"type": "textarea",
-						"id": "content",
-						"label": "Metafields",
-						"info": "Include a list of labels and product metafield keys below, separated by a colon, one per line. Example: Color:custom.color"
-					},
-					{
-						"type": "text",
-						"id": "empty_field_label",
-						"default": "N/A",
-						"label": "Empty field text",
-						"info": "Text to use for empty fields"
-					}
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Tabbed content",
-				"blocks": [
-					{
-						"type": "tab"
-					},
-					{
-						"type": "tab"
-					},
-					{
-						"type": "tab"
-					}
-				]
-      }
-    ],
-		"enabled_on": {
-			"templates": ["*"],
-			"groups": [
-				"header", "footer"
-			]
-		}
+    "groups": [
+      "header",
+      "footer"
+    ]
   }
+}
 {% endschema %}

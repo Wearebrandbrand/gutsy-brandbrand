@@ -561,6 +561,12 @@ if (!customElements.get('product-slider')) {
       });
       this.flkty.on('settle', function (index) {
         _this.selectedIndex = index;
+        let current_slide = this.cells[index].element,
+          current_media = current_slide.querySelector('.product-single__media');
+
+        if (current_media.classList.contains('product-single__media-native-video')) {
+          current_media.querySelector('video').play();
+        }
       });
       this.flkty.on('change', (index) => {
 

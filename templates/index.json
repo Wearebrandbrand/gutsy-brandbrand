@@ -365,7 +365,7 @@
           "settings": {
             "text": "Gutsy op bezoek bij Koning Filip.",
             "image": "shopify://shop_images/2022_VRT_NWS_Journaal_logo_svg.png",
-            "image_width": 100,
+            "image_width": 320,
             "link": ""
           }
         },
@@ -374,7 +374,7 @@
           "settings": {
             "text": "Gutsy scoort bij de beste merken van België",
             "image": "shopify://shop_images/testaankoop.png",
-            "image_width": 100,
+            "image_width": 300,
             "link": ""
           }
         },
@@ -383,7 +383,7 @@
           "settings": {
             "text": "2 Jonge ondernemers veroveren België met hondenvoeding op basis van unieke eiwitbron.",
             "image": "shopify://shop_images/logo-de-tijd.webp",
-            "image_width": 100,
+            "image_width": 340,
             "link": ""
           }
         },
@@ -392,7 +392,7 @@
           "settings": {
             "text": "Onze brokjes zijn verkozen tot product van het jaar 2024.",
             "image": "shopify://shop_images/POY-UK-2024-CONSO-BE-AST.png",
-            "image_width": 100,
+            "image_width": 200,
             "link": ""
           }
         }

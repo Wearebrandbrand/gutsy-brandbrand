@@ -391,8 +391,8 @@
           "type": "logo",
           "settings": {
             "text": "Onze brokjes zijn verkozen tot product van het jaar 2024.",
-            "image": "shopify://shop_images/POY-UK-2024-CONSO-BE-AST.png",
-            "image_width": 200,
+            "image": "shopify://shop_images/POY_2024_Logo_RGB.webp",
+            "image_width": 100,
             "link": ""
           }
         }

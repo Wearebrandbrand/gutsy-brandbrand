@@ -303,8 +303,8 @@
         "column_a": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
+            "image": "shopify://shop_images/1.LH_hypoallergeen_beige.png",
+            "image_width": 50,
             "image_link": "",
             "title": "Hypoallergeen",
             "text": "<p>Insecten zijn de meest zuivere dierlijke eiwitbron dat geen allergische reacties teweegbrengen.</p>",
@@ -315,8 +315,8 @@
         "column_b": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
+            "image": "shopify://shop_images/1.LH_proteine_beige.png",
+            "image_width": 50,
             "image_link": "",
             "title": "Pure proteine",
             "text": "<p>Onze eiwitten bevatten een verteerbaarheids-score van 94,7%. We gebruiken alleen hoogwaardige en licht verteerbare eiwitten in onze hondenvoeding.</p>",
@@ -327,8 +327,8 @@
         "column_c": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
+            "image": "shopify://shop_images/1.LH_planeet_beige.png",
+            "image_width": 50,
             "image_link": "",
             "title": "Een ecologisch alternatief",
             "text": "<p>De ecologische voetafdruk van insecten is 30 keer kleiner van die van rundvlees.</p>",
@@ -339,8 +339,8 @@
         "column_d": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
+            "image": "shopify://shop_images/1.LH_vertering-beige.png",
+            "image_width": 50,
             "image_link": "",
             "title": "Rijk aan vitaminen en  mineralen",
             "text": "<p>Insecten bevatten essentiële vitaminen en mineralen waaronder ijzer, vitamine A, B2 en D.</p>",
@@ -351,8 +351,8 @@
         "column_e": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
-            "image_full_width": true,
+            "image": "shopify://shop_images/1.LH_insect_beige.png",
+            "image_width": 50,
             "image_link": "",
             "title": "natuurlijke schoonmakers",
             "text": "<p>De humane restatomen kunnen gereduceerd worden doordat insecten deze gebruiken als voedingsbronnen.</p>",

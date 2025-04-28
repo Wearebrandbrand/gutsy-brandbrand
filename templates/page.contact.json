@@ -32,10 +32,22 @@
             "custom_liquid": ""
           }
         },
+        "tab_bRAVrr": {
+          "type": "tab",
+          "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
+          "settings": {
+            "tab_label": "Gebruik & voedingstips",
+            "icon": "none",
+            "text": "",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
         "tab_yEEQ9G": {
           "type": "tab",
           "settings": {
-            "tab_label": "{{ metaobjects.faq_content_gebruik_voedingstips[\"hoeveel-voeding-moet-ik-mijn-hond-geven-per-dag\"].referentie.value }}",
+            "tab_label": "",
             "icon": "none",
             "text": "",
             "text_columns": "1",
@@ -46,6 +58,7 @@
       },
       "block_order": [
         "tab_XLUwrV",
+        "tab_bRAVrr",
         "tab_yEEQ9G"
       ],
       "settings": {

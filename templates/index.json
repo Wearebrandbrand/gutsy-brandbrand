@@ -127,7 +127,7 @@
         "column_UUyLUt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/USP-1.svg",
+            "image": "shopify://shop_images/belgium.svg",
             "image_width": 140,
             "image_link": "",
             "title": "Gemaakt in belgië",
@@ -182,6 +182,14 @@
     "table_section": {
       "type": "table-section",
       "blocks": {
+        "table_content_mRD67D": {
+          "type": "table_content",
+          "settings": {
+            "text": "Zonder bewaarmiddelen, kleurstoffen of smaakversterkers",
+            "other_brand": false,
+            "gutys_brand": true
+          }
+        },
         "table_block_b": {
           "type": "table_content",
           "settings": {
@@ -190,18 +198,10 @@
             "gutys_brand": true
           }
         },
-        "table_content_RXUeMA": {
+        "table_block_a": {
           "type": "table_content",
           "settings": {
-            "text": "Goedgekeurd bij de top van Testaankoop",
-            "other_brand": false,
-            "gutys_brand": true
-          }
-        },
-        "table_content_mRD67D": {
-          "type": "table_content",
-          "settings": {
-            "text": "Graanvrij",
+            "text": "Gemaakt in België",
             "other_brand": false,
             "gutys_brand": true
           }
@@ -209,15 +209,15 @@
         "table_block_d": {
           "type": "table_content",
           "settings": {
-            "text": "Voorkomt krabben en likken aan de poten",
+            "text": "Graanvrij",
             "other_brand": false,
             "gutys_brand": true
           }
         },
-        "table_block_a": {
+        "table_content_RXUeMA": {
           "type": "table_content",
           "settings": {
-            "text": "Gemaakt met lokale, kraakverse producten",
+            "text": "Goedgekeurd bij de top van Testaankoop",
             "other_brand": false,
             "gutys_brand": true
           }
@@ -232,17 +232,17 @@
         }
       },
       "block_order": [
-        "table_block_b",
-        "table_content_RXUeMA",
         "table_content_mRD67D",
-        "table_block_d",
+        "table_block_b",
         "table_block_a",
+        "table_block_d",
+        "table_content_RXUeMA",
         "table_block_c"
       ],
       "settings": {
         "heading": "Gutsy Voeding",
         "sub_heading": "Supermarkt voeding vs.",
-        "description": "<p>Al meer dan 10.000 baasjes merkten een verschil al na 2-3 weken.</p>",
+        "description": "<p>Ontdek hier het verschil:</p>",
         "image": "shopify://shop_images/52b6d6b7-221c-49d5-9f5e-d8c3a6fd856b.png",
         "image_2": "shopify://shop_images/06505a46-6137-4329-ad98-32e5c2351e7c.png",
         "button_text": "Probeer het nu",

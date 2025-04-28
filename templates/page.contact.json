@@ -44,10 +44,11 @@
             "custom_liquid": ""
           }
         },
-        "tab_yEEQ9G": {
+        "tab_TL48Xy": {
           "type": "tab",
+          "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
           "settings": {
-            "tab_label": "",
+            "tab_label": " Bestelling & levering",
             "icon": "none",
             "text": "",
             "text_columns": "1",
@@ -59,7 +60,7 @@
       "block_order": [
         "tab_XLUwrV",
         "tab_bRAVrr",
-        "tab_yEEQ9G"
+        "tab_TL48Xy"
       ],
       "settings": {
         "heading": "FAQ",

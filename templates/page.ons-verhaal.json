@@ -304,6 +304,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/IMG.jpg",
+            "image_width": 50,
             "image_link": "",
             "title": "Hypoallergeen",
             "text": "<p>Insecten zijn de meest zuivere dierlijke eiwitbron dat geen allergische reacties teweegbrengen.</p>",
@@ -315,6 +316,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/IMG.jpg",
+            "image_width": 50,
             "image_link": "",
             "title": "Pure proteine",
             "text": "<p>Onze eiwitten bevatten een verteerbaarheids-score van 94,7%. We gebruiken alleen hoogwaardige en licht verteerbare eiwitten in onze hondenvoeding.</p>",
@@ -326,6 +328,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/IMG.jpg",
+            "image_width": 50,
             "image_link": "",
             "title": "Een ecologisch alternatief",
             "text": "<p>De ecologische voetafdruk van insecten is 30 keer kleiner van die van rundvlees.</p>",
@@ -337,6 +340,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/IMG.jpg",
+            "image_width": 50,
             "image_link": "",
             "title": "Rijk aan vitaminen en  mineralen",
             "text": "<p>Insecten bevatten essentiële vitaminen en mineralen waaronder ijzer, vitamine A, B2 en D.</p>",
@@ -348,6 +352,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/IMG.jpg",
+            "image_width": 50,
             "image_link": "",
             "title": "natuurlijke schoonmakers",
             "text": "<p>De humane restatomen kunnen gereduceerd worden doordat insecten deze gebruiken als voedingsbronnen.</p>",
@@ -386,26 +391,26 @@
     "our-team": {
       "type": "our-team",
       "blocks": {
-        "team_member_a": {
+        "team_member_e": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
+            "member_image": "shopify://shop_images/Scherm_afbeelding_2024-06-06_om_10.48.12.png",
+            "member_name": "Noémie",
+            "member_post": "Influencer marketing"
           }
         },
         "team_member_b": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
+            "member_image": "shopify://shop_images/Achilles.jpg",
+            "member_name": "Achilles",
             "member_post": "Co-Founder"
           }
         },
-        "team_member_c": {
+        "team_member_a": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
+            "member_image": "shopify://shop_images/custom_resized_a24b6071-6043-414a-a8f8-1b799b978d0c.jpg",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -413,26 +418,26 @@
         "team_member_d": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
+            "member_image": "shopify://shop_images/IMG_2399.jpg",
+            "member_name": "Julie",
+            "member_post": "Operations Manager"
           }
         },
-        "team_member_e": {
+        "team_member_c": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
+            "member_image": "shopify://shop_images/2e4181eb-c6f2-4417-ac93-cb9988a59f7d.jpg",
+            "member_name": "Wouter",
+            "member_post": "Business Development"
           }
         }
       },
       "block_order": [
-        "team_member_a",
+        "team_member_e",
         "team_member_b",
-        "team_member_c",
+        "team_member_a",
         "team_member_d",
-        "team_member_e"
+        "team_member_c"
       ],
       "settings": {
         "heading": "het team",

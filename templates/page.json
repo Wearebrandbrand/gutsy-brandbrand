@@ -63,15 +63,6 @@
         "bottom_bar_text": ""
       }
     },
-    "spacer_wgHyx7": {
-      "type": "spacer",
-      "settings": {
-        "spacer_mobile": 50,
-        "spacer_desktop": 100,
-        "border_separator": false,
-        "border_separator_full": false
-      }
-    },
     "store_locator_m37JGH": {
       "type": "store-locator",
       "settings": {
@@ -84,6 +75,15 @@
       "disabled": true,
       "settings": {}
     },
+    "spacer_wgHyx7": {
+      "type": "spacer",
+      "settings": {
+        "spacer_mobile": 50,
+        "spacer_desktop": 100,
+        "border_separator": false,
+        "border_separator_full": false
+      }
+    },
     "multicolumn_3PgeaW": {
       "type": "multicolumn",
       "blocks": {
@@ -91,7 +91,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/woofie.png",
-            "image_width": 250,
+            "image_width": 50,
             "image_link": "",
             "title": "Casper eet weer met plezier",
             "text": "<p>Eten was voor lange tijd een strijd, tot we Gutsy ontdekte. Dankzij de smaakvolle brokken kijkt hij nu elke maaltijd verlangend uit. </p><p>- Baasje van Casper 🐾</p>",
@@ -103,7 +103,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2024-10-05_at_10.33.18.jpg",
-            "image_width": 250,
+            "image_width": 50,
             "image_link": "",
             "title": "Max voelt zich weer top!",
             "text": "<p>Max had vaak last van een moeilijke vertering, maar sinds hij Gutsy eet, is dat verleden tijd. De brokken zijn licht verteerbaar en geven hem eindelijk de energie die hij nodig heeft. En het gaat ook nog eens vlot binnen!</p><p>- Baasje van Max 🐾</p>",
@@ -115,7 +115,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2024-09-28_at_16.38.15.jpg",
-            "image_width": 250,
+            "image_width": 50,
             "image_link": "",
             "title": "Luna groeit gelukkig en gezond!",
             "text": "<p>Onze pup had moeite met eten, maar Gutsy bracht daar verandering in. De brokken zijn perfect afgestemd op haar jonge maagje en ondersteunen haar. </p><p>- Baasje van Luna🐾</p>",
@@ -161,7 +161,7 @@
         "heading_VPhRcE": {
           "type": "heading",
           "settings": {
-            "text": "Pammeke is eindelijk van haar allergieën vanaf",
+            "text": "\"Pammeke is eindelijk van zijn allergieën vanaf\"",
             "heading_size": "h3"
           }
         },
@@ -203,9 +203,9 @@
   },
   "order": [
     "slideshow_Vt8p9D",
-    "spacer_wgHyx7",
     "store_locator_m37JGH",
     "main",
+    "spacer_wgHyx7",
     "multicolumn_3PgeaW",
     "image_with_text_TjxyB9"
   ]

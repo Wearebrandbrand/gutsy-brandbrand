@@ -111,22 +111,12 @@
             "custom_liquid": ""
           }
         },
-        "collapsible_tab_BJAHj6": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "open": false,
-            "content": "",
-            "page": "",
-            "custom_liquid": ""
-          }
-        },
         "collapsible_tab_mDqDC4": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Hoeveel voeding moet ik mijn hond geven per dag?",
             "open": false,
-            "content": "",
+            "content": "<p>Bij elk van onze producten vind je een voedingstabel met het aanbevolen dagelijkse voedingsadvies. Deze tabel houdt rekening met het gewicht van je hond. Let wel: de ideale hoeveelheid kan variëren afhankelijk van de leeftijd, het activiteitsniveau en de individuele behoeften van je hond. We raden aan om de richtlijnen op de verpakking te volgen en indien nodig licht aan te passen. Zo zorg je ervoor dat je hond precies krijgt wat hij of zij nodig heeft.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -134,9 +124,179 @@
         "collapsible_tab_XAtLzx": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Moet ik overschakelen van de oude voeding? Hoe doe ik dat het best?",
             "open": false,
-            "content": "",
+            "content": "<p>Ja, als je hond een andere voeding gewend is, raden we aan om stap voor stap over te schakelen naar Gutsy. Zo geef je het spijsverteringssysteem van je hond de tijd om te wennen aan de nieuwe ingrediënten.</p><p>Onze Go-To Gutsy handleiding:</p><ul><li>Dag 1-2: 25% Gutsy + 75% huidige voeding<br/><br/></li><li>Dag 3-4: 50% Gutsy + 50% huidige voeding<br/><br/></li><li>Dag 5-6: 75% Gutsy + 25% huidige voeding<br/><br/></li><li>Dag 7: Tijd om helemaal over te stappen op Gutsy en volop te genieten!</li></ul><p>Een rustige overgang helpt om mogelijke spijsverteringsproblemen te voorkomen en zorgt ervoor dat je hond vanaf het begin optimaal kan genieten van zijn nieuwe voeding.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_Yh7TAg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wanneer en hoe schakel ik over van puppyvoeding naar volwassenvoeding?",
+            "open": false,
+            "content": "<p>De overstap van puppy- naar volwassenvoeding hangt af van de grootte van je hond. Hieronder vind je de algemene richtlijnen:</p><ul><li><strong>Mini-rassen</strong> (bijv. Chihuahua, Maltezer): vanaf 8 maanden<br/><br/></li><li><strong>Kleine rassen</strong> (bijv. Jack Russell, Franse Bulldog): vanaf 12 maanden<br/><br/></li><li><strong>Middelgrote rassen</strong> (bijv. Cocker Spaniel): vanaf 14 maanden<br/><br/></li><li><strong>Grote rassen</strong> (bijv. Duitse Herder, Golden Retriever): vanaf 18 maanden<br/><br/></li><li><strong>Zeer grote rassen</strong> (bijv. Spaanse Mastiff, Berner Sennenhond): vanaf 24 maanden<br/><br/></li></ul><p>Puppy's hebben meer calorieën nodig om te groeien. Bij de overstap naar volwassenvoeding zal je merken dat het aantal maaltijden per dag vaak lager ligt. Raadpleeg onze voedingstabel voor het juiste aantal maaltijden en de aanbevolen dagelijkse hoeveelheid.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_LkUwCp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wat is de levertijd van mijn bestelling?",
+            "open": false,
+            "content": "<p>Na je bestelling gaan onze chauffeurs aan de slag om je pakket zo snel mogelijk op het door jou opgegeven adres af te leveren. In België, Nederland en Luxemburg streven we ernaar om onze producten binnen 2 dagen na bestelling op de gekozen bestemming af te leveren. Helaas is het altijd mogelijk dat er een vertraging optreedt in onze logistieke keten, waardoor het iets langer duurt. In andere Europese landen hangt dit af van onze lokale logistieke partners en proberen we binnen 5 dagen te leveren.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_JYK4qf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Kan ik een abonnement nemen? Hoe werkt dat?",
+            "open": false,
+            "content": "<p>Zeker! Met een abonnement hoef je nooit meer zelf te denken aan het tijdig bestellen van nieuwe voeding. Bovendien bespaar je permanent 10% op je bestellingen. Je kiest zelf hoe vaak je een levering wilt ontvangen: elke 4, 5, 6, 8 of 10 weken. Let op: om je abonnement te kunnen beheren (aanpassen, pauzeren of annuleren), moet je <strong>zelf een account aanmaken</strong> op onze website. Via je account op onze website kan je je abonnement op elk moment bekijken, aanpassen of annuleren. Flexibel en helemaal afgestemd op jouw behoeften! Heb je vragen of hulp nodig bij je abonnement? Aarzel dan niet om ons te contacteren, we helpen je graag verder!</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_wbJCqp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wat als mijn pakket niet aankomt of beschadigd is?",
+            "open": false,
+            "content": "<p>Is je pakket niet aangekomen of beschadigd? Neem dan zo snel mogelijk contact met ons op via woof@gutsy.dog. Bij beschadigde leveringen vragen we om enkele duidelijke foto's mee te sturen, zodat we het probleem snel kunnen beoordelen. We staan altijd klaar om je verder te helpen en zoeken samen naar een passende oplossing!</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_bURDin": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Kan ik mijn bestelling wijzigen of annuleren?",
+            "open": false,
+            "content": "<p>Spijtig genoeg kan dit niet meer. Onze pakketten worden onmiddellijk verzonden nadat je de bestelling hebt geplaatst.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_dXFAkN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Welke betaalmethodes accepteren jullie?",
+            "open": false,
+            "content": "<p>Bij ons kan je veilig en gemakkelijk betalen met de volgende methodes: Bancontact, Visa, Mastercard, Maestro, American Express, Shop Pay, Apple Pay en Google Pay. Zo kies je zelf de betaalmethode die het best bij jou past.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_K9LQFF": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Kan ik hondenvoeding retourneren?",
+            "open": false,
+            "content": "<p>Ja, je kunt je bestelling retourneren, op voorwaarde dat de verpakking ongeopend en onbeschadigd is. De verzendkosten voor het terugsturen zijn wel voor eigen rekening. Wil je een retour aanmelden? Stuur dan een e-mail naar woof@gutsy.dog met als onderwerp “RETURN”. Ons team helpt je vervolgens graag verder om het retourproces vlot en correct te laten verlopen.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_j6gYYj": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wat als ik niet tevreden ben? Is er een proefperiode of geld-terug-garantie?",
+            "open": false,
+            "content": "<p>We willen dat jij én je hond 100% tevreden zijn. Daarom bieden we een 60 dagen niet-tevreden-geld-terug garantie. Ben je binnen die periode niet tevreden over onze voeding? Dan krijg je je geld terug. Stuur ons gewoon een e-mail naar woof@gutsy.dog, en we helpen je graag verder.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_Qww847": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is deze voeding goed voor honden met een gevoelige maag / voedselintolerantie?",
+            "open": false,
+            "content": "<p>Ja, Gutsy is uitermate geschikt voor honden met een gevoelige maag. Onze voeding is hypoallergeen en bevat insecteneiwitten met een uitzonderlijk hoge verteerbaarheid van 94,7%. Dat betekent dat je hond de voeding makkelijk opneemt en verwerkt, wat helpt om spijsverteringsproblemen zoals winderigheid, diarree of misselijkheid te verminderen. We kiezen bewust voor natuurlijke, zuivere ingrediënten zonder kunstmatige toevoegingen of onnodige vulstoffen — precies wat honden met een gevoelige maag nodig hebben. Klanten geven vaak aan dat hun hond zich zichtbaar beter voelt na de overstap op Gutsy. Onze licht verteerbare samenstelling ondersteunt een gezonde darmflora en zorgt ervoor dat ook gevoelige honden met plezier én zonder zorgen kunnen eten.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_dKtP9J": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Zijn er toegevoegde vitamines of supplementen?",
+            "open": false,
+            "content": "<p>In onze voeding voegen we geen specifieke supplementen toe zoals je die afzonderlijk zou geven, maar we verrijken onze recepten wel met zorgvuldig geselecteerde ingrediënten die de gezondheid van je hond ondersteunen. Zo voegen we onder andere toe:</p><p><strong>Zalmolie:</strong> rijk aan omega-3 vetzuren, ondersteunt een gezonde huid en een glanzende vacht.</p><p><strong>Kurkuma:</strong> bekend om zijn natuurlijke ontstekingsremmende werking en ondersteuning van gezonde gewrichten.</p><p><strong>Yucca:</strong> helpt de darmgezondheid te verbeteren en draagt bij aan minder geurige stoelgang.</p><p><strong>Rozemarijn:</strong> een aromatisch kruid dat de bloedcirculatie bevordert en de aanmaak van aminozuren ondersteunt.Daarnaast bevat onze voeding essentiële vitamines zoals:</p><p><strong>Vitamine A:</strong> belangrijk voor de huid, het zicht en het immuunsysteem.</p><p><strong>Vitamine D₃:</strong> ondersteunt de botopbouw en het calcium-metabolisme.</p><p><strong>Vitamine E:</strong> een krachtige antioxidant die cellen helpt beschermen.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_LhqtUh": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Wat moet ik doen als mijn hond diarree krijgt na overschakeling?",
+            "open": false,
+            "content": "<p>Een lichte vorm van diarree kan soms voorkomen tijdens de overgang naar nieuwe voeding. Dit is meestal tijdelijk en heeft te maken met de aanpassing van het spijsverteringsstelsel. Wij raden aan om de overgang geleidelijk te laten verlopen over een periode van 7 tot 10 dagen: meng stap voor stap steeds meer van de nieuwe voeding door de oude. Als de diarree langer dan een paar dagen aanhoudt of als je hond andere symptomen vertoont zoals sloomheid, braken of weigeren te eten, neem dan contact op met je dierenarts.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_7ExGkg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Hoe lang blijft de voeding goed na openen?",
+            "open": false,
+            "content": "<p>Onze voeding blijft 18 maanden goed na de productiedatum, zolang de verpakking ongeopend blijft. Na opening adviseren we de voeding binnen 2 à 3 maanden te gebruiken. Zorg ervoor dat de zak na elk gebruik goed gesloten wordt om de versheid optimaal te bewaren.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_gtQUBf": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Hebben jullie voeding tegen constipatie?",
+            "open": false,
+            "content": "<p>Bij <strong>Gutsy</strong> begrijpen we hoe vervelend het is wanneer je huisdier last heeft van obstipatie of moeilijke stoelgang. Daarom is onze <strong>voeding standaard vezelrijk</strong>, wat zorgt voor een <strong>vlotte en gezonde darmflora</strong>. De extra vezels stimuleren de darmwerking en helpen zo om de stoelgang weer op gang te brengen — op een natuurlijke manier. Onze brokken zijn speciaal ontwikkeld om de darmen actief te houden. Dit maakt Gutsy ideaal voor honden en katten die gevoelig zijn voor harde of onregelmatige ontlasting. Heeft je dier specifieke darmklachten? Dan kun je onze <strong>probiotica supplementen</strong> gebruiken als een ondersteunende kuur om het evenwicht in de darmen te herstellen. Extra tips: Zorg voor <strong>voldoende beweging</strong> – wandelen stimuleert de natuurlijke darmactiviteit. Zorg altijd voor <strong>vers drinkwater</strong>.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_xdHtUc": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Mijn hond heeft last van diarree, hoe komt dit?",
+            "open": false,
+            "content": "<p>Heeft jouw hond last van diarree of winderigheid? Dan weet je hoe vervelend dat kan zijn — zowel voor je hond als voor jou als baasje. Bij Gutsy krijgen we vaak te horen van klanten dat deze klachten verdwenen zijn zodra ze overstapten op onze voeding. Dat is geen toeval: onze brokken zijn licht verteerbaar dankzij het gebruik van hoogwaardige insecteneiwitten, die veel minder vaak allergieën of intoleranties uitlokken. Door te kiezen voor zorgvuldig geselecteerde, natuurlijke ingrediënten zonder overbodige toevoegingen, zorgen we ervoor dat de darmen van je hond rust en balans terugvinden. Diarree bij honden kan veel verschillende oorzaken hebben. Soms komt het doordat je hond buiten iets eet wat de darmflora verstoort — zoals een bacterie of parasiet. In andere gevallen speelt een allergie mee, of ligt de oorzaak bij stress of een plotse verandering van voeding. Ook bij een overschakeling naar nieuwe brokken kan de darm even moeten wennen, wat in de eerste één à twee weken soms leidt tot slappere stoelgang. Maar wanneer de samenstelling klopt en je hond tijd krijgt om zich aan te passen, verdwijnen deze klachten meestal vanzelf. Het is belangrijk om naast goede voeding ook aandacht te besteden aan andere factoren: geef je hond voldoende beweging om de darmwerking te stimuleren, zorg voor een rustige omgeving, en voorzie altijd vers drinkwater. Wil je extra ondersteuning bieden, dan kun je tijdelijk een probiotica-supplement geven om het spijsverteringsstelsel verder in balans te brengen. Let ook op met tafelrestjes, want die kunnen makkelijk een gevoelige maag of darmen ontregelen. Tot slot is het aan te raden om je hond minstens vier keer per jaar te ontwormen of af en toe een ontlastingsonderzoek te laten uitvoeren. Blijft de diarree ondanks deze aanpassingen toch aanhouden, of merk je bijkomende klachten zoals lusteloosheid, gewichtsverlies of braken op? Dan is het verstandig om contact op te nemen met je dierenarts. Diarree kan immers ook een symptoom zijn van een onderliggende aandoening die medische opvolging vereist. Bij Gutsy geloven we in voeding die écht het verschil maakt — en dat begint bij een gezonde buik. Onze licht verteerbare brokken zorgen voor rust in het spijsverteringsstelsel en geven jouw hond opnieuw energie, comfort en een gelukkig gevoel.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_iF7FGy": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Waarom eet mijn hond gras?",
+            "open": false,
+            "content": "<p>Het eten van gras is voor veel honden normaal gedrag en meestal geen reden tot ongerustheid. Sommige honden doen het af en toe omwille van lichte maagklachten; gras kan in zulke gevallen helpen om misselijkheid te verlichten of braken op te wekken. Andere honden eten gras uit gewoonte, nieuwsgierigheid, verveling of zelfs omdat ze het lekker vinden — vooral jong en sappig gras is aantrekkelijk. In zeldzamere gevallen kan het wijzen op een gebrek aan vezels of andere voedingsstoffen in de voeding. Daarom is een evenwichtig dieet belangrijk. Zolang je hond verder gezond is, goed eet en geen andere klachten vertoont, is gras eten doorgaans geen probleem. Zie je plots veranderingen in gedrag of spijsvertering, of eet je hond opvallend veel gras, dan is het raadzaam om even contact op te nemen met je dierenarts.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_xHdQkG": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is de verpakking recycleerbaar?",
+            "open": false,
+            "content": "<p>Ja! Onze verpakking is gemaakt van monoplastic, wat betekent dat alle zakken 100% recyclebaar zijn. Je kunt je Gutsy-zakje eenvoudig recyclen door het bij het plastic afval te sorteren. Monoplastic heeft als voordeel dat het makkelijker en efficiënter te recyclen is dan verpakkingen die uit meerdere materialen bestaan. We hebben bewust gekozen voor deze oplossing, ook al betekent dit een extra investering van onze kant. Zo zorgen we samen voor een zo klein mogelijke ecologische pootafdruk. </p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_zENAAb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Hoe zorgen jullie voor een duurzame keten?",
+            "open": false,
+            "content": "<p>Wij zetten ons actief in voor een duurzame keten. Enerzijds doen we dit door insecten te gebruiken als belangrijke eiwitbron in onze voeding — een milieuvriendelijk alternatief voor traditionele dierlijke eiwitten. Anderzijds verzamelen we onze ingrediënten zoveel mogelijk lokaal, dicht bij onze fabriek, om transport en CO₂-uitstoot te beperken. Ook bij de keuze van onze verpakkingen maken we bewuste, duurzame keuzes. We doen er alles aan om een product aan te bieden dat de ecologische voetafdruk van zowel de consument als zijn hond zo klein mogelijk houdt.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -150,12 +310,28 @@
         "collapsible_tab_7TWtcC",
         "collapsible_tab_JWCTKW",
         "collapsible_tab_jC6R3f",
-        "collapsible_tab_BJAHj6",
         "collapsible_tab_mDqDC4",
-        "collapsible_tab_XAtLzx"
+        "collapsible_tab_XAtLzx",
+        "collapsible_tab_Yh7TAg",
+        "collapsible_tab_LkUwCp",
+        "collapsible_tab_JYK4qf",
+        "collapsible_tab_wbJCqp",
+        "collapsible_tab_bURDin",
+        "collapsible_tab_dXFAkN",
+        "collapsible_tab_K9LQFF",
+        "collapsible_tab_j6gYYj",
+        "collapsible_tab_Qww847",
+        "collapsible_tab_dKtP9J",
+        "collapsible_tab_LhqtUh",
+        "collapsible_tab_7ExGkg",
+        "collapsible_tab_gtQUBf",
+        "collapsible_tab_xdHtUc",
+        "collapsible_tab_iF7FGy",
+        "collapsible_tab_xHdQkG",
+        "collapsible_tab_zENAAb"
       ],
       "settings": {
-        "heading": "FAQ",
+        "heading": "",
         "sub_heading": "",
         "description": "",
         "color_bg": "rgba(0,0,0,0)",
@@ -188,8 +364,9 @@
       "block_order": [
         "page_jxfyFi"
       ],
+      "disabled": true,
       "settings": {
-        "heading": "",
+        "heading": "Gutsy & jouw data",
         "description": "",
         "show_page_title": true,
         "disable_top_spacing": true,

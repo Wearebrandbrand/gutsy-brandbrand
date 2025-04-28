@@ -32,15 +32,12 @@
             "custom_liquid": ""
           }
         },
-        "tab_HVcPPy": {
+        "tab_tbtA7x": {
           "type": "tab",
+          "repeater": "{{ page.metafields.brandbrand.collapsible_content.value }}",
           "settings": {
-            "tab_label": "Voedingsgids",
-            "icon": "none",
-            "text": "<p>Add a short description for this tabbed section</p>",
-            "text_columns": "1",
-            "page": "",
-            "custom_liquid": ""
+            "tab_label": "Gebruik & voedingstips",
+            "text": "<p>{{ block.repeater.reference.value }}</p>"
           }
         },
         "tab_myeHQH": {
@@ -68,7 +65,7 @@
       },
       "block_order": [
         "tab_XLUwrV",
-        "tab_HVcPPy",
+        "tab_tbtA7x",
         "tab_myeHQH",
         "tab_9ehGrk"
       ],

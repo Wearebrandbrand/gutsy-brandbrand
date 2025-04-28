@@ -394,7 +394,7 @@
         "team_member_a": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
+            "member_image": "shopify://shop_images/custom_resized_JACKb0ebb6e0-e7eb-4c8c-88d3-a5e5e88e27e6.jpg",
             "member_name": "JACK",
             "member_post": "Co-Founder"
           }
@@ -403,32 +403,32 @@
           "type": "team_member",
           "settings": {
             "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
+            "member_name": "achilles",
             "member_post": "Co-Founder"
           }
         },
         "team_member_c": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
+            "member_image": "shopify://shop_images/2e4181eb-c6f2-4417-ac93-cb9988a59f7d.jpg",
+            "member_name": "wouter",
+            "member_post": "Business developer, Partner"
           }
         },
         "team_member_d": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
+            "member_image": "shopify://shop_images/IMG_2399.jpg",
+            "member_name": "Julie",
+            "member_post": "Operation manager"
           }
         },
         "team_member_e": {
           "type": "team_member",
           "settings": {
-            "member_image": "shopify://shop_images/IMG.png",
-            "member_name": "JACK",
-            "member_post": "Co-Founder"
+            "member_image": "shopify://shop_images/Scherm_afbeelding_2024-06-06_om_10.48.12.png",
+            "member_name": "Noémie",
+            "member_post": "Marketing"
           }
         }
       },

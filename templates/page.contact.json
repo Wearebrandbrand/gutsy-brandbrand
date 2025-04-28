@@ -32,20 +32,12 @@
             "custom_liquid": ""
           }
         },
-        "tab_myeHQH": {
-          "type": "tab",
-          "source": "{{ page.metafields.custom.gebruik_voedingstips.value }}",
-          "settings": {
-            "tab_label": "{{ page.metafields.custom.gebruik_voedingstips.value.title.value }}",
-            "text": "<p>{{ page.metafields.custom.gebruik_voedingstips.value.reference.value }}</p>"
-          }
-        },
-        "tab_9ehGrk": {
+        "tab_yEEQ9G": {
           "type": "tab",
           "settings": {
-            "tab_label": "Account en Abonnement",
+            "tab_label": "{{ metaobjects.faq_content_gebruik_voedingstips[\"hoeveel-voeding-moet-ik-mijn-hond-geven-per-dag\"].referentie.value }}",
             "icon": "none",
-            "text": "<p>Add a short description for this tabbed section</p>",
+            "text": "",
             "text_columns": "1",
             "page": "",
             "custom_liquid": ""
@@ -54,8 +46,7 @@
       },
       "block_order": [
         "tab_XLUwrV",
-        "tab_myeHQH",
-        "tab_9ehGrk"
+        "tab_yEEQ9G"
       ],
       "settings": {
         "heading": "FAQ",

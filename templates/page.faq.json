@@ -44,9 +44,9 @@
         "collapsible_tab_YrmbCK": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Is Gutsy getest door experts?",
+            "heading": "Wat maakt jullie hondenvoeding anders dan andere merken?",
             "open": false,
-            "content": "<p>Onze voeding is deskundig getest door een uitgebreid team van voedingsdeskundigen aan de<strong>Universiteit van Gent</strong>die dag en nacht hebben gewerkt om een fantastische brok te produceren die tot de beste in zijn klasse behoort in zowel <strong>smaak- als verteringstests.</strong></p>",
+            "content": "<p>We gebruiken geen onnodige vulmiddelen, maar kiezen alleen voor pure en essentiële ingrediënten die daadwerkelijk iets toevoegen aan de gezondheid van je hond. Wat onze voeding nog uniek maakt is het gebruik van insecten, zij zijn een uitstekende bron van eiwitten en zijn heel licht verteerbaar. We gaan altijd zorgen voor een mix tussen dierlijke proteïnen (kip of witte vis) en insecten proteïnen. Dit in combinatie met het feit dat onze voeding graanvrij is, zorgt onze voeding voor een uitstekende vertering. Je kan onze volledige ingrediëntenlijst raadplegen op de website en op de zak zodat je precies weet wat je je hond geeft. </p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -54,9 +54,9 @@
         "collapsible_tab_Kzi9B7": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Is Gutsy graanvrij?",
+            "heading": "Zijn de ingrediënten 100% graan- en glutenvrij?",
             "open": false,
-            "content": "<p>Onze brokjes zijn <strong>100% graan en gluten vrij</strong>.</p>",
+            "content": "<p>Onze brokken zijn <strong>100% graan en glutenvrij</strong>. We gebruiken geen tarwe, rogge, gerst of spelt in onze recepten.</p>",
             "page": "",
             "custom_liquid": ""
           }
@@ -64,14 +64,54 @@
         "collapsible_tab_LbpYTc": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Waar wordt de voeding geproduceerd?",
             "open": false,
-            "content": "",
+            "content": "<p>Onze brokken worden geproduceerd op Belgische bodem, meer bepaald in Gent. Met Gutsy willen we echt een verschil maken en zo ook de lokale economie steunen. 85% van al onze ingrediënten komen uit een straal van 160 km rond de plaats waar we onze brokken produceren.</p>",
             "page": "",
             "custom_liquid": ""
           }
         },
         "collapsible_tab_ba4GBw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is jullie voeding geschikt voor alle hondenrassen?",
+            "open": false,
+            "content": "<p>Ja, onze voeding is geschikt voor alle hondenrassen, groot of klein. We zorgen ervoor dat onze recepten perfect uitgebalanceerd zijn en voldoen aan de voedingsbehoeften van elke hond, ongeacht ras of formaat. Let natuurlijk altijd op de juiste portiegrootte aangepast aan de leeftijd, het gewicht en de activiteit van je hond.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_7TWtcC": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is de voeding ook geschikt voor puppy’s?",
+            "open": false,
+            "content": "<p>We hebben voeding specifiek voor puppy’s. Aangepast aan de noden van een puppy in groei.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_JWCTKW": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is de voeding ook geschikt voor senioren?",
+            "open": false,
+            "content": "<p>Onze white fish & insect voeding bevat wat belangrijk is voor ouderen honden. Bij veel merken is seniorenvoeding hetzelfde als volwassenvoeding maar in een andere zak, maar bij ons bevat de voeding reeds wat een oudere hond nodig heeft. Namelijk minder calorieën dan de kipsmaak, voldoende vezels voor een vlotte spijsvertering en lichtverteerbare eiwitten door het gebruik van insecten als eiwitbasis (die makkelijker verteerbaar zijn) en omega 3. Voor een mooi uitgebalanceerd dieet raden we voor oude honden aan om de hip&joint ter aanvulling te geven vanwege de glucosamine die er in zit ter ondersteuning van de gewrichten.</p>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_jC6R3f": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is de voeding ook geschikt voor honden met allergieën?",
+            "open": false,
+            "content": "<ol><li>Onze voeding is hypoallergeen, Maar wat betekent dit nu precies? Hypoallergeen betekent dat de voeding <strong>minder kans geeft op allergische reacties</strong>, omdat het gemaakt is met <strong>ingrediënten die zelden allergieën veroorzaken</strong>. Het wil niet zeggen dat álle honden met allergieën het automatisch goed verdragen — maar de kans is wél veel kleiner. <strong>Waarom onze voeding hypoallergeen is:</strong></li></ol><ul><li><strong>1 eiwitbron per smaak (kip of vis):<br/></strong>Door slechts één dierlijke eiwitbron te gebruiken, verkleinen we het risico op allergische reacties. Heeft je hond bijvoorbeeld een gevoeligheid voor kip, dan is onze <strong>visvariant de veiligste keuze</strong>.</li><li><strong>Geen kunstmatige toevoegingen:</strong> Geen geur-, kleur- of smaakstoffen die het lichaam van je hond kunnen triggeren.</li><li><strong>Zorgvuldige selectie van ingrediënten:</strong> Alleen wat je hond nodig heeft. Geen tarwe, soja of andere veelvoorkomende triggers.</li><li><strong>Wat met insecten? </strong>Voeding met insecteneiwit is een <strong>gouden optie voor gevoelige honden</strong>. Insecten zijn een <strong>nieuwe eiwitbron</strong>, waardoor honden er zelden allergisch aan zijn. Bovendien is het ook nog eens een <strong>duurzame keuze</strong> 🌍.</li><li>Let op: Heeft je hond een allergie voor kip, kies dan onze smaak op basis van vis.</li></ul>",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_BJAHj6": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Collapsible row",
@@ -81,7 +121,17 @@
             "custom_liquid": ""
           }
         },
-        "collapsible_tab_7TWtcC": {
+        "collapsible_tab_mDqDC4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "open": false,
+            "content": "",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_XAtLzx": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Collapsible row",
@@ -97,12 +147,17 @@
         "collapsible_tab_Kzi9B7",
         "collapsible_tab_LbpYTc",
         "collapsible_tab_ba4GBw",
-        "collapsible_tab_7TWtcC"
+        "collapsible_tab_7TWtcC",
+        "collapsible_tab_JWCTKW",
+        "collapsible_tab_jC6R3f",
+        "collapsible_tab_BJAHj6",
+        "collapsible_tab_mDqDC4",
+        "collapsible_tab_XAtLzx"
       ],
       "settings": {
-        "heading": "Collapsible content",
+        "heading": "FAQ",
         "sub_heading": "",
-        "description": "<p>Add a short description for this section</p>",
+        "description": "",
         "color_bg": "rgba(0,0,0,0)",
         "color_heading": "#1a1c1d",
         "color_text": "#2c2d2e",

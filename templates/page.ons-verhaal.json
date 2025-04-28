@@ -303,7 +303,7 @@
         "column_a": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
+            "image": "shopify://shop_images/1.LH_hypoallergeen_beige.png",
             "image_width": 50,
             "image_link": "",
             "title": "Hypoallergeen",
@@ -315,7 +315,7 @@
         "column_b": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
+            "image": "shopify://shop_images/1.LH_proteine_beige.png",
             "image_width": 50,
             "image_link": "",
             "title": "Pure proteine",
@@ -327,7 +327,7 @@
         "column_c": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
+            "image": "shopify://shop_images/1.LH_planeet_beige.png",
             "image_width": 50,
             "image_link": "",
             "title": "Een ecologisch alternatief",
@@ -339,7 +339,7 @@
         "column_d": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
+            "image": "shopify://shop_images/1.LH_vertering-beige.png",
             "image_width": 50,
             "image_link": "",
             "title": "Rijk aan vitaminen en  mineralen",
@@ -351,7 +351,7 @@
         "column_e": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/IMG.jpg",
+            "image": "shopify://shop_images/1.LH_insect_beige.png",
             "image_width": 50,
             "image_link": "",
             "title": "natuurlijke schoonmakers",

@@ -55,12 +55,25 @@
             "page": "",
             "custom_liquid": ""
           }
+        },
+        "tab_YBcp7Y": {
+          "type": "tab",
+          "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
+          "settings": {
+            "tab_label": " Bestelling & levering",
+            "icon": "none",
+            "text": "",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
         "tab_XLUwrV",
         "tab_bRAVrr",
-        "tab_TL48Xy"
+        "tab_TL48Xy",
+        "tab_YBcp7Y"
       ],
       "settings": {
         "heading": "FAQ",

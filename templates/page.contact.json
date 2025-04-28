@@ -25,7 +25,11 @@
           "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
           "settings": {
             "tab_label": "Producten",
-            "text": ""
+            "icon": "none",
+            "text": "",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
           }
         },
         "tab_HVcPPy": {

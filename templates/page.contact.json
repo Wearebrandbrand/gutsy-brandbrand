@@ -27,7 +27,7 @@
             "icon": "none",
             "text": "<h5>Producten</h5><p></p>",
             "text_columns": "1",
-            "page": "faq",
+            "page": "producten-2",
             "custom_liquid": ""
           }
         },

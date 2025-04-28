@@ -60,7 +60,31 @@
           "type": "tab",
           "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
           "settings": {
-            "tab_label": " Bestelling & levering",
+            "tab_label": "Betaling & retour",
+            "icon": "none",
+            "text": "",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "tab_UKbbJV": {
+          "type": "tab",
+          "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
+          "settings": {
+            "tab_label": "Gezondheid & veiligheid",
+            "icon": "none",
+            "text": "",
+            "text_columns": "1",
+            "page": "",
+            "custom_liquid": ""
+          }
+        },
+        "tab_Y3P9Cm": {
+          "type": "tab",
+          "source": "{{ metaobjects.faq_content[\"zijn-de-ingredienten-100-graan-en-glutenvrij\"] }}",
+          "settings": {
+            "tab_label": "Duurzaamheid & verpakking",
             "icon": "none",
             "text": "",
             "text_columns": "1",
@@ -73,7 +97,9 @@
         "tab_XLUwrV",
         "tab_bRAVrr",
         "tab_TL48Xy",
-        "tab_YBcp7Y"
+        "tab_YBcp7Y",
+        "tab_UKbbJV",
+        "tab_Y3P9Cm"
       ],
       "settings": {
         "heading": "FAQ",

@@ -1,0 +1,25 @@
+{% for item in cart.items %}
+  {% if item.selling_plan_allocation != null %}
+    {% assign has_selling_plan = true %}
+  {% endif %}
+{% endfor %}
+{% assign has_prepaid = false %}
+{% render 'has-prepaid-plan' with has_prepaid %}
+
+{% if has_selling_plan and has_prepaid == false %}
+  {% render 'juo-checkout-link', classes: 'button accent checkout checkout-button full' %}
+{% endif %}
+
+{% if has_selling_plan %}
+  {% render 'default-checkout-link' %}
+{% else %}
+  <!-- Paste here default checkout button from live theme -->
+  <button
+    type="submit"
+    class="button accent checkout checkout-button full"
+    name="checkout"
+    title="{{ 'general.cart_drawer.checkout' | t | escape }}"
+  >
+    <span>{{ 'general.cart_drawer.checkout' | t }}</span>
+  </button>
+{% endif %}

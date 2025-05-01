@@ -279,7 +279,8 @@
         "one_result": "There is one shipping rate for your address:",
         "multiple_results": "There are several shipping rates for your address:",
         "error": "One or more error occurred while retrieving shipping rates:"
-      }
+      },
+      "checkout_local_payments": "Pay with"
     },
     "collection_template": {
       "empty": "No products found",

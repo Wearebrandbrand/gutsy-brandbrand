@@ -62,6 +62,7 @@
     "search_menu": "",
     "search_product_collection": "all",
     "search_product_collection_limit": 3,
+    "favicon": "shopify://shop_images/Frame_262.png",
     "search_product_list": [],
     "content_for_index": [],
     "blocks": {

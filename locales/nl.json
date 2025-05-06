@@ -279,7 +279,8 @@
         "one_result": "Er is één verzendtarief voor uw adres:",
         "multiple_results": "Er zijn meerdere verzendtarieven voor uw adres:",
         "error": "Er is een of meer fouten opgetreden bij het ophalen van verzendtarieven:"
-      }
+      },
+      "checkout_local_payments": "Betaal met"
     },
     "collection_template": {
       "empty": "Geen producten gevonden",

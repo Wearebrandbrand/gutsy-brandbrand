@@ -274,7 +274,8 @@
         "one_result": "Il y a un frais d'envoi pour votre adresse:",
         "multiple_results": "Il y a plusieurs frais d'envoi pour votre adresse:",
         "error": "Une ou plusieurs erreurs se sont produites lors de la récupération des frais d'envoi:"
-      }
+      },
+      "checkout_local_payments": "Payer avec"
     },
     "collection_template": {
       "empty": "Aucun produit trouvé",

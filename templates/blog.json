@@ -17,7 +17,7 @@
       "type": "main-blog-header",
       "settings": {
         "heading": "Ons blog",
-        "description": "<p>Lees meer informatie over gutsy</p>",
+        "description": "<p>Lees meer informatie over gutsy<\/p>",
         "show_category_list": true
       }
     },

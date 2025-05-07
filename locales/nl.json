@@ -25,7 +25,7 @@
       "add_order_note": "Voeg bestelnotitie toe",
       "save": "Opslaan",
       "free_shipping": {
-        "spend_more_for_free_shipping_html": "Besteed nog <span>{{ amount }}</span> voor GRATIS verzending.",
+        "spend_more_for_free_shipping_html": "Besteed nog <span>{{ amount }}<\/span> voor GRATIS verzending.",
         "free_shipping_applied_at_checkout": "GRATIS verzending wordt toegepast bij het afrekenen"
       }
     },
@@ -87,8 +87,8 @@
       "read_more": "Lees verder",
       "tags": "Tags:",
       "comments_html": {
-        "one": "<span>{{ count }} reactie</span> {{ title }}",
-        "other": "<span>{{ count }} reacties</span> {{ title }}"
+        "one": "<span>{{ count }} reactie<\/span> {{ title }}",
+        "other": "<span>{{ count }} reacties<\/span> {{ title }}"
       },
       "moderated": "Let op: opmerkingen moeten worden goedgekeurd voordat ze worden gepubliceerd.",
       "comment_form_title": "Reactie plaatsen",
@@ -140,7 +140,7 @@
         "one": "Verkrijgbaar in {{ count }} kleur",
         "other": "Verkrijgbaar in {{ count }} kleuren"
       },
-      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij de checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij de checkout.",
       "quantity": {
         "label": "Aantal",
         "input_label": "Aantal voor {{ product }}",
@@ -158,8 +158,8 @@
         "view_store_info": "Winkelgegevens bekijken",
         "check_other_stores": "Controleer de beschikbaarheid bij andere winkels",
         "pick_up_available": "Afhaling is beschikbaar",
-        "pick_up_available_at_html": "Afhaling is beschikbaar bij <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_available_at_html": "Afhaling is beschikbaar bij <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_unavailable_at_html": "Afhaling is momenteel niet beschikbaar bij <span class=\"color-foreground\">{{ location_name }}<\/span>",
         "unavailable": "Kan beschikbaarheid voor afhalen niet laden",
         "refresh": "Vernieuwen"
       },
@@ -212,11 +212,6 @@
     }
   },
   "sections": {
-    "404": {
-      "not_found": "Pagina niet gevonden",
-      "not_found_description": "De pagina waarnaar u op zoek was, bestaat niet. Mogelijk hebt u het adres verkeerd getypt of is de pagina verplaatst.",
-      "continue_shopping": "Verder winkelen"
-    },
     "insects": {
       "cow": "Koe",
       "sheep": "Schaap",
@@ -244,6 +239,11 @@
       "cart": "Winkelwagen",
       "collections": "Collecties"
     },
+    "404": {
+      "not_found": "Pagina niet gevonden",
+      "not_found_description": "De pagina waarnaar u op zoek was, bestaat niet. Mogelijk hebt u het adres verkeerd getypt of is de pagina verplaatst.",
+      "continue_shopping": "Verder winkelen"
+    },
     "cart": {
       "title": "Jouw winkelwagen",
       "order_summary": "Overzicht van de bestelling",
@@ -256,9 +256,9 @@
       "ready": "Klaar om je nieuwe favoriete producten te vinden?",
       "cart_error": "Er is een fout opgetreden bij het bijwerken van je winkelwagen. Probeer het opnieuw.",
       "cart_quantity_error_html": "Je kunt maar {{ quantity }} van dit artikel toevoegen aan je winkelwagen.",
-      "taxes_and_shipping_policy_at_checkout_html": "Belastingen en <a href=\"{{ link }}\">verzendkosten</a> worden berekend bij de checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Belastingen en <a href=\"{{ link }}\">verzendkosten<\/a> worden berekend bij de checkout",
       "taxes_included_but_shipping_at_checkout": "Belasting inbegrepen en verzendkosten worden berekend bij de checkout",
-      "taxes_included_and_shipping_policy_html": "Inclusief btw. <a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij de checkout.",
+      "taxes_included_and_shipping_policy_html": "Inclusief btw. <a href=\"{{ link }}\">Verzendkosten<\/a> worden berekend bij de checkout.",
       "taxes_and_shipping_at_checkout": "Belastingen en verzendkosten worden berekend bij de checkout",
       "headings": {
         "product": "Product",
@@ -267,7 +267,7 @@
         "quantity": "Aantal"
       },
       "terms": "Ik ga akkoord met de algemene voorwaarden",
-      "terms_html": "Ik ga akkoord met de <a href='{{ url }}' target='_blank'>algemene voorwaarden</a>",
+      "terms_html": "Ik ga akkoord met de <a href='{{ url }}' target='_blank'>algemene voorwaarden<\/a>",
       "terms_confirm": "U moet akkoord gaan met de algemene voorwaarden van verkoop om af te rekenen",
       "shipping_estimator": {
         "estimate_shipping": "Verzendkosten schatten",
@@ -280,11 +280,11 @@
         "multiple_results": "Er zijn meerdere verzendtarieven voor uw adres:",
         "error": "Er is een of meer fouten opgetreden bij het ophalen van verzendtarieven:"
       },
-      "checkout_local_payments": "Betaal met"
+      "checkout_local_payments": "Betalen met"
     },
     "collection_template": {
       "empty": "Geen producten gevonden",
-      "use_fewer_filters_html": "Minder filters gebruiken of <a class=\"{{ class }}\" href=\"{{ link }}\">alles verwijderen</a>",
+      "use_fewer_filters_html": "Minder filters gebruiken of <a class=\"{{ class }}\" href=\"{{ link }}\">alles verwijderen<\/a>",
       "load_more": "Meer laden"
     },
     "password": {
@@ -332,10 +332,10 @@
     }
   },
   "localization": {
-    "country_label": "Land/regio",
+    "country_label": "Land\/regio",
     "language_label": "Taal",
     "update_language": "Taal bijwerken",
-    "update_country": "Land/regio bijwerken"
+    "update_country": "Land\/regio bijwerken"
   },
   "customer": {
     "login_page": {
@@ -430,7 +430,7 @@
       "address1": "Adres 1",
       "address2": "Adres 2",
       "city": "Plaats",
-      "country": "Land/regio",
+      "country": "Land\/regio",
       "province": "Provincie",
       "zip": "Postcode",
       "phone": "Telefoonnummer",

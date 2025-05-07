@@ -9,25 +9,22 @@
  */
 {
   "sections": {
-		"breadcrumbs": {
+    "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {
-      }
+      "settings": {}
     },
-		"template-header": {
+    "template-header": {
       "type": "template-header",
-      "settings": {
-      }
+      "settings": {}
     },
     "main-account": {
       "type": "main-account",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
-		"breadcrumbs",
-		"template-header",
+    "breadcrumbs",
+    "template-header",
     "main-account"
   ]
 }

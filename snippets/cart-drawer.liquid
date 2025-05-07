@@ -293,7 +293,7 @@
               {%- endif -%}
               {%- if settings.cart_drawer_checkout_button -%}
                 <form action="{{ routes.cart_url }}" method="post" novalidate class="juo-cart-drawer-submit">
-                    {% render 'side-cart-checkout-links' %}
+									{% render 'side-cart-checkout-links' %}
                 </form>
               {%- endif -%}
             </div>

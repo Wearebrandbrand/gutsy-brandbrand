@@ -59,53 +59,9 @@
         "media_fullwidth_mobile": true,
         "media_show_prevnext_mobile": true
       }
-    },
-    "1746619329f512d0af": {
-      "type": "apps",
-      "blocks": {
-        "juo_subscriptions_subscription_widget_FceTkk": {
-          "type": "shopify://apps/juo-subscriptions/blocks/subscription-widget/a6065f5b-3eef-401a-b86f-7be2e8940aa4",
-          "settings": {
-            "product": "{{product}}",
-            "defaultTheme": "v1",
-            "defaultMode": "SUBSCRIPTION",
-            "hide_oos": false,
-            "color": "#000000",
-            "background": "#FAFAFA",
-            "border_color": "#FAFAFA",
-            "input_border_color": "#D4D4D4",
-            "border_radius": 0,
-            "font_weight": "",
-            "heading_font_weight": "700",
-            "block_margin_top": 0,
-            "block_margin_bottom": 0,
-            "badge_label": "Subscribe & save",
-            "badge_color": "#FFF",
-            "badge_background": "#000",
-            "discount_badge_color": "#000",
-            "discount_badge_background": "#feffb6",
-            "subscription_label": "Subscription",
-            "subscription_background": "transparent",
-            "subscription_uvps": "<ul><li>Extra discount on subscription</li><li>Flexible edits or swaps anytime</li><li>Easy, no-cost cancellation</li></ul>",
-            "subscription_collapsible": false,
-            "otp_label": "One-time purchase",
-            "otp_background": "#FFFFFF",
-            "custom_css": ""
-          }
-        }
-      },
-      "block_order": [
-        "juo_subscriptions_subscription_widget_FceTkk"
-      ],
-      "settings": {
-        "section_width": "grid",
-        "disable_top_spacing": false,
-        "disable_bottom_spacing": false
-      }
     }
   },
   "order": [
-    "main-product-quick-view",
-    "1746619329f512d0af"
+    "main-product-quick-view"
   ]
 }

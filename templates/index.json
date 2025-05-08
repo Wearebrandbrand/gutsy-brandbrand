@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Overlay.png",
+            "mobile_image": "shopify://shop_images/Banner_andere_kader.png",
             "slide_link": "shopify://products/chicken-munchies-adult-l",
             "video_background": false,
             "badge_text": "",

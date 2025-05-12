@@ -9,26 +9,36 @@
  */
 {
   "sections": {
-    "slideshow_Vt8p9D": {
-      "type": "slideshow",
+    "image_with_text_overlay_ApMWMF": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_yNRCnD": {
+          "type": "heading",
+          "settings": {
+            "text": "Win een packraft avontuur & een Gutsy pakket t.w.v. €625!",
+            "heading_size": "h1-xlarge"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yNRCnD"
+      ],
+      "name": "Image with text overlay",
       "settings": {
+        "image": "shopify://shop_images/DSC8630.jpg",
+        "image_parallax": false,
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",
         "full_width": true,
-        "autoplay": false,
-        "autoplay_length": 5,
-        "transition": "zoom",
-        "controls": "arrows-with-numbers",
+        "content_width": "medium",
+        "content_position": "bottom-center",
+        "text_alignment": "center",
+        "heading_color": "",
+        "text_color": "#FFFFFF",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
         "disable_top_spacing": true,
-        "disable_bottom_spacing": true,
-        "bottom_bar_text": ""
-      }
-    },
-    "store_locator_m37JGH": {
-      "type": "store-locator",
-      "settings": {
-        "map_start_point": "50.639037, 4.67258",
-        "map_icon_svg": "<svg width=\"59\" height=\"59\" viewbox=\"0 0 59 59\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g filter=\"url(#filter0_d_1667_58676)\">\n<path d=\"M35.5508 14.0889C35.551 14.1811 35.5628 14.2813 35.5683 14.3274L35.569 14.3334C35.5737 14.3735 35.577 14.4006 35.5803 14.4272C35.5842 14.4588 35.588 14.4896 35.5938 14.5402C35.6019 14.6101 35.6089 14.6788 35.6142 14.7446C35.3606 14.7258 35.0715 14.6325 34.6816 14.4368C34.3975 14.2942 34.1357 14.1401 33.83 13.9601C33.6158 13.8339 33.3801 13.6951 33.1 13.5387C31.8188 12.8232 30.1505 12.0754 27.7105 12.0754C24.0275 12.0754 21.0673 13.3782 19.0443 15.7555C17.0398 18.1111 16.049 21.41 16.049 25.2497C16.049 30.1384 17.1214 33.3599 19.0212 35.3508C20.9349 37.3564 23.5007 37.9189 26.021 37.9189C28.9635 37.9189 30.7771 37.1834 32.1571 36.4457C32.4749 36.2758 32.7309 36.1293 32.9612 35.9974C33.2643 35.8239 33.5228 35.6759 33.8189 35.5339C34.2641 35.3203 34.6293 35.212 35.0227 35.2089C35.0175 35.34 35.0068 35.4569 34.9952 35.5665C34.993 35.5866 34.9904 35.6096 34.9876 35.6349C34.9734 35.7598 34.9531 35.9395 34.9531 36.0877C34.9531 36.7523 35.2535 37.2963 35.6997 37.6515C36.1225 37.9881 36.6452 38.1354 37.1296 38.1354C37.6537 38.1354 38.2213 38.0135 38.6706 37.6282C39.1449 37.2214 39.3343 36.654 39.3343 36.0877C39.3343 35.8558 39.3118 35.4944 39.2834 35.0403C39.2697 34.8206 39.2547 34.5791 39.2401 34.3202C39.1935 33.4889 39.1449 32.3785 39.1367 30.9559C39.1367 30.1256 39.1554 29.5024 39.1997 29.0306C39.2453 28.5464 39.3122 28.296 39.3676 28.1711C39.3771 28.1499 39.3849 28.1353 39.3905 28.1259C39.4293 28.1139 39.5363 28.0914 39.7838 28.0914C39.8344 28.0914 39.9128 28.0968 40.0527 28.1072L40.0607 28.1078C40.1769 28.1165 40.3397 28.1286 40.4897 28.1286C40.9967 28.1286 41.5489 27.9723 41.9501 27.5038C42.3262 27.0647 42.4309 26.5092 42.4309 26.0088C42.4309 25.4166 42.2427 24.875 41.8605 24.4741C41.4836 24.0788 40.981 23.8889 40.4897 23.8889C40.201 23.8889 39.6107 23.9165 38.9159 23.949C38.7031 23.9589 38.4805 23.9693 38.2538 23.9795C37.2585 24.0244 36.1376 24.0681 35.2307 24.0681C34.2188 24.0681 33.0654 24.0154 31.9584 23.9611C31.8656 23.9565 31.773 23.952 31.6808 23.9474C30.6894 23.8985 29.7389 23.8516 29.0258 23.8516C28.369 23.8516 27.8201 24.1392 27.4566 24.5917C27.112 25.0205 26.967 25.5511 26.967 26.0437C26.967 26.4194 27.0689 26.9162 27.3532 27.3506C27.665 27.8271 28.2123 28.2357 28.9882 28.2357C29.1928 28.2357 29.5544 28.1947 29.8306 28.1634C29.8492 28.1613 29.8674 28.1592 29.8852 28.1572C30.0469 28.139 30.1987 28.1218 30.3279 28.1092C30.3922 28.1029 30.4461 28.0981 30.4894 28.0951C30.5108 28.0935 30.5277 28.0926 30.5404 28.092C30.5537 28.0914 30.5588 28.0914 30.5576 28.0914C30.7772 28.0914 30.8725 28.1178 30.904 28.1304C30.9052 28.1309 30.9059 28.131 30.9063 28.131C30.9066 28.1318 30.9074 28.1333 30.9089 28.1356C30.9298 28.168 30.9826 28.2725 31.0253 28.5246C31.0676 28.7737 31.0918 29.1157 31.0918 29.5849C31.0918 30.6838 30.7634 31.4579 30.2979 31.9495C29.8365 32.4369 29.1544 32.7385 28.2588 32.7385C27.7825 32.7385 27.463 32.6031 27.2018 32.3551C26.9115 32.0795 26.6194 31.5927 26.3736 30.7632C25.8765 29.0856 25.6798 26.412 25.6798 22.5048C25.6798 20.0173 25.9532 18.365 26.3791 17.3702C26.5877 16.883 26.8108 16.6062 27.0057 16.4535C27.1862 16.3122 27.3845 16.243 27.6376 16.243C27.9618 16.243 28.1662 16.2901 28.3079 16.3511C28.4427 16.4092 28.5722 16.5017 28.7159 16.6725C29.0475 17.0666 29.3567 17.7416 29.8446 18.9714L29.8459 18.9746C30.48 20.5574 31.3755 21.7783 32.5918 22.5936C33.8072 23.4083 35.2509 23.7562 36.8731 23.7562H36.8972L36.9213 23.755C37.8052 23.7124 38.5912 23.4649 39.0903 22.8035C39.5476 22.1973 39.5885 21.4519 39.5885 20.9146C39.5885 20.5982 39.569 20.2285 39.5501 19.8685C39.5455 19.7805 39.5409 19.693 39.5366 19.6071C39.5139 19.1491 39.4978 18.6996 39.5147 18.2821L39.515 18.2739L39.5152 18.2656C39.5325 17.5406 39.5771 16.6139 39.6181 15.8086C39.6247 15.6775 39.6314 15.5481 39.6379 15.4225C39.6677 14.843 39.6934 14.3443 39.6964 14.1253C39.7133 13.8486 39.6724 13.5714 39.5761 13.3112C39.4748 13.0375 39.3148 12.7897 39.108 12.5846C38.9012 12.3795 38.6525 12.2221 38.3795 12.1225C38.1197 12.0277 37.8434 11.9873 37.5678 12.0034C37.0966 12.0095 36.5574 12.1331 36.1347 12.5419C35.6943 12.9679 35.5479 13.5403 35.5508 14.0889ZM35.5508 14.0889C35.5508 14.09 35.5508 14.091 35.5508 14.0921L36.5508 14.0858H35.5508C35.5508 14.0869 35.5508 14.0879 35.5508 14.0889Z\" fill=\"#1A3C32\" stroke=\"white\" stroke-width=\"2\"></path>\n</g>\n<defs>\n<filter id=\"filter0_d_1667_58676\" x=\"0.0490112\" y=\"0\" width=\"58.3819\" height=\"58.1348\" filterunits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feflood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feflood>\n<fecolormatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"></fecolormatrix>\n<feoffset dy=\"4\"></feoffset>\n<fegaussianblur stddeviation=\"7.5\"></fegaussianblur>\n<fecolormatrix type=\"matrix\" values=\"0 0 0 0 0.0516493 0 0 0 0 0.145833 0 0 0 0 0.118132 0 0 0 0.25 0\"></fecolormatrix>\n<feblend mode=\"normal\" in2=\"BackgroundImageFix\" result=\"effect1_dropShadow_1667_58676\"></feblend>\n<feblend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_dropShadow_1667_58676\" result=\"shape\"></feblend>\n</filter>\n</defs>\n</svg>"
+        "disable_bottom_spacing": true
       }
     },
     "main": {
@@ -36,35 +46,20 @@
       "disabled": true,
       "settings": {}
     },
-    "spacer_wgHyx7": {
-      "type": "spacer",
-      "settings": {
-        "spacer_mobile": 50,
-        "spacer_desktop": 100,
-        "border_separator": false,
-        "border_separator_full": false
-      }
-    },
     "image_with_text_TjxyB9": {
       "type": "image-with-text",
       "blocks": {
-        "subheading_g638aG": {
-          "type": "subheading",
-          "settings": {
-            "text": "Florence - 69 jaar"
-          }
-        },
         "heading_VPhRcE": {
           "type": "heading",
           "settings": {
-            "text": "\"Pammeke is eindelijk van zijn allergieën vanaf\"",
-            "heading_size": "h3"
+            "text": "3 jaar Gutsy",
+            "heading_size": "h1"
           }
         },
         "text_tdpUPc": {
           "type": "text",
           "settings": {
-            "text": "<p>Pammeke krijgt de white fish & insect van Gutsy. Voordien had ze last van jeuk en uitslag. 2 weken nadat ik haar Gutsy ben beginnen te geven zijn al deze symptomen weggegaan.</p>"
+            "text": "<p>Drie jaar geleden begonnen we met één simpele vraag:<br/><br/><em><strong>\"Wat als hondenvoer écht beter kon – voor hond én planeet?\"</strong></em></p><p>Vandaag vieren we wat we samen bereikt hebben — en dat doen we graag met een avontuur dat net zo wild, puur en trouw is als jij en je hond. 🌿🐾<br/><br/>Samen met <strong>The Packraft Trail</strong> geven we één gelukkige winnaar de kans om er twee dagen op uit te trekken, de natuur in, met z’n viervoeter én een <strong>Gutsy-deluxe pakket</strong> onder de arm.</p>"
           }
         },
         "button_qxAaTE": {
@@ -76,13 +71,12 @@
         }
       },
       "block_order": [
-        "subheading_g638aG",
         "heading_VPhRcE",
         "text_tdpUPc",
         "button_qxAaTE"
       ],
       "settings": {
-        "image": "shopify://shop_images/image_banner_mami_cc4985a5-5c09-4eb7-8394-26840ac2973d.png",
+        "image": "shopify://shop_images/DSC8581.jpg",
         "use_video": false,
         "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": true,
@@ -95,13 +89,132 @@
         "disable_bottom_spacing": false,
         "layout_type": "normal"
       }
+    },
+    "multicolumn_drjjaC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ic8pt8": {
+          "type": "column",
+          "settings": {
+            "image_width": 50,
+            "image_link": "",
+            "title": "TAG",
+            "text": "<p>Tag degene die je mee wil nemen op dit geweldige avontuur. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4bfNL7": {
+          "type": "column",
+          "settings": {
+            "image_width": 50,
+            "image_link": "",
+            "title": "REAGEER",
+            "text": "<p>Reageer PACKRAFT onder de post, dan krijg je van ons een berichtje. </p><p>Vul je e-mailadres in!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mkzeH8": {
+          "type": "column",
+          "settings": {
+            "image_width": 50,
+            "image_link": "",
+            "title": "DEEL",
+            "text": "<p>Deel je post in je Instagram verhaal om andere te inspiren om ook deel te nemen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yactgX": {
+          "type": "column",
+          "settings": {
+            "image_width": 50,
+            "image_link": "",
+            "title": "VUL IN",
+            "text": "<p>Vul je e-mailadres in via het berichtje dat je van ons gekregen hebt. Dan kunnen we je contacteren als je gewonnen hebt.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_ic8pt8",
+        "column_4bfNL7",
+        "column_mkzeH8",
+        "column_yactgX"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "heading": "Hoe kan je deelnemen?",
+        "sub_heading": "",
+        "description": "",
+        "columns_desktop": 5,
+        "layout": "normal",
+        "mobile_swipe": false,
+        "image_ratio": "adapt",
+        "text_alignment": "center",
+        "heading_size": "h5",
+        "color_heading": "#094e39",
+        "color_text": "#ff8500",
+        "color_links": "#2c2d2e",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "button_1_color": "accent",
+        "link_label": "",
+        "link": ""
+      }
+    },
+    "layered_images_with_text_zfX9DL": {
+      "type": "layered-images-with-text",
+      "blocks": {
+        "subheading_qfDU3V": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_ThhJWL": {
+          "type": "heading",
+          "settings": {
+            "text": "Wat kan je winnen?",
+            "heading_size": "h3"
+          }
+        },
+        "text_wV8dHF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Een micro-avontuur met <strong>The Packraft Trail</strong>:<br/>• Voor 2 personen + hond<br/>• 2-daagse in 2025 op locatie naar keuze<br/>• Inclusief packraft, tent, matje en slaapzak<br/>• Ter waarde van <strong>€325</strong></p><p>Een <strong>Gutsy deluxe pakket</strong> voor je hond:<br/>• Vol voeding, snacks, supplementen en care<br/>• Ter waarde van <strong>€300</strong></p><p><strong>Totale waarde: €625</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_qfDU3V",
+        "heading_ThhJWL",
+        "text_wV8dHF"
+      ],
+      "name": "Layered images with text",
+      "settings": {
+        "image": "shopify://shop_images/DSCF4548.jpg",
+        "image_ratio": "portrait",
+        "image_2": "shopify://shop_images/DSC8534.jpg",
+        "image_ratio_2": "square",
+        "image_3": "shopify://shop_images/DSC8567.jpg",
+        "image_ratio_3": "square",
+        "full_width": false,
+        "layout": "image_first",
+        "content_alignment": "text-left",
+        "content_position": "middle",
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true
+      }
     }
   },
   "order": [
-    "slideshow_Vt8p9D",
-    "store_locator_m37JGH",
+    "image_with_text_overlay_ApMWMF",
     "main",
-    "spacer_wgHyx7",
-    "image_with_text_TjxyB9"
+    "image_with_text_TjxyB9",
+    "multicolumn_drjjaC",
+    "layered_images_with_text_zfX9DL"
   ]
 }

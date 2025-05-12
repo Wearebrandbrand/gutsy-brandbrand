@@ -15,6 +15,7 @@
     },
     "single_image_ykmzDH": {
       "type": "collection-single-image",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "disable_top_spacing": true,

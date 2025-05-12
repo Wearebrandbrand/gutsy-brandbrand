@@ -98,6 +98,17 @@
           "settings": {
             "image_width": 50,
             "image_link": "",
+            "title": "VOLG",
+            "text": "<p>Volg <a href=\"https://www.instagram.com/gutsy.dog\">@gutsy.dog</a>, <a href=\"https://www.instagram.com/packrafttrail\">@thepackrafttrail</a> & <a href=\"https://www.instagram.com/withmywest\">@withmywest</a> op Instagram</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4LfYCM": {
+          "type": "column",
+          "settings": {
+            "image_width": 50,
+            "image_link": "",
             "title": "TAG",
             "text": "<p>Tag degene die je mee wil nemen op dit geweldige avontuur. </p>",
             "link_label": "",
@@ -140,6 +151,7 @@
       },
       "block_order": [
         "column_ic8pt8",
+        "column_4LfYCM",
         "column_4bfNL7",
         "column_mkzeH8",
         "column_yactgX"
@@ -158,8 +170,8 @@
         "color_heading": "#094e39",
         "color_text": "#ff8500",
         "color_links": "#2c2d2e",
-        "disable_top_spacing": false,
-        "disable_bottom_spacing": false,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": true,
         "button_1_color": "accent",
         "link_label": "",
         "link": ""
@@ -195,7 +207,7 @@
       ],
       "name": "Layered images with text",
       "settings": {
-        "image": "shopify://shop_images/DSCF4548.jpg",
+        "image": "shopify://shop_images/DSCF4548-2.jpg",
         "image_ratio": "portrait",
         "image_2": "shopify://shop_images/DSC8534.jpg",
         "image_ratio_2": "square",
@@ -208,6 +220,50 @@
         "disable_top_spacing": true,
         "disable_bottom_spacing": true
       }
+    },
+    "image_with_text_QWfjN4": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_kVJPbH": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_3Vrhny": {
+          "type": "heading",
+          "settings": {
+            "text": "De voorwaarden",
+            "heading_size": "h3"
+          }
+        },
+        "text_GeCcWd": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>De wedstrijd loopt t.e.m. <strong>vrijdag 31 mei, 23u59</strong></li><li>De winnaar wordt bekendgemaakt op <strong>zondag 1 juni om 11u</strong>, via mail én Instagram</li><li>Er is <strong>één winnaar</strong>, gekozen via een willekeurige online tool (als alle voorwaarden voldaan zijn) </li><li>Het micro-packraft avontuur is geldig voor <strong>2 personen en 1 hond </strong></li><li>Inclusief <strong>packraft, tent, slaapzak en matras </strong>In te plannen op basis van <strong>beschikbaarheid in 2025</strong>, via The Packraft Trail </li><li>Het Gutsy pakket wordt verzonden naar het thuisadres van de winnaar</li><li>Deelnemende e-mailadressen worden toegevoegd aan de e-maillijsten van Gutsy & Travelbase (Uitschrijven is altijd mogelijk via de uitschrijflink in elke e-mail)</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_kVJPbH",
+        "heading_3Vrhny",
+        "text_GeCcWd"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/DSC8611.jpg",
+        "use_video": false,
+        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": true,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_position": "text-left",
+        "text_color": "",
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false,
+        "layout_type": "normal"
+      }
     }
   },
   "order": [
@@ -215,6 +271,7 @@
     "main",
     "image_with_text_TjxyB9",
     "multicolumn_drjjaC",
-    "layered_images_with_text_zfX9DL"
+    "layered_images_with_text_zfX9DL",
+    "image_with_text_QWfjN4"
   ]
 }

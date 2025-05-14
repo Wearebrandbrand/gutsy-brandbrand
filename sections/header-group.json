@@ -19,7 +19,7 @@
           "settings": {
             "icon": "none",
             "text": "33% korting op heel de site - Gutsy bestaat 3 jaar!",
-            "link": "",
+            "link": "shopify://collections/all",
             "color_bg": "#ff8500",
             "color_text": "#ffffff"
           }
@@ -44,7 +44,7 @@
         "announcement_bar_homepage_only": false,
         "announcement_bar_layout": "carousel",
         "direction": "left",
-        "speed": "20s",
+        "speed": "30s",
         "use_block_colors": true,
         "autoplay": true,
         "autoplay_length": 5

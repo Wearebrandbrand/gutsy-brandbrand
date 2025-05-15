@@ -602,6 +602,24 @@
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }
+    },
+    "featured_collection_D6JAdc": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "heading": "Nieuwe supplementen!",
+        "description": "<p>Ontdek nu ook de calming, multivitamine en dental in ons supplementen gamma.</p>",
+        "button_text": "Shop Voeding",
+        "collection": "supplementen",
+        "display_type": "grid",
+        "product_limit": 6,
+        "columns_desktop": 5,
+        "show_view_all": true,
+        "mobile_swipe": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
     }
   },
   "order": [
@@ -613,6 +631,7 @@
     "table_section",
     "customer_review",
     "logo_list_fxpijU",
+    "featured_collection_D6JAdc",
     "image_hotspots_q7kyCz",
     "rich_text_eBpcff",
     "collapsible_content_Jdkgrc",

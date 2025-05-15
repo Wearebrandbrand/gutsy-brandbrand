@@ -433,6 +433,24 @@
         "color_logo_bg": "#ffffff"
       }
     },
+    "featured_collection_D6JAdc": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "heading": "Nieuwe supplementen!",
+        "description": "<p>Ontdek nu ook de calming, multivitamine en dental in ons supplementen gamma.</p>",
+        "button_text": "Shop Voeding",
+        "collection": "supplementen",
+        "display_type": "grid",
+        "product_limit": 5,
+        "columns_desktop": 5,
+        "show_view_all": true,
+        "mobile_swipe": false,
+        "show_progress_bar": true,
+        "disable_top_spacing": false,
+        "disable_bottom_spacing": false
+      }
+    },
     "image_hotspots_q7kyCz": {
       "type": "image-hotspots",
       "blocks": {
@@ -599,24 +617,6 @@
         "color_heading": "#1a3c32",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
-        "disable_top_spacing": false,
-        "disable_bottom_spacing": false
-      }
-    },
-    "featured_collection_D6JAdc": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "heading": "Nieuwe supplementen!",
-        "description": "<p>Ontdek nu ook de calming, multivitamine en dental in ons supplementen gamma.</p>",
-        "button_text": "Shop Voeding",
-        "collection": "supplementen",
-        "display_type": "grid",
-        "product_limit": 6,
-        "columns_desktop": 5,
-        "show_view_all": true,
-        "mobile_swipe": false,
-        "show_progress_bar": true,
         "disable_top_spacing": false,
         "disable_bottom_spacing": false
       }

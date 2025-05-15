@@ -150,7 +150,25 @@ if (!customElements.get('quantity-selector')) {
         return;
       }
 
-      var amount = productPriceContainer.querySelector('.amount');
+      var discounted = productPriceContainer.querySelector('.discounted');
+
+      if (!discounted) {
+        var amount = productPriceContainer.querySelector('.amount');
+      }
+      else {
+        var amount = discounted;
+        var originalAmount = productPriceContainer.querySelector('.amount-original');
+        var originalPriceData = productPriceContainer.querySelector('del');
+
+        if (originalAmount && originalPriceData?.dataset?.priceAmount) {
+          var priceOriginalAmount = originalPriceData.dataset.priceAmount;
+          var totalOriginalAmount = priceOriginalAmount * quantity;
+
+          if (totalOriginalAmount && Shopify.formatMoney) {
+            originalAmount.innerHTML = Shopify.formatMoney(totalOriginalAmount);
+          }
+        }
+      }
       var priceAmount = priceData.dataset.priceAmount;
       var totalAmount = priceAmount * quantity;
 

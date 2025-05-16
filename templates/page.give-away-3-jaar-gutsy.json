@@ -15,7 +15,7 @@
         "heading_yNRCnD": {
           "type": "heading",
           "settings": {
-            "text": "Win een packraft avontuur & een Gutsy pakket t.w.v. €625!",
+            "text": "Win een packraft avontuur & een Gutsy pakket t.w.v. €648!",
             "heading_size": "h1-xlarge"
           }
         }
@@ -34,7 +34,7 @@
         "content_position": "bottom-center",
         "text_alignment": "center",
         "heading_color": "",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
         "disable_top_spacing": true,
@@ -196,7 +196,7 @@
         "text_wV8dHF": {
           "type": "text",
           "settings": {
-            "text": "<p>Een micro-avontuur met <strong>The Packraft Trail</strong>:<br/>• Voor 2 personen + hond<br/>• 2-daagse in 2025 op locatie naar keuze<br/>• Inclusief packraft, tent, matje en slaapzak<br/>• Ter waarde van <strong>€325</strong></p><p>Een <strong>Gutsy deluxe pakket</strong> voor je hond:<br/>• Vol voeding, snacks, supplementen en care<br/>• Ter waarde van <strong>€300</strong></p><p><strong>Totale waarde: €625</strong></p>"
+            "text": "<p>Een micro-avontuur met <strong>The Packraft Trail</strong>:<br/>• Voor 2 personen + hond<br/>• 2-daagse in 2025 op locatie naar keuze<br/>• Inclusief packraft, tent, matje en slaapzak<br/>• Ter waarde van <strong>€348</strong></p><p>Een <strong>Gutsy deluxe pakket</strong> voor je hond:<br/>• Vol voeding, snacks, supplementen en care<br/>• Ter waarde van <strong>€300</strong></p><p><strong>Totale waarde: €648</strong></p>"
           }
         }
       },
@@ -207,7 +207,7 @@
       ],
       "name": "Layered images with text",
       "settings": {
-        "image": "shopify://shop_images/DSCF4548-2.jpg",
+        "image": "shopify://shop_images/DSCF4548-2kl_03d4d706-37d8-439c-bb45-5f1869837b13.jpg",
         "image_ratio": "portrait",
         "image_2": "shopify://shop_images/DSC8534.jpg",
         "image_ratio_2": "square",
@@ -264,6 +264,34 @@
         "disable_bottom_spacing": false,
         "layout_type": "normal"
       }
+    },
+    "countdown_banner_bmk6JW": {
+      "type": "countdown-banner",
+      "name": "Countdown banner",
+      "settings": {
+        "full_width": false,
+        "section_layout": "horizontal",
+        "desktop_height": "desktop-height-auto",
+        "mobile_height": "mobile-height-auto",
+        "subheading": "",
+        "heading": "Doe mee en maak kans",
+        "heading_size": "h2",
+        "content": "Maak kans op een 2-daags packraft avontuur en deluxe Gutsy pakket t.w.v. 648 euro!",
+        "content_size": "medium",
+        "button_text": "",
+        "button_link": "",
+        "timer_year": 2025,
+        "timer_month": "05",
+        "timer_day": "31",
+        "timer_hour": "00",
+        "timer_minute": "00",
+        "color_bg": "#fbedda",
+        "color_text": "#094e39",
+        "overlay_color": "#000000",
+        "overlay_opacity": 10,
+        "disable_top_spacing": true,
+        "disable_bottom_spacing": false
+      }
     }
   },
   "order": [
@@ -272,6 +300,7 @@
     "image_with_text_TjxyB9",
     "multicolumn_drjjaC",
     "layered_images_with_text_zfX9DL",
-    "image_with_text_QWfjN4"
+    "image_with_text_QWfjN4",
+    "countdown_banner_bmk6JW"
   ]
 }

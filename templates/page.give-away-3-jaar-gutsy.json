@@ -59,21 +59,13 @@
         "text_tdpUPc": {
           "type": "text",
           "settings": {
-            "text": "<p>Drie jaar geleden begonnen we met één simpele vraag:<br/><br/><em><strong>\"Wat als hondenvoer écht beter kon – voor hond én planeet?\"</strong></em></p><p>Vandaag vieren we wat we samen bereikt hebben — en dat doen we graag met een avontuur dat net zo wild, puur en trouw is als jij en je hond. 🌿🐾<br/><br/>Samen met <strong>The Packraft Trail</strong> geven we één gelukkige winnaar de kans om er twee dagen op uit te trekken, de natuur in, met z’n viervoeter én een <strong>Gutsy-deluxe pakket</strong> onder de arm.</p>"
-          }
-        },
-        "button_qxAaTE": {
-          "type": "button",
-          "settings": {
-            "button_text": "Bestel nu",
-            "button_link": "shopify://products/white-fish-insects-large-adult-copy"
+            "text": "<p>Drie jaar geleden begonnen we met één simpele vraag:<br/><br/><em><strong>\"Wat als hondenvoer écht beter kon – voor hond én planeet?\"</strong></em></p><p>Vandaag vieren we wat we samen bereikt hebben — en dat doen we graag met een avontuur dat net zo wild, puur en trouw is als jij en je hond. 🌿🐾<br/><br/>Samen met <strong>The Packraft Trail</strong> geven we één gelukkige winnaar de kans om er twee dagen op uit te trekken, de natuur in, met z’n viervoeter én een <strong>Gutsy-deluxe pakket</strong> onder de arm.</p><h3><a href=\"https://www.instagram.com/gutsy.dog\" target=\"_blank\" title=\"https://www.instagram.com/gutsy.dog\"><strong>DOE MEE VIA INSTAGRAM</strong></a></h3><p></p><p></p><p></p>"
           }
         }
       },
       "block_order": [
         "heading_VPhRcE",
-        "text_tdpUPc",
-        "button_qxAaTE"
+        "text_tdpUPc"
       ],
       "settings": {
         "image": "shopify://shop_images/DSC8581.jpg",
@@ -86,7 +78,7 @@
         "content_position": "text-left",
         "text_color": "",
         "disable_top_spacing": false,
-        "disable_bottom_spacing": false,
+        "disable_bottom_spacing": true,
         "layout_type": "normal"
       }
     },
@@ -196,7 +188,7 @@
         "text_wV8dHF": {
           "type": "text",
           "settings": {
-            "text": "<p>Een micro-avontuur met <strong>The Packraft Trail</strong>:<br/>• Voor 2 personen + hond<br/>• 2-daagse in 2025 op locatie naar keuze<br/>• Inclusief packraft, tent, matje en slaapzak<br/>• Ter waarde van <strong>€348</strong></p><p>Een <strong>Gutsy deluxe pakket</strong> voor je hond:<br/>• Vol voeding, snacks, supplementen en care<br/>• Ter waarde van <strong>€300</strong></p><p><strong>Totale waarde: €648</strong></p>"
+            "text": "<p>Een micro-avontuur met <strong>The Packraft Trail</strong>:<br/>• Voor 2 personen + hond<br/>• 2-daagse in 2025 op locatie naar keuze<br/>• Inclusief packraft, tent, matje en slaapzak<br/>• Ter waarde van <strong>€348</strong></p><p>Een <strong>Gutsy deluxe pakket</strong> voor je hond:<br/>• Vol voeding, snacks, supplementen en care<br/>• Ter waarde van <strong>€300</strong></p><p><strong>Totale waarde: €648</strong></p><h3><a href=\"https://www.instagram.com/gutsy.dog\" target=\"_blank\" title=\"https://www.instagram.com/gutsy.dog\"><strong>DOE MEE & maak kans!</strong></a></h3>"
           }
         }
       },

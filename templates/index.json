@@ -15,8 +15,8 @@
         "slide_9tfJ4P": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/banner_3.png",
-            "mobile_image": "shopify://shop_images/Naamloos-3.png",
+            "image": "shopify://shop_images/banner_mei.png",
+            "mobile_image": "shopify://shop_images/banner_mobiel.png",
             "slide_link": "shopify://products/chicken-munchies-adult-l",
             "video_background": false,
             "badge_text": "",

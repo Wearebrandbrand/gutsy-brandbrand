@@ -14,29 +14,18 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "955bb93b-7a65-4933-8023-83a64ee46bc2": {
-          "type": "text",
-          "settings": {
-            "icon": "none",
-            "text": "33% korting op heel de site - Gutsy bestaat 3 jaar!",
-            "link": "shopify://collections/all",
-            "color_bg": "#ff8500",
-            "color_text": "#ffffff"
-          }
-        },
         "text_teyUGz": {
           "type": "text",
           "settings": {
             "icon": "none",
             "text": "Vandaag besteld = binnen 1-2 dagen aan huis geleverd!",
             "link": "shopify://collections/all",
-            "color_bg": "#FF8500",
+            "color_bg": "#ff8500",
             "color_text": "#ffffff"
           }
         }
       },
       "block_order": [
-        "955bb93b-7a65-4933-8023-83a64ee46bc2",
         "text_teyUGz"
       ],
       "settings": {

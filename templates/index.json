@@ -41,9 +41,9 @@
             "button_1_color": "accent",
             "button_1_link": "shopify://collections/kibble",
             "use_text_button_1": false,
-            "button_2_text": "Meedoen aan give-away",
+            "button_2_text": "Care assortiment",
             "button_2_color": "regular",
-            "button_2_link": "shopify://pages/giveaway-3-jaar-gutsy",
+            "button_2_link": "shopify://collections/care",
             "use_text_button_2": false
           }
         }
@@ -72,7 +72,7 @@
         "heading": "Nieuw! Care assortiment",
         "description": "<p>Gutsy Care is er voor hondenbaasjes die bewust kiezen voor pure verzorging.<br/>Met krachtige oliën, balsems en cleaners die huid, vacht, oren en pootjes sterk en gezond houden.</p>",
         "button_text": "Shop Care",
-        "collection": "nieuw-care-assortiment",
+        "collection": "care",
         "display_type": "grid",
         "product_limit": 3,
         "columns_desktop": 4,

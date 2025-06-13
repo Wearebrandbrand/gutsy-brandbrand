@@ -132,5 +132,35 @@
 		<script type="module" src="{{ 'instant-page.js' | asset_url }}" defer="defer"></script>
 	{%- endif -%}
 	{% render 'juo-tag' with '@/modules/checkout-link/index.ts' %}
+    {% if request.path contains 'juo' %}
+    <script>
+      const portal = document.querySelector('juo-customer-portal');
+
+      if (portal && portal.shadowRoot) {
+        const style = document.createElement('style');
+        style.textContent = `
+          section[part="subscription-content-wrapper"] {
+            display: flex;
+            flex-direction: column;
+          }
+      
+          section[part="subscription-content-wrapper"] > aside[part="subscription-upsell"] {
+            order: 2;
+            border: none;
+          }
+      
+          section[part="subscription-content-wrapper"] > *:nth-of-type(1) {
+            order: 1;
+          }
+      
+          section[part="subscription-content-wrapper"] > *:nth-of-type(2) {
+            order: 3;
+          }
+        `;
+      
+        portal.shadowRoot.appendChild(style);
+      }
+    </script>
+    {% endif %}
 </body>
 </html>

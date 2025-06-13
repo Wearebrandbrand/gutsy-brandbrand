@@ -134,7 +134,9 @@
 	{% render 'juo-tag' with '@/modules/checkout-link/index.ts' %}
     {% if request.path contains 'juo' %}
     <script>
-      const portal = document.querySelector('juo-customer-portal');
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const portal = document.querySelector('juo-customer-portal');
 
       if (portal && portal.shadowRoot) {
         const style = document.createElement('style');
@@ -161,6 +163,7 @@
       
         portal.shadowRoot.appendChild(style);
       }
+    });
     </script>
     {% endif %}
 </body>

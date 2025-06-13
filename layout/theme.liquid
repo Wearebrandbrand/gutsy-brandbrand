@@ -138,6 +138,7 @@
 
       if (portal && portal.shadowRoot) {
         const style = document.createElement('style');
+        style.dataset.customStyles = "true";
         style.textContent = `
           section[part="subscription-content-wrapper"] {
             display: flex;

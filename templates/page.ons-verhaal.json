@@ -415,6 +415,14 @@
             "member_post": "Co-Founder"
           }
         },
+        "team_member_c": {
+          "type": "team_member",
+          "settings": {
+            "member_image": "shopify://shop_images/2e4181eb-c6f2-4417-ac93-cb9988a59f7d.jpg",
+            "member_name": "Wouter",
+            "member_post": "Business Development & Partner"
+          }
+        },
         "team_member_d": {
           "type": "team_member",
           "settings": {
@@ -422,22 +430,14 @@
             "member_name": "Julie",
             "member_post": "Operations Manager"
           }
-        },
-        "team_member_c": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/2e4181eb-c6f2-4417-ac93-cb9988a59f7d.jpg",
-            "member_name": "Wouter",
-            "member_post": "Business Development"
-          }
         }
       },
       "block_order": [
         "team_member_e",
         "team_member_b",
         "team_member_a",
-        "team_member_d",
-        "team_member_c"
+        "team_member_c",
+        "team_member_d"
       ],
       "settings": {
         "heading": "het team",

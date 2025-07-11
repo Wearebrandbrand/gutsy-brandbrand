@@ -81,7 +81,60 @@
             </countdown-timer>
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
           {%- when 'email-signup' -%}
-            {% render 'email-signup-form' %}
+  <form class="email-signup-form" method="post" action="/account/register">
+    <div class="email-signup-form__fields">
+      <input
+        type="email"
+        name="contact[email]"
+        class="email-signup-form__input"
+        placeholder="Jouw e-mail"
+        required
+        autocomplete="email"
+        {% if form.errors contains 'email' %}aria-invalid="true"{% endif %}
+      >
+      <button
+        type="submit"
+        class="email-signup-form__button"
+        aria-label="Verzend"
+      >
+        Verzend
+      </button>
+    </div>
+  </form>
+  <style>
+    .email-signup-form__fields {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px #d1d5db;
+      margin-top: 1.25rem;
+    }
+    .email-signup-form__input {
+      flex: 1;
+      border: none;
+      padding: 16px 12px;
+      font-size: 1rem;
+      outline: none;
+    }
+    .email-signup-form__button {
+      background: #2BB673;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 0 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-transform: capitalize;
+    }
+    .email-signup-form__button:hover,
+    .email-signup-form__button:focus {
+      background: #23965d;
+    }
+  </style>
+
         {%- endcase -%}
       {%- endfor -%}
     </div>

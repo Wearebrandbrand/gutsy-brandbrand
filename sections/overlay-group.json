@@ -17,39 +17,34 @@
         "heading_FYVN3c": {
           "type": "heading",
           "settings": {
-            "text": "Abonneer op onze nieuwsbrief en bespaar!",
+            "text": "Krijg 10% korting op je eerste bestelling!",
             "heading_size": "h3"
           }
         },
         "text_YkpLzx": {
           "type": "text",
           "settings": {
-            "text": "<p>Krijg </p>",
+            "text": "<p>Vul hier je e-mail in en we sturen de kortingscode onmiddellijk door.</p>",
             "description_size": "medium"
           }
         },
-        "button_UVTeEJ": {
-          "type": "button",
-          "settings": {
-            "button_text": "Shop Now",
-            "button_link": "",
-            "button_outline": false
-          }
+        "email_signup_VmWgHn": {
+          "type": "email-signup",
+          "settings": {}
         }
       },
       "block_order": [
         "heading_FYVN3c",
         "text_YkpLzx",
-        "button_UVTeEJ"
+        "email_signup_VmWgHn"
       ],
-      "disabled": true,
       "name": "Pop-up",
       "settings": {
         "popup_delay": 5,
         "disable_for_accounts": false,
         "show_on_specific_page": false,
         "specific_page": "",
-        "popup_image": "shopify://shop_images/image_banner_mami_cc4985a5-5c09-4eb7-8394-26840ac2973d.png",
+        "popup_image": "shopify://shop_images/gif-site.gif",
         "popup_position": "center",
         "text_alignment": "center"
       }

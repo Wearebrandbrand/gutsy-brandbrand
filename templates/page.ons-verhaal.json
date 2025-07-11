@@ -15,7 +15,7 @@
         "heading_bFGaWT": {
           "type": "heading",
           "settings": {
-            "text": "Hoi, ik ben achilles",
+            "text": "Hoi, Wij zijn Jack & Achilles",
             "heading_size": "h1-xlarge"
           }
         },
@@ -31,7 +31,7 @@
         "subheading_rYrHwV"
       ],
       "settings": {
-        "image": "shopify://shop_images/about-banner.png",
+        "image": "shopify://shop_images/Jack_Achilles.jpg",
         "image_parallax": true,
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",
@@ -391,14 +391,6 @@
     "our-team": {
       "type": "our-team",
       "blocks": {
-        "team_member_e": {
-          "type": "team_member",
-          "settings": {
-            "member_image": "shopify://shop_images/Scherm_afbeelding_2024-06-06_om_10.48.12.png",
-            "member_name": "Noémie",
-            "member_post": "Influencer marketing"
-          }
-        },
         "team_member_b": {
           "type": "team_member",
           "settings": {
@@ -430,14 +422,22 @@
             "member_name": "Julie",
             "member_post": "Operations Manager"
           }
+        },
+        "team_member_e": {
+          "type": "team_member",
+          "settings": {
+            "member_image": "shopify://shop_images/Scherm_afbeelding_2024-06-06_om_10.48.12.png",
+            "member_name": "Noémie",
+            "member_post": "Influencer marketing"
+          }
         }
       },
       "block_order": [
-        "team_member_e",
         "team_member_b",
         "team_member_a",
         "team_member_c",
-        "team_member_d"
+        "team_member_d",
+        "team_member_e"
       ],
       "settings": {
         "heading": "het team",

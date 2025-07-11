@@ -81,7 +81,7 @@
             </countdown-timer>
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
           {%- when 'email-signup' -%}
-  <form class="custom-email-signup" method="post" action="/account/register" style="margin-top: 16px;">
+  <form class="custom-email-signup" method="post" action="/account/register" style="margin-top: 18px;">
     <div class="custom-email-signup__wrapper">
       <input
         type="email"
@@ -90,14 +90,15 @@
         placeholder="Jouw e-mail"
         required
         autocomplete="email"
-        {% if form.errors contains 'email' %}aria-invalid="true"{% endif %}
+        style="border: none; outline: none; padding: 0 16px; flex:1; font-size: 1rem; font-family: inherit; font-weight:400; height: 48px; background: #fff;"
       >
       <button
         type="submit"
         class="custom-email-signup__button"
         aria-label="Verzend"
+        style="background: #164f40; color: #fff; font-weight:700; border: none; padding: 0 24px; font-size: 1rem; height: 48px; display:flex; align-items: center; justify-content:center; cursor:pointer; border-radius: 0 8px 8px 0; font-family: inherit; min-width: 110px; transition: background .2s;"
       >
-        <span>Verzend</span>
+        <span style="font-weight:700; font-family:inherit;">Verzend</span>
       </button>
     </div>
   </form>
@@ -105,7 +106,6 @@
     .custom-email-signup__wrapper {
       display: flex;
       align-items: center;
-      gap: 0;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 0 0 1px #d1d5db;
@@ -113,57 +113,20 @@
       width: 100%;
       max-width: 100%;
     }
-    .custom-email-signup__input {
-      flex: 1;
-      border: none;
-      padding: 14px 16px;
-      font-size: 1rem;
-      outline: none;
-      background: #fff;
-      font-family: inherit;
-      font-weight: 400;
-    }
-    .custom-email-signup__button {
-      background: #164f40;
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      padding: 0 28px;
-      font-size: 1rem;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s;
-      border-radius: 0 8px 8px 0;
-      font-family: inherit;
-      text-transform: none;
-      min-width: 120px;
-    }
-    .custom-email-signup__button span {
-      font-weight: 700;
-      font-family: inherit;
-      letter-spacing: 0.5px;
-    }
-    .custom-email-signup__button:hover,
-    .custom-email-signup__button:focus {
-      background: #103c2f;
-    }
     @media (max-width: 480px) {
       .custom-email-signup__button {
         font-size: 0.95rem;
-        padding: 0 16px;
-        min-width: 90px;
+        padding: 0 14px;
+        min-width: 80px;
         height: 42px;
       }
       .custom-email-signup__input {
-        padding: 12px 8px;
+        padding: 0 8px;
+        height: 42px;
       }
     }
   </style>
 
-            {% render 'email-signup-form' %}
         {%- endcase -%}
       {%- endfor -%}
     </div>

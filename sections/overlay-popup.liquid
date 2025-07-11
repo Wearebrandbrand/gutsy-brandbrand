@@ -107,6 +107,8 @@
       background: #fff;
       font-weight: 400;
       border-radius: 8px 0 0 8px;
+      /* Zorg dat text niet overlapt */
+      z-index: 1;
     }
     .gutsy-signup-wrapper input[type="email"]::placeholder {
       color: #868686;
@@ -116,22 +118,25 @@
       color: #fff;
       font-weight: 700;
       border: none;
-      padding: 0 24px;
-      font-size: 1rem;
+      padding: 0 28px;
+      font-size: 1.4rem;
       height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       border-radius: 0 8px 8px 0;
-      min-width: 100px;
+      min-width: 56px;
       white-space: nowrap;
       transition: background .2s;
       font-family: inherit;
+      z-index: 2;
     }
-    .gutsy-signup-wrapper button[type="submit"]:hover,
-    .gutsy-signup-wrapper button[type="submit"]:focus {
-      background: #103c2f;
+    /* Icon styling */
+    .gutsy-signup-wrapper button[type="submit"] svg {
+      width: 28px;
+      height: 28px;
+      display: block;
     }
     @media (max-width: 500px) {
       .gutsy-signup-wrapper input[type="email"] {
@@ -140,10 +145,14 @@
         font-size: .96rem;
       }
       .gutsy-signup-wrapper button[type="submit"] {
-        font-size: .97rem;
+        font-size: 1.1rem;
         padding: 0 14px;
-        min-width: 80px;
+        min-width: 44px;
         height: 42px;
+      }
+      .gutsy-signup-wrapper button[type="submit"] svg {
+        width: 22px;
+        height: 22px;
       }
     }
   </style>

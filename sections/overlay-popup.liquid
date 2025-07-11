@@ -82,24 +82,45 @@
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
           {%- when 'email-signup' -%}
             <style>
-              .klaviyo_form button[type="submit"],
-              .email-signup-form button[type="submit"] {
-                background-color: #1B4D3E !important;
-                color: white !important;
-                border: none;
-                border-radius: 6px;
-                padding: 12px 24px;
-                font-weight: 600;
-                cursor: pointer;
-                text-transform: uppercase;
+              .popup-email-form {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+                margin-top: 20px;
               }
 
-              .klaviyo_form button[type="submit"]::after,
-              .email-signup-form button[type="submit"]::after {
-                content: Verzend;
+              .popup-email-form input[type="email"] {
+                flex-grow: 1;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 16px;
+                width: 100%;
+              }
+
+              .popup-email-form button[type="submit"] {
+                background-color: #1B4D3E;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                padding: 12px 20px;
+                font-weight: 600;
+                font-size: 16px;
+                text-transform: uppercase;
+                cursor: pointer;
+              }
+
+              .popup-email-form button[type="submit"]:hover {
+                background-color: #174134;
               }
             </style>
-            {% render 'email-signup-form' %}
+
+            <form method="post" action="/contact#Popup-{{ section.id }}" class="popup-email-form">
+              <input type="hidden" name="form_type" value="customer">
+              <input type="hidden" name="utf8" value="✓">
+              <input type="email" name="contact[email]" placeholder="Jouw e-mail" required>
+              <button type="submit">Verzend</button>
+            </form>
         {%- endcase -%}
       {%- endfor -%}
     </div>

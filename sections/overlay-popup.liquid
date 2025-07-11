@@ -82,20 +82,41 @@
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
          {%- when 'email-signup' -%}
   <div class="gutsy-signup-wrapper">
-    {% render 'email-signup-form' %}
+    <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="gutsy-signup-form" autocomplete="off">
+      <input
+        type="email"
+        name="contact[email]"
+        class="gutsy-email-signup__input"
+        placeholder="Jouw e-mail"
+        required
+        autocomplete="email"
+        aria-label="E-mailadres"
+      >
+      <button type="submit" class="gutsy-email-signup__button" aria-label="Verzend">
+        <!-- Mail SVG icon, netjes gecentreerd -->
+        <svg viewBox="0 0 24 24" fill="none" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="none"/>
+          <path d="M3.6 7.8A2.2 2.2 0 0 1 5.8 5.6h12.4a2.2 2.2 0 0 1 2.2 2.2v8.4a2.2 2.2 0 0 1-2.2 2.2H5.8A2.2 2.2 0 0 1 3.6 16V7.8Zm2.2-.2L12 12.1l6.2-4.5H5.8Zm12.4 1.34-6 4.38a1 1 0 0 1-1.16 0l-6-4.38V16a.2.2 0 0 0 .2.2h12.4a.2.2 0 0 0 .2-.2V8.94Z" fill="#fff"/>
+        </svg>
+      </button>
+    </form>
   </div>
   <style>
-    .gutsy-signup-wrapper .email-signup-form,
-    .gutsy-signup-wrapper form {
+    .gutsy-signup-wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .gutsy-signup-form {
       display: flex;
+      width: 100%;
+      max-width: 100%;
       margin-top: 18px;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 0 0 1px #d1d5db;
       background: #fff;
-      max-width: 100%;
     }
-    .gutsy-signup-wrapper input[type="email"] {
+    .gutsy-email-signup__input {
       flex: 1 1 0%;
       min-width: 0;
       height: 48px;
@@ -109,11 +130,11 @@
       border-radius: 8px 0 0 8px;
       z-index: 1;
     }
-    .gutsy-signup-wrapper input[type="email"]::placeholder {
+    .gutsy-email-signup__input::placeholder {
       color: #868686;
       opacity: 1 !important;
     }
-    /* HIDE floating labels from theme */
+    /* Verberg Shopify floating labels */
     .gutsy-signup-wrapper input[type="email"] + label,
     .gutsy-signup-wrapper input[type="email"] ~ label,
     .gutsy-signup-wrapper .field__label,
@@ -121,45 +142,74 @@
     .gutsy-signup-wrapper label[for*="Email"] {
       display: none !important;
     }
-    .gutsy-signup-wrapper button[type="submit"] {
+    .gutsy-email-signup__button {
       background: #164f40;
       color: #fff;
-      font-weight: 700;
       border: none;
-      padding: 0 24px;
-      font-size: 1rem;
+      padding: 0 22px;
+      font-size: 1.3rem;
       height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       border-radius: 0 8px 8px 0;
-      min-width: 100px;
+      min-width: 54px;
       white-space: nowrap;
       transition: background .2s;
       font-family: inherit;
       z-index: 2;
     }
-    .gutsy-signup-wrapper button[type="submit"] svg {
-      width: 28px;
-      height: 28px;
+    .gutsy-email-signup__button svg {
+      width: 24px;
+      height: 24px;
       display: block;
+      pointer-events: none;
     }
-    @media (max-width: 500px) {
-      .gutsy-signup-wrapper input[type="email"] {
-        height: 42px;
-        padding: 0 8px;
-        font-size: .96rem;
+    .gutsy-email-signup__button:hover,
+    .gutsy-email-signup__button:focus {
+      background: #103c2f;
+    }
+    @media (max-width: 600px) {
+      .gutsy-signup-form {
+        max-width: 95vw;
+        width: 100%;
+        min-width: 0;
+        margin-top: 16px;
       }
-      .gutsy-signup-wrapper button[type="submit"] {
-        font-size: 1.1rem;
-        padding: 0 14px;
+      .gutsy-email-signup__input {
+        height: 44px;
+        font-size: 1rem;
+        padding: 0 10px;
+        border-radius: 8px 0 0 8px;
+      }
+      .gutsy-email-signup__button {
+        height: 44px;
+        padding: 0 12px;
         min-width: 44px;
-        height: 42px;
+        font-size: 1.1rem;
+        border-radius: 0 8px 8px 0;
       }
-      .gutsy-signup-wrapper button[type="submit"] svg {
-        width: 22px;
-        height: 22px;
+      .gutsy-email-signup__button svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @media (max-width: 380px) {
+      .gutsy-signup-form {
+        flex-direction: column;
+        gap: 6px;
+        box-shadow: none;
+        border-radius: 8px;
+      }
+      .gutsy-email-signup__input,
+      .gutsy-email-signup__button {
+        border-radius: 8px;
+        width: 100%;
+        min-width: 0;
+      }
+      .gutsy-email-signup__button {
+        margin-top: 4px;
       }
     }
   </style>

@@ -31,12 +31,21 @@
         "email_signup_VmWgHn": {
           "type": "email-signup",
           "settings": {}
+        },
+        "button_ypUfcE": {
+          "type": "button",
+          "settings": {
+            "button_text": "Stuur door",
+            "button_link": "",
+            "button_outline": false
+          }
         }
       },
       "block_order": [
         "heading_FYVN3c",
         "text_YkpLzx",
-        "email_signup_VmWgHn"
+        "email_signup_VmWgHn",
+        "button_ypUfcE"
       ],
       "name": "Pop-up",
       "settings": {

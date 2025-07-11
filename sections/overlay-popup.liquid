@@ -81,52 +81,51 @@
             </countdown-timer>
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
           {%- when 'email-signup' -%}
-  <form class="custom-email-signup" method="post" action="/account/register" style="margin-top: 18px;">
-    <div class="custom-email-signup__wrapper">
-      <input
-        type="email"
-        name="contact[email]"
-        class="custom-email-signup__input"
-        placeholder="Jouw e-mail"
-        required
-        autocomplete="email"
-        style="border: none; outline: none; padding: 0 16px; flex:1; font-size: 1rem; font-family: inherit; font-weight:400; height: 48px; background: #fff;"
-      >
-      <button
-        type="submit"
-        class="custom-email-signup__button"
-        aria-label="Verzend"
-        style="background: #164f40; color: #fff; font-weight:700; border: none; padding: 0 24px; font-size: 1rem; height: 48px; display:flex; align-items: center; justify-content:center; cursor:pointer; border-radius: 0 8px 8px 0; font-family: inherit; min-width: 110px; transition: background .2s;"
-      >
-        <span style="font-weight:700; font-family:inherit;">Verzend</span>
-      </button>
-    </div>
-  </form>
-  <style>
-    .custom-email-signup__wrapper {
-      display: flex;
-      align-items: center;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 0 0 1px #d1d5db;
-      background: #fff;
-      width: 100%;
-      max-width: 100%;
-    }
-    @media (max-width: 480px) {
-      .custom-email-signup__button {
-        font-size: 0.95rem;
-        padding: 0 14px;
-        min-width: 80px;
-        height: 42px;
-      }
-      .custom-email-signup__input {
-        padding: 0 8px;
-        height: 42px;
-      }
-    }
-  </style>
-
+            <form class="custom-email-signup" method="post" action="/account/register" style="margin-top: 18px;">
+              <div class="custom-email-signup__wrapper">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="custom-email-signup__input"
+                  placeholder="Jouw e-mail"
+                  required
+                  autocomplete="email"
+                  style="border: none; outline: none; padding: 0 16px; flex:1; font-size: 1rem; font-family: inherit; font-weight:400; height: 48px; background: #fff;"
+                >
+                <button
+                  type="submit"
+                  class="custom-email-signup__button"
+                  aria-label="Verzend"
+                  style="background: #164f40; color: #fff; font-weight:700; border: none; padding: 0 24px; font-size: 1rem; height: 48px; display:flex; align-items: center; justify-content:center; cursor:pointer; border-radius: 0 8px 8px 0; font-family: inherit; min-width: 110px; transition: background .2s;"
+                >
+                  <span style="font-weight:700; font-family:inherit;">Verzend</span>
+                </button>
+              </div>
+            </form>
+            <style>
+              .custom-email-signup__wrapper {
+                display: flex;
+                align-items: center;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 0 0 1px #d1d5db;
+                background: #fff;
+                width: 100%;
+                max-width: 100%;
+              }
+              @media (max-width: 480px) {
+                .custom-email-signup__button {
+                  font-size: 0.95rem;
+                  padding: 0 14px;
+                  min-width: 80px;
+                  height: 42px;
+                }
+                .custom-email-signup__input {
+                  padding: 0 8px;
+                  height: 42px;
+                }
+              }
+            </style>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -137,9 +136,9 @@
 {% schema %}
   {
     "name": "Pop-up",
-		"class": "section-overlay-popup",
+    "class": "section-overlay-popup",
     "settings": [
-			{
+      {
         "type": "range",
         "id": "popup_delay",
         "min": 0,
@@ -172,90 +171,90 @@
         "content": "Design"
       },
       {
-				"type": "image_picker",
-				"id": "popup_image",
-				"label": "Image",
-				"info": "300 x 400 .jpg recommended."
-			},
-      {
-				"type": "select",
-				"id": "popup_position",
-				"label": "Position",
-				"options": [
-					{
-						"value": "bottom-left",
-						"label": "Bottom left"
-					},
-					{
-						"value": "center",
-						"label": "Center"
-					},
-					{
-						"value": "bottom-right",
-						"label": "Bottom right"
-					}
-				],
-				"default": "center"
+        "type": "image_picker",
+        "id": "popup_image",
+        "label": "Image",
+        "info": "300 x 400 .jpg recommended."
       },
       {
-				"type": "select",
-				"id": "text_alignment",
-				"label": "Content alignment",
-				"options": [
-					{
-						"value": "left",
-						"label": "Left"
-					},
-					{
-						"value": "center",
-						"label": "Center"
-					},
-					{
-						"value": "right",
-						"label": "Right"
-					}
-				],
-				"default": "center"
+        "type": "select",
+        "id": "popup_position",
+        "label": "Position",
+        "options": [
+          {
+            "value": "bottom-left",
+            "label": "Bottom left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "bottom-right",
+            "label": "Bottom right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Content alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
       }
     ],
     "blocks": [
-			{
-				"type": "heading",
-				"name": "Heading",
-				"limit": 1,
-				"settings": [
-					{
-						"type": "text",
-						"id": "text",
-						"label": "Text",
-						"default": "Sign up and save"
-					},
-					{
-						"type": "select",
-						"id": "heading_size",
-						"label": "Size",
-						"options": [
+      {
+        "type": "heading",
+        "name": "Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Sign up and save"
+          },
+          {
+            "type": "select",
+            "id": "heading_size",
+            "label": "Size",
+            "options": [
               {
-								"value": "h2",
-								"label": "Large"
-							},
+                "value": "h2",
+                "label": "Large"
+              },
               {
-								"value": "h3",
-								"label": "Medium"
-							},
-							{
-								"value": "h4",
-								"label": "Small"
-							}
-						],
-						"default": "h2"
-					}
-				]
-			},
-			{
+                "value": "h3",
+                "label": "Medium"
+              },
+              {
+                "value": "h4",
+                "label": "Small"
+              }
+            ],
+            "default": "h2"
+          }
+        ]
+      },
+      {
         "type": "text",
         "name": "Text",
-				"limit": 1,
+        "limit": 1,
         "settings": [
           {
             "type": "richtext",
@@ -263,64 +262,64 @@
             "label": "Content",
             "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
           },
-					{
-						"type": "select",
-						"id": "description_size",
-						"label": "Size",
-						"options": [
-							{
-								"value": "small",
-								"label": "Small"
-							},
-							{
-								"value": "medium",
-								"label": "Medium"
-							},
-							{
-								"value": "large",
-								"label": "Large"
-							}
-						],
-						"default": "medium"
-					}
+          {
+            "type": "select",
+            "id": "description_size",
+            "label": "Size",
+            "options": [
+              {
+                "value": "small",
+                "label": "Small"
+              },
+              {
+                "value": "medium",
+                "label": "Medium"
+              },
+              {
+                "value": "large",
+                "label": "Large"
+              }
+            ],
+            "default": "medium"
+          }
         ]
       },
-			{
+      {
         "type": "button",
         "name": "Button",
-				"limit": 2,
+        "limit": 2,
         "settings": [
-					{
-						"id": "button_text",
-						"type": "text",
-						"label": "Button label",
-						"default": "Shop Now",
-						"info": "Leave the label blank to hide the button."
-					},
-					{
-						"id": "button_link",
-						"type": "url",
-						"label": "Button link"
-					},
-					{
-						"type": "checkbox",
-						"id": "button_outline",
-						"label": "Use outline button style",
-						"default": false
-					}
+          {
+            "id": "button_text",
+            "type": "text",
+            "label": "Button label",
+            "default": "Shop Now",
+            "info": "Leave the label blank to hide the button."
+          },
+          {
+            "id": "button_link",
+            "type": "url",
+            "label": "Button link"
+          },
+          {
+            "type": "checkbox",
+            "id": "button_outline",
+            "label": "Use outline button style",
+            "default": false
+          }
         ]
       },
-			{
+      {
         "type": "email-signup",
         "name": "E-mail signup",
-				"limit": 1
+        "limit": 1
       },
       {
         "type": "countdown",
         "name": "Countdown",
-				"limit": 1,
+        "limit": 1,
         "settings": [
-					{
+          {
             "type": "number",
             "id": "timer_year",
             "label": "Year",
@@ -867,23 +866,23 @@
     "presets": [
       {
         "name": "Pop-up",
-				"blocks": [
-					{
-						"type": "heading"
-					},
-					{
-						"type": "text"
-					},
-					{
-						"type": "button"
-					}
-				]
+        "blocks": [
+          {
+            "type": "heading"
+          },
+          {
+            "type": "text"
+          },
+          {
+            "type": "button"
+          }
+        ]
       }
     ],
-		"enabled_on": {
-			"groups": [
-				"custom.overlay"
-			]
-		}
+    "enabled_on": {
+      "groups": [
+        "custom.overlay"
+      ]
+    }
   }
 {% endschema %}

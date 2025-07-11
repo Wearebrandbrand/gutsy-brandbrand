@@ -80,7 +80,7 @@
               </div>
             </countdown-timer>
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
-          {%- when 'email-signup' -%}
+         {%- when 'email-signup' -%}
   <div class="gutsy-signup-wrapper">
     {% render 'email-signup-form' %}
   </div>
@@ -107,32 +107,39 @@
       background: #fff;
       font-weight: 400;
       border-radius: 8px 0 0 8px;
-      /* Zorg dat text niet overlapt */
       z-index: 1;
     }
     .gutsy-signup-wrapper input[type="email"]::placeholder {
       color: #868686;
+      opacity: 1 !important;
+    }
+    /* HIDE floating labels from theme */
+    .gutsy-signup-wrapper input[type="email"] + label,
+    .gutsy-signup-wrapper input[type="email"] ~ label,
+    .gutsy-signup-wrapper .field__label,
+    .gutsy-signup-wrapper .form__label,
+    .gutsy-signup-wrapper label[for*="Email"] {
+      display: none !important;
     }
     .gutsy-signup-wrapper button[type="submit"] {
       background: #164f40;
       color: #fff;
       font-weight: 700;
       border: none;
-      padding: 0 28px;
-      font-size: 1.4rem;
+      padding: 0 24px;
+      font-size: 1rem;
       height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       border-radius: 0 8px 8px 0;
-      min-width: 56px;
+      min-width: 100px;
       white-space: nowrap;
       transition: background .2s;
       font-family: inherit;
       z-index: 2;
     }
-    /* Icon styling */
     .gutsy-signup-wrapper button[type="submit"] svg {
       width: 28px;
       height: 28px;
@@ -916,3 +923,15 @@
     }
   }
 {% endschema %}
+.gutsy-signup-wrapper input[type="email"] + label,
+.gutsy-signup-wrapper input[type="email"] ~ label,
+.gutsy-signup-wrapper .field__label,
+.gutsy-signup-wrapper .form__label,
+.gutsy-signup-wrapper label[for*="Email"] {
+  display: none !important;
+}
+
+.gutsy-signup-wrapper input[type="email"]::placeholder {
+  opacity: 1 !important;
+  color: #868686 !important;
+}

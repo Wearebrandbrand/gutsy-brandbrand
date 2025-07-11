@@ -81,56 +81,37 @@
             </countdown-timer>
             <script src="{{ 'sections--countdown-banner.js' | asset_url }}" defer="defer"></script>
           {%- when 'email-signup' -%}
-  <form class="gutsy-email-signup" method="post" action="/contact#contact_form" accept-charset="UTF-8" style="margin-top: 18px;">
-    <div class="gutsy-email-signup__wrapper">
-      <input
-        type="email"
-        name="contact[email]"
-        class="gutsy-email-signup__input"
-        placeholder="Jouw e-mail"
-        required
-        autocomplete="email"
-      >
-      <button
-        type="submit"
-        class="gutsy-email-signup__button"
-        aria-label="Verzend"
-      >
-        <span>Verzend</span>
-      </button>
-    </div>
-  </form>
+  <div class="gutsy-signup-wrapper">
+    {% render 'email-signup-form' %}
+  </div>
   <style>
-    .gutsy-email-signup__wrapper {
+    .gutsy-signup-wrapper .email-signup-form,
+    .gutsy-signup-wrapper form {
       display: flex;
-      align-items: center;
+      margin-top: 18px;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 0 0 1px #d1d5db;
       background: #fff;
-      width: 100%;
       max-width: 100%;
-      min-width: 0;
-      gap: 0;
     }
-    .gutsy-email-signup__input {
+    .gutsy-signup-wrapper input[type="email"] {
       flex: 1 1 0%;
       min-width: 0;
-      box-sizing: border-box;
       height: 48px;
       padding: 0 16px;
       font-size: 1rem;
       font-family: inherit;
-      font-weight: 400;
       border: none;
       outline: none;
       background: #fff;
+      font-weight: 400;
+      border-radius: 8px 0 0 8px;
     }
-    .gutsy-email-signup__input::placeholder {
+    .gutsy-signup-wrapper input[type="email"]::placeholder {
       color: #868686;
-      opacity: 1;
     }
-    .gutsy-email-signup__button {
+    .gutsy-signup-wrapper button[type="submit"] {
       background: #164f40;
       color: #fff;
       font-weight: 700;
@@ -143,31 +124,26 @@
       justify-content: center;
       cursor: pointer;
       border-radius: 0 8px 8px 0;
-      font-family: inherit;
       min-width: 100px;
       white-space: nowrap;
       transition: background .2s;
-      box-sizing: border-box;
-    }
-    .gutsy-email-signup__button span {
-      font-weight: 700;
       font-family: inherit;
     }
-    .gutsy-email-signup__button:hover,
-    .gutsy-email-signup__button:focus {
+    .gutsy-signup-wrapper button[type="submit"]:hover,
+    .gutsy-signup-wrapper button[type="submit"]:focus {
       background: #103c2f;
     }
     @media (max-width: 500px) {
-      .gutsy-email-signup__button {
+      .gutsy-signup-wrapper input[type="email"] {
+        height: 42px;
+        padding: 0 8px;
+        font-size: .96rem;
+      }
+      .gutsy-signup-wrapper button[type="submit"] {
         font-size: .97rem;
         padding: 0 14px;
         min-width: 80px;
         height: 42px;
-      }
-      .gutsy-email-signup__input {
-        padding: 0 8px;
-        height: 42px;
-        font-size: .96rem;
       }
     }
   </style>

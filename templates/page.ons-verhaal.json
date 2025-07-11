@@ -32,6 +32,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Jack_Achilles.jpg",
+        "mobile_image": "shopify://shop_images/Jack_Achilles.jpg",
         "image_parallax": true,
         "desktop_height": "desktop-height-650",
         "mobile_height": "mobile-height-500",

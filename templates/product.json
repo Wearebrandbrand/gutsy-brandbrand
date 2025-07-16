@@ -62,7 +62,7 @@
           "settings": {
             "product": "{{product}}",
             "defaultTheme": "v2",
-            "defaultMode": "SUBSCRIPTION",
+            "defaultMode": "OTP",
             "hide_oos": true,
             "color": "#1a3c32",
             "background": "#f0e7b2",
@@ -78,7 +78,7 @@
             "badge_background": "rgba(0,0,0,0)",
             "discount_badge_color": "#ffffff",
             "discount_badge_background": "#094e39",
-            "subscription_label": "Abonneer en bespaar",
+            "subscription_label": "Abonneer en bespaar 10%",
             "subscription_background": "rgba(0,0,0,0)",
             "subscription_uvps": "<p>Op ieder moment te wijzigen of annuleren</p>",
             "subscription_collapsible": false,
